@@ -1,0 +1,127 @@
+\documentclass[oneside,12pt]{wipb}
+
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb} %symbole strza³ek
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{fancyhdr} 
+\usepackage{array}
+\theoremstyle{definition}
+\newcommand{\re}{\mathbb{R}}  % definiowanie liczb RZECZYWISTYCH 
+\newtheorem{definition}{Definicja}%[section]
+\newtheorem{ex}{Przyk³ad}%[section]
+\newtheorem{theorem}{Twierdzenie}%[section]
+\newtheorem{uw}{Uwaga}
+\newtheorem{wniosek}{Wniosek}
+\newtheorem*{dowod*}{Dowód}
+\newtheorem{stw}{Stwierdzenie}%[section]
+\usepackage{graphicx}
+\usepackage{bbding}
+
+
+
+\katedra{Matematyki}
+\typpracy{Magisterska}
+\temat{Konstrukcja dwuwymiarowych kwadratur Newtona-Cotesa i ich zastosowanie do obliczania ca³ki podwójnej}
+\autor{Szymon D¹browski}
+\promotor{dr Jan Popio³ek}
+\indeks{\,87901}
+\studia{stacjonarne}
+\rokakademicki{2016/2017}
+\profil{II stopnia magisterskie}
+\kierunekstudiow{Informatyka}
+\specjalnosc{\small{Informatyka i finanse}}
+\zakres{\vspace{0.2cm}{1. Wielomiany Lagrange'a jednej i dwóch zmiennych.}\newline \vspace{-0.1cm}{2. Jednowymiarowe kwadratury Newtona-Cotesa.}\newline \vspace{-0.1cm}{3. Dwuwymiarowe kwadratury Newtona-Cotesa.}\\ 4. Zastosowanie kwadratur do obliczania ca³ek.}
+
+\hypersetup{
+pdfauthor={Szymon D¹browski},
+pdftitle={Praca magisterska},
+pdfsubject={} 
+pdfkeywords={},
+pdfpagemode=UseNone,
+linkcolor=black,
+citecolor=black,
+urlcolor=black
+} 
+
+\setlength{\epigraphwidth}{1\textwidth}
+
+
+
+\begin{document}
+
+\maketitle        % strona tytulowa
+\pagestyle{plain}  %  sposob w jaki maja byc numerowane strony
+
+
+%=================================STRESZCZENIE===============================
+\textbf{Thesis topic:} Construction of twodimensional Newton-Cotes quadratures and their application to calculate of double integral.\\
+
+\begin{center}
+SUMMARY
+\end{center}
+%=======Treœæ streszczenia:========
+
+
+\vspace{16cm}\hfill\\
+\begin{flushleft}
+\textbf{Key words:} Newton-Cotes quadratures; Lagrange polynomials;
+\end{flushleft}
+\newpage
+
+
+
+%==========================OSWIADCZENIE=======================
+\begin{center}
+{\small  Plik OœwiadczenieOSamodzielnoœci.pdf}
+\end{center}
+
+%=============================================================
+
+\tableofcontents   % spis tresci
+
+\input{wstep.tex}
+\input{rozdziali.tex}
+\input{rozdzialii.tex}
+\input{rozdzialiii.tex}
+\input{rozdzialiv.tex}
+\input{podsumowanie.tex}
+
+
+
+
+%================Bibliografia===============
+\bibliographystyle{unsrt}
+\begin{thebibliography}{99}
+
+\bibitem{klucz1} Olszowski B.,\,\,\textit{Wybrane metody numeryczne : podrêcznik dla studentów wy¿szych szkó³ technicznych}, Wydawnictwo Politechniki Krakowskiej, Kraków 2007, s. 27-37
+
+\bibitem{klucz2} Kosma Z.,\,\,\textit{Metody numeryczne dla zastosowañ in¿ynierskich}, Wydawnictwo Politechniki Radomskiej, Radom 2007, s. 155-160
+
+\bibitem{klucz3} 
+
+\bibitem{klucz4} 
+
+\end{thebibliography}
+
+\addcontentsline{toc}{chapter}{Bibliografia} % bibliografia dodana do spisu tresci jako rozdzial
+
+
+
+
+%=================Spis procedur============
+\newpage
+\renewcommand{\listoftables}{\Large\textbf{\flushleft{Spis procedur w jêzyku Maple}}}
+\listoftables
+
+
+\addcontentsline{toc}{chapter}{Spis procedur w jêzyku Maple}
+
+
+
+%\listoffigures
+%\addcontentsline{toc}{chapter}{Spis rysunków}
+
+\end{document}

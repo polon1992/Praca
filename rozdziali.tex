@@ -1,0 +1,119 @@
+
+\chapter{Wielomiany interpolacyjne \textit{Lagrange'a}}
+W dzisiejszych czasach zaspokojenie g³odu czy pragnienia nie wystarcza, by sprostaæ ludzkim potrzebom. Nieustanna chêæ rozwoju naszego gatunku sprawia, ¿e konieczne jest siêganie do wiedzy matematycznej w celu lepszego poznania otaczaj¹cego nas œwiata. Niejednokrotnie posiadamy tylko dyskretne dane pozyskane w trakcie badañ i chc¹c dokonaæ analizy matematycznej pewnych zdarzeñ czy procesów musimy stworzyæ/wyprowadziæ regularne funkcje interpolacyjne, które w sposób ci¹g³y i wystarczaj¹co dok³adny opisywa³yby interesuj¹ce nas zjawiska. Jak mo¿emy siê spodziewaæ, czêsto jest to ciê¿kie do wykonania zadanie.
+
+%Wyjaœnijmy nieco pojêcie interpolacji. Ujmuj¹c w wielkim skrócie, jest ona procesem dziêki któremu jesteœmy w stanie przybli¿yæ pewn¹ funkcjê $f(x)$ (interpolowan¹) przy pomocy innej funkcji $\phi(x)$ (interpoluj¹cej). 
+%Warunkiem, który nale¿y bezwzglêdnie spe³niæ, by wyznaczyæ funkcjê interpoluj¹c¹ jest to, %¿e musimy posiadaæ wiedzê na temat dok³adnych wartoœci $f(x_i)$ w $n$ punktach nale¿¹cych %do jej dziedziny. 
+
+Funkcje interpoluj¹ce w znacznym stopniu upraszczaj¹ prowadzenie obliczeñ podczas wyznaczania przybli¿onych wartoœci funkcji, których postaæ analityczna jest bardzo skomplikowana, lub wyliczenie kolejnych jej wartoœci wymaga wykonania zawi³ych obliczeñ komputerowych. W tym rozdziale pracy skupimy siê zatem na sposobie w jaki mo¿emy wyznaczaæ tak zwane wielomiany interpolacyjne \textit{$Lagrange'a$} dla funkcji jednej oraz dwóch zmiennych.
+
+\section{Wielomiany \textit{Lagrange'a} dla funkcji jednej zmiennej}
+Jak wspomnieliœmy we wstêpie, czêsto w celu uproszczenia obliczeñ sk³aniamy siê do wykorzystania interpolacji. Stosuj¹c j¹ musimy liczyæ siê z faktem, ¿e pozyskane wyniki s¹ wartoœciami przybli¿onymi, wiêc z regu³y bêd¹ ró¿ni³y siê od wyników dok³adnych. %Mo¿emy jednak w pewien sposób kontrolowaæ to, jak bardzo bêd¹ one od siebie odbiega³y - do tego jednak wrócimy póŸniej. 
+Przed przejœciem do dalszych rozwa¿añ nale¿y zdefiniowaæ pojêcie interpolacji.
+
+\begin{definition}{Interpolacja}\\ \hfill
+Interpolacja jest metod¹ numeryczn¹ przybli¿ania funkcji. Polega ona na konstruowaniu tak zwanych \textbf{funkcji interpoluj¹cych} (przybli¿aj¹cych) $W(x)$. Wykorzystujemy do tego znane nam wartoœci \textbf{funkcji interpolowanej} (przybli¿anej) $f(x)$, dla wybranych argumentów nale¿¹cych do jej dziedziny.
+\end{definition}  
+
+Wielomian $W(x)$ tworzony jest w oparciu o dwa powi¹zane ze sob¹ zbiory liczbowe \cite{klucz1}:
+							$$X=\{x_i : i=0,1,\ldots ,n\},\vspace{1cm}
+							F=\{f_i : i=0,1,\ldots ,n\}.$$
+Zbiory $X$ i $F$ s¹ równoliczne. Elementy $x_i \in X$  definiuj¹ wspó³rzêdne punktów wêz³owych w przestrzeni $\re^n$, natomiast elementy z $F$ okreœlaj¹ wartoœci funkcji $f(x)$ w wêz³ach $x_i$, tzn. 
+\begin{equation}\label{f_i=f(x_i)}
+		f_i=f(x_i),
+\end{equation} przy czym $f_i\in \re$ 
+
+Wyjaœnijmy równie¿ pojêcie wêz³a, którym przed chwil¹ operowaliœmy:
+\begin{definition}{Wêz³y (Punkty wêz³owe)}\\\hfill
+	Wêz³ami nazywamy punkty w przestrzeni $\re^n$, bêd¹ce takimi argumentami funkcji $f(x)$, dla których jesteœmy w stanie wyznaczyæ jej wartoœæ. 
+\end{definition}
+W wêz³ach wartoœci funkcji 	interpoluj¹cej i interpolowanej s¹ równe. Oznacza to, ¿e:
+\begin{equation}\label{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach}
+	W(x_i)=f(x_i) \hspace{1cm} (i=0,1,\ldots,n)
+\end{equation}
+
+\begin{uw}
+W tym podrozdziale ograniczaæ bêdziemy siê jedynie do funkcji jednej zmiennej niezale¿nej. Funkcje te badane bêd¹ na ograniczonym domkniêtym przedziale $[a,b]$. W zwi¹zku z tym, zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$. Definicja zbioru $F$ nie ulega zmianie.
+\end{uw}
+Na rysunku \ref{R1} zobrazowano w sposób symboliczny na czym polega interpolacja, oraz czym s¹ wêz³y(punkty $x_i$ przeciêcia wykresów $W(x)$ i $f(x)$, zachodzi dla nich równoœæ (\ref{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach})). 
+\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{R1.eps}
+		\end{center}
+	   \caption{Funkcja interpolacyjna $W(x)$ oraz interpolowana $f(x)$}
+\label{R1}
+\end{figure}
+
+Maj¹c ju¿ podstawy do tego, by wiedzieæ czym jest interpolacja - przejdŸmy o krok dalej. Rozwa¿my pewien liniowo niezale¿ny uk³ad funkcji, zdefiniowanych na domkniêtym przedziale $[a,b]$:
+\begin{equation}\label{funkcjeLiniowoNiezal}
+	\phi_0(x),\phi_1(x),\ldots,\phi_n(x)
+\end{equation}    
+oraz zbiór szukanych wspó³czynników
+\begin{equation}\label{wsp.AlphaDoKombinacjiLiniowej}
+	\alpha_0,\alpha_1,\ldots,\alpha_n
+\end{equation}
+takich, ¿e ich kombinacja liniowa z (\ref{funkcjeLiniowoNiezal}) bêdzie spe³nia³a poni¿szy uk³ad równañ:
+\begin{equation}\label{KombinacjaLiniowaAlfaiPhi}
+	\alpha_0\phi_0(x_i)+\alpha_1\phi_1(x_i)+\cdots+\alpha_n\phi_n(x_i)=f_i 
+\end{equation}
+gdzie $f_i\in F$ oraz $x_i \in X$. 
+
+W \textit{interpolacji Lagrange'a} w sk³ad (\ref{funkcjeLiniowoNiezal}) wchodz¹ wielomiany okreœlone w nastêpuj¹cy sposób:
+\begin{equation}\label{i-TeFunkcjeBazoweLagrange'a}
+	l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).
+\end{equation}
+S¹ one nazywane funkcjami bazowymi stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi nastêpuj¹ca równoœæ: 
+\begin{equation}\label{deltaKroneckera}
+l_i(x_j)=\delta_{ij}=
+					\left\{
+							\begin{array}{lr}
+							1, \,\,\,\,gdy\,\, i=j\\
+							0, \,\,\,\,\,\,\,w p.p.
+							\end{array}
+					\right.
+\end{equation}
+Z powy¿szego wynika, ¿e tylko w jednym przypadku $l_i(x)$ bêdzie mia³a wartoœæ ró¿n¹ od 0 (gdy $x=x_i$), zatem $\sum\limits_{i=0}^n l_i(x)=1$. Dodatkowo zauwa¿my, ¿e macierz¹ charakterystyczn¹ uk³adu (\ref{KombinacjaLiniowaAlfaiPhi}) jest macierz jednostkowa. Skutkuje to tym, i¿ \cite{klucz2}
+\begin{equation}\label{wielomianInterpolacyjnyLagrangea}
+L_n(x)=\sum\limits_{i=0}^n f_i\cdot l_i(x)=\sum\limits_{i=0}^n f_i \prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j}
+\end{equation} 
+bêdzie wielomianem o stopniu nie wiêkszym ni¿ $n$, oraz przyjmie wartoœci (\ref{f_i=f(x_i)})
+w punktach wêz³owych. Wielomian (\ref{wielomianInterpolacyjnyLagrangea}) nazywany jest \textbf{wielomianem interpolacyjnym \textit{Lagrange'a}}. Z jego pomoc¹ w dosyæ przystêpny sposób mo¿emy interpolowaæ dowoln¹ funkcjê.
+
+\begin{ex}{(Wyznaczanie wielomianu interpolacyjnego \textit{Lagrange'a} stopnia $n=2$)}\\\hfill
+\textit{Zbuduj wielomian interpolacyjny $L_2(x)$ dla funkcji $f(x)=e^{x^2}$ rozpatrywanej na ograniczonym przedziale $[0,1]$. Kolejno oblicz $L_2(0,6)$ i wynik porównaj z wartoœci¹ rzeczywist¹ wiedz¹c, ¿e $f(0,6)=e^{(0,6)^2}=1,4(3)$.}
+
+W celu wyznaczenia wielomianu \textit{Lagrange'a} stopnia $n=2$, potrzebowaæ bêdziemy $n+1$ wêz³ów takich, ¿e $a=x_0<x_1<x_2=b$. Przyjmijmy zatem nastêpuj¹ce ich wartoœci: 
+$x_0=0$, $x_1=\frac{1}{2}$, $x_2=1.$ 
+Korzystaj¹c bezpoœrednio z równania (\ref{wielomianInterpolacyjnyLagrangea}) dostajemy:
+$$L_2(x)=f(x_0)\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}+
+f(x_1)\frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}+
+f(x_2)\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}$$
+Podstawiamy kolejno wartoœci wêz³ów do równania $L_2(x)$, otrzymuj¹c wielomian interpoluj¹cy nasz¹ funkcjê $f(x)=e^{x^2}$ na $[a,b]=[0,1]$:
+$$L_2(x)=e^0\frac{(x-\frac{1}{2})(x-1)}{(0-\frac{1}{2})(0-1)}+
+e^{(\frac{1}{4})} \frac{(x-0)(x-1)}{(\frac{1}{2}-0)(\frac{1}{2}-1)}+e^4\frac{(x-0)(x-\frac{1}{2})}{(1-0)(1-\frac{1}{2})}=
+2,30046x^2-0,58218x+1$$
+Ostatecznie wyznaczamy wartoœæ $L_2(0,6)$:
+$$L_2(0,6)=2,30046\cdot(0,6)^2-0,58218\cdot(0,6)+1=1,4788576$$
+Wartoœæ interpolowana $L_2(0,6)$ odbiega nieco od wartoœci dok³adnej $f(0,6)$. 
+\end{ex} 
+
+Wyprowadzona w powy¿szym przyk³adzie dla funkcji $f(x)$ i zadanych wêz³ów postaæ wielomianu $L_2(x)$ jest jednoznaczna. Mówi o tym nastêpuj¹ce twierdzenie:
+\begin{theorem}{(O istnieniu i jednoznacznoœci wielomianu interpolacyjnego \textit{Lagrange'a})}\label{TwOJednoznacznosciWielomLagrangea}\\\hfill
+Niech $R_n[x]$ bêdzie przestrzeni¹ liniow¹ wielomianów stopnia $\leq n$ o wspó³czynnikach rzeczywistych tzn.:
+$R_n[x]=\{W(x)=a_nx^n+x_{n-1}x^{n-1}+\cdots+a_1x+a_0 : a_i\in\re, (i=0,1,\ldots,n)\}$.\\
+Dla dowolnej funkcji $f: X\rightarrow\re$ istnieje dok³adnie jeden wielomian $W(x)\in R_n[x]$ interpoluj¹cy $f$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$).
+\end{theorem}
+
+W powy¿szym przyk³adzie zauwa¿yliœmy, ¿e wynik jest obarczony pewnym b³êdem. Nosi on miano \textit{b³êdu interpolacji}. Dla wielomianów \textit{Lagrange'a} definiujemy go w nastêpuj¹cy sposób:
+\begin{definition}{(B³¹d interpolacji wielomianu \textit{Lagrange'a})}\\\hfill
+WeŸmy $$M_{n+1}=\sup\limits_{[a,b]}|f^{(n+1)}(x)|$$  $$m_{n+1}=\sup\limits_{[a,b]}|\omega_{n+1}(x)|,$$\\ przy czym \,$\omega_n(x)=(x-x_0)\ldots(x-x_n)=\prod\limits_{k=0}^n(x-x_k)$, zaœ $f(x)$ to funkcja interpolowana.\\
+B³êdem interpolacji wielomianu \textit{Lagrange'a} (stopnia $n$) nazywamy wówczas takie
+\begin{equation}\label{Bl¹dInterpolacjiWielomLagrangea}
+	\delta_L=\frac{M_{n+1}\cdot m_{n+1}}{(n+1)!}
+\end{equation}
+dla którego zachodzi: $$|L_n(x)-f(x)|\leq\delta_L \,\,\,\,,x\in[a,b]$$
+
+\end{definition}    
+
+  
+\section{Wielomiany \textit{Lagrange'a} dla funkcji dwóch zmiennych}
