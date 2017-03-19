@@ -13,7 +13,6 @@ Funkcjê podca³kow¹ zawsze mo¿emy zast¹piæ inn¹ funkcj¹ tak¹, ¿e w miarê mo¿liwoœ
 \int\limits_a^b f(x) dx \approx \int\limits_a^b g(x) dx
 \end{equation}
 
-%Jednak do wyznaczenia przybli¿onych wartoœci czêsto stosowane s¹ wzory nazywane kwadraturami. 
 W praktyce czêsto spotkaæ mo¿emy siê z przypadkiem takim, ze do wyznaczenia przybli¿onych wartoœci $I(f)$  stosowane s¹ wzory nazywane kwadraturami. 
 Owe kwadratury opieraj¹ siê jedynie na wartoœciach $f(x)$ w punktach wêz³owych i mog¹ niezbyt dok³adnie przybli¿aæ wynik tzn: 
 \begin{equation}\label{WzorKwadratura}
@@ -21,95 +20,81 @@ Owe kwadratury opieraj¹ siê jedynie na wartoœciach $f(x)$ w punktach wêz³owych i
 \end{equation}
 przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnikami kwadratury), zaœ $x_i$ nosi miano wêz³ów kwadratury.
 
-Naszym celem jest jednak (w miarê mo¿liwoœci jak najlepsze) zminimalizowanie b³êdu pojawiaj¹cego siê w trakcie przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy:
+Naszym celem jest jednak to, by jak najbardziej zminimalizowaæ b³¹d pojawiaj¹cy siê podczas przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy:
 
-
-%WeŸmy 
-%\begin{equation}\label{PodstawienieLagrangeDoKwadratury}
-%g(x)=\sum\limits_{i=0}^n f(x_i)L_i(x),
-%\end{equation}
-%gdzie $L_i(x)$ to wielomiany\textit{ Lagrange'a}.
-%\\ Podstawiaj¹c powy¿sz¹ funkcjê $g(x)$ do wzoru (\ref{ZastapienieFunkcjiFxfunkcjaGx}) otrzymujemy:
 \begin{equation}\label{SumaCalkowaLagrangeWkwadraturze}
 \int\limits_a^b f(x) dx \approx \int\limits_a^b L_n(x) dx=
 \sum\limits_{i=0}^n \alpha_i f(x_i) dx,
 \end{equation}
-gdzie $\alpha_i=\int\limits_a^b l_i(x)$ natomiast $l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).$
-
+gdzie 
+\begin{equation}\label{wspolczynnikAi}
+\alpha_i=\int\limits_a^b l_i(x),
+\end{equation}
+ natomiast 
+ \begin{equation}\label{l_iDlaKwadraturN-C}
+ l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).
+ \end{equation}
 W zwi¹zku z powy¿szym ca³kê (\ref{I(f)=Calkaf(x)}) mo¿emy wyraziæ w nastêpuj¹cy sposób:
 \begin{equation}\label{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n f(x_i)\int\limits_a^b l_i(x) dx
 \end{equation}
-Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy wêz³y takie, ¿e $x_0=a$, $x_n=b$ a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_k=a+hs$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazywamy kwadratur¹ \textit{Newtona-Cotesa}. Skupimy siê na rozwa¿eniu trzech ró¿nych kwadratur tego typu.
+Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa}. Skupimy siê na rozwa¿eniu trzech ró¿nych kwadratur tego typu, bêd¹ nimi: \textit{wzór trapezów}, \textit{wzór Simpsona} oraz \textit{wzór prostok¹tów}.
 
 
 \section{Wzór trapezów}
 
-%\sum\limits_{i=0}^n f(x_i)
-%\int\limits_a^b L_i(x)
-Zauwa¿my, ¿e przybli¿enie $\sum\limits_{i=0}^n f(x_i)\int\limits_a^b L_i(x) dx$ jest szczególnym przypadkiem sumy z równania (\ref{WzorKwadratura}), przy czym: 
+%Zauwa¿my, ¿e przybli¿enie $\sum\limits_{i=0}^n f(x_i)\int\limits_a^b L_i(x) dx$ jest szczególnym przypadkiem sumy z równania (\ref{WzorKwadratura}), przy czym: 
 
-\begin{equation}\label{wspolczynnikAi}
-a_i=\int\limits_a^b L_i(x) dx
-\end{equation}
+%\begin{equation}\label{wspolczynnikAi}
+%a_i=\int\limits_a^b L_i(x) dx
+%\end{equation}
 
 
-
-Zastosujmy pewne podstawienie $x=a+hs$ do wielomianu interpolacyjnego Lagrange'a ($a,h$ s¹ sta³ymi, $s$ jest zmienn¹ niezale¿n¹):
-$L_i(x)=\prod\limits_{k=0, k\neq i}^n \frac{x-x_k}{x_i-x_k}=
-\prod\limits_{k=0, k\neq i}^n \frac{a+hs-(a+kh)}{(a+ih)-(a+kh)}=
-\prod\limits_{k=0, k\neq i}^n \frac{s-k}{i-k}
-$\vspace{0.4cm}
+Do wyznaczenia wzoru trapezów bêdziemy wykorzystywaæ wielomian interpolacyjny \textit{Lagrange'a} rzêdu $n=1$ ($L_1(x)$) utworzony dla wêz³ów $a$ i $b$.
+Zastosujmy w (\ref{l_iDlaKwadraturN-C}) nastêpuj¹ce podstawienie: $x=a+hs$. Wartoœci $a,h$ s¹ pewnymi sta³ymi, natomiast $s$ jest zmienn¹ niezale¿n¹.
+$$l_i(x)=\prod\limits_{j=0, j\neq i}^n \frac{x-x_j}{x_i-x_j}=
+\prod\limits_{j=0, j\neq i}^n \frac{a+hs-(a+jh)}{(a+ih)-(a+jh)}=
+\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}$$
 Otrzymujemy zatem:
 \begin{equation}\label{WielomianLagrangeaPoPodstawieniuZaX}
-L_i(x)=\prod\limits_{k=0, k\neq i}^n \frac{s-k}{i-k}=\phi_i(s)
+l_i(x)=\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}=\psi_i(s)
 \end{equation}
-$\phi_i(s)$ to nasza nowa funkcja zmiennej $s$.
+$\psi_i(s)$ to nasza nowa funkcja zmiennej $s$.
 
 
+Ca³kê z równania (\ref{wspolczynnikAi}) obliczymy metod¹ ca³kowania przez podstawienie. Skorzystamy z przedstawionego przed chwil¹ podstawienia $x=a+hs$ oraz równania (\ref{WielomianLagrangeaPoPodstawieniuZaX})\\
 
-
-
-Obliczamy ca³kê z równania (\ref{wspolczynnikAi}) metod¹ przez podstawienie stosuj¹c podstawienie z poprzedniego slajdu tzn. $x=a+hs$ oraz równanie (\ref{WielomianLagrangeaPoPodstawieniuZaX})
-
-$a_i=\int\limits_a^b L_i(x) dx=\left\{\begin{array}{ll}
+$a_i=\int\limits_a^b l_i(x) dx=\left\{\begin{array}{ll}
 x=a+hs\\
 dx=h ds\\
 b=a+hs \Rightarrow \frac{b-a}{h}=s\Rightarrow s=n\\
 a=a+hs \Rightarrow 0=hs \Rightarrow s=0
-\end{array}\right\}=$
-\\$=h\int\limits_0^n \phi_i(s)ds
-$
+\end{array}\right\}=h\int\limits_0^n \psi_i(s)ds
+$\\
 
-
-
-
-Chcemy wyliczyæ teraz wartoœci wspó³czynników $a_0$ i $a_1$ dla wielomianu \textit{Lagrange'a} rzêdu $n=1$
-\\$a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\int\limits_0^1(1-s)ds= h[s-\frac{s^2}{2}]_0^1=\frac{h}{2}$
-\\$a_1=h\int\limits_0^1 \phi_1(s) ds=h\int\limits_0^1\frac{s-0}{1-0}ds=\int\limits_0^1(s)ds= h[\frac{s^2}{2}]_0^1=\frac{h}{2}$
-\\Po wstawieniu wyliczonych wspó³czynników do (\ref{WzorKwadratura}) otrzymujemy\\ 
+Chcemy wyliczyæ teraz wartoœci wspó³czynników kwadratury $a_0$ i $a_1$. Pamiêtamy o tym, ¿e  do obliczeñ wykorzystujemy postaæ wielomianu \textit{Lagrange'a} rzêdu $n=1$, zatem bêdziemy ca³kowali w granicach $[0,n]=[0,1]$
+$$a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\int\limits_0^1(1-s)ds= h\left[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
+$$a_1=h\int\limits_0^1 \phi_1(s) ds=h\int\limits_0^1\frac{s-0}{1-0}ds=\int\limits_0^1(s)ds= h\left[\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
+Po wstawieniu wyliczonych wspó³czynników do (\ref{WzorKwadratura}) otrzymujemy 
 \begin{equation}\label{wzorTrapezowBrakPodzialu}
 \begin{array}{cc}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^1 a_if(x_i)=a_0f(x_0)+a_1f(x_1)=\\
 =\frac{h}{2}f(x_0)+\frac{h}{2}f(x_1)=\frac{h}{2}(f(x_0)+f(x_1))
 \end{array}
 \end{equation}
+Wzór ten nazywamy \textbf{wzorem trapezów}.
+%Gdybyœmy wyliczali wspó³czynniki dla $n=2$, to otrzymalibyœmy wzór \textit{Simpsona}
 
-Wzór ten nazywamy \textbf{wzorem trapezów}. Gdybyœmy wyliczali wspó³czynniki dla $n=2$, to otrzymalibyœmy wzór \textit{Simpsona}
-
-
-
-Je¿eli przedzia³ ca³kowania $<a,b>$ podzielimy na $\geq 2$ równe czêœci takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, to wzór przyjmie postaæ \\
+Podczas wyznaczania (\ref{wzorTrapezowBrakPodzialu}) przyjêliœmy, ¿e przedzia³ ca³kowania nie zosta³ podzielony, a jedynymi wêz³ami by³y jego pocz¹tek i koniec. W rzeczywistoœci rozpatrujemy przypadki z wielokrotnym podzia³em przedzia³u. Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, to wzór przyjmie postaæ:
 \begin{equation}\label{OgolnyWzorTrapezow}
 \begin{array}{cc}
 \int\limits_a^b f(x)dx\approx (\frac{h}{2}(f(a)+f(x_1))+\cdots+\frac{h}{2}(f(x_{n-1})+f(b)))=\\
-\frac{h}{2}(f(a)+2f(x1)+\cdots+2f(x_{n-1})+f(b))
-
+=\frac{h}{2}(f(a)+2f(x1)+\cdots+2f(x_{n-1})+f(b))
 \end{array}
 \end{equation}
 
 
-
+---------------OD TAD NIE POPRAWIANE:
 Wzór trapezów jak sama nazwa wskazuje korzysta z trapezów, a dok³adniej mówi¹c z pól trapezów. Przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o wysokoœci $h$ ( kroku pomiêdzy kolejnymi krañcami podprzedzia³ów przedzia³u $<a,b>$ podzielonego tak, ¿e $a=x_0\leq x_1 <x_1<x_2<\ldots<x_n=b$) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$
  \begin{center}  
   	\includegraphics[scale=0.13]{MetodaTrapezow.eps} \\

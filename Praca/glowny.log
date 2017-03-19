@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  19 MAR 2017 21:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  20 MAR 2017 00:10
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -894,14 +894,24 @@ File: R1.eps Graphic file (type eps)
 Rozdzia\l  2.
 [12
 
-] [13]
-File: MetodaTrapezow.eps Graphic file (type eps)
- <MetodaTrapezow.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[14]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [15]
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--74
+
+ []
+
+[13]
+File: MetodaTrapezow.eps Graphic file (type eps)
+ <MetodaTrapezow.eps> [14]
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [15]
 Rozdzia\l  3.
 ) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [16
 
@@ -930,12 +940,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12577 strings out of 493922
- 185520 string characters out of 3144896
- 289241 words of memory out of 3000000
- 15649 multiletter control sequences out of 15000+200000
+ 12578 strings out of 493922
+ 185540 string characters out of 3144896
+ 289353 words of memory out of 3000000
+ 15650 multiletter control sequences out of 15000+200000
  55895 words of font info for 68 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,12n,77p,655b,6134s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (20 pages, 64072 bytes).
+Output written on glowny.dvi (20 pages, 65000 bytes).
