@@ -82,25 +82,29 @@ Po wstawieniu wyliczonych wspó³czynników do (\ref{WzorKwadratura}) otrzymujemy
 =\frac{h}{2}f(x_0)+\frac{h}{2}f(x_1)=\frac{h}{2}(f(x_0)+f(x_1))
 \end{array}
 \end{equation}
-Wzór ten nazywamy \textbf{wzorem trapezów}.
+Wzór ten nazywamy \textbf{wzorem trapezów}. Zauwa¿my, ¿e suma wspó³czynników $\alpha_0$,$\alpha_1$ jest równa $h\cdot n$. W póŸniejszych podrozdzia³ach równie¿ zetkniemy siê z tak¹ prawid³owoœci¹ rozpatruj¹c wy¿szy rz¹d wielomianów \textit{Lagrange'a} dla $n>1$.
 %Gdybyœmy wyliczali wspó³czynniki dla $n=2$, to otrzymalibyœmy wzór \textit{Simpsona}
 
-Podczas wyznaczania (\ref{wzorTrapezowBrakPodzialu}) przyjêliœmy, ¿e przedzia³ ca³kowania nie zosta³ podzielony, a jedynymi wêz³ami by³y jego pocz¹tek i koniec. W rzeczywistoœci rozpatrujemy przypadki z wielokrotnym podzia³em przedzia³u. Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, to wzór przyjmie postaæ:
+Podczas wyznaczania (\ref{wzorTrapezowBrakPodzialu}) przyjêliœmy, ¿e przedzia³ ca³kowania nie zosta³ podzielony, a jedynymi wêz³ami by³y jego pocz¹tek i koniec. W rzeczywistoœci rozpatrujemy przypadki z wielokrotnym podzia³em przedzia³u. %Dzieje siê tak, poniewa¿ im wiêcej podzia³ów dokonamy tym dok³adniejszy bêdzie uzyskany wynik. 
+Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, to wzór przyjmie postaæ:
 \begin{equation}\label{OgolnyWzorTrapezow}
 \begin{array}{cc}
-\int\limits_a^b f(x)dx\approx (\frac{h}{2}(f(a)+f(x_1))+\cdots+\frac{h}{2}(f(x_{n-1})+f(b)))=\\
-=\frac{h}{2}(f(a)+2f(x1)+\cdots+2f(x_{n-1})+f(b))
+\int\limits_a^b f(x)dx=\sum\limits_{i=0}^{n-1}\int\limits_{x_i}^{x_{i+1}}f(x)dx\approx\\ \approx(\frac{h}{2}(f(x_0)+f(x_1))+\cdots+\frac{h}{2}(f(x_{n-1})+f(x_n)))=\\
+=\frac{h}{2}(f(x_0)+2f(x_1)+\cdots+2f(x_{n-1})+f(x_n))=\\ 
+=\frac{h}{2}\sum\limits_{i=0}^{n-1}[f(x_i)+f(x_{i+1})]
 \end{array}
 \end{equation}
 
 
----------------OD TAD NIE POPRAWIANE:
-Wzór trapezów jak sama nazwa wskazuje korzysta z trapezów, a dok³adniej mówi¹c z pól trapezów. Przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o wysokoœci $h$ ( kroku pomiêdzy kolejnymi krañcami podprzedzia³ów przedzia³u $<a,b>$ podzielonego tak, ¿e $a=x_0\leq x_1 <x_1<x_2<\ldots<x_n=b$) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$
- \begin{center}  
-  	\includegraphics[scale=0.13]{MetodaTrapezow.eps} \\
-  \end{center}
+W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ek sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e zrozumieæ nam zagadnienie, któremu poœwiêcony jest ten podrozdzia³.
 
-
+\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.13]{R2.eps} 
+		\end{center}
+	   \caption{Graficzne przedstawienie idei zastosowania wzoru trapezów do ca³kowania}
+\label{R1}
+\end{figure}
 
 
 Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ dzielimy na n=4 równe czêœci. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  20 MAR 2017 00:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  20 MAR 2017 20:12
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -691,7 +691,11 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bbding\bbding.sty"
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 )
-("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
+("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux"
+
+LaTeX Warning: Label `R1' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -706,8 +710,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 53.
 LaTeX Font Info:    Try loading font information for OT4+cmr on input line 53.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\ot4cmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\ot4cmr.fd"
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    ... okay on input line 53.
@@ -905,9 +908,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--74
  []
 
 [13]
-File: MetodaTrapezow.eps Graphic file (type eps)
- <MetodaTrapezow.eps> [14]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+File: R2.eps Graphic file (type eps)
+ <R2.eps> [14]
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
@@ -932,7 +935,11 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: 3F4E548190FDB07D681F5C7A60A3A205;1158.
+(rerunfilecheck)             Checksum: 9B0A847009C47D03FA40CFFDB4489E1D;1158.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  )
 (\end occurred inside a group at level 1)
@@ -941,11 +948,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
 ### bottom level 
 Here is how much of TeX's memory you used:
  12578 strings out of 493922
- 185540 string characters out of 3144896
- 289353 words of memory out of 3000000
+ 185516 string characters out of 3144896
+ 289409 words of memory out of 3000000
  15650 multiletter control sequences out of 15000+200000
  55895 words of font info for 68 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,12n,77p,655b,6134s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (20 pages, 65000 bytes).
+Output written on glowny.dvi (20 pages, 66224 bytes).
