@@ -96,8 +96,7 @@ Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿
 \end{equation}
 
 
-W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ek sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e zrozumieæ nam zagadnienie, któremu poœwiêcony jest ten podrozdzia³.
-
+W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ek sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, któremu poœwiêcony jest ten podrozdzia³.
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.13]{R2.eps} 
@@ -106,15 +105,30 @@ W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wa
 \label{R1}
 \end{figure}
 
+-------------OD TAD POPRAWIC,Dodaæ wstêp przed przyk³adem, rozszerzyæ przyk³ad do n=6, opisac wzor na b³¹d metody trapezów, dodaæ procedurê licz¹ca z wzoru trapezów, porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik-------- 
 
-Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ dzielimy na n=4 równe czêœci. 
+\begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\hfill
+\textit{Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ dzielimy na n=4 równe czêœci(5 wêz³ów)}
 
 $h=\frac{1-0}{4}=\frac{1}{4}$, $x_0=0$, $x_1=0.25$, $x_2=0.5$, $x_3=0.75$, $x_4=1$.\\ Do rozwi¹zania zadania sorzystamy ze wzoru (\ref{OgolnyWzorTrapezow})\\
 \begin{center}
 $\int\limits_0^1 e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+f(x_4))=$\\
 $=\frac{1}{8}(e^0+2e^{\frac{1}{16}}+2e^{\frac{1}{4}}+2e^{\frac{9}{16}}+e)\approx 1.49068$\\
 \end{center}
-Wartoœæ dok³adna wynosi 1.46265, zatem ró¿nica w wyniku jest nieznaczna. Ponadto im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejszy otrzymamy wynik.
+Wartoœæ dok³adna wynosi 1.46265, zatem ró¿nica w wyniku jest nieznaczna.
+\end{ex}
+Im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejszy otrzymamy wynik. Wynika to bezpoœrednio ze wzoru na b³¹d metody trapezów. Wygl¹da on nastêpuj¹co:
+\begin{definition}{(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
+\begin{equation}
+\mathbf{\delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2},
+\end{equation}
+gdzie 
+\begin{equation}
+\mathbf{M_2= \sup_{x \in [a,b]} \, | f^{''}(x) |}
+\end{equation}
+
+\end{definition}
+
 
 
 
