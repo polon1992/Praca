@@ -96,7 +96,7 @@ Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿
 \end{equation}
 
 
-W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ek sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, któremu poœwiêcony jest ten podrozdzia³.
+W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, na którym siê skupiamy.
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.13]{R2.eps} 
@@ -105,29 +105,52 @@ W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wa
 \label{R1}
 \end{figure}
 
--------------OD TAD POPRAWIC,Dodaæ wstêp przed przyk³adem, rozszerzyæ przyk³ad do n=6, opisac wzor na b³¹d metody trapezów, dodaæ procedurê licz¹ca z wzoru trapezów, porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik-------- 
+PrzejdŸmy do praktycznego zastosowania wzoru (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla zadanej funkcji przeprowadzimy rêcznie przy relatywnie ma³ej liczbie podzia³u przedzia³ów, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla du¿o wiêkszej liczby podzia³u. 
+
 
 \begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\hfill
-\textit{Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ dzielimy na n=4 równe czêœci(5 wêz³ów)}
+\textit{Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów)}\\
 
-$h=\frac{1-0}{4}=\frac{1}{4}$, $x_0=0$, $x_1=0.25$, $x_2=0.5$, $x_3=0.75$, $x_4=1$.\\ Do rozwi¹zania zadania sorzystamy ze wzoru (\ref{OgolnyWzorTrapezow})\\
+Do rozwi¹zania zadania skorzystamy z ogólnego wzoru trapezów. Wyznaczamy wartoœci wêz³ów oraz odleg³oœ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
+$h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\ 
+Wyliczone wartoœci wstawiamy do (\ref{OgolnyWzorTrapezow}):
 \begin{center}
-$\int\limits_0^1 e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+f(x_4))=$\\
-$=\frac{1}{8}(e^0+2e^{\frac{1}{16}}+2e^{\frac{1}{4}}+2e^{\frac{9}{16}}+e)\approx 1.49068$\\
+$\int\limits_0^{\frac{3}{2}} e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+2f(x_4)+2f(x_5)+f(x_6))=$\\
+$=\frac{1}{8}(e^0+2e^{\frac{1}{4}}+2e^{\frac{2}{4}}+2e^{\frac{3}{4}}+2e^1+2e^\frac{5}{4}+e^{\frac{6}{4}})\approx \frac{1}{8}(1+2\cdot 1,28403+2\cdot 1,64872+2\cdot 2,11700+2\cdot 2,71828+2\cdot 3,49034+4,48168)\approx 3,4998$\\
 \end{center}
-Wartoœæ dok³adna wynosi 1.46265, zatem ró¿nica w wyniku jest nieznaczna.
+Wartoœæ dok³adna wynosi w zaokr¹gleniu 4,063114. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów!
 \end{ex}
-Im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejszy otrzymamy wynik. Wynika to bezpoœrednio ze wzoru na b³¹d metody trapezów. Wygl¹da on nastêpuj¹co:
+
+
+Im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze otrzymamy przybli¿enie. Wynika to bezpoœrednio ze wzoru na b³¹d metody trapezów:
 \begin{definition}{(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
+Niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^2$ na $[a,b]$, oraz niech $n$ wyznacza iloœæ podzia³ów tego przedzia³u, to b³¹d metody trapezów wyra¿a nastêpuj¹cy wzór: 
 \begin{equation}
-\mathbf{\delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2},
+\delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2,
 \end{equation}
 gdzie 
 \begin{equation}
-\mathbf{M_2= \sup_{x \in [a,b]} \, | f^{''}(x) |}
+M_2= \sup_{x \in [a,b]} \, | f^{''}(x) |
 \end{equation}
 
 \end{definition}
+Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku Maple. Pos³u¿y nam ona do obliczania przybli¿onych wartoœci ca³ek oznaczonych metod¹ trapezów:
+
+\begin{proc}{(Procedura obliczaj¹ca wartoœci ca³ek metod¹ trapezów)}
+\begin{verbatim}
+> trapez:=proc(a,b,N) 
+local h,j,k,x,y,t,tp; 
+h:=(b-a)/N; 
+for j from 0 to N do x:= j -> a+j*h od;  
+for j from 0 to N do y:= j -> f(x(j)) od;  
+t:= h/2 * sum(y(k)+y(k+1), k=0..N-1); 
+tp:=evalf(t,12); 
+end;
+\end{verbatim}
+\end{proc}
+Przeanalizujmy wyniki otrzymane nastêpuj¹c¹ procedur¹ dla $n=6$ podzia³ów oraz $n=100$ podzia³ów
+
+%-------------DODAC: opis procedury na wzor trapezow, porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik, pokazaæ ze mozna wyliczyæ minimaln¹ liczbê podzia³u przedzia³ów by otrzymaæ wynik z maksymalnie okreslonym bledem-------- 
 
 
 
