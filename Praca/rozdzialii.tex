@@ -116,13 +116,14 @@ $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{
 Wyliczone wartoœci wstawiamy do (\ref{OgolnyWzorTrapezow}):
 \begin{center}
 $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+2f(x_4)+2f(x_5)+f(x_6))=$\\
-$=\frac{1}{8}(e^0+2e^{\frac{1}{4}}+2e^{\frac{2}{4}}+2e^{\frac{3}{4}}+2e^1+2e^\frac{5}{4}+e^{\frac{6}{4}})\approx \frac{1}{8}(1+2\cdot 1,28403+2\cdot 1,64872+2\cdot 2,11700+2\cdot 2,71828+2\cdot 3,49034+4,48168)\approx 3,4998$\\
+$=\frac{1}{8}(e^0+2e^{{(\frac{1}{4})}^2}+2e^{{(\frac{2}{4})}^2}+2e^{{(\frac{3}{4})}^2}+2e^1+2e^{{(\frac{5}{4})}^2}+e^{{(\frac{6}{4})}^2})\approx 
+\frac{1}{8}(1+2\cdot 1,06449+2\cdot 1,28402+2\cdot 1,75505+2\cdot  2,71828+2\cdot 4,77073+9,48773)\approx 4,20911$\\
 \end{center}
-Wartoœæ dok³adna wynosi w zaokr¹gleniu 4,063114. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów!
+Wartoœæ dok³adna wynosi w zaokr¹gleniu $4,063114$. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów, poniewa¿ otrzymany przez nas wynik to $4,20911$.
 \end{ex}
 
 
-Im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze otrzymamy przybli¿enie. Wynika to bezpoœrednio ze wzoru na b³¹d metody trapezów:
+Im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze otrzymamy przybli¿enie. Mo¿na wnioskowaæ w ten sposób równie¿ poddaj¹c siê na analizie wzoru na b³¹d metody trapezów (im wiêkszy $n$ tym mniejsza wartoœæ $\delta_T$):
 \begin{definition}{(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
 Niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^2$ na $[a,b]$, oraz niech $n$ wyznacza iloœæ podzia³ów tego przedzia³u, to b³¹d metody trapezów wyra¿a nastêpuj¹cy wzór: 
 \begin{equation}
@@ -148,9 +149,10 @@ tp:=evalf(t,12);
 end;
 \end{verbatim}
 \end{proc}
+---------OPIS PROCEDURY+przerobic j¹ \\
 Przeanalizujmy wyniki otrzymane nastêpuj¹c¹ procedur¹ dla $n=6$ podzia³ów oraz $n=100$ podzia³ów
 
-%-------------DODAC: opis procedury na wzor trapezow, porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik, pokazaæ ze mozna wyliczyæ minimaln¹ liczbê podzia³u przedzia³ów by otrzymaæ wynik z maksymalnie okreslonym bledem-------- 
+-------------DODAC: opis procedury na wzor trapezow, porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik, pokazaæ ze mozna wyliczyæ minimaln¹ liczbê podzia³u przedzia³ów by otrzymaæ wynik z maksymalnie okreslonym bledem-------- 
 
 
 

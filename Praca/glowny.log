@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  22 MAR 2017 00:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  22 MAR 2017 01:02
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -916,26 +916,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--113
  []
 
 [15]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 140.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 141.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
-("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [16]
+("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [16] [17]
 Rozdzia\l  3.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [17
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [18
 
 ]
 Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [18
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [19
 
-]) [19
+]) [20
 
-] [20
+] [21
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
 
-[21]
+[22]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 128.
@@ -959,6 +959,6 @@ Here is how much of TeX's memory you used:
  15683 multiletter control sequences out of 15000+200000
  56217 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,77p,655b,6155s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,77p,655b,6163s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (21 pages, 70824 bytes).
+Output written on glowny.dvi (22 pages, 72208 bytes).
