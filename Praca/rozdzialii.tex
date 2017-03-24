@@ -108,7 +108,7 @@ W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wa
 PrzejdŸmy do praktycznego zastosowania wzoru (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla zadanej funkcji przeprowadzimy rêcznie przy relatywnie ma³ej liczbie podzia³u przedzia³ów, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla du¿o wiêkszej liczby podzia³u. 
 
 
-\begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\hfill
+\begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\label{PrzykladCalkaPojedynczaMetodaTrapezow}\hfill
 \textit{Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów)}\\
 
 Do rozwi¹zania zadania skorzystamy z ogólnego wzoru trapezów. Wyznaczamy wartoœci wêz³ów oraz odleg³oœ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
@@ -123,21 +123,21 @@ Wartoœæ dok³adna wynosi w zaokr¹gleniu $4,063114$. Jak widaæ ró¿nica w wyniku je
 \end{ex}
 
 
-Im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze otrzymamy przybli¿enie. Mo¿na wnioskowaæ w ten sposób równie¿ poddaj¹c siê na analizie wzoru na b³¹d metody trapezów (im wiêkszy $n$ tym mniejsza wartoœæ $\delta_T$):
+Z regu³y im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze powinniœmy otrzymamy przybli¿enie. Mo¿na wnioskowaæ w ten sposób równie¿ poddaj¹c siê na analizie wzoru na b³¹d metody trapezów (im wiêkszy $n$ tym mniejsza wartoœæ $\delta_T$):
 \begin{definition}{(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
 Niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^2$ na $[a,b]$, oraz niech $n$ wyznacza iloœæ podzia³ów tego przedzia³u, to b³¹d metody trapezów wyra¿a nastêpuj¹cy wzór: 
-\begin{equation}
+\begin{equation}\label{BladMetodyTrapezow}
 \delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2,
 \end{equation}
 gdzie 
-\begin{equation}
+\begin{equation}\label{CzynnikM2DoBleduMetodyTrapezow}
 M_2= \sup_{x \in [a,b]} \, | f^{''}(x) |
 \end{equation}
 
 \end{definition}
-Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku Maple. Pos³u¿y nam ona do obliczania przybli¿onych wartoœci ca³ek oznaczonych metod¹ trapezów:
+Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku Maple. Pos³u¿y nam ona do zautomatyzowania procesu obliczania przybli¿onych wartoœci ca³ek oznaczonych metod¹ trapezów:
 
-\begin{proc}{(Procedura obliczaj¹ca wartoœci ca³ek metod¹ trapezów)}
+\begin{proc}{(Procedura wyznaczaj¹ca wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapez:=proc(a,b,N) 
 local h,j,k,x,y,t,tp; 
@@ -149,14 +149,50 @@ tp:=evalf(t,12);
 end;
 \end{verbatim}
 \end{proc}
----------OPIS PROCEDURY+przerobic j¹ \\
-Przeanalizujmy wyniki otrzymane nastêpuj¹c¹ procedur¹ dla $n=6$ podzia³ów oraz $n=100$ podzia³ów
 
--------------DODAC: opis procedury na wzor trapezow, porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik, pokazaæ ze mozna wyliczyæ minimaln¹ liczbê podzia³u przedzia³ów by otrzymaæ wynik z maksymalnie okreslonym bledem-------- 
+\hspace{-1cm}{Przed przejœciem do prezentacji wyników jakie zwróci powy¿sza procedura, nale¿y wyjaœniæ nieco jej zasadê dzia³ania i znaczenie parametrów.}
+
+\hspace{-1cm}{Pierwsza linia jest deklaracj¹ procedury \textit{trapez} z nastêpuj¹cymi parametrami wejœciowymi:}\\
+\textbf{a}, \textbf{b} - s¹ odpowiednio dolnym i górnym krañcem przedzia³u ca³kowania\\
+\textbf{N} - okreœla liczbê podprzedzia³ów na które podzielony zostanie nasz przedzia³ $[a,b]$\\
+Kolejno deklarujemy zmienne pomocnicze z których korzysta procedura ( nie pobierane od u¿ytkownika) oraz wyznaczamy wartoœæ kroku $h$, czyli odleg³oœæ pomiêdzy dwoma kolejnymi wêz³ami. Nastêpnie wyznaczamy wszystkie wêz³y na danym przedziale oraz wyliczamy wartoœci (deklarowanej przed wywo³ywaniem procedury) funkcji $f$ w tych¿e wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci w sposób zgodny ze wzorem (\ref{OgolnyWzorTrapezow}). Algorytm koñczymy poprzez przekszta³cenie sumy do "przyjaznej" \,postaci i prezentacjê wyniku z dok³adnoœci¹ do 12 miejsc po przecinku. 
+
+
+Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów $N$. Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|W-W_{trapez}|$). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 6 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,063114$.  \\
+
+\begin{table}[h!]
+\label{WynikiZProceduryTrapez}
+\centering
+ \begin{tabular}{|c|c|c|c|} 
+ \hline
+ $\mathbf{N}$ & $\mathbf{W_{trapez}}$ &$\mathbf{\delta_T}$& $\mathbf{|W-W_{trapez}|}$  \\ [0.5ex] 
+ \hline \hline
+ 6 &  &  &  \\ 
+ \hline
+ 30&  &  & \\
+ \hline 
+ 100&  &  &  \\
+ \hline 
+ 200&  &  &  \\
+ \hline 
+ 400&  &  & \\ 
+  \hline 
+ 800&  &  & \\
+  \hline 
+ 1200&  &  & \\
+  \hline 
+ 2000&  &  & \\
+  \hline 
+ 5000&  &  & \\[0.5ex] 
+ \hline 
+ \end{tabular}
+\end{table}
+
+-------------DODAC:  porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik, pokazaæ ze mozna wyliczyæ minimaln¹ liczbê podzia³u przedzia³ów by otrzymaæ wynik z maksymalnie okreslonym bledem-------- 
 
 
 
 
 \section{Wzór Simpsona}
-\section{Wzór 'prostok¹tów'}
+\section{Wzór prostok¹tów}
 
