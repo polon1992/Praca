@@ -119,13 +119,17 @@ $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(
 $=\frac{1}{8}(e^0+2e^{{(\frac{1}{4})}^2}+2e^{{(\frac{2}{4})}^2}+2e^{{(\frac{3}{4})}^2}+2e^1+2e^{{(\frac{5}{4})}^2}+e^{{(\frac{6}{4})}^2})\approx 
 \frac{1}{8}(1+2\cdot 1,06449+2\cdot 1,28402+2\cdot 1,75505+2\cdot  2,71828+2\cdot 4,77073+9,48773)\approx 4,20911$\\
 \end{center}
-Wartoœæ dok³adna wynosi w zaokr¹gleniu $4,063114$. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów, poniewa¿ otrzymany przez nas wynik to $4,20911$.
+Wartoœæ dok³adna wynosi w zaokr¹gleniu $4,06311405862$. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów, poniewa¿ otrzymany przez nas wynik to $4,20911$.
 \end{ex}
 
 
 Z regu³y im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze powinniœmy otrzymamy przybli¿enie. Mo¿na wnioskowaæ w ten sposób równie¿ poddaj¹c siê na analizie wzoru na b³¹d metody trapezów (im wiêkszy $n$ tym mniejsza wartoœæ $\delta_T$):
 \begin{definition}{(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
-Niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^2$ na $[a,b]$, oraz niech $n$ wyznacza iloœæ podzia³ów tego przedzia³u, to b³¹d metody trapezów wyra¿a nastêpuj¹cy wzór: 
+Przyjmijmy, ¿e $BBT_n$ oznacza b³¹d bezwzglêdny przybli¿enia(ró¿nica pomiêdzy wartoœci¹ dok³adn¹ i przybli¿on¹ ca³ki). Ponadto niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^2$ na $[a,b]$, oraz $n$ wyznacza iloœæ podzia³ów tego przedzia³u, wtedy spe³niona jest nastêpuj¹ca nierównoœæ:
+\begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaT}
+|BBT_n|\leq\delta_T
+\end{equation}
+Symbol $\delta_T$ oznacza b³¹d metody trapezów i wyra¿a j¹ nastêpuj¹cy wzór: 
 \begin{equation}\label{BladMetodyTrapezow}
 \delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2,
 \end{equation}
@@ -134,17 +138,18 @@ gdzie
 M_2= \sup_{x \in [a,b]} \, | f^{''}(x) |
 \end{equation}
 
+
 \end{definition}
 Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku Maple. Pos³u¿y nam ona do zautomatyzowania procesu obliczania przybli¿onych wartoœci ca³ek oznaczonych metod¹ trapezów:
 
-\begin{proc}{(Procedura wyznaczaj¹ca wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
+\begin{proc}{(Wznaczanie wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
-> trapez:=proc(a,b,N) 
+> trapez:=proc(a,b,n) 
 local h,j,k,x,y,t,tp; 
-h:=(b-a)/N; 
-for j from 0 to N do x:= j -> a+j*h od;  
-for j from 0 to N do y:= j -> f(x(j)) od;  
-t:= h/2 * sum(y(k)+y(k+1), k=0..N-1); 
+h:=(b-a)/n; 
+for j from 0 to n do x:= j -> a+j*h od;  
+for j from 0 to n do y:= j -> f(x(j)) od;  
+t:= h/2 * sum(y(k)+y(k+1), k=0..n-1); 
 tp:=evalf(t,12); 
 end;
 \end{verbatim}
@@ -154,43 +159,84 @@ end;
 
 \hspace{-1cm}{Pierwsza linia jest deklaracj¹ procedury \textit{trapez} z nastêpuj¹cymi parametrami wejœciowymi:}\\
 \textbf{a}, \textbf{b} - s¹ odpowiednio dolnym i górnym krañcem przedzia³u ca³kowania\\
-\textbf{N} - okreœla liczbê podprzedzia³ów na które podzielony zostanie nasz przedzia³ $[a,b]$\\
+\textbf{n} - okreœla liczbê podprzedzia³ów na które podzielony zostanie nasz przedzia³ $[a,b]$\\
 Kolejno deklarujemy zmienne pomocnicze z których korzysta procedura ( nie pobierane od u¿ytkownika) oraz wyznaczamy wartoœæ kroku $h$, czyli odleg³oœæ pomiêdzy dwoma kolejnymi wêz³ami. Nastêpnie wyznaczamy wszystkie wêz³y na danym przedziale oraz wyliczamy wartoœci (deklarowanej przed wywo³ywaniem procedury) funkcji $f$ w tych¿e wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci w sposób zgodny ze wzorem (\ref{OgolnyWzorTrapezow}). Algorytm koñczymy poprzez przekszta³cenie sumy do "przyjaznej" \,postaci i prezentacjê wyniku z dok³adnoœci¹ do 12 miejsc po przecinku. 
 
 
-Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów $N$. Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|W-W_{trapez}|$). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 6 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,063114$.  \\
+Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów $n$. Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|BBT_n|$, zgodnie z (\ref{NierownoscBBPrzyblizenia<=DeltaT})). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 11 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,06311405862$.  \\
 
 \begin{table}[h!]
-\label{WynikiZProceduryTrapez}
+
+
 \centering
  \begin{tabular}{|c|c|c|c|} 
  \hline
- $\mathbf{N}$ & $\mathbf{W_{trapez}}$ &$\mathbf{\delta_T}$& $\mathbf{|W-W_{trapez}|}$  \\ [0.5ex] 
+ $\mathbf{n}$ & $\mathbf{W_{trapez}}$ & $\mathbf{|BBT_n|}$ &$\mathbf{\delta_T}$ \\ [0.5ex] 
  \hline \hline
- 6 &  &  &  \\ 
+ 6 & 4,20911436529  & 0,146000306 &  0,815352298  \\ 
  \hline
- 30&  &  & \\
+ 30& 4,06904019209  & 0,005926133  & 0,032614091 \\
  \hline 
- 100&  &  &  \\
+ 100& 4,06364771371  &0,000533655 & 0,002935268  \\
  \hline 
- 200&  &  &  \\
+ 200& 4,06324747807 & 0,000133419 &  0,000733817  \\
  \hline 
- 400&  &  & \\ 
+ 400& 4,06314741384 & 0,000033355 &  0,000183454 \\ 
   \hline 
- 800&  &  & \\
+ 800& 4,06312239755  &0,000008339 & 0,000045863 \\
   \hline 
- 1200&  &  & \\
+ 1200& 4,06311776480 & 0,000003706  &0,000020383 \\
   \hline 
- 2000&  &  & \\
+ 2000& 4,06311539304  & 0,000001334 &0,000007338 \\
   \hline 
- 5000&  &  & \\[0.5ex] 
+ 5000& 4,06311427243 & 0,000000213  &0,000001174 \\
+  \hline 
+ 10000& 4,06311411177 & 0,000000053 &0,000000293 \\
+  \hline 
+ 30000& 4,06311406426 & 0,000000005 &0,000000032 \\
+  \hline 
+ 50000& 4,06311406037 & 0,000000002 &0,000000011 \\
+  \hline 
+ 70000& 4,06311406006 & 0.000000001 &0,000000005 \\[0.5ex] 
  \hline 
- \end{tabular}
+ \end{tabular}\\\hfill
+ \caption{Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki wzorem trapezów}
+ \label{WynikiZProceduryTrapez}
 \end{table}
+Na podstawie powy¿szych pomiarów mo¿emy uznaæ i¿ nasze przewidywania odnoœnie tego, ¿e w miarê wzrostu wartoœci $n$ wynik bêdzie coraz dok³adniejszy okazuj¹ siê byæ trafne. Procedura generuje prawid³owe wyniki, co mo¿na potwierdziæ tym, ze dla $n=6$ wartoœæ obliczona "{rêcznie}"\, jest taka sama jak otrzymana w trakcie badañ. Zauwa¿my, ¿e ju¿ przy $n\geq 100$ wynik zaczyna byæ dosyæ mocno zbli¿ony do dok³adnego - ró¿nice pojawiaj¹ siê dopiero na 4 miejscu po przecinku.
+Uwagê nale¿y skupiæ równie¿ na wartoœciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_T}$ z tablicy \ref{WynikiZProceduryTrapez}. Po ich dok³adnej analizie jesteœmy w stanie zauwa¿yæ, ¿e $\mathbf{|BBT_n|}$ jest zawsze wiêksze od $\mathbf{\delta_T}$. Nie ma znaczenia to, jaki $n$ przyjêliœmy. Nie jest to jednak przypadkowa zale¿noœæ. Fakt ten w pe³ni wyjaœnia nam definicja \ref{BladMetodyTrapezow}. Wartoœæ $\delta_T$ zosta³a wyznaczona przy wykorzystaniu nastêpuj¹cego skryptu:
 
--------------DODAC:  porównaæ wyniki otrzymane metod¹ trapezów dla n=6 liczone recznie i dla duzego n liczonego procedur¹, pokazaæ ze im wiêksza liczba podzia³ów tym dok³adniejszy wynik, pokazaæ ze mozna wyliczyæ minimaln¹ liczbê podzia³u przedzia³ów by otrzymaæ wynik z maksymalnie okreslonym bledem-------- 
+\begin{proc}{(Wyznaczanie b³êdu przybli¿enia dla metody trapezów)}
+\label{MAPLE_BladMetodyTrapezowCalkaPojedyncza}
+\begin{verbatim}
+> trapezBlad:= proc (a, b, n)
+local d2ff, simd2ff, M2, deltaT;
+d2ff:= diff(diff(f(x), x), x); 
+simd2ff:= simplify(d2ff); 
+M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b); 
+deltaT:= evalf(1/12*M2[1]*(b-a)^3/n^2) 
+end;
+\end{verbatim}
+\end{proc}    
+Procedura ta opiera siê na wzorach (\ref{BladMetodyTrapezow}) oraz (\ref{CzynnikM2DoBleduMetodyTrapezow}). Wynikiem jej dzia³ania jest wartoœæ b³êdu $\delta_T$ dla ca³ki z $f$ (funkcja musi zostaæ zdefiniowana przed wywo³aniem trapezBlad) liczonej w granicach $[a,b]$, i dokonanych $n$ podzia³ów tego przedzia³u. Parametry wejœciowe s¹ definiowane tak samo jak dla procedury \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}. Dok³adny opis algorytmu dla tego przypadku zostaje pominiêty. 
 
+Czêsto przeprowadzaj¹c obliczenia naukowe musimy zadbaæ o to, by wynik jaki otrzymamy by³ jak najdok³adniejszy i obci¹¿ony co najwy¿ej pewnym b³êdem, nie wiêkszym ni¿ dopuszczalny. Równie¿ wykorzystuj¹c wzór trapezów do ca³kowania numerycznego, mo¿emy kontrolowaæ wielkoœæ b³êdu, jaki pojawia siê podczas przybli¿ania wyniku. Sposobem na to jest odpowiedni dobór liczby podzia³ów przedzia³u ca³kowania. Poni¿sza procedura wskazuje nam, ile co najmniej owych podzia³ów powinniœmy dokonaæ, by wartoœæ b³êdu nie przekracza³a zdefiniowanej przez nas wartoœci.\\  
+ 
+\begin{proc}{(Wyznaczanie najmniejszej liczby $n$ podzia³ów przedzia³u ca³kowania tak, by wynik by³ obci¹¿ony b³êdem nie wiêkszym ni¿ zadany)}
+\label{MAPLE_najmniejszyNDlaMetodyTrapezowCalkaPojedyncza}
+\begin{verbatim}
+> trapeznMin:= proc (a, b, blad) 
+local d2ff, simd2ff, M2, nMin, p;
+d2ff:= diff(diff(f(x), x), x);
+simd2ff:= simplify(d2ff); 
+M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b);
+p:= solve*({1/12*(b-a)^3*M2[1]/n^2 < blad, 0 < n}, {n}); 
+nMin := p[1] 
+end;
+\end{verbatim}
+\end{proc}
 
+Powy¿sza procedura równie¿ korzysta ze wzorów (\ref{BladMetodyTrapezow}) i (\ref{CzynnikM2DoBleduMetodyTrapezow}). Jej parametry wejœciowe $a$ i $b$ s¹ tak jak poprzednio granicami ca³kowania pewnej funkcji $f$, natomiast $blad$ okreœla jaki b³¹d przybli¿enia jest przez nas maksymalnie akceptowalny. Kod znajduj¹cy siê wewn¹trz procedury kolejno oblicza $f^{''}(x)$ i upraszcza postaæ wyliczonej pochodnej. Nastêpnie szukana jest wartoœæ $M_2= \sup_{x \in [a,b]} \, | f^{''}(x) |$. Najwa¿niejszym elementem sk³adowym \textit{trapeznMin} jest jednak wyliczanie wartoœci dla zmiennej $p$. By j¹ wyznaczyæ rozwi¹zujemy nierównoœæ \mbox{$\frac{(b-a)^3}{12n^2} \cdot M_2<blad$} ze wzglêdu na $n$. Zak³adamy, ¿e interesuj¹ nas tylko $n>0$ ($n$ jest liczb¹ podzia³ów i musi byæ wartoœci¹ dodatni¹). Ostatnia linia odpowiada za prezentacjê obliczonej wartoœci $n$. Wynik pojawia siê w postaci $N>z$, gdzie $z$ jest liczb¹ ca³kowit¹ - zatem jako wynik traktowaæ bêdziemy najmniejsz¹ liczbê naturaln¹ wiêksz¹ od $z$.
 
 
 \section{Wzór Simpsona}
