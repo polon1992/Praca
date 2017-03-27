@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  18 MAR 2017 09:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  27 MAR 2017 16:15
 entering extended mode
 **rozdziali.tex
-("F:\SEMESTR 4\Seminarium (OlbryÅ›)\PracaMagisterska\rozdziali.tex"
+("F:\SEMESTR 4\PracaMagisterska\Praca\rozdziali.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -2897,10 +2897,28 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.43 	   \caption
-                 {Funkcja interpolacyjna $W(x)$ oraz interpolowana $f(x)$}
+                 {\cite{klucz3} Funkcja interpolacyjna $W(x)$ oraz interpolo...
+
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+Missing character: There is no [ in font nullfont!
+\citation{klucz3}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.43 	   \caption{\cite{klucz3}
+                                Funkcja interpolacyjna $W(x)$ oraz interpolo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz3' on page  undefined on input line 43.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2953,8 +2971,13 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 43--46
+[]
+ []
+
+
 Overfull \hbox (24.32642pt too wide) in paragraph at lines 43--46
-  $\OML/cmm/m/it/10 W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
+\OML/cmm/m/it/10 W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
  []
 
 
@@ -3492,10 +3515,31 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no œ in font nullfont!
 Missing character: There is no æ in font nullfont!
-Missing character: There is no : in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz3}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.65 ...zachodzi nastêpuj¹ca równoœæ \cite{klucz3}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz3' on page  undefined on input line 65.
+
+Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (6.00235pt too wide) in paragraph at lines 64--66
       $\OML/cmm/m/it/10 n$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 64--66
+[] 
  []
 
 
@@ -4537,6 +4581,8 @@ Missing character: There is no œ in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no : in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no K in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -4663,13 +4709,23 @@ Overfull \hbox (20.75691pt too wide) in paragraph at lines 85--88
  []
 
 
-Overfull \hbox (30.20134pt too wide) in paragraph at lines 85--88
-\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; x[] \OT1/cmr/m/n/10 =
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 85--88
+\OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (31.58745pt too wide) in paragraph at lines 85--88
-[]\OML/cmm/m/it/10 ; x[] \OT1/cmr/m/n/10 =
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 85--88
+\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 85--88
+[]$
+ []
+
+
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 85--88
+\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
@@ -4777,6 +4833,8 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no j in font nullfont!
 Missing character: There is no ê in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no : in font nullfont!
 
 Overfull \hbox (24.78477pt too wide) in paragraph at lines 90--92
@@ -4791,7 +4849,17 @@ Overfull \hbox (30.02084pt too wide) in paragraph at lines 90--92
 
 
 Overfull \hbox (13.59383pt too wide) in paragraph at lines 90--92
-\OML/cmm/m/it/10 e[]$ 
+\OML/cmm/m/it/10 e[]$
+ []
+
+
+Overfull \hbox (30.13304pt too wide) in paragraph at lines 90--92
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ] =
+ []
+
+
+Overfull \hbox (20.00002pt too wide) in paragraph at lines 90--92
+\OT1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1]$ 
  []
 
 
@@ -4920,8 +4988,8 @@ Overfull \hbox (33.51395pt too wide) in paragraph at lines 96--99
  []
 
 
-Overfull \hbox (19.46533pt too wide) in paragraph at lines 96--99
-\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
+Overfull \hbox (28.1945pt too wide) in paragraph at lines 96--99
+\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6)$
  []
 
 Missing character: There is no W in font nullfont!
@@ -5446,17 +5514,7 @@ Overfull \hbox (42.66885pt too wide) in paragraph at lines 100--106
 
  []
 
-Missing character: There is no N in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no W in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
@@ -5464,9 +5522,8 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no ¿ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no z in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no o in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no z in font nullfont!
@@ -5475,26 +5532,24 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no ³ in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no œ in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no ¿ in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no y in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -5684,13 +5739,13 @@ Overfull \hbox (37.18353pt too wide) in paragraph at lines 107--109
  []
 
 
-Overfull \hbox (102.16452pt too wide) detected at line 109
+Overfull \hbox (111.78967pt too wide) detected at line 109
 \OML/cmm/m/it/10 M[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f[
 ]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j
  []
 
 
-Overfull \hbox (98.02328pt too wide) detected at line 109
+Overfull \hbox (107.64844pt too wide) detected at line 109
 \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ![
 ]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OML/cmm
 /m/it/10 ;
@@ -5935,11 +5990,11 @@ Missing character: There is no h in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 36 strings out of 493922
- 598 string characters out of 3144896
+ 37 strings out of 493922
+ 561 string characters out of 3144896
  56031 words of memory out of 3000000
- 3425 multiletter control sequences out of 15000+200000
+ 3426 multiletter control sequences out of 15000+200000
  4653 words of font info for 17 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  20i,7n,21p,629b,129s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on rozdziali.dvi (1 page, 3200 bytes).
+Output written on rozdziali.dvi (1 page, 3204 bytes).
