@@ -14,17 +14,17 @@ Funkcjê podca³kow¹ zawsze mo¿emy zast¹piæ inn¹ funkcj¹ tak¹, ¿e w miarê mo¿liwoœ
 \end{equation}
 
 W praktyce czêsto spotkaæ mo¿emy siê z przypadkiem takim, ze do wyznaczenia przybli¿onych wartoœci $I(f)$  stosowane s¹ wzory nazywane kwadraturami. 
-Owe kwadratury opieraj¹ siê jedynie na wartoœciach $f(x)$ w punktach wêz³owych i mog¹ niezbyt dok³adnie przybli¿aæ wynik tzn: 
+Owe kwadratury opieraj¹ siê na wartoœciach $f(x)$ w punktach wêz³owych i mog¹ niezbyt dok³adnie przybli¿aæ wynik tzn: 
 \begin{equation}\label{WzorKwadratura}
-\int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n a_if(x_i),\,\,\,\, x_i\in[a,b],
+\int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n a_if(x_i)=S(f),\,\,\,\, x_i\in[a,b],
 \end{equation}
-przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnikami kwadratury), zaœ $x_i$ nosi miano wêz³ów kwadratury.
+przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnikami wagowymi kwadratury i okreœlaj¹ one wielkoœæ udzia³u $d(x_i)$ w wartoœci ca³ej sumy $S(f)$), zaœ $x_i$ nosi miano wêz³ów kwadratury.
 
 Naszym celem jest jednak to, by jak najbardziej zminimalizowaæ b³¹d pojawiaj¹cy siê podczas przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy \cite{klucz4}\cite{klucz7}
 
 \begin{equation}\label{SumaCalkowaLagrangeWkwadraturze}
-\int\limits_a^b f(x) dx \approx \int\limits_a^b L_n(x) dx=
-\sum\limits_{i=0}^n \alpha_i f(x_i) dx,
+I(f)=\int\limits_a^b f(x) dx \approx \int\limits_a^b L_n(x) dx=
+\sum\limits_{i=0}^n \alpha_i f(x_i) dx= S(f),
 \end{equation}
 gdzie 
 \begin{equation}\label{wspolczynnikAi}
@@ -34,11 +34,11 @@ gdzie
  \begin{equation}\label{l_iDlaKwadraturN-C}
  l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).
  \end{equation}
-W zwi¹zku z powy¿szym ca³kê (\ref{I(f)=Calkaf(x)}) mo¿emy wyraziæ w nastêpuj¹cy sposób:
+W zwi¹zku z powy¿szym, ca³kê (\ref{I(f)=Calkaf(x)}) mo¿emy wyraziæ w nastêpuj¹cy sposób:
 \begin{equation}\label{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n f(x_i)\int\limits_a^b l_i(x) dx
 \end{equation}
-Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu trzech ró¿nych kwadratur tego typu, bêd¹ nimi: \textit{wzór trapezów}, \textit{wzór Simpsona} oraz \textit{wzór prostok¹tów}.
+Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu trzech ró¿nych kwadratur takiego typu, bêd¹ nimi: \textit{wzór trapezów}, \textit{wzór Simpsona} oraz \textit{wzór prostok¹tów}.
 
 
 \section{Wzór trapezów}
@@ -72,7 +72,7 @@ a=a+hs \Rightarrow 0=hs \Rightarrow s=0
 \end{array}\right\}=h\int\limits_0^n \psi_i(s)ds
 $\\
 
-Chcemy wyliczyæ teraz wartoœci wspó³czynników kwadratury $a_0$ i $a_1$. Pamiêtamy o tym, ¿e  do obliczeñ wykorzystujemy postaæ wielomianu \textit{Lagrange'a} rzêdu $n=1$, zatem bêdziemy ca³kowali w granicach $[0,n]=[0,1]$\cite{klucz7}
+Chcemy wyliczyæ teraz wartoœci wspó³czynników kwadratury $a_0$ i $a_1$. Pamiêtamy o tym, ¿e  do obliczeñ wykorzystujemy postaæ wielomianu \textit{Lagrange'a} rzêdu $n=1$, zatem bêdziemy ca³kowali \cite{klucz7} w granicach $[0,n]=[0,1]$
 $$a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\int\limits_0^1(1-s)ds= h\left[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
 $$a_1=h\int\limits_0^1 \phi_1(s) ds=h\int\limits_0^1\frac{s-0}{1-0}ds=\int\limits_0^1(s)ds= h\left[\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
 Po wstawieniu wyliczonych wspó³czynników do (\ref{WzorKwadratura}) otrzymujemy 
@@ -96,7 +96,7 @@ Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿
 \end{equation}
 
 
-W wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, na którym siê skupiamy.
+W wyprowadzonym wzorze trapezów (\ref{OgolnyWzorTrapezow}) (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, na którym siê skupiamy.
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.13]{R2.eps} 

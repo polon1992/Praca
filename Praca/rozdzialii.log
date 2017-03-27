@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  27 MAR 2017 16:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  27 MAR 2017 18:54
 entering extended mode
 **rozdzialii.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialii.tex"
@@ -198,6 +198,23 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no ³ in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no ê in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz4}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 Rozwa¿my pewn¹ ca³kê \cite{klucz4}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz4' on page  undefined on input line 6.
+
+Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 5--7
 []
@@ -221,6 +238,11 @@ Overfull \hbox (11.52776pt too wide) in paragraph at lines 5--7
 
 Overfull \hbox (32.35526pt too wide) in paragraph at lines 5--7
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 5--7
+[] 
  []
 
 
@@ -521,13 +543,21 @@ Missing character: There is no ¹ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no ê in font nullfont!
-Missing character: There is no j in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no z in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no w in font nullfont!
@@ -615,11 +645,12 @@ Overfull \hbox (19.46533pt too wide) in paragraph at lines 16--18
  []
 
 
-Overfull \hbox (157.63911pt too wide) detected at line 20
+Overfull \hbox (191.43071pt too wide) detected at line 20
 [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML
 /cmm/m/it/10 dx \OMS/cmsy/m/n/10  [] \OML/cmm/m/it/10 a[]f\OT1/cmr/m/n/10 (\OM
-L/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;     x[] \OMS/cmsy/m/n/10 2
- \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ;
+L/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 f\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;     x[] \OMS/cmsy/m/n/10 2 \OT1/
+cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ;
  []
 
 Missing character: There is no p in font nullfont!
@@ -683,6 +714,14 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no i in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -692,6 +731,52 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no æ in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -732,6 +817,16 @@ Overfull \hbox (8.61517pt too wide) in paragraph at lines 20--22
 
 Overfull \hbox (19.46533pt too wide) in paragraph at lines 20--22
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (22.02722pt too wide) in paragraph at lines 20--22
+\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (20.45837pt too wide) in paragraph at lines 20--22
+\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )$
  []
 
 
@@ -1022,7 +1117,7 @@ Missing character: There is no ( in font nullfont!
 <write> ...ence `WzorKwadratura' on page \thepage 
                                                   \space undefined\on@line .
 l.23 ...o podstawieniu go do (\ref{WzorKwadratura}
-                                                  ) otrzymamy:
+                                                  ) otrzymamy \cite{klucz4}\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1042,7 +1137,40 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no y in font nullfont!
-Missing character: There is no : in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz4}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.23 ...f{WzorKwadratura}) otrzymamy \cite{klucz4}
+                                                  \cite{klucz7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz4' on page  undefined on input line 23.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz7}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.23 ...ura}) otrzymamy \cite{klucz4}\cite{klucz7}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz7' on page  undefined on input line 23.
+
+Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 23--24
 []
@@ -1084,6 +1212,11 @@ Overfull \hbox (10.86105pt too wide) in paragraph at lines 23--24
  []
 
 
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 23--24
+[][] 
+ []
+
+
 ! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1101,12 +1234,14 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 25--25
  []
 
 
-Overfull \hbox (179.37724pt too wide) detected at line 28
-[][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML
-/cmm/m/it/10 dx \OMS/cmsy/m/n/10  [] \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML
-/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] \OML/cm
-m/m/it/10 []f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/
-it/10 dx;
+Overfull \hbox (245.43266pt too wide) detected at line 28
+[]\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = [] \
+OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m
+/it/10 dx \OMS/cmsy/m/n/10  [] \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] \OML/cmm/m/it
+/10 []f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 
+dx \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/
+cmr/m/n/10 )\OML/cmm/m/it/10 ;
  []
 
 Missing character: There is no g in font nullfont!
@@ -1154,6 +1289,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no ³ in font nullfont!
@@ -1163,7 +1299,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ...ence `I(f)=Calkaf(x)' on page \thepage 
                                                   \space undefined\on@line .
-l.37 ...ku z powy¿szym ca³kê (\ref{I(f)=Calkaf(x)}
+l.37 ...u z powy¿szym, ca³kê (\ref{I(f)=Calkaf(x)}
                                                   ) mo¿emy wyraziæ w nastêpu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1356,6 +1492,23 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ¹ in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz2}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.41 ...tur¹ \textbf{Newtona-Cotesa} \cite{klucz2}
+                                                  . Skupimy siê na rozwa¿eni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz2' on page  undefined on input line 41.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no k in font nullfont!
@@ -1402,6 +1555,9 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -1510,6 +1666,11 @@ Overfull \hbox (48.61084pt too wide) in paragraph at lines 40--42
 
 Overfull \hbox (33.92479pt too wide) in paragraph at lines 40--42
 \OT1/cmr/bx/n/10 Cotesa
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 40--42
+[]
  []
 
 
@@ -1808,6 +1969,23 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no ¿ in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ¹ in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz7}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.54 ... $s$ jest zmienn¹ niezale¿n¹ \cite{klucz7}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz7' on page  undefined on input line 54.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 53--55
@@ -1877,6 +2055,11 @@ Overfull \hbox (15.49188pt too wide) in paragraph at lines 53--55
 
 Overfull \hbox (4.6875pt too wide) in paragraph at lines 53--55
 \OML/cmm/m/it/10 s$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 53--55
+[] 
  []
 
 
@@ -2324,6 +2507,23 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz7}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.75 ...1$, zatem bêdziemy ca³kowali \cite{klucz7}
+                                                   w granicach $[0,n]=[0,1]$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz7' on page  undefined on input line 75.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -2370,6 +2570,11 @@ Overfull \hbox (5.00002pt too wide) in paragraph at lines 75--76
  []
 
 
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 75--76
+[]
+ []
+
+
 Overfull \hbox (31.55786pt too wide) in paragraph at lines 75--76
 \OT1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; n\OT1/cmr/m/n/10 ] =
  []
@@ -2380,15 +2585,6 @@ Overfull \hbox (20.00002pt too wide) in paragraph at lines 75--76
  []
 
 
-Overfull \hbox (286.19476pt too wide) detected at line 76
-\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h [] []\OT1/cmr/m/n/10
- (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ds \OT1/cmr/m/n/10 = \OML
-/cmm/m/it/10 h [] []ds \OT1/cmr/m/n/10 = [](1 \OMS/cmsy/m/n/10   \OML/cmm/m/it/
-10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ds \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h [
-][] \OT1/cmr/m/n/10 = []
- []
-
-
 ! LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
@@ -2396,8 +2592,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -2406,8 +2603,8 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <write> \newlabel{I(f)=Calkaf(x)}{{1}{\thepage 
                                                }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2418,8 +2615,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...pienieFunkcjiFxfunkcjaGx}{{2}{\thepage 
                                                   }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2430,8 +2627,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{WzorKwadratura}{{3}{\thepage 
                                                }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2442,8 +2639,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...kowaLagrangeWkwadraturze}{{4}{\thepage 
                                                   }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2454,8 +2651,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{wspolczynnikAi}{{5}{\thepage 
                                                }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2466,8 +2663,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...label{l_iDlaKwadraturN-C}{{6}{\thepage 
                                                   }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2478,8 +2675,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...mianamiBazowymiLagrangea}{{7}{\thepage 
                                                   }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2490,8 +2687,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...grangeaPoPodstawieniuZaX}{{8}{\thepage 
                                                   }}
-l.76 ...t[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
-                                                  
+l.76 $$
+       a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2500,6 +2697,15 @@ and I'll forget about whatever was undefined.
 
 \newlabel{WielomianLagrangeaPoPodstawieniuZaX}{{8}{}}
 ]
+Overfull \hbox (286.19476pt too wide) detected at line 76
+\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h [] []\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ds \OT1/cmr/m/n/10 = \OML
+/cmm/m/it/10 h [] []ds \OT1/cmr/m/n/10 = [](1 \OMS/cmsy/m/n/10   \OML/cmm/m/it/
+10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ds \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h [
+][] \OT1/cmr/m/n/10 = []
+ []
+
+
 Overfull \hbox (256.50731pt too wide) detected at line 77
 \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h [] []\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ds \OT1/cmr/m/n/10 = \OML
@@ -3143,7 +3349,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.99 W
-       wyprowadzonym powy¿ej wzorze trapezów (jak sama nazwa sugeruje) przyb...
+       wyprowadzonym wzorze trapezów (\ref{OgolnyWzorTrapezow}) (jak sama na...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3162,13 +3368,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no ¿ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no j in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -3183,6 +3382,23 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no ó in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no ( in font nullfont!
+! Undefined control sequence.
+<write> ... `OgolnyWzorTrapezow' on page \thepage 
+                                                  \space undefined\on@line .
+l.99 ... wzorze trapezów (\ref{OgolnyWzorTrapezow}
+                                                  ) (jak sama nazwa sugeruje...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `OgolnyWzorTrapezow' on page  undefined on input line 
+99.
+
+Missing character: There is no ) in font nullfont!
 Missing character: There is no ( in font nullfont!
 Missing character: There is no j in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -3431,6 +3647,11 @@ Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 99--101
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 99--101
 []
  []
 
@@ -5105,7 +5326,23 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no œ in font nullfont!
 Missing character: There is no æ in font nullfont!
-Missing character: There is no : in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{klucz6}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.128 ...jest nastêpuj¹ca nierównoœæ \cite{klucz6}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `klucz6' on page  undefined on input line 128.
+
+Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 126--129
 []
@@ -5149,6 +5386,11 @@ Overfull \hbox (19.57753pt too wide) in paragraph at lines 126--129
 
 Overfull \hbox (6.00235pt too wide) in paragraph at lines 126--129
 \OML/cmm/m/it/10 n$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 126--129
+[] 
  []
 
 
@@ -10441,11 +10683,11 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 245--246
 
  
 Here is how much of TeX's memory you used:
- 47 strings out of 493922
- 861 string characters out of 3144896
+ 51 strings out of 493922
+ 893 string characters out of 3144896
  70031 words of memory out of 3000000
- 3434 multiletter control sequences out of 15000+200000
+ 3438 multiletter control sequences out of 15000+200000
  5081 words of font info for 19 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 18i,10n,16p,1074b,160s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on rozdzialii.dvi (1 page, 4016 bytes).
+ 18i,10n,21p,1074b,160s stack positions out of 5000i,500n,10000p,200000b,50000s
+Output written on rozdzialii.dvi (1 page, 3924 bytes).

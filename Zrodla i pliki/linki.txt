@@ -16,6 +16,9 @@ http://www.staff.amu.edu.pl/~awoj/OLAT/kwadraturyNC.pdf
 http://home.agh.edu.pl/~morchel/files/mownit/zajecia4/zajecia4-mownit.pdf
 http://edu.pjwstk.edu.pl/wyklady/am/scb/main79.html
 
+rozdzia³ 2 - pomoce:
+http://www.l5.pk.edu.pl/~pplucin/ms/lib/exe/fetch.php?media=pl:wyciag1011.pdf
+
 
 manual do maple:
 http://www.maplesoft.com/applications/view.aspx?SID=1558&view=html
