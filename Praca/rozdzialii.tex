@@ -18,7 +18,7 @@ Owe kwadratury opieraj¹ siê na wartoœciach $f(x)$ w punktach wêz³owych i mog¹ ni
 \begin{equation}\label{WzorKwadratura}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n a_if(x_i)=S(f),\,\,\,\, x_i\in[a,b],
 \end{equation}
-przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnikami wagowymi kwadratury i okreœlaj¹ one wielkoœæ udzia³u $d(x_i)$ w wartoœci ca³ej sumy $S(f)$), zaœ $x_i$ nosi miano wêz³ów kwadratury.
+przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnikami wagowymi kwadratury i okreœlaj¹ one wielkoœæ udzia³u $f(x_i)$ w wartoœci ca³ej sumy $S(f)$), zaœ $x_i$ nosi miano wêz³ów kwadratury.
 
 Naszym celem jest jednak to, by jak najbardziej zminimalizowaæ b³¹d pojawiaj¹cy siê podczas przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy \cite{klucz4}\cite{klucz7}
 
@@ -51,7 +51,7 @@ Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozp
 
 
 Do wyznaczenia wzoru trapezów bêdziemy wykorzystywaæ wielomian interpolacyjny \textit{Lagrange'a} rzêdu $n=1$ ($L_1(x)$) utworzony dla wêz³ów $a$ i $b$.
-Zastosujmy w (\ref{l_iDlaKwadraturN-C}) nastêpuj¹ce podstawienie: $x=a+hs$. Wartoœci $a,h$ s¹ pewnymi sta³ymi, natomiast $s$ jest zmienn¹ niezale¿n¹ \cite{klucz7}.
+Zastosujmy w (\ref{l_iDlaKwadraturN-C}) nastêpuj¹ce podstawienie: $x=a+hs$. Wartoœci $a,h$ s¹ pewnymi sta³ymi \cite{klucz7}, natomiast $s$ jest zmienn¹ niezale¿n¹.
 $$l_i(x)=\prod\limits_{j=0, j\neq i}^n \frac{x-x_j}{x_i-x_j}=
 \prod\limits_{j=0, j\neq i}^n \frac{a+hs-(a+jh)}{(a+ih)-(a+jh)}=
 \prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}$$
@@ -105,11 +105,11 @@ W wyprowadzonym wzorze trapezów (\ref{OgolnyWzorTrapezow}) (jak sama nazwa suger
 \label{R1}
 \end{figure}
 
-PrzejdŸmy do praktycznego zastosowania wzoru (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla zadanej funkcji przeprowadzimy rêcznie przy relatywnie ma³ej liczbie podzia³u przedzia³ów, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla du¿o wiêkszej liczby podzia³u. 
+PrzejdŸmy do praktycznego zastosowania wzoru (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla zadanej funkcji przeprowadzimy rêcznie - przy relatywnie ma³ej liczbie podzia³u przedzia³ów, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla du¿o wiêkszej liczby podzia³ów. 
 
 
 \begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\label{PrzykladCalkaPojedynczaMetodaTrapezow}\hfill
-\textit{Wyznaczyæ przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów)}\\
+\textit{Wyznaczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów).}\\
 
 Do rozwi¹zania zadania skorzystamy z ogólnego wzoru trapezów. Wyznaczamy wartoœci wêz³ów oraz odleg³oœ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
 $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\ 
@@ -163,7 +163,7 @@ end;
 Kolejno deklarujemy zmienne pomocnicze z których korzysta procedura ( nie pobierane od u¿ytkownika) oraz wyznaczamy wartoœæ kroku $h$, czyli odleg³oœæ pomiêdzy dwoma kolejnymi wêz³ami. Nastêpnie wyznaczamy wszystkie wêz³y na danym przedziale oraz wyliczamy wartoœci (deklarowanej przed wywo³ywaniem procedury) funkcji $f$ w tych¿e wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci w sposób zgodny ze wzorem (\ref{OgolnyWzorTrapezow}). Algorytm koñczymy poprzez przekszta³cenie sumy do "przyjaznej" \,postaci i prezentacjê wyniku (12 oznacza, ¿e rezultat wywo³ania bêdzie 12 znakowy nie wliczaj¹c w to przecinka). 
 
 
-Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów $n$. Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|BBT_n|$, zgodnie z (\ref{NierownoscBBPrzyblizenia<=DeltaT})). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 11 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,06311405862$.  \\
+Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów (ozn. $n$). Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|BBT_n|$, zgodnie z (\ref{NierownoscBBPrzyblizenia<=DeltaT})). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 11 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,06311405862$.  \\
 
 \begin{table}[h!]
 
@@ -218,7 +218,7 @@ deltaT:= evalf(1/12*M2[1]*(b-a)^3/n^2)
 end;
 \end{verbatim}
 \end{proc}    
-Procedura ta opiera siê na wzorach (\ref{BladMetodyTrapezow}) oraz (\ref{CzynnikM2DoBleduMetodyTrapezow}). Wynikiem jej dzia³ania jest wartoœæ b³êdu $\delta_T$ dla ca³ki z $f$ (funkcja musi zostaæ zdefiniowana przed wywo³aniem trapezBlad) liczonej w granicach $[a,b]$, i dokonanych $n$ podzia³ów tego przedzia³u. Parametry wejœciowe s¹ definiowane tak samo jak dla procedury \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}. Dok³adny opis algorytmu dla tego przypadku zostaje pominiêty. 
+Procedura ta opiera siê na wzorach (\ref{BladMetodyTrapezow}) oraz (\ref{CzynnikM2DoBleduMetodyTrapezow}). Wynikiem jej dzia³ania jest wartoœæ b³êdu $\delta_T$ dla ca³ki z $f$ (funkcja musi zostaæ zdefiniowana przed wywo³aniem \textit{trapezBlad}) liczonej w granicach $[a,b]$, i dokonanych $n$ podzia³ów tego przedzia³u. Parametry wejœciowe s¹ definiowane tak samo jak dla procedury \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}. Dok³adny opis algorytmu dla tego przypadku zostaje pominiêty. 
 
 Czêsto przeprowadzaj¹c obliczenia naukowe musimy zadbaæ o to, by wynik jaki otrzymamy by³ jak najdok³adniejszy i obci¹¿ony co najwy¿ej pewnym b³êdem, nie wiêkszym ni¿ dopuszczalny. Równie¿ wykorzystuj¹c wzór trapezów do ca³kowania numerycznego, mo¿emy kontrolowaæ wielkoœæ b³êdu, jaki pojawia siê podczas przybli¿ania wyniku. Sposobem na to jest odpowiedni dobór liczby podzia³ów przedzia³u ca³kowania. Poni¿sza procedura wskazuje nam, ile co najmniej owych podzia³ów powinniœmy dokonaæ, by wielkoœæ b³êdu nie przekracza³a zdefiniowanej przez nas wartoœci.\\  
  

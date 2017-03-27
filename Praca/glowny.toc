@@ -14,5 +14,5 @@
 \contentsline {section}{\numberline {3.3}Wz\'or 'prostok\k at\'ow'}{20}{section.3.3}
 \contentsline {chapter}{\numberline {4}Zastosowanie kwadratur do obliczania ca\IeC {\l }ek po obszarach normalnych}{21}{chapter.4}
 \contentsline {chapter}{Podsumowanie}{22}{chapter*.6}
-\contentsline {chapter}{Bibliografia}{23}{chapter*.7}
+\contentsline {chapter}{Bibliografia}{24}{chapter*.7}
 \contentsline {chapter}{Spis procedur w j\k ezyku Maple}{24}{chapter*.7}

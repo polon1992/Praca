@@ -35,7 +35,7 @@ W wêz³ach wartoœci funkcji 	interpoluj¹cej i interpolowanej s¹ równe. Oznacza to
 \begin{uw}
 W tym podrozdziale ograniczaæ bêdziemy siê jedynie do funkcji jednej zmiennej niezale¿nej. Funkcje te badane bêd¹ na ograniczonym domkniêtym przedziale $[a,b]$. W zwi¹zku z tym, zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$. Definicja zbioru $F$ nie ulega zmianie.
 \end{uw}
-Na rysunku \ref{R1} zobrazowano w sposób symboliczny na czym polega interpolacja, oraz czym s¹ wêz³y(punkty $x_i$ przeciêcia wykresów $W(x)$ i $f(x)$, zachodzi dla nich równoœæ (\ref{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach})). 
+Na rysunku \ref{R1} zobrazowaliœmy w sposób symboliczny na czym polega interpolacja, oraz czym s¹ wêz³y(punkty $x_i$ przeciêcia wykresów $W(x)$ i $f(x)$, zachodzi dla nich równoœæ (\ref{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach})). 
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.3]{R1.eps}
@@ -62,7 +62,7 @@ W \textit{interpolacji Lagrange'a} w sk³ad (\ref{funkcjeLiniowoNiezal}) wchodz¹ 
 \begin{equation}\label{i-TeFunkcjeBazoweLagrange'a}
 	l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).
 \end{equation}
-S¹ one nazywane funkcjami bazowymi stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi nastêpuj¹ca równoœæ \cite{klucz3} 
+S¹ one nazywane funkcjami bazowymi stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi nastêpuj¹ca równoœæ \cite{klucz3}: 
 \begin{equation}\label{deltaKroneckera}
 l_i(x_j)=\delta_{ij}=
 					\left\{
@@ -79,8 +79,10 @@ L_n(x)=\sum\limits_{i=0}^n f_i\cdot l_i(x)=\sum\limits_{i=0}^n f_i \prod\limits_
 bêdzie wielomianem o stopniu nie wiêkszym ni¿ $n$, oraz przyjmie wartoœci (\ref{f_i=f(x_i)})
 w punktach wêz³owych. Wielomian (\ref{wielomianInterpolacyjnyLagrangea}) nazywany jest \textbf{wielomianem interpolacyjnym \textit{Lagrange'a}}. Z jego pomoc¹ w dosyæ przystêpny sposób mo¿emy interpolowaæ dowoln¹ funkcjê.
 
-\begin{ex}{(Wyznaczanie wielomianu interpolacyjnego \textit{Lagrange'a} stopnia $n=2$)}\\\hfill
-\textit{Zbuduj wielomian interpolacyjny $L_2(x)$ dla funkcji $f(x)=e^{x^2}$ rozpatrywanej na ograniczonym przedziale $[0,1]$. Kolejno oblicz $L_2(0,6)$ i wynik porównaj z wartoœci¹ rzeczywist¹ wiedz¹c, ¿e $f(0,6)=e^{(0,6)^2}=1,4(3)$.}
+\begin{ex}{(Wyznaczanie wielomianu interpolacyjnego \textit{Lagrange'a} stopnia $n=2$)}\label{Przyklad_WielomianInterpolacyjnyLagrangea1}\\\hfill
+\textit{Zbudujemy wielomian interpolacyjny $L_2(x)$ dla funkcji $f(x)=e^{x^2}$ rozpatrywanej na ograniczonym przedziale $[0,1]$. 
+%Kolejno oblicz $L_2(0,6)$ i wynik porównaj z wartoœci¹ rzeczywist¹ wiedz¹c, ¿e $f(0,6)=e^{(0,6)^2}=1,4(3)$.
+}
 
 W celu wyznaczenia wielomianu \textit{Lagrange'a} stopnia $n=2$, potrzebowaæ bêdziemy $n+1$ wêz³ów takich, ¿e $a=x_0<x_1<x_2=b$. Przyjmijmy zatem nastêpuj¹ce ich wartoœci: 
 $x_0=0$, $x_1=\frac{1}{2}$, $x_2=1.$ 
@@ -92,9 +94,9 @@ Podstawiamy kolejno wartoœci wêz³ów do równania $L_2(x)$, otrzymuj¹c wielomian i
 $$L_2(x)=e^0\frac{(x-\frac{1}{2})(x-1)}{(0-\frac{1}{2})(0-1)}+
 e^{(\frac{1}{4})} \frac{(x-0)(x-1)}{(\frac{1}{2}-0)(\frac{1}{2}-1)}+e^4\frac{(x-0)(x-\frac{1}{2})}{(1-0)(1-\frac{1}{2})}=
 2,30046x^2-0,58218x+1$$
-Ostatecznie wyznaczamy wartoœæ $L_2(0,6)$:
-$$L_2(0,6)=2,30046\cdot(0,6)^2-0,58218\cdot(0,6)+1=1,4788576$$
-Wartoœæ interpolowana $L_2(0,6)$ odbiega nieco od wartoœci dok³adnej $f(0,6)$. 
+%Ostatecznie wyznaczamy wartoœæ $L_2(0,6)$:
+%$$L_2(0,6)=2,30046\cdot(0,6)^2-0,58218\cdot(0,6)+1=1,4788576$$
+%Wartoœæ interpolowana $L_2(0,6)$ odbiega nieco od wartoœci dok³adnej $f(0,6)$. 
 \end{ex} 
 
 Wyprowadzona w powy¿szym przyk³adzie dla funkcji $f(x)$ i zadanych wêz³ów postaæ wielomianu $L_2(x)$ jest jednoznaczna. Mówi o tym nastêpuj¹ce twierdzenie:
@@ -104,14 +106,14 @@ $R_n[x]=\{W(x)=a_nx^n+x_{n-1}x^{n-1}+\cdots+a_1x+a_0 : a_i\in\re, (i=0,1,\ldots,
 Dla dowolnej funkcji $f: X\rightarrow\re$ istnieje \cite{klucz5} dok³adnie jeden wielomian $W(x)\in R_n[x]$ interpoluj¹cy $f$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$).
 \end{theorem}
 
-W powy¿szym przyk³adzie zauwa¿yliœmy, ¿e wynik jest obarczony pewnym b³êdem. Nosi on miano \textit{b³êdu interpolacji}. Dla wielomianów \textit{Lagrange'a} definiujemy go w nastêpuj¹cy sposób:
+Je¿eli obliczylibyœmy wartoœæ wielomianu interpolacyjnego  \textit{Lagrange'a} $L_2(x)$ (zbudowanego w przyk³adzie \ref{Przyklad_WielomianInterpolacyjnyLagrangea1}) dla pewnego $x$ nale¿¹cego do dziedziny $f(x)$ i porównali j¹ z wartoœci¹ dok³adn¹ $f(x)$ dla tego samego argumentu, to zauwa¿ylibyœmy, ¿e wynik jest obarczony pewnym b³êdem. Nosi on miano \textit{b³êdu interpolacji}. Dla wielomianów \textit{Lagrange'a} definiujemy go w nastêpuj¹cy sposób:
 \begin{definition}{(B³¹d interpolacji wielomianu \textit{Lagrange'a})}\\\hfill
 WeŸmy $$M_{n+1}=\sup\limits_{x\in[a,b]}|f^{(n+1)}(x)|$$  $$m_{n+1}=\sup\limits_{x\in[a,b]}|\omega_{n+1}(x)|,$$\\ przy czym \,$\omega_n(x)=(x-x_0)\ldots(x-x_n)=\prod\limits_{k=0}^n(x-x_k)$, zaœ $f(x)$ to funkcja interpolowana.\\
 B³êdem interpolacji wielomianu \textit{Lagrange'a} (stopnia $n$) nazywamy wówczas takie
 \begin{equation}\label{Bl¹dInterpolacjiWielomLagrangea}
-	\delta_L=\frac{M_{n+1}\cdot m_{n+1}}{(n+1)!}
+	\delta_L=\frac{M_{n+1}\cdot m_{n+1}}{(n+1)!},
 \end{equation}
-dla którego zachodzi: $$|L_n(x)-f(x)|\leq\delta_L \,\,\,\,,x\in[a,b]$$
+dla którego zachodzi: $$|L_n(x)-f(x)|\leq\delta_L \,\,\,\,,x\in[a,b].$$
 
 \end{definition}    
 
