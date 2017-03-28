@@ -62,7 +62,7 @@ W \textit{interpolacji Lagrange'a} w sk³ad (\ref{funkcjeLiniowoNiezal}) wchodz¹ 
 \begin{equation}\label{i-TeFunkcjeBazoweLagrange'a}
 	l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).
 \end{equation}
-S¹ one nazywane funkcjami bazowymi stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi nastêpuj¹ca równoœæ \cite{klucz3}: 
+S¹ one nazywane funkcjami bazowymi(wielomianami bazowymi) stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi nastêpuj¹ca równoœæ \cite{klucz3}: 
 \begin{equation}\label{deltaKroneckera}
 l_i(x_j)=\delta_{ij}=
 					\left\{
@@ -101,10 +101,20 @@ e^{(\frac{1}{4})} \frac{(x-0)(x-1)}{(\frac{1}{2}-0)(\frac{1}{2}-1)}+e^4\frac{(x-
 
 Wyprowadzona w powy¿szym przyk³adzie dla funkcji $f(x)$ i zadanych wêz³ów postaæ wielomianu $L_2(x)$ jest jednoznaczna. Mówi o tym nastêpuj¹ce twierdzenie:
 \begin{theorem}{(O istnieniu i jednoznacznoœci wielomianu interpolacyjnego \textit{Lagrange'a} )}\label{TwOJednoznacznosciWielomLagrangea}\\\hfill
-Niech $R_n[x]$ bêdzie przestrzeni¹ liniow¹ wielomianów stopnia $\leq n$ o wspó³czynnikach rzeczywistych tzn.:
-$R_n[x]=\{W(x)=a_nx^n+x_{n-1}x^{n-1}+\cdots+a_1x+a_0 : a_i\in\re, (i=0,1,\ldots,n)\}$.\\
-Dla dowolnej funkcji $f: X\rightarrow\re$ istnieje \cite{klucz5} dok³adnie jeden wielomian $W(x)\in R_n[x]$ interpoluj¹cy $f$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$).
+Zadanie interpolacyjne \textit{Lagrange’a} ma zawsze dok³adnie jedno rozwi¹zanie, które mo¿na wyraziæ wzorem (\ref{wielomianInterpolacyjnyLagrangea}). Oznacza to, ¿e dla dowolnej funkcji $f: X\rightarrow\re$ oraz jej wartoœci $f(x_i)$ w $n+1$ zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$), istnieje dok³adnie jeden wielomian $L_n(x)$ interpoluj¹cy $f(x)$, dla którego prawdziwa jest zale¿noœæ $L_n(x_i)=f(x_i)$.
 \end{theorem}
+
+PrzeprowadŸmy dowód twierdzenia \ref{TwOJednoznacznosciWielomLagrangea}, by wykazaæ jego s³usznoœæ.
+\begin{dowod*}\label{DowodTwOJednoznacznosciWielomLagrangea}\hfill\\
+Dowodzenie rozpoczniemy od wykazania faktu, ¿e rozwi¹zanie w ogóle istnieje \cite{klucz5}.  Skonstruujmy je przy u¿yciu  wielomianów bazowych \textit{Lagrange'a} $l_i(x)$ z (\ref{i-TeFunkcjeBazoweLagrange'a}), oraz równania (\ref{deltaKroneckera}). Nale¿y zauwa¿yæ, ¿e odpowiadaj¹ca dla ka¿dego z wêz³ów $x_i$, gdzie ($i=0,1,\ldots,n$) funkcja $l_i(x)$ jest wielomianem $n$-tego stopnia. W zwi¹zku z tym
+$$L_n(x)=\sum\limits_{i=0}^n f(x_i)\cdot l_i(x)$$ 
+bêdzie wielomianem stopnia co najwy¿ej $n$. Ponadto odwo³uj¹c siê do (\ref{deltaKroneckera}) powy¿szy wzór mo¿emy przekszta³ciæ do nastêpuj¹cej postaci:
+$$L_n(x_j)=\sum\limits_{i=0}^n f(x_i)\cdot\delta_{ij}=f(x_j). $$
+Wynika  st¹d bezpoœrednio fakt, ¿e $L_n(x)$ jest wielomianem interpolacyjnym \textit{Lagrange'a}. Interpoluje on funkcjê $f(x)$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$). 
+
+Kolejno poka¿my, ¿e wyznaczony wielomian interpolacyjny \textit{Lagrange'a}  $L_n(x)$ jest jednoznaczny.  Przedstawmy go w postaci $$L_n(x)=\sum\limits_{i=0}^n a_i\cdot x^i$$..DOPISAC 2 CZESC DOWODU!!!..
+\end{dowod*}
+
 
 Je¿eli obliczylibyœmy wartoœæ wielomianu interpolacyjnego  \textit{Lagrange'a} $L_2(x)$ (zbudowanego w przyk³adzie \ref{Przyklad_WielomianInterpolacyjnyLagrangea1}) dla pewnego $x$ nale¿¹cego do dziedziny $f(x)$ i porównali j¹ z wartoœci¹ dok³adn¹ $f(x)$ dla tego samego argumentu, to zauwa¿ylibyœmy, ¿e wynik jest obarczony pewnym b³êdem. Nosi on miano \textit{b³êdu interpolacji}. Dla wielomianów \textit{Lagrange'a} definiujemy go w nastêpuj¹cy sposób:
 \begin{definition}{(B³¹d interpolacji wielomianu \textit{Lagrange'a})}\\\hfill
