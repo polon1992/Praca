@@ -104,15 +104,43 @@ Wyprowadzona w powy¿szym przyk³adzie dla funkcji $f(x)$ i zadanych wêz³ów postaæ
 Zadanie interpolacyjne \textit{Lagrange’a} ma zawsze dok³adnie jedno rozwi¹zanie, które mo¿na wyraziæ wzorem (\ref{wielomianInterpolacyjnyLagrangea}). Oznacza to, ¿e dla dowolnej funkcji $f: X\rightarrow\re$ oraz jej wartoœci $f(x_i)$ w $n+1$ zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$), istnieje dok³adnie jeden wielomian $L_n(x)$ interpoluj¹cy $f(x)$, dla którego prawdziwa jest zale¿noœæ $L_n(x_i)=f(x_i)$.
 \end{theorem}
 
-PrzeprowadŸmy dowód twierdzenia \ref{TwOJednoznacznosciWielomLagrangea}, by wykazaæ jego s³usznoœæ.
+%PrzeprowadŸmy dowód twierdzenia \ref{TwOJednoznacznosciWielomLagrangea}, by wykazaæ jego s³usznoœæ.
+
 \begin{dowod*}\label{DowodTwOJednoznacznosciWielomLagrangea}\hfill\\
-Dowodzenie rozpoczniemy od wykazania faktu, ¿e rozwi¹zanie w ogóle istnieje \cite{klucz5}.  Skonstruujmy je przy u¿yciu  wielomianów bazowych \textit{Lagrange'a} $l_i(x)$ z (\ref{i-TeFunkcjeBazoweLagrange'a}), oraz równania (\ref{deltaKroneckera}). Nale¿y zauwa¿yæ, ¿e odpowiadaj¹ca dla ka¿dego z wêz³ów $x_i$, gdzie ($i=0,1,\ldots,n$) funkcja $l_i(x)$ jest wielomianem $n$-tego stopnia. W zwi¹zku z tym
+Dowodzenie rozpoczniemy od wykazania faktu, ¿e rozwi¹zanie w ogóle istnieje.  Skonstruujmy je przy u¿yciu  wielomianów bazowych \textit{Lagrange'a} $l_i(x)$ z (\ref{i-TeFunkcjeBazoweLagrange'a}), oraz równania (\ref{deltaKroneckera}). Nale¿y zauwa¿yæ, ¿e odpowiadaj¹ca dla ka¿dego z wêz³ów $x_i$, gdzie ($i=0,1,\ldots,n$) funkcja $l_i(x)$ jest wielomianem $n$-tego stopnia. W zwi¹zku z tym \cite{klucz5}
 $$L_n(x)=\sum\limits_{i=0}^n f(x_i)\cdot l_i(x)$$ 
 bêdzie wielomianem stopnia co najwy¿ej $n$. Ponadto odwo³uj¹c siê do (\ref{deltaKroneckera}) powy¿szy wzór mo¿emy przekszta³ciæ do nastêpuj¹cej postaci:
 $$L_n(x_j)=\sum\limits_{i=0}^n f(x_i)\cdot\delta_{ij}=f(x_j). $$
 Wynika  st¹d bezpoœrednio fakt, ¿e $L_n(x)$ jest wielomianem interpolacyjnym \textit{Lagrange'a}. Interpoluje on funkcjê $f(x)$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$). 
 
-Kolejno poka¿my, ¿e wyznaczony wielomian interpolacyjny \textit{Lagrange'a}  $L_n(x)$ jest jednoznaczny.  Przedstawmy go w postaci $$L_n(x)=\sum\limits_{i=0}^n a_i\cdot x^i$$..DOPISAC 2 CZESC DOWODU!!!..
+Kolejno poka¿my, ¿e wyznaczany wielomian interpolacyjny \textit{Lagrange'a}  $L_n(x)$ jest zawsze jednoznaczny. Je¿eli zapiszemy go w postaci potêgowej (naturalnej) w bazie jednomianów \(\{1, x, x^2, \dots, x^n, \ldots\}\) tzn.$$L_n(x)=\sum\limits_{i=0}^n a_i\cdot x^i,$$
+to zauwa¿amy, ¿e rozwi¹zanie naszego problemu sprowadza siê do wyznaczenia $n+1$ wspó³czynników $a_i$ ($i=0,1,\ldots,n$) takich, ¿e bêd¹ one spe³nia³y nastêpuj¹cy uk³ad $n+1$ równañ liniowych:
+\begin{equation}\label{Dowod_UkladWPostaciMacierzowej}
+\begin{bmatrix}
+1 & x_0 & x_0^2 & x_0^3 & \cdots & x_0^n\\
+1 & x_1 & x_1^2 & x_1^3 & \cdots & x_1^n\\
+1 & x_2 & x_2^2 & x_2^3 & \cdots & x_2^n\\
+\vdots & \vdots & \vdots & \vdots& \vdots& \vdots\\
+1 & x_n & x_n^2 & x_n^3 & \cdots & x_n^n
+ \end{bmatrix}
+ \begin{bmatrix}
+a_0\\
+a_1\\
+a_2\\
+\vdots\\
+a_n
+ \end{bmatrix}
+ =
+  \begin{bmatrix}
+  f(x_0)\\
+f(x_1)\\
+f(x_2)\\
+\vdots\\
+f(x_n)
+ \end{bmatrix}
+\end{equation}
+
+Niech symbolicznym zapisem powy¿szego uk³adu bêdzie $X \cdot A=F$. Macierz $X$ jest tak zwan¹ macierz¹ \textit{Vandermonde'a}. Zatem wiadomo, ¿e jej wyznacznik jest $\neq 0$, przy za³o¿eniu, ¿e $x_0 \neq x_1\neq\ldots\neq x_{n-1}\neq x_n$. W zwi¹zku z tym uk³ad (\ref{Dowod_UkladWPostaciMacierzowej}) posiada jednoznaczne rozwi¹zanie, co koñczy dowód. $\square$
 \end{dowod*}
 
 
