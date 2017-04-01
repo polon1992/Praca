@@ -38,10 +38,10 @@ W zwi¹zku z powy¿szym, ca³kê (\ref{I(f)=Calkaf(x)}) mo¿emy wyraziæ w nastêpuj¹cy
 \begin{equation}\label{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n f(x_i)\int\limits_a^b l_i(x) dx
 \end{equation}
-Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu trzech ró¿nych kwadratur takiego typu, bêd¹ nimi: \textit{wzór trapezów}, \textit{wzór Simpsona} oraz \textit{wzór prostok¹tów}.
+Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu trzech ró¿nych przypadków, dla których kolejne wêz³y s¹ równo odleg³e - bêd¹ to: \textit{wzór trapezów}, \textit{wzór Simpsona} oraz dodatkowo \textit{wzór prostok¹tów}.
 
 
-\section{Wzór trapezów}
+\section{Wzór trapezów}\label{Podrozdzial_WzorTrapezow}
 
 %Zauwa¿my, ¿e przybli¿enie $\sum\limits_{i=0}^n f(x_i)\int\limits_a^b L_i(x) dx$ jest szczególnym przypadkiem sumy z równania (\ref{WzorKwadratura}), przy czym: 
 
@@ -63,14 +63,14 @@ $\psi_i(s)$ to nasza nowa funkcja zmiennej $s$.
 
 
 Ca³kê z równania (\ref{wspolczynnikAi}) obliczymy metod¹ ca³kowania przez podstawienie. Skorzystamy z przedstawionego przed chwil¹ podstawienia $x=a+hs$ oraz równania (\ref{WielomianLagrangeaPoPodstawieniuZaX})\\
-
-$a_i=\int\limits_a^b l_i(x) dx=\left\{\begin{array}{ll}
+\begin{equation}\label{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}
+a_i=\int\limits_a^b l_i(x) dx=\left\{\begin{array}{ll}
 x=a+hs\\
 dx=h ds\\
 b=a+hs \Rightarrow \frac{b-a}{h}=s\Rightarrow s=n\\
 a=a+hs \Rightarrow 0=hs \Rightarrow s=0
 \end{array}\right\}=h\int\limits_0^n \psi_i(s)ds
-$\\
+\end{equation}
 
 Chcemy wyliczyæ teraz wartoœci wspó³czynników kwadratury $a_0$ i $a_1$. Pamiêtamy o tym, ¿e  do obliczeñ wykorzystujemy postaæ wielomianu \textit{Lagrange'a} rzêdu $n=1$, zatem bêdziemy ca³kowali \cite{klucz7} w granicach $[0,n]=[0,1]$
 $$a_0=h\int\limits_0^1 \phi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\int\limits_0^1(1-s)ds= h\left[s-\frac{s^2}{2}\right]_0^1=\frac{h}{2}$$
@@ -96,13 +96,13 @@ Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿
 \end{equation}
 
 
-W wyprowadzonym wzorze trapezów (\ref{OgolnyWzorTrapezow}) (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R1} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, na którym siê skupiamy.
+W wyprowadzonym wzorze trapezów (\ref{OgolnyWzorTrapezow}) (jak sama nazwa sugeruje) przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R2} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ zagadnienie, na którym siê skupiamy.
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.13]{R2.eps} 
 		\end{center}
 	   \caption{Graficzne przedstawienie idei zastosowania wzoru trapezów do ca³kowania}
-\label{R1}
+\label{R2}
 \end{figure}
 
 PrzejdŸmy do praktycznego zastosowania wzoru (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla zadanej funkcji przeprowadzimy rêcznie - przy relatywnie ma³ej liczbie podzia³u przedzia³ów, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla du¿o wiêkszej liczby podzia³ów. 
@@ -240,7 +240,22 @@ Powy¿sza procedura równie¿ korzysta ze wzorów (\ref{BladMetodyTrapezow}) i (\ref
 
 
 \section{Wzór Simpsona}
+Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Simpsona}. Zamiennie nazywana jest równie¿ \textit{metod¹ parabol}. Charakteryzuje siê ona du¿¹ dok³adnoœci¹ przy jednoczeœnie niewielkiej z³o¿onoœci rachunków. Jej nazwa wywodzi siê od tego, ¿e funkcjê podca³kow¹ przybli¿amy na ka¿dym z podprzedzia³ów utworzonych przez \textbf{3} wêz³y za pomoc¹ paraboli. W zwi¹zku z tym, ¿e ka¿de $3$ kolejne wêz³y tworz¹ $2$ podprzedzia³y wnioskujemy, ¿e ca³kowita liczba podprzedzia³ów przedzia³u ca³kowania musi byæ podzielna przez $2$ (we wzorze trapezów nie by³o to wymagane). Przybli¿onym wynikiem ca³ki jest suma pól tzw. trapezów "parabolicznych". S¹ one ograniczone przez wêz³y $x_i$ i $x_{i+2}$ ($i=0,1,\ldots n-2$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_i$, $x_{i+1}$, $x_{i+2}$ ($i=0,1,\ldots n-2$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y. Sposób ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³ przedstawiony na rysunku \ref{R3}.
+
+\begin{figure}[H]
+		\begin{center}
+		%\includegraphics[scale=0.13]{R2.eps} 
+		\end{center}
+	   \caption{Graficzne przedstawienie idei zastosowania wzoru parabol do ca³kowania}
+\label{R3}
+\end{figure}
+  
+Rozpatrzmy pocz¹tkowo szczególny przypadek, w którym przedzia³ ca³kowania zostanie podzielony na dok³adnie $2$ podprzedzia³y, wydzielone przez $3$ równo odleg³e wêz³y \mbox{$a=x_0 < x_1 < x_2=b$}, dla których zachodzi $\frac{x_0+x_2}{2}=x_1$. W celu wyprowadzenia wzoru \textit{Simpsona} wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} $L_2(x)$ (wielomian rzêdu $n=2$) zbudowany zgodnie z (\ref{wielomianInterpolacyjnyLagrangea}) dla wêz³ów $a=x_0$, $x_1$, $x_2=b$. By stworzyæ wielomian $L_2(x)$, który nas interesuje, potrzebujemy wiedzieæ jak wygl¹daj¹ wspó³czynniki \mbox{$a_0$, $a_1$, $a_2$}. Ich wartoœæ wyliczymy wykorzystuj¹c wzory  (\ref{WielomianLagrangeaPoPodstawieniuZaX}) oraz (\ref{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}). Wynika z nich, ¿e ka¿dy ze wspó³czynników $a_i$ ($i=0,1,\ldots,n$) jest postaci:
+\begin{equation}\label{WspolczynnikAiWPostaciCalkiZIloczynu}\\
+a_i=h\int\limits_0^n \left(\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}\right)ds.
+\end{equation}  
 
 
-\section{Wzór prostok¹tów}
+
+\section{Wzór 'prostok¹tów'}
 
