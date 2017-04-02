@@ -129,7 +129,7 @@ Przyjmijmy, ¿e $BBT_n$ oznacza b³¹d bezwzglêdny przybli¿enia(ró¿nica pomiêdzy wa
 \begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaT}
 |BBT_n|\leq\delta_T
 \end{equation}
-Symbol $\delta_T$ oznacza b³¹d metody trapezów i wyra¿a j¹ nastêpuj¹cy wzór: 
+Symbol $\delta_T$ oznacza b³¹d metody trapezów i wyra¿a go nastêpuj¹cy wzór: 
 \begin{equation}\label{BladMetodyTrapezow}
 \delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2,
 \end{equation}
@@ -240,7 +240,7 @@ Powy¿sza procedura równie¿ korzysta ze wzorów (\ref{BladMetodyTrapezow}) i (\ref
 
 
 \section{Wzór Simpsona}
-Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Simpsona}. Zamiennie nazywana jest równie¿ \textit{metod¹ parabol}. Charakteryzuje siê ona du¿¹ dok³adnoœci¹ przy jednoczeœnie niewielkiej z³o¿onoœci rachunków. Jej nazwa wywodzi siê od tego, ¿e funkcjê podca³kow¹ przybli¿amy na ka¿dym z podprzedzia³ów utworzonych przez \textbf{3} wêz³y za pomoc¹ paraboli. W zwi¹zku z tym, ¿e ka¿de $3$ kolejne wêz³y tworz¹ $2$ podprzedzia³y wnioskujemy, ¿e ca³kowita liczba podprzedzia³ów przedzia³u ca³kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we wzorze trapezów nie by³o to wymagane). Przybli¿onym wynikiem ca³ki jest suma pól tzw. trapezów "parabolicznych"\,  (jedno z ramion trapezu jest parabol¹). Ka¿dy z nich jest ograniczany przez wêz³y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y, wiêc jej równanie zawsze bêdzie wyznaczone w sposób jednoznaczny. Metoda ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³a przedstawiona na rysunku \ref{R3}.
+Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Simpsona}. Zamiennie nazywana jest równie¿ \textit{metod¹ parabol}. Charakteryzuje siê ona du¿¹ dok³adnoœci¹ przy jednoczeœnie niewielkiej z³o¿onoœci rachunków. Jej nazwa wywodzi siê od tego, ¿e funkcjê podca³kow¹ przybli¿amy na ka¿dym z podprzedzia³ów utworzonych przez \textbf{3} wêz³y za pomoc¹ paraboli. W zwi¹zku z tym, ¿e ka¿de $3$ kolejne wêz³y tworz¹ $2$ podprzedzia³y wnioskujemy, ¿e ca³kowita liczba podprzedzia³ów przedzia³u ca³kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we wzorze trapezów nie by³o wymagane by liczba podprzedzia³ów by³a parzysta). Przybli¿onym wynikiem ca³ki jest suma pól tzw. trapezów "parabolicznych"\,  (jedno z ramion trapezu jest parabol¹). Ka¿dy z nich jest ograniczany przez wêz³y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y, wiêc jej równanie zawsze bêdzie wyznaczone w sposób jednoznaczny. Metoda ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³a przedstawiona na rysunku \ref{R3}.
 
 \begin{figure}[H]
 		\begin{center}
@@ -281,7 +281,18 @@ Dla przypadku ogólnego, w którym przedzia³ ca³kowania $[a,b]$ zostanie podzielon
 \end{equation}
 Równanie (\ref{wzorSimpsonaZPodzialami}) nazywane jest czêsto \textit{uogólnionym wzorem Simpsona}. Nie trudno siê domyœleæ, ¿e w zwi¹zku z tym, i¿ wzór ten jedynie przybli¿a dok³adn¹ wartoœæ ca³ki, to wi¹¿e siê z tym fakt obci¹¿enia wyniku pewnym b³êdem. Oszacowanie owego b³êdu przybli¿enia dla wzoru \textit{Simpsona} wyjaœnia poni¿sza definicja:
 \begin{definition}(B³¹d przybli¿enia wzorem \textit{Simpsona})\\
-Podac definicje
+Przyjmijmy, ¿e $BBS_{N}$ oznacza b³¹d bezwzglêdny przybli¿enia (tzn. ró¿nica pomiêdzy wartoœci¹ dok³adn¹ i przybli¿on¹ ca³ki). Ponadto niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^4$ na $[a,b]$, oraz $N=2m$ ($m\in\mathbb{N}$) wyznacza iloœæ podzia³ów przedzia³u $[a,b]$, wtedy spe³niona jest nastêpuj¹ca nierównoœæ \cite{klucz6}:
+\begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaT}
+|BBS_{N}|\leq\delta_S
+\end{equation}
+Przez $\delta_S$ rozumiemy b³¹d metody Simpsona, który jest opisany nastêpuj¹cym wzorem:
+\begin{equation}\label{BladMetodyTrapezow}
+\delta_S = \frac{(b-a)^5}{180 \cdot N^4} \cdot M_4\stackrel{N=2m}{=}\frac{(b-a)^5}{2880 \cdot m^4} \cdot M_4 ,
+\end{equation}
+przy czym 
+\begin{equation}\label{CzynnikM2DoBleduMetodyTrapezow}
+M_4= \sup\limits_{x \in [a,b]} \, | f^{(IV)}(x) |
+\end{equation}
 \end{definition} 
 
 
