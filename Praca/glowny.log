@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  2 APR 2017 13:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  2 APR 2017 15:29
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -949,7 +949,12 @@ ML/plm/m/it/12 h [] [] ds \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 h [] [] ds \U/
 MnSymbolD/m/n/12   \OML/plm/m/it/12 h [] []ds \U/MnSymbolD/m/n/12  
  []
 
-[21] [22]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [23]
+[21] [22]
+Overfull \hbox (27.29793pt too wide) detected at line 281
+[]
+ []
+
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [23]
 Rozdzia\l  3.
 ) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [24
 
@@ -1012,4 +1017,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,12n,77p,1271b,6077s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (28 pages, 126580 bytes).
+Output written on glowny.dvi (28 pages, 128804 bytes).

@@ -268,12 +268,22 @@ Podstawiaj¹c obliczone powy¿ej wartoœci $a_0, a_1, a_2$ do (\ref{WzorKwadratura}
 \end{equation}
 Zauwa¿my, ¿e dla tego przypadku zachodzi równie¿ prawid³owoœæ zwi¹zana z wartoœci¹ sumy wspó³czynników, adekwatna do tej ze wzoru trapezów: $a_0+a_1+a_2=\frac{h}{2}+\frac{4h}{3}+\frac{h}{3}=n\cdot h=2\cdot h$. Mo¿emy zatem wnioskowaæ, ¿e powy¿sze obliczenia zosta³y przeprowadzone prawid³owo.
 
-Równanie (\ref{wzorSimpsonaBrakPodzialu}) opisuje przypadek, dla którego ca³ka $\int\limits_a^b f(x)dx$ jest przybli¿ana polem znajduj¹cym siê tylko pod jedn¹ parabol¹ na przedziale $[a,b]$. Wykres tej¿e paraboli przechodzi przez punkty $(a=x_0,f(x_0))$, $(\frac{b+a}{2}=x_1,f(x_1))$, $(b=x_2,f(x_2))$. 
+Równanie (\ref{wzorSimpsonaBrakPodzialu}) opisuje przypadek, dla którego ca³ka $\int\limits_a^b f(x)dx$ jest przybli¿ana polem znajduj¹cym siê tylko pod jedn¹ parabol¹ na przedziale $[a,b]$ (podzielono go na dwa równe podprzedzia³y $[a=x_0,x_1]$ i $[x_1,x_2=b]$). Wykres omawianej paraboli przechodzi przez punkty $(a=x_0,f(x_0))$, $(\frac{b+a}{2}=x_1,f(x_1))$, $(b=x_2,f(x_2))$. 
 
-Dla przypadku ogólnego, w którym przedzia³ ca³kowania $[a,b]$ zostanie podzielony na $N=2m$ \mbox{($m=1,2,\ldots$)} podprzedzia³ów o równej d³ugoœci $h=\frac{b-a}{N}=\frac{b-a}{2m}$, przy czym ka¿dy wêze³ jest postaci $x_k=a+ih$ \mbox{($i=0,1,2,\ldots, N=2m$)}, to wzór (\ref{wzorSimpsonaBrakPodzialu}) przyjmie nastêpuj¹c¹ formê:
+Dla przypadku ogólnego, w którym przedzia³ ca³kowania $[a,b]$ zostanie podzielony na $N=2m$ \mbox{($m=1,2,\ldots$)} podprzedzia³ów równej d³ugoœci $h=\frac{b-a}{N}=\frac{b-a}{2m}$, przy czym ka¿dy wêze³ jest postaci $x_i=a+ih$ \mbox{($i=0,1,2,\ldots, N=2m$)}, wzór (\ref{wzorSimpsonaBrakPodzialu}) przyjmuje nastêpuj¹c¹ formê:
 \begin{equation}\label{wzorSimpsonaZPodzialami}
-\int\limits_a^b f(x)dx\approx
-\end{equation}  
+\begin{array}{cc}
+\int\limits_a^b f(x)dx = \sum\limits_{i=0}^{m-1} \int\limits_{x_{2i}}^{x_{2i+2}} f(x) dx \approx\\
+\approx\left(\frac{h}{3}\left(f(x_0)+4f(x_1)+f(x_2)\right)+\ldots+ \frac{h}{3}\left(f(x_{2m-2})+4f(x_{2m-1})+f(x_{2m})\right)\right)=\\
+=\frac{h}{3}\left(f(x_0)+4(f(x_1)+f(x_3)+\ldots+f(x_{2m-1}))+2(f(x_2)+f(x_4)+\ldots+f(x_{2m-2}))+f(x_{2m})\right)=\\
+=\frac{h}{3}\sum\limits_{i=0}^{m-1}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right).
+\end{array}
+\end{equation}
+Równanie (\ref{wzorSimpsonaZPodzialami}) nazywane jest czêsto \textit{uogólnionym wzorem Simpsona}. Nie trudno siê domyœleæ, ¿e w zwi¹zku z tym, i¿ wzór ten jedynie przybli¿a dok³adn¹ wartoœæ ca³ki, to wi¹¿e siê z tym fakt obci¹¿enia wyniku pewnym b³êdem. Oszacowanie owego b³êdu przybli¿enia dla wzoru \textit{Simpsona} wyjaœnia poni¿sza definicja:
+\begin{definition}(B³¹d przybli¿enia wzorem \textit{Simpsona})\\
+Podac definicje
+\end{definition} 
+
 
 \section{Wzór 'prostok¹tów'}
 
