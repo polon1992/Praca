@@ -239,8 +239,12 @@ end;
 Powy¿sza procedura równie¿ korzysta ze wzorów (\ref{BladMetodyTrapezow}) i (\ref{CzynnikM2DoBleduMetodyTrapezow}). Jej parametry wejœciowe $a$ i $b$ s¹ tak jak poprzednio granicami ca³kowania pewnej funkcji $f$, natomiast $blad$ okreœla jaki b³¹d przybli¿enia jest przez nas maksymalnie akceptowalny. Kod znajduj¹cy siê wewn¹trz procedury kolejno oblicza $f^{''}(x)$ i upraszcza postaæ wyliczonej pochodnej. Nastêpnie szukana jest wartoœæ $M_2= \sup\limits_{x \in [a,b]} \, | f^{''}(x) |$. Najwa¿niejszym elementem sk³adowym \textit{trapeznMin} jest jednak wyliczanie wartoœci dla zmiennej $p$. By j¹ wyznaczyæ rozwi¹zujemy nierównoœæ \mbox{$\frac{(b-a)^3}{12n^2} \cdot M_2<blad$} ze wzglêdu na $n$. Zak³adamy, ¿e interesuj¹ nas tylko $n>0$ ($n$ jest liczb¹ podzia³ów i musi byæ wartoœci¹ ca³kowit¹ dodatni¹). Ostatnia linia odpowiada za prezentacjê obliczonej wartoœci $n$. Wynik pojawia siê w postaci $N>z$, gdzie $z$ jest liczb¹ ca³kowit¹ - zatem jako wynik traktowaæ bêdziemy najmniejsz¹ liczbê naturaln¹ wiêksz¹ od $z$.
 
 
+
 \section{Wzór Simpsona}
-Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Simpsona}. Zamiennie nazywana jest równie¿ \textit{metod¹ parabol}. Charakteryzuje siê ona du¿¹ dok³adnoœci¹ przy jednoczeœnie niewielkiej z³o¿onoœci rachunków. Jej nazwa wywodzi siê od tego, ¿e funkcjê podca³kow¹ przybli¿amy na ka¿dym z podprzedzia³ów utworzonych przez \textbf{3} wêz³y za pomoc¹ paraboli. W zwi¹zku z tym, ¿e ka¿de $3$ kolejne wêz³y tworz¹ $2$ podprzedzia³y wnioskujemy, ¿e ca³kowita liczba podprzedzia³ów przedzia³u ca³kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we wzorze trapezów nie by³o wymagane by liczba podprzedzia³ów by³a parzysta). Przybli¿onym wynikiem ca³ki jest suma pól tzw. trapezów "parabolicznych"\,  (jedno z ramion trapezu jest parabol¹). Ka¿dy z nich jest ograniczany przez wêz³y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y, wiêc jej równanie zawsze bêdzie wyznaczone w sposób jednoznaczny. Metoda ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³a przedstawiona na rysunku \ref{R3}.
+%wyciete 2 zdanie - Charakteryzuje siê ona du¿¹ dok³adnoœci¹ przy jednoczeœnie niewielkiej z³o¿onoœci rachunków.
+Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Simpsona}. Zamiennie nazywana jest równie¿ \textit{metod¹ parabol}. Jej nazwa wywodzi siê od tego, ¿e funkcjê podca³kow¹ przybli¿amy na ka¿dym z podprzedzia³ów utworzonych przez \textbf{3} wêz³y za pomoc¹ paraboli. W zwi¹zku z tym, ¿e ka¿de $3$ kolejne wêz³y tworz¹ \textbf{2} podprzedzia³y wnioskujemy, ¿e ca³kowita liczba podprzedzia³ów przedzia³u ca³kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we wzorze trapezów nie by³o wymagane, by liczba podprzedzia³ów by³a parzysta). 
+
+Przybli¿onym wynikiem ca³ki obliczanej metod¹ \textit{Simpsona} jest suma pól tzw. trapezów "parabolicznych"\,  (jedno z ramion trapezu jest parabol¹). Ka¿dy z nich jest ograniczany przez wêz³y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y, wiêc jej równanie zawsze bêdzie wyznaczone w sposób jednoznaczny. Metoda ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³a przedstawiona na rysunku \ref{R3}.
 
 \begin{figure}[H]
 		\begin{center}
@@ -250,7 +254,7 @@ Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Sim
 \label{R3}
 \end{figure}
   
-Rozpatrzmy pocz¹tkowo szczególny przypadek, w którym przedzia³ ca³kowania zostanie podzielony na dok³adnie $2$ podprzedzia³y, wydzielone przez $3$ równo odleg³e wêz³y \mbox{$a=x_0 < x_1 < x_2=b$}, dla których zachodzi $\frac{x_0+x_2}{2}=x_1$. W celu wyprowadzenia wzoru \textit{Simpsona} wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} $L_2(x)$ (wielomian rzêdu $n=2$) zbudowany zgodnie z (\ref{wielomianInterpolacyjnyLagrangea}) dla wêz³ów $a=x_0$, $x_1$, $x_2=b$. By stworzyæ wielomian $L_2(x)$, który nas interesuje, potrzebna nam jest wiedza na temat tego, jak wygl¹daj¹ wspó³czynniki \mbox{$a_0$, $a_1$, $a_2$}. Ich wartoœæ wyliczymy wykorzystuj¹c wzory  (\ref{WielomianLagrangeaPoPodstawieniuZaX}) oraz (\ref{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}). Wynika z nich, ¿e ka¿dy ze wspó³czynników $a_i$ ($i=0,1,\ldots,n$) jest postaci:
+Rozpatrzmy pocz¹tkowo szczególny przypadek, w którym przedzia³ ca³kowania zostanie podzielony na dok³adnie $2$ podprzedzia³y, wydzielone przez $3$ równo odleg³e wêz³y \mbox{$a=x_0 < x_1 < x_2=b$}, dla których zachodzi $\frac{x_0+x_2}{2}=x_1$. W celu wyprowadzenia wzoru \textit{Simpsona} wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} $L_2(x)$ (wielomian rzêdu $n=2$) zbudowany zgodnie z (\ref{wielomianInterpolacyjnyLagrangea}) dla wêz³ów $a=x_0$, $x_1$, $x_2=b$. By stworzyæ $L_2(x)$, który nas interesuje, potrzebna nam jest wiedza na temat tego, jak wygl¹daj¹ wspó³czynniki \mbox{$a_0$, $a_1$, $a_2$}. Ich wartoœæ wyliczymy wykorzystuj¹c wzory  (\ref{WielomianLagrangeaPoPodstawieniuZaX}) oraz (\ref{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}). Wynika z nich, ¿e ka¿dy ze wspó³czynników $a_i$ ($i=0,1,\ldots,n$) jest postaci:
 \begin{equation}\label{WspolczynnikAiWPostaciCalkiZIloczynu}\\
 a_i=h\int\limits_0^n \psi_i(s) ds=h\int\limits_0^n \left(\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}\right)ds.
 \end{equation}  
@@ -268,7 +272,7 @@ Podstawiaj¹c obliczone powy¿ej wartoœci $a_0, a_1, a_2$ do (\ref{WzorKwadratura}
 \end{equation}
 Zauwa¿my, ¿e dla tego przypadku zachodzi równie¿ prawid³owoœæ zwi¹zana z wartoœci¹ sumy wspó³czynników, adekwatna do tej ze wzoru trapezów: $a_0+a_1+a_2=\frac{h}{2}+\frac{4h}{3}+\frac{h}{3}=n\cdot h=2\cdot h$. Mo¿emy zatem wnioskowaæ, ¿e powy¿sze obliczenia zosta³y przeprowadzone prawid³owo.
 
-Równanie (\ref{wzorSimpsonaBrakPodzialu}) opisuje przypadek, dla którego ca³ka $\int\limits_a^b f(x)dx$ jest przybli¿ana polem znajduj¹cym siê tylko pod jedn¹ parabol¹ na przedziale $[a,b]$ (podzielono go na dwa równe podprzedzia³y $[a=x_0,x_1]$ i $[x_1,x_2=b]$). Wykres omawianej paraboli przechodzi przez punkty $(a=x_0,f(x_0))$, $(\frac{b+a}{2}=x_1,f(x_1))$, $(b=x_2,f(x_2))$. 
+Równanie (\ref{wzorSimpsonaBrakPodzialu}) opisuje przypadek, w którym ca³ka $\int\limits_a^b f(x)dx$ jest przybli¿ana polem znajduj¹cym siê tylko pod jedn¹ parabol¹ na przedziale $[a,b]$ (podzielono go na dwa równe podprzedzia³y $[a=x_0,x_1]$ i $[x_1,x_2=b]$). Wykres omawianej paraboli przechodzi przez punkty $(a=x_0,f(x_0))$, $(\frac{b+a}{2}=x_1,f(x_1))$, $(b=x_2,f(x_2))$. 
 
 Dla przypadku ogólnego, w którym przedzia³ ca³kowania $[a,b]$ zostanie podzielony na $N=2m$ \mbox{($m=1,2,\ldots$)} podprzedzia³ów równej d³ugoœci $h=\frac{b-a}{N}=\frac{b-a}{2m}$, przy czym ka¿dy wêze³ jest postaci $x_i=a+ih$ \mbox{($i=0,1,2,\ldots, N=2m$)}, wzór (\ref{wzorSimpsonaBrakPodzialu}) przyjmuje nastêpuj¹c¹ formê:
 \begin{equation}\label{wzorSimpsonaZPodzialami}
@@ -279,22 +283,37 @@ Dla przypadku ogólnego, w którym przedzia³ ca³kowania $[a,b]$ zostanie podzielon
 =\frac{h}{3}\sum\limits_{i=0}^{m-1}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right).
 \end{array}
 \end{equation}
-Równanie (\ref{wzorSimpsonaZPodzialami}) nazywane jest czêsto \textit{uogólnionym wzorem Simpsona}. Nie trudno siê domyœleæ, ¿e w zwi¹zku z tym, i¿ wzór ten jedynie przybli¿a dok³adn¹ wartoœæ ca³ki, to wi¹¿e siê z tym fakt obci¹¿enia wyniku pewnym b³êdem. Oszacowanie owego b³êdu przybli¿enia dla wzoru \textit{Simpsona} wyjaœnia poni¿sza definicja:
+Równanie (\ref{wzorSimpsonaZPodzialami}) nosi miano \textit{uogólnionego wzoru Simpsona}. Nie trudno siê domyœleæ, ¿e w zwi¹zku z tym, i¿ wzór ten jedynie przybli¿a dok³adn¹ wartoœæ ca³ki, to wi¹¿e siê z tym fakt obci¹¿enia wyniku pewnym b³êdem. Oszacowanie owego b³êdu przybli¿enia dla wzoru \textit{Simpsona} wyjaœnia poni¿sza definicja:
 \begin{definition}(B³¹d przybli¿enia wzorem \textit{Simpsona})\\
 Przyjmijmy, ¿e $BBS_{N}$ oznacza b³¹d bezwzglêdny przybli¿enia (tzn. ró¿nica pomiêdzy wartoœci¹ dok³adn¹ i przybli¿on¹ ca³ki). Ponadto niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^4$ na $[a,b]$, oraz $N=2m$ ($m\in\mathbb{N}$) wyznacza iloœæ podzia³ów przedzia³u $[a,b]$, wtedy spe³niona jest nastêpuj¹ca nierównoœæ \cite{klucz6}:
 \begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaT}
 |BBS_{N}|\leq\delta_S
 \end{equation}
-Przez $\delta_S$ rozumiemy b³¹d metody Simpsona, który jest opisany nastêpuj¹cym wzorem:
+Przez $\delta_S$ rozumiemy b³¹d metody \textit{Simpsona}, który jest opisany nastêpuj¹cym wzorem:
 \begin{equation}\label{BladMetodyTrapezow}
 \delta_S = \frac{(b-a)^5}{180 \cdot N^4} \cdot M_4\stackrel{N=2m}{=}\frac{(b-a)^5}{2880 \cdot m^4} \cdot M_4 ,
 \end{equation}
 przy czym 
 \begin{equation}\label{CzynnikM2DoBleduMetodyTrapezow}
-M_4= \sup\limits_{x \in [a,b]} \, | f^{(IV)}(x) |
+M_4= \sup\limits_{x \in [a,b]} \, | f^{(IV)}(x) |.
 \end{equation}
 \end{definition} 
 
+Zbadajmy dok³adnoœæ, z jak¹ wzór (\ref{wzorSimpsonaZPodzialami}) przybli¿a wartoœci ca³ek oznaczonych. W tym celu przedstawmy kompletne wyliczenia dla przypadku, gdzie liczba podzia³ów przedzia³u ca³kowania bêdzie wzglêdnie ma³a, natomiast sama ca³ka okreœlona taka jak w przyk³adzie \ref{PrzykladCalkaPojedynczaMetodaTrapezow}. 
+
+\begin{ex}(Wyznaczanie przybli¿onej wartoœci ca³ki metod¹ \textit{Simpsona})\\\hfill
+\textit{Obliczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ dziel¹c przedzia³ ca³kowania na $N=2m=6$ podprzedzia³ów równej d³ugoœci ($7$ wêz³ów).}\\\newline
+Do wykonania rachunków niezbêdna jest nam d³ugoœæ podprzedzia³u $h=\frac{b-a}{N}$ \mbox{($[a,b]=[0,\frac{3}{2}]$)} oraz wartoœci wêz³ów $x_i=a+ih$ ($i=0,1,\ldots,6$). \\
+Zatem: $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\
+Kolejno wstawiamy wyznaczone wartoœci do (\ref{wzorSimpsonaZPodzialami}):
+\begin{gather*}
+\int\limits_0^{\frac{3}{2}} e^{x^2} dx = \frac{\frac{1}{4}}{3}\sum\limits_{i=0}^{2}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right) = \\
+=\frac{1}{12}\left((f(x_0)+4f(x_1)+f(x_2))+(f(x_2)+4f(x_3)+f(x_4))+(f(x_4)+4f(x_5)+f(x_6)) \right)=\\
+=\frac{1}{12}\left(\left(e^{0^2}+4e^{{\left(\frac{1}{4}\right)}^2}+e^{{\left(\frac{2}{4}\right)}^2}\right)+\left(e^{{\left(\frac{2}{4}\right)}^2}+4e^{{\left(\frac{3}{4}\right)}^2}+e^{{1}^2}\right)+\left(e^{1^2}+4e^{{\left(\frac{5}{4}\right)}^2}+e^{{\left(\frac{6}{4}\right)}^2}\right)\right)=\\
+=\frac{1}{12}\left(e^0+4\left(e^{\left(\frac{1}{16}\right)}+e^{\left(\frac{9}{16}\right)}+e^{\left(\frac{25}{16}\right)}\right)+2\left(e^{\left(\frac{4}{16}\right)}+e\right)+e^{\left(\frac{36}{16}\right)}\right)=\\
+=\frac{1}{12}(1+4(1,06449+1,75505+4,77073)+2(1,28402+2,71828)+9,48773)=4,071123
+\end{gather*}
+\end{ex}  
 
 \section{Wzór 'prostok¹tów'}
 
