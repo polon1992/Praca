@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  4 APR 2017 00:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  6 APR 2017 21:46
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -974,15 +974,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--309
 
  []
 
-[23]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [24]
+[23]
+Underfull \hbox (badness 1509) in paragraph at lines 317--318
+\T1/ptm/m/n/12 przy-bli-»e-nia ma by¢ nie wi¦k-szy ni» $\OT4/cmr/m/n/12 0\OML/p
+lm/m/it/12 ; \OT4/cmr/m/n/12 0000001$\T1/ptm/m/n/12 ). Po-dob-nie jak dla me-to
+dy tra-pe-zów,
+ []
+
+[24]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [25]
 Rozdzia\l  3.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [25
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [26
 
 ]
 Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [26
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [27
 
-]) [27
+]) [28
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
@@ -1011,11 +1018,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--121
 ][][][][][][]
  []
 
-[28
+[29
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
- [29]
+ [30]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 158.
@@ -1033,12 +1040,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12563 strings out of 493922
- 185881 string characters out of 3144896
- 294030 words of memory out of 3000000
- 15622 multiletter control sequences out of 15000+200000
+ 12564 strings out of 493922
+ 185918 string characters out of 3144896
+ 294051 words of memory out of 3000000
+ 15623 multiletter control sequences out of 15000+200000
  57738 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,13n,77p,1093b,6077s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,13n,77p,1093b,6162s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (29 pages, 135868 bytes).
+Output written on glowny.dvi (30 pages, 137908 bytes).

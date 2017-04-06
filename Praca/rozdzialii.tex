@@ -145,11 +145,11 @@ Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ 
 \begin{proc}{(Wznaczanie wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapez:=proc(a,b,n) 
-local h,j,k,x,y,t,tp; 
+local h,j,i,x,y,t,tp; 
 h:=(b-a)/n; 
 for j from 0 to n do x:= j -> a+j*h od;  
 for j from 0 to n do y:= j -> f(x(j)) od;  
-t:= h/2 * sum(y(k)+y(k+1), k=0..n-1); 
+t:= h/2 * sum(y(i)+y(i+1), i=0..n-1); 
 tp:=evalf(t,12); 
 end;
 \end{verbatim}
@@ -299,7 +299,7 @@ M_4= \sup\limits_{x \in [a,b]} \, | f^{(IV)}(x) |.
 \end{equation}
 \end{definition} 
 
-Zbadajmy dok³adnoœæ, z jak¹ wzór (\ref{wzorSimpsonaZPodzialami}) przybli¿a wartoœci ca³ek oznaczonych. W tym celu przedstawmy kompletne wyliczenia dla przypadku, gdzie liczba podzia³ów przedzia³u ca³kowania bêdzie wzglêdnie ma³a, natomiast sama ca³ka okreœlona taka jak w przyk³adzie \ref{PrzykladCalkaPojedynczaMetodaTrapezow}. 
+Zbadajmy dok³adnoœæ, z jak¹ wzór (\ref{wzorSimpsonaZPodzialami}) przybli¿a wartoœci ca³ek oznaczonych. W tym celu przedstawmy kompletne wyliczenia dla przypadku, gdzie liczba podzia³ów przedzia³u ca³kowania bêdzie wzglêdnie ma³a, natomiast sama ca³ka okreœlona tak jak w przyk³adzie \ref{PrzykladCalkaPojedynczaMetodaTrapezow}. 
 
 \begin{ex}(Wyznaczanie przybli¿onej wartoœci ca³ki metod¹ \textit{Simpsona})\\\hfill
 \textit{Obliczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ dziel¹c przedzia³ ca³kowania na $N=2m=6$ podprzedzia³ów równej d³ugoœci ($7$ wêz³ów).}\\\newline
@@ -313,7 +313,31 @@ Kolejno wstawiamy wyznaczone wartoœci do (\ref{wzorSimpsonaZPodzialami}):
 =\frac{1}{12}\left(e^0+4\left(e^{\left(\frac{1}{16}\right)}+e^{\left(\frac{9}{16}\right)}+e^{\left(\frac{25}{16}\right)}\right)+2\left(e^{\left(\frac{4}{16}\right)}+e\right)+e^{\left(\frac{36}{16}\right)}\right)=\\
 =\frac{1}{12}(1+4(1,06449+1,75505+4,77073)+2(1,28402+2,71828)+9,48773)=4,071123
 \end{gather*}
-\end{ex}  
+\end{ex}
+Wynik, który otrzymaliœmy w przeprowadzonych powy¿ej obliczeniach jest bardzo zbli¿ony do wartoœci dok³adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4,06311405862...$. Chcemy jednak sprawdziæ, przy jak du¿ej liczbie podzia³ów przedzia³u ca³kowania przybli¿enie zacznie siê stabilizowaæ tak, byœmy mogli uznaæ je za wystarczaj¹co dok³adne (przyjmijmy, ¿e b³¹d bezwzglêdny przybli¿enia ma byæ nie wiêkszy ni¿ $0,0000001$). Podobnie jak dla metody trapezów, wykorzystajmy stworzone na nasze potrzeby procedury.
+
+\begin{proc}{(Wznaczanie wartoœci ca³ek pojedynczych metod¹ \textit{Simpsona})}\label{MAPLE_MetodaSimpsonaCalkaPojedyncza}
+\begin{verbatim}
+>simpson :=proc(a,b,N) 
+local h,i,j,m,x,y,s,sp;
+if (mod(N,2)=1) then 
+ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
+else
+	m:=N/2; 
+	h:=(b-a)/(2*m); 
+	for j from 0 to 2*m do x:= j -> a+j*h od;  
+	for j from 0 to 2*m do y:= j -> f(x(j)) od;  
+	s:= h/3 * sum(y(2*i)+4*y(2*i+1)+y(2*i+2), i=0..m-1); 
+	sp:=evalf(s,12);
+fi; 
+end;
+\end{verbatim}
+\end{proc}      
+
+
 
 \section{Wzór 'prostok¹tów'}
+
+
+
 
