@@ -142,7 +142,7 @@ M_2= \sup\limits_{x \in [a,b]} \, | f^{''}(x) |
 \end{definition}
 Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku Maple. Pos³u¿y nam ona do zautomatyzowania procesu obliczania przybli¿onych wartoœci ca³ek oznaczonych metod¹ trapezów:
 
-\begin{proc}{(Wznaczanie wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
+\begin{proc}{(Wznaczanie przybli¿onych wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapez:=proc(a,b,n) 
 local h,j,i,x,y,t,tp; 
@@ -286,15 +286,15 @@ Dla przypadku ogólnego, w którym przedzia³ ca³kowania $[a,b]$ zostanie podzielon
 Równanie (\ref{wzorSimpsonaZPodzialami}) nosi miano \textit{uogólnionego wzoru Simpsona}. Nie trudno siê domyœleæ, ¿e w zwi¹zku z tym, i¿ wzór ten jedynie przybli¿a dok³adn¹ wartoœæ ca³ki, to wi¹¿e siê z tym fakt obci¹¿enia wyniku pewnym b³êdem. Oszacowanie owego b³êdu przybli¿enia dla wzoru \textit{Simpsona} wyjaœnia poni¿sza definicja:
 \begin{definition}(B³¹d przybli¿enia wzorem \textit{Simpsona})\\
 Przyjmijmy, ¿e $BBS_{N}$ oznacza b³¹d bezwzglêdny przybli¿enia (tzn. ró¿nica pomiêdzy wartoœci¹ dok³adn¹ i przybli¿on¹ ca³ki). Ponadto niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^4$ na $[a,b]$, oraz $N=2m$ ($m\in\mathbb{N}$) wyznacza iloœæ podzia³ów przedzia³u $[a,b]$, wtedy spe³niona jest nastêpuj¹ca nierównoœæ \cite{klucz6}:
-\begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaT}
+\begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaS}
 |BBS_{N}|\leq\delta_S
 \end{equation}
 Przez $\delta_S$ rozumiemy b³¹d metody \textit{Simpsona}, który jest opisany nastêpuj¹cym wzorem:
-\begin{equation}\label{BladMetodyTrapezow}
+\begin{equation}\label{BladMetodySimpsona}
 \delta_S = \frac{(b-a)^5}{180 \cdot N^4} \cdot M_4\stackrel{N=2m}{=}\frac{(b-a)^5}{2880 \cdot m^4} \cdot M_4 ,
 \end{equation}
 przy czym 
-\begin{equation}\label{CzynnikM2DoBleduMetodyTrapezow}
+\begin{equation}\label{CzynnikM4DoBleduMetodySimpsona}
 M_4= \sup\limits_{x \in [a,b]} \, | f^{(IV)}(x) |.
 \end{equation}
 \end{definition} 
@@ -314,14 +314,15 @@ Kolejno wstawiamy wyznaczone wartoœci do (\ref{wzorSimpsonaZPodzialami}):
 =\frac{1}{12}(1+4(1,06449+1,75505+4,77073)+2(1,28402+2,71828)+9,48773)=4,071123
 \end{gather*}
 \end{ex}
-Wynik, który otrzymaliœmy w przeprowadzonych powy¿ej obliczeniach jest bardzo zbli¿ony do wartoœci dok³adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4,06311405862...$. Chcemy jednak sprawdziæ, przy jak du¿ej liczbie podzia³ów przedzia³u ca³kowania przybli¿enie zacznie siê stabilizowaæ tak, byœmy mogli uznaæ je za wystarczaj¹co dok³adne (przyjmijmy, ¿e b³¹d bezwzglêdny przybli¿enia ma byæ nie wiêkszy ni¿ $0,0000001$). Podobnie jak dla metody trapezów, wykorzystajmy stworzone na nasze potrzeby procedury.
+Wynik, który otrzymaliœmy w przeprowadzonych powy¿ej obliczeniach jest bardzo zbli¿ony do wartoœci dok³adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4,06311405862...$. Chcemy jednak sprawdziæ, przy jak du¿ej liczbie podzia³ów przedzia³u ca³kowania przybli¿enie zacznie siê stabilizowaæ tak, byœmy mogli uznaæ je za wystarczaj¹co dok³adne (przyjmijmy, ¿e b³¹d bezwzglêdny przybli¿enia ma byæ nie wiêkszy ni¿ $0,0000001$). Podobnie jak dla metody trapezów, wykorzystajmy stworzone na nasze potrzeby procedury. \\ 
 
-\begin{proc}{(Wznaczanie wartoœci ca³ek pojedynczych metod¹ \textit{Simpsona})}\label{MAPLE_MetodaSimpsonaCalkaPojedyncza}
+\begin{proc}{(Wznaczanie przybli¿onych wartoœci ca³ek pojedynczych metod¹ \textit{Simpsona})}\label{MAPLE_MetodaSimpsonaCalkaPojedyncza}
 \begin{verbatim}
 >simpson :=proc(a,b,N) 
 local h,i,j,m,x,y,s,sp;
-if (mod(N,2)=1) then 
-ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
+if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
+then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
+
 else
 	m:=N/2; 
 	h:=(b-a)/(2*m); 
@@ -334,6 +335,32 @@ end;
 \end{verbatim}
 \end{proc}      
 
+Powy¿szy skrypt tworzy procedurê \textit{Maple}, realizuj¹c¹ algorytm wyznaczania przybli¿onej wartoœæ ca³ki metod¹ \textit{Simpsona}. Jej parametrami wejœciowymi s¹:\\
+$\mathbf{a}$ - wartoœæ dolnej granicy ca³kowania\\
+$\mathbf{b}$ - wartoœæ górnej granicy ca³kowania\\
+$\mathbf{N}$ - opisuje iloœæ podzia³ów przedzia³u ca³kowania funkcji $f(x)$ (konieczne jest zdefiniowanie $f(x)$ przed wywo³aniem procedury). Wartoœæ parametru $N$ musi byæ liczb¹ naturaln¹ i podzieln¹ przez $2$, gdy¿ zastosowanie metody parabol  wymaga co najmniej $2$ podprzedzia³ów wydzielonych przez $3$ równo odleg³e wêz³y.\\
+Kod znajduj¹cy siê po nag³ówku procedury to definicja zmiennych lokalnych, wykorzystywanych wewn¹trz owej procedury. Kolejno sprawdzana jest poprawnoœæ wprowadzonego parametru $N$. Je¿eli $N$ posiada niezerow¹ czêœæ dziesiêtn¹, b¹dŸ jest liczb¹ naturaln¹ nieparzyst¹ lub  ca³kowit¹ \mbox{$\leq 0$} wtedy algorytm koñczy swoje dzia³anie zwracaj¹c b³¹d o treœci 'Ostatni parametr musi by liczba naturalna postaci 2m'. W przeciwnym wypadku nastêpuje przejœcie do g³ównego algorytmu, który rozpoczyna siê od obliczenia iloœci par podprzedzia³ów oraz odleg³oœci $h$ pomiêdzy kolejnymi punktami wêz³owymi. Nastêpnie wyznaczane s¹ wszystkie wêz³y $x_i$ na danym przedziale $[a,b]$ oraz obliczane wartoœci funkcji $f(x)$ w tych wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci $f(x_i)$ w sposób zgodny ze wzorem (\ref{wzorSimpsonaZPodzialami}). Ostatecznie procedura upraszcza postaæ sumy i zwraca j¹ w formie 12 znakowego wyniku (nie wliczaj¹c w to przecinka).\\
+
+Zanim zaprezentujemy wyniki zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}, to zechciejmy pochyliæ siê jeszcze przez moment nad kodem dodatkowej procedury umo¿liwiaj¹cej oszacowanie b³êdu $\delta_S$ (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoœci bêdzie nam pomocna podczas kontroli, czy obliczenia s¹ przeprowadzane poprawnie, tzn. musi zachodziæ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wy¿szych wartoœci podzia³ów przedzia³u ca³kowania.
+
+\begin{proc}{(Wyznaczanie b³êdu przybli¿enia dla metody \textit{Simpsona})}
+\label{MAPLE_BladMetodySimpsonaCalkaPojedyncza}
+\begin{verbatim}
+> simpsonBlad:= proc(a, b, N)
+local d4ff, simd4ff, M4, deltaS;
+if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
+then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
+else
+d4ff:= diff(diff(diff(diff(f(x),x),x),x),x); 
+simd4ff:= simplify(d4ff); 
+M4:= (Optimization[Maximize])(abs(simd4ff), x = a .. b); 
+deltaS:= evalf(1/180*M4[1]*(b-a)^5/N^4);
+fi; 
+end;
+\end{verbatim}
+\end{proc}
+
+   
 
 
 \section{Wzór 'prostok¹tów'}
