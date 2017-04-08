@@ -145,12 +145,15 @@ Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ 
 \begin{proc}{(Wznaczanie przybli¿onych wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapez:=proc(a,b,n) 
-local h,j,i,x,y,t,tp; 
+local h,j,i,x,y,t,tp;
+if (((ceil(n)>n) or (floor(n)<n)) or n<=0)
+then ERROR('Ostatni parametr musi byc liczba naturalna')else 
 h:=(b-a)/n; 
 for j from 0 to n do x:= j -> a+j*h od;  
 for j from 0 to n do y:= j -> f(x(j)) od;  
 t:= h/2 * sum(y(i)+y(i+1), i=0..n-1); 
-tp:=evalf(t,12); 
+tp:=evalf(t,12);
+fi; 
 end;
 \end{verbatim}
 \end{proc}
@@ -160,7 +163,7 @@ end;
 \hspace{-1cm}{Pierwsza linia jest deklaracj¹ procedury \textit{trapez} z nastêpuj¹cymi parametrami wejœciowymi:}\\
 \textbf{a}, \textbf{b} - s¹ odpowiednio dolnym i górnym krañcem przedzia³u ca³kowania\\
 \textbf{n} - okreœla liczbê podprzedzia³ów na które podzielony zostanie nasz przedzia³ $[a,b]$\\
-Kolejno deklarujemy zmienne pomocnicze z których korzysta procedura ( nie pobierane od u¿ytkownika) oraz wyznaczamy wartoœæ kroku $h$, czyli odleg³oœæ pomiêdzy dwoma kolejnymi wêz³ami. Nastêpnie wyznaczamy wszystkie wêz³y na danym przedziale oraz wyliczamy wartoœci (deklarowanej przed wywo³ywaniem procedury) funkcji $f$ w tych¿e wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci w sposób zgodny ze wzorem (\ref{OgolnyWzorTrapezow}). Algorytm koñczymy poprzez przekszta³cenie sumy do "przyjaznej" \,postaci i prezentacjê wyniku (12 oznacza, ¿e rezultat wywo³ania bêdzie 12 znakowy nie wliczaj¹c w to przecinka). 
+Kolejno deklarujemy zmienne pomocnicze z których korzysta procedura ( nie pobierane od u¿ytkownika). Je¿eli ostatni parametr $n \in \mathbb{N}$ to zwracany jest stosowny komunikat i procedura koñczy swoje dzia³anie, w p.p. wykonuje siê g³ówny algorytm tzn. obliczamy wartoœæ kroku $h$, czyli odleg³oœæ pomiêdzy dwoma kolejnymi wêz³ami. Nastêpnie wyznaczamy wszystkie wêz³y $x_i$ na danym przedziale oraz wyliczamy wartoœci (deklarowanej przed wywo³ywaniem procedury) funkcji $f$ w tych¿e wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci w sposób zgodny ze wzorem (\ref{OgolnyWzorTrapezow}). Algorytm koñczymy poprzez przekszta³cenie sumy do "przyjaznej" \,postaci i prezentacjê wyniku w formacie 12 znakowym. 
 
 
 Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów (ozn. $n$). Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|BBT_n|$, zgodnie z (\ref{NierownoscBBPrzyblizenia<=DeltaT})). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 11 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,06311405862$.  \\
@@ -185,11 +188,11 @@ Poni¿sza tabela prezentuje wyniki procedury  \ref{MAPLE_MetodaTrapezowCalkaPojed
   \hline 
  800& 4,06312239755  &0,000008339 & 0,000045863 \\
   \hline 
- 1200& 4,06311776480 & 0,000003706  &0,000020383 \\
-  \hline 
  2000& 4,06311539304  & 0,000001334 &0,000007338 \\
   \hline 
  5000& 4,06311427243 & 0,000000213  &0,000001174 \\
+  \hline 
+ 7310& 4,06311415812 &  0.000000099 &0.000000549 \\
   \hline 
  10000& 4,06311411177 & 0,000000053 &0,000000293 \\
   \hline 
@@ -211,10 +214,14 @@ Uwagê nale¿y skupiæ równie¿ na wartoœciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_
 \begin{verbatim}
 > trapezBlad:= proc (a, b, n)
 local d2ff, simd2ff, M2, deltaT;
+if (((ceil(n)>n) or (floor(n)<n)) or n<=0)
+then ERROR('Ostatni parametr musi byc liczba naturalna')
+else 
 d2ff:= diff(diff(f(x), x), x); 
 simd2ff:= simplify(d2ff); 
 M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b); 
-deltaT:= evalf(1/12*M2[1]*(b-a)^3/n^2) 
+deltaT:= evalf(1/12*M2[1]*(b-a)^3/n^2)
+fi; 
 end;
 \end{verbatim}
 \end{proc}    
@@ -301,7 +308,7 @@ M_4= \sup\limits_{x \in [a,b]} \, | f^{(IV)}(x) |.
 
 Zbadajmy dok³adnoœæ, z jak¹ wzór (\ref{wzorSimpsonaZPodzialami}) przybli¿a wartoœci ca³ek oznaczonych. W tym celu przedstawmy kompletne wyliczenia dla przypadku, gdzie liczba podzia³ów przedzia³u ca³kowania bêdzie wzglêdnie ma³a, natomiast sama ca³ka okreœlona tak jak w przyk³adzie \ref{PrzykladCalkaPojedynczaMetodaTrapezow}. 
 
-\begin{ex}(Wyznaczanie przybli¿onej wartoœci ca³ki metod¹ \textit{Simpsona})\\\hfill
+\begin{ex}(Wyznaczanie przybli¿onej wartoœci ca³ki metod¹ \textit{Simpsona})\\\hfill\label{PrzykladCalkaLiczonaWzoremSimpsona}
 \textit{Obliczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ dziel¹c przedzia³ ca³kowania na $N=2m=6$ podprzedzia³ów równej d³ugoœci ($7$ wêz³ów).}\\\newline
 Do wykonania rachunków niezbêdna jest nam d³ugoœæ podprzedzia³u $h=\frac{b-a}{N}$ \mbox{($[a,b]=[0,\frac{3}{2}]$)} oraz wartoœci wêz³ów $x_i=a+ih$ ($i=0,1,\ldots,6$). \\
 Zatem: $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\
@@ -314,7 +321,7 @@ Kolejno wstawiamy wyznaczone wartoœci do (\ref{wzorSimpsonaZPodzialami}):
 =\frac{1}{12}(1+4(1,06449+1,75505+4,77073)+2(1,28402+2,71828)+9,48773)=4,071123
 \end{gather*}
 \end{ex}
-Wynik, który otrzymaliœmy w przeprowadzonych powy¿ej obliczeniach jest bardzo zbli¿ony do wartoœci dok³adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4,06311405862...$. Chcemy jednak sprawdziæ, przy jak du¿ej liczbie podzia³ów przedzia³u ca³kowania przybli¿enie zacznie siê stabilizowaæ tak, byœmy mogli uznaæ je za wystarczaj¹co dok³adne (przyjmijmy, ¿e b³¹d bezwzglêdny przybli¿enia ma byæ nie wiêkszy ni¿ $0,0000001$). Podobnie jak dla metody trapezów, wykorzystajmy stworzone na nasze potrzeby procedury. \\ 
+Wynik, który otrzymaliœmy w przeprowadzonych powy¿ej obliczeniach jest bardzo zbli¿ony do wartoœci dok³adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4,06311405862...$. Chcemy jednak sprawdziæ, przy jak du¿ej liczbie podzia³ów przedzia³u ca³kowania przybli¿enie zacznie siê stabilizowaæ tak, byœmy mogli uznaæ je za wystarczaj¹co dok³adne (przyjmijmy, ¿e b³¹d bezwzglêdny przybli¿enia ma byæ nie wiêkszy ni¿ $0,0000001$). Podobnie jak dla metody trapezów, wykorzystajmy stworzone na nasze potrzeby procedury automatyzuj¹ce przeprowadzanie obliczeñ. \\ 
 
 \begin{proc}{(Wznaczanie przybli¿onych wartoœci ca³ek pojedynczych metod¹ \textit{Simpsona})}\label{MAPLE_MetodaSimpsonaCalkaPojedyncza}
 \begin{verbatim}
@@ -322,7 +329,6 @@ Wynik, który otrzymaliœmy w przeprowadzonych powy¿ej obliczeniach jest bardzo zb
 local h,i,j,m,x,y,s,sp;
 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
 then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
-
 else
 	m:=N/2; 
 	h:=(b-a)/(2*m); 
@@ -335,13 +341,13 @@ end;
 \end{verbatim}
 \end{proc}      
 
-Powy¿szy skrypt tworzy procedurê \textit{Maple}, realizuj¹c¹ algorytm wyznaczania przybli¿onej wartoœæ ca³ki metod¹ \textit{Simpsona}. Jej parametrami wejœciowymi s¹:\\
+Powy¿szy skrypt tworzy procedurê \textit{Maple}, realizuj¹c¹ algorytm wyznaczania przybli¿onej wartoœæ ca³ki pojedynczej metod¹ \textit{Simpsona}. Jej parametrami wejœciowymi s¹:\\
 $\mathbf{a}$ - wartoœæ dolnej granicy ca³kowania\\
 $\mathbf{b}$ - wartoœæ górnej granicy ca³kowania\\
 $\mathbf{N}$ - opisuje iloœæ podzia³ów przedzia³u ca³kowania funkcji $f(x)$ (konieczne jest zdefiniowanie $f(x)$ przed wywo³aniem procedury). Wartoœæ parametru $N$ musi byæ liczb¹ naturaln¹ i podzieln¹ przez $2$, gdy¿ zastosowanie metody parabol  wymaga co najmniej $2$ podprzedzia³ów wydzielonych przez $3$ równo odleg³e wêz³y.\\
-Kod znajduj¹cy siê po nag³ówku procedury to definicja zmiennych lokalnych, wykorzystywanych wewn¹trz owej procedury. Kolejno sprawdzana jest poprawnoœæ wprowadzonego parametru $N$. Je¿eli $N$ posiada niezerow¹ czêœæ dziesiêtn¹, b¹dŸ jest liczb¹ naturaln¹ nieparzyst¹ lub  ca³kowit¹ \mbox{$\leq 0$} wtedy algorytm koñczy swoje dzia³anie zwracaj¹c b³¹d o treœci 'Ostatni parametr musi by liczba naturalna postaci 2m'. W przeciwnym wypadku nastêpuje przejœcie do g³ównego algorytmu, który rozpoczyna siê od obliczenia iloœci par podprzedzia³ów oraz odleg³oœci $h$ pomiêdzy kolejnymi punktami wêz³owymi. Nastêpnie wyznaczane s¹ wszystkie wêz³y $x_i$ na danym przedziale $[a,b]$ oraz obliczane wartoœci funkcji $f(x)$ w tych wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci $f(x_i)$ w sposób zgodny ze wzorem (\ref{wzorSimpsonaZPodzialami}). Ostatecznie procedura upraszcza postaæ sumy i zwraca j¹ w formie 12 znakowego wyniku (nie wliczaj¹c w to przecinka).\\
+Kod znajduj¹cy siê po nag³ówku procedury to definicja zmiennych lokalnych, wykorzystywanych wewn¹trz owej procedury. Kolejno sprawdzana jest poprawnoœæ wprowadzonego parametru $N$. Je¿eli $N$ posiada niezerow¹ czêœæ dziesiêtn¹, b¹dŸ jest liczb¹ naturaln¹ nieparzyst¹ lub  ca³kowit¹ \mbox{$\leq 0$} wtedy algorytm koñczy swoje dzia³anie zwracaj¹c b³¹d o treœci 'Ostatni parametr musi by liczba naturalna postaci 2m'. W przeciwnym wypadku nastêpuje przejœcie do g³ównego algorytmu, który rozpoczyna siê od obliczenia iloœci par podprzedzia³ów oraz odleg³oœci $h$ pomiêdzy kolejnymi punktami wêz³owymi. Nastêpnie wyznaczane s¹ wszystkie wêz³y $x_i$ na danym przedziale $[a,b]$ oraz obliczane wartoœci funkcji $f(x)$ w tych wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci $f(x_i)$ w sposób zgodny ze wzorem (\ref{wzorSimpsonaZPodzialami}). Ostatecznie procedura upraszcza postaæ sumy i zwraca j¹ w formie 12 znakowego wyniku (nie wliczaj¹c w to przecinka).
 
-Zanim zaprezentujemy wyniki zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}, to zechciejmy pochyliæ siê jeszcze przez moment nad kodem dodatkowej procedury umo¿liwiaj¹cej oszacowanie b³êdu $\delta_S$ (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoœci bêdzie nam pomocna podczas kontroli, czy obliczenia s¹ przeprowadzane poprawnie, tzn. musi zachodziæ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wy¿szych wartoœci podzia³ów przedzia³u ca³kowania.
+Zanim zaprezentujemy wyniki zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}, to zechciejmy pochyliæ siê jeszcze przez moment nad kodem dodatkowej procedury umo¿liwiaj¹cej oszacowanie b³êdu $\delta_S$ (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoœci bêdzie nam pomocna podczas kontroli, czy obliczenia s¹ przeprowadzane poprawnie, tzn. musi zachodziæ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wiêkszych iloœci podzia³ów przedzia³u ca³kowania.
 
 \begin{proc}{(Wyznaczanie b³êdu przybli¿enia dla metody \textit{Simpsona})}
 \label{MAPLE_BladMetodySimpsonaCalkaPojedyncza}
@@ -359,8 +365,67 @@ fi;
 end;
 \end{verbatim}
 \end{proc}
+Powy¿sza procedura ma za zadanie wyznaczyæ wartoœæ $\delta_S$, tak by prawdziwe by³o oszacowanie (\ref{NierownoscBBPrzyblizenia<=DeltaS}). Parametry $a$, $b$ i $N$ definiowane s¹ w sposób identyczny, jak w procedurze \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Aby wykona³ siê algorytm g³ówny (znajduj¹cy siê wewn¹trz procedury w bloku \textit{else}), ponownie musi zostaæ spe³niony warunek mówi¹cy o tym, ¿e $N$ jest licz¹ naturaln¹ i parzyst¹. Je¿eli taka prawid³owoœæ zachodzi, to obliczamy wartoœæ $f^{(IV)}(x)$ oraz upraszczamy jej postaæ. Zgodnie z (\ref{CzynnikM4DoBleduMetodySimpsona}) wyliczamy maksimum  $f^{(IV)}(x)$ na przedziale $[a,b]$ (jest to najbardziej znacz¹cy krok) i podstawiamy wszystkie znane ju¿ nam argumenty do (\ref{BladMetodySimpsona}). W ten sposób dochodzimy do po¿¹danej przez nas formy $\delta_S$. 
 
-   
+Posiadaj¹c ju¿ odpowiednie narzêdzia (procedury \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}) oraz wiedzê z zakresu metodyki ich dzia³ania, wykonajmy pomiary, które zobrazuj¹ nam w sposób praktyczny dok³adnoœæ metody \textit{Simpsona}. Niech $N$ bêdzie liczb¹ podzia³ów przedzia³y ca³kowania, $W_{simpson}$ opisuje wartoœci zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Ponadto $|BBS_{N}|$ bêdzie oznacza³o b³¹d bezwzglêdnym przybli¿enia wartoœci ca³ki metod¹ \textit{Simpsona}. Przez symbol $\delta_S$ rozumieæ bêdziemy wynik wywo³ania procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}. Rozpatrzmy ca³kê z przyk³adu \ref{PrzykladCalkaLiczonaWzoremSimpsona} (wykorzystamy jej wartoœæ dok³adna - jest ona podana w rozwi¹zaniu), wtedy:
+
+\begin{table}[h!]
+
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{N}$ & $\mathbf{W_{simpson}}$ & $\mathbf{|BBS_N|}$ &$\mathbf{\delta_S}$ \\ [0.5ex] 
+ \hline \hline
+ 4   & 4,09788104673 & 0,03476698811 & 0,31426966780\\ 
+ \hline
+ 6   & 4,07112329317 & 0,00800923455 & 0,06207795906\\
+\hline 
+ 10  & 4,06425014407 & 0,00113608545 & 0,00804530349\\ 
+\hline 
+ 20  & 4,06318804961 & 0,00007399099 & 0,00050283147\\ 
+ \hline
+ 40  & 4,06311873247 & 0,00007399099 & 0,00003142697\\ 
+ \hline 
+ 60  & 4,06311498371 & 0,00000092509 & 0,00000620779\\ 
+\hline 
+ 80  & 4,06311435154 & 0,00000029292 & 0,00000196419\\ 
+ \hline
+ 100 & 4,06311417861 & 0,00000011999 & 0,00000080453\\
+\hline 
+ 104 & 4,06311416121 & 0,00000010259 & 0,00000068771\\  
+ \hline 
+ 106 & 4,06311415370 & 0,00000009508 & 0,00000063726\\ 
+\hline 
+ 150 & 4,06311408231 & 0,00000002369 & 0,00000015892\\ 
+ \hline
+ 200 & 4,06311406613 & 0,00000000751 & 0,00000005028\\
+ \hline 
+ 400 & 4,06311405910 & 0,00000000048 & 0,00000000314\\[0.5ex] 
+\hline 
+ 1000& 4,06311405847 & 0,00000000015 & 0,00000000008\\ 
+ \hline
+ \end{tabular}\\\hfill
+ \caption{Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki pojedynczej wzorem \textit{Simpsona}}
+ \label{WynikiZProcedurySimpson}
+\end{table}
+
+Analizuj¹c wyniki z  powy¿szej tabeli mo¿na bardzo szybko zauwa¿yæ, ¿e metoda \textit{parabol} jest bardziej optymalna ni¿ metoda \textit{trapezów}. B³¹d bezwzglêdny przybli¿enia spad³ poni¿ej $0,0000001$ ju¿ dla przypadku, w którym dokonaliœmy $N=106$ podzia³ów przedzia³u ca³kowania, dla porównania w metodzie trapezów podzia³ów tych musieliœmy wykonaæ a¿ $n=7310$. 
+
+
+
+\begin{proc}{(Wyznaczanie najmniejszej liczby $N$ podzia³ów przedzia³u ca³kowania tak, by wynik by³ obci¹¿ony b³êdem nie wiêkszym ni¿ zadany)}
+\label{MAPLE_najmniejszyNDlaMetodySimpsonaCalkaPojedyncza}
+\begin{verbatim}
+> simpsonMinN:= proc (a, b, blad) 
+local d4ff, simd4ff, M4, Nmin, p;
+d4ff:= diff(diff(diff(diff(f(x),x),x),x),x);
+simd4ff:= simplify(d4ff); 
+M4:= (Optimization[Maximize])(abs(simd4ff), x = a .. b);
+p:= solve*({1/180*(b-a)^5*M4[1]/N^4 < blad, N>0}, {N}); 
+Nmin := p[1] 
+end;
+\end{verbatim}
+\end{proc}   
 
 
 \section{Wzór 'prostok¹tów'}
