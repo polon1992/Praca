@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 APR 2017 12:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 APR 2017 17:23
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -954,62 +954,54 @@ Overfull \hbox (27.29793pt too wide) detected at line 292
 []
  []
 
-
-Underfull \hbox (badness 1596) in paragraph at lines 294--296
-\T1/ptm/m/n/12 Przyjmijmy, »e $\OML/plm/m/it/12 BBS[]$ \T1/ptm/m/n/12 ozna-cza 
-bª¡d bez-wzgl¦dny przy-bli-»e-nia (tzn. ró»-nica po-mi¦-dzy
- []
-
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 311--316
+Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 324--325
-\T1/ptm/m/n/12 przy-bli-»e-nia ma by¢ nie wi¦k-szy ni» $\OT4/cmr/m/n/12 0\OML/p
-lm/m/it/12 ; \OT4/cmr/m/n/12 0000001$\T1/ptm/m/n/12 ). Po-dob-nie jak dla me-to
-dy tra-pe-zów,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 [24]
-Overfull \hbox (17.39494pt too wide) in paragraph at lines 341--341
+Overfull \hbox (17.39494pt too wide) in paragraph at lines 342--342
 []\T1/pcr/m/n/12 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N
 <=0)[] 
  []
 
 
-Overfull \hbox (31.79494pt too wide) in paragraph at lines 341--341
+Overfull \hbox (31.79494pt too wide) in paragraph at lines 342--342
 []\T1/pcr/m/n/12 then ERROR('Ostatni parametr musi byc liczba naturalna postaci
  \2m')[] 
  []
 
 [25]
-Overfull \hbox (17.39494pt too wide) in paragraph at lines 366--366
+Overfull \hbox (17.39494pt too wide) in paragraph at lines 367--367
 []\T1/pcr/m/n/12 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N
 <=0)[] 
  []
 
 
-Overfull \hbox (31.79494pt too wide) in paragraph at lines 366--366
+Overfull \hbox (31.79494pt too wide) in paragraph at lines 367--367
 []\T1/pcr/m/n/12 then ERROR('Ostatni parametr musi byc liczba naturalna postaci
  \2m')[] 
  []
 
-[26] [27]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [28]
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+[26] [27]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [28] [29]
 Rozdzia\l  3.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [29
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [30
 
 ]
 Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [30
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [31
 
-]) [31
+]) [32
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
@@ -1038,11 +1030,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--121
 ][][][][][][]
  []
 
-[32
+[33
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
- [33]
+ [34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 161.
@@ -1056,12 +1048,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12570 strings out of 493922
- 186150 string characters out of 3144896
- 294256 words of memory out of 3000000
- 15629 multiletter control sequences out of 15000+200000
+ 12571 strings out of 493922
+ 186186 string characters out of 3144896
+ 294283 words of memory out of 3000000
+ 15630 multiletter control sequences out of 15000+200000
  57738 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,13n,77p,1093b,6166s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,13n,77p,1131b,6075s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (33 pages, 155192 bytes).
+Output written on glowny.dvi (34 pages, 159704 bytes).
