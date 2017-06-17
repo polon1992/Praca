@@ -4,15 +4,15 @@
 \contentsline {chapter}{\numberline {1}Wielomiany interpolacyjne \textit {Lagrange'a}}{7}{chapter.1}
 \contentsline {section}{\numberline {1.1}Wielomiany \textit {Lagrange'a} dla funkcji jednej zmiennej}{7}{section.1.1}
 \contentsline {section}{\numberline {1.2}Wielomiany \textit {Lagrange'a} dla funkcji dw\'och zmiennych}{12}{section.1.2}
-\contentsline {chapter}{\numberline {2}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ki pojedynczej}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Wz\'or trapez\'ow}{14}{section.2.1}
-\contentsline {section}{\numberline {2.2}Wz\'or Simpsona}{21}{section.2.2}
-\contentsline {section}{\numberline {2.3}Wz\'or 'prostok\k at\'ow'}{29}{section.2.3}
-\contentsline {chapter}{\numberline {3}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ek podw\'ojnych}{30}{chapter.3}
-\contentsline {section}{\numberline {3.1}Wz\'or trapez\'ow}{30}{section.3.1}
-\contentsline {section}{\numberline {3.2}Wz\'or Simpsona}{30}{section.3.2}
-\contentsline {section}{\numberline {3.3}Wz\'or 'prostok\k at\'ow'}{30}{section.3.3}
-\contentsline {chapter}{\numberline {4}Zastosowanie kwadratur do obliczania ca\IeC {\l }ek po obszarach normalnych}{31}{chapter.4}
-\contentsline {chapter}{Podsumowanie}{32}{chapter*.8}
-\contentsline {chapter}{Bibliografia}{33}{chapter*.9}
-\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{34}{chapter*.9}
+\contentsline {chapter}{\numberline {2}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ki pojedynczej}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Wz\'or trapez\'ow}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}Wz\'or Simpsona}{22}{section.2.2}
+\contentsline {section}{\numberline {2.3}Wz\'or 'prostok\k at\'ow'}{30}{section.2.3}
+\contentsline {chapter}{\numberline {3}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ek podw\'ojnych}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Wz\'or trapez\'ow}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Wz\'or Simpsona}{31}{section.3.2}
+\contentsline {section}{\numberline {3.3}Wz\'or 'prostok\k at\'ow'}{31}{section.3.3}
+\contentsline {chapter}{\numberline {4}Zastosowanie kwadratur do obliczania ca\IeC {\l }ek po obszarach normalnych}{32}{chapter.4}
+\contentsline {chapter}{Podsumowanie}{33}{chapter*.8}
+\contentsline {chapter}{Bibliografia}{34}{chapter*.9}
+\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{35}{chapter*.9}
