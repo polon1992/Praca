@@ -164,11 +164,71 @@ W poprzednim podrozdziale rozwa¿yliœmy wielomian interpolacyjny \textit{Lagrange
   
 Zdefiniujmy na pocz¹tku trzy pomocnicze zbiory liczbowe:
   $$X=\{x_i: i=0,1,\ldots ,n\} \,\,\,,
-  Y=\{y_i: i=0,1,\ldots ,m\}$$
+  Y=\{y_j: j=0,1,\ldots ,m\}$$
   $$F=\{f_{i,j}=f(x_i,y_j): x_i\in X \, ,\, y_j\in Y\}$$
 
-Elementy \mbox{$x_i \in X$} definiuj¹ wspó³rzêdne $x$-owe, zaœ $y_j \in Y$  wspó³rzêdne $y$-owe wszystkich punktów wêz³owych postaci $(x_i,y_j)$  na badanym, ograniczonym obszarze. Zbiór $F$ zawiera natomiast wartoœci funkcji $f(x,y)$ we wszystkich punktach wêz³owych $(x_i,y_j)$ . Ponadto rozpatrujemy tylko takie przypadki, ¿e $f(x,y)\in \re$. Zauwa¿my dodatkowo, ¿e iloczyn kartezjañski zbiorów $X$ x $Y$ jest równoliczny ze zbiorem $F$, w zwi¹zku z tym z ka¿dym wêz³em $(x_i,y_j)$ mo¿emy powi¹zaæ jedn¹ wartoœæ funkcji $f_{i,j}$.
+Elementy \mbox{$x_i \in X$} definiuj¹ wspó³rzêdne $x$-owe, zaœ $y_j \in Y$  wspó³rzêdne $y$-owe wszystkich wêz³ów postaci $(x_i,y_j)$  na badanym, ograniczonym obszarze. Zbiór $F$ zawiera natomiast wartoœci funkcji $f(x,y)$ we wszystkich punktach wêz³owych $(x_i,y_j)$ . Ponadto rozpatrujemy tylko takie przypadki, ¿e $f(x,y)\in \re$. Zauwa¿my dodatkowo, ¿e iloczyn kartezjañski zbiorów $X \times Y$ jest równoliczny ze zbiorem $F$. W zwi¹zku z tym dla ka¿dego wêz³a postaci $(x_i,y_j)$ istnieje dok³adnie jedna wartoœæ funkcji $f_{i,j} \in F$.
 
-\begin{uw}
-W naszych rozwa¿aniach ograniczymy siê do funkcji dwóch zmiennych, zdefiniowanych na ograniczonym domkniêtym obszarze $[a,b]$x$[c,d]$. W zwi¹zku z tym, zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, intuicyjnie zbiór $Y$ elementy $y_i \in \re$ takie, ¿e $c=y_0<y_1<\ldots<y_m=d$. Definicja zbioru $F$ nie zmienia siê.
-\end{uw}
+
+W naszych rozwa¿aniach ograniczymy siê do funkcji dwóch zmiennych, zdefiniowanych na ograniczonym domkniêtym obszarze prostok¹tnym $D=\{(x,y) | a\leq x\leq b,\, c\leq y\leq d\}$. Zatem zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, intuicyjnie zbiór $Y$ elementy $y_i \in \re$ takie, ¿e $c=y_0<y_1<\ldots<y_m=d$. Definicja zbioru $F$ nie zmienia siê. WeŸmy $$f:D\rightarrow \re$$ takie, dla którego mo¿emy okreœliæ wartoœci $f(x_i,y_j)\in F$. Tak jak w przypadku wielomianu interpolacyjnego \textit{Lagreange'a} funkcji jednej zmiennej, wartoœci funkcji interpoluj¹cej i interpolowanej w wêz³ach musz¹ byæ równe, tzn.:
+\begin{equation}\label{eq:RownoscWartosciWielomLagrange2IwartosciFkcjiwWezlach}
+L_{n,m}(x_i,y_j)=f(x_i,y_j),\,\,\,\, (i=0,1,\ldots,n \,\, ;\,\, j=0,1,\ldots ,m)
+\end{equation}
+(Przez zastosowane oznaczenie $L_{n,m}(x,y)$ bêdziemy rozumieli wielomian interpolacyjny \textit{Lagrange'a} funkcji dwóch zmiennych, gdzie stopieñ $x$ wynosi $n$, zaœ stopieñ $y$ jest \mbox{równy $m$}.)
+W sk³ad wielomianu interpolacyjnego $L_{n,m}(x,y)$ wchodzi³y bêd¹ dwie funkcje bazowe (wielomiany bazowe) - po jednej dla ka¿dej zmiennej niezale¿nej. \\
+Dla $x$ wielomian bazowy stopnia $n$ ma postaæ : 
+\begin{equation}\label{WielomianBazowyLagr2li(x)}
+l_i(x)=\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s} \,\,\,(i=0,1,\ldots ,n).
+\end{equation} 
+Natomiast dla zmiennej $y$ wielomian bazowy stopnia $m$ to :
+\begin{equation}\label{WielomianBazowyLagr2li(y)}
+l_j(y)=\prod\limits_{s=0,\,s\neq j}^m \frac{y-y_s}{y_j-y_s}\,\,\,(j=0,1,\ldots ,m).
+\end{equation} 
+
+\begin{flushleft}
+Dla powy¿szych funkcji bazowych zachodz¹ nastêpuj¹ce w³asnoœci:
+\end{flushleft}
+
+\begin{equation}\label{deltaKroneckerali(xs)}
+l_i(x_s)=\delta_{is}=
+					\left\{
+							\begin{array}{lr}
+							1, \,\,\,\,gdy\,\, i=s\\
+							0, \,\,\,\,\,\,\,w p.p.
+							\end{array}
+					\right.
+\end{equation}  
+
+
+\begin{equation}\label{deltaKroneckeralj(ys)}
+l_j(y_s)=\delta_{js}=
+					\left\{
+							\begin{array}{lr}
+							1, \,\,\,\,gdy\,\, j=s\\
+							0, \,\,\,\,\,\,\,w p.p.
+							\end{array}
+					\right.
+\end{equation}
+
+Wielomian interpolacyjny \textit{Lagrange'a} dla funkcji dwóch zmiennych jest nastêpuj¹cej postaci:
+\begin{equation}\label{WielomianInterpolacyjnyLagrangea}
+L_{n,m}(x,y)=\sum\limits_{i=0}^n \sum\limits_{j=0}^m f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{s=0,\,s\neq j}^m \frac{y-y_s}{y_j-y_s} \right)
+\end{equation} 					  
+
+B³¹d jaki zostaje pope³niony poprzez zamianê funkcji $f(x,y)$ na wielomian interpolacyjny $L_{n,m}(x,y)$ precyzuje definicja poni¿ej.
+
+\begin{definition}(B³¹d interpolacji wielomianem \textit{Lagrange'a} dla funkcji dwóch zmiennych)\\
+Niech dane bêd¹ nastêpuj¹ce równoœci:\\
+$$M=\sup\limits_{(x,y)\in D} \frac{\partial^{n+m}f(x,y)}{\partial x^n \partial y^m}$$
+$$m_1=\sup\limits_{x\in [a,b]}\, |\omega(x)|$$
+$$m_2=\sup\limits_{y\in [c,d]}\, |\omega(y)|$$
+Przy czym $\omega(x)=\prod\limits_{i=0}^n(x-x_i)$ oraz $\omega(y)=\prod\limits_{j=0}^m(y-y_j)$, natomiast $f(x,y)$ to funkcja interpolowana. B³êdem interpolacji wielomianem \textit{Lagrange'a} $L_{n,m}(x,y)$ nazywamy takie 
+\begin{equation}\label{BladInterpolacjiWielomianemLagrangea2zmiennych}
+\delta_{L_{i,j}}=\frac{M}{n!\cdot m!}\cdot m_1 \cdot m_2
+\end{equation}
+dla którego prawdziwa jest nastêpuj¹ca nierównoœæ:
+\begin{equation}\label{ModulRoznicyFunkcja-WielomInterpLagr2<=deltaLij}
+|f(x,y)-L_{n,m}(x,y)| \leq \delta_{L_{i,j}}
+\end{equation}
+
+\end{definition}
