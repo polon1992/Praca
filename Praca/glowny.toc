@@ -9,10 +9,10 @@
 \contentsline {section}{\numberline {2.2}Wz\'or Simpsona}{25}{section.2.2}
 \contentsline {section}{\numberline {2.3}Wz\'or 'prostok\k at\'ow'}{33}{section.2.3}
 \contentsline {chapter}{\numberline {3}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ek podw\'ojnych}{34}{chapter.3}
-\contentsline {section}{\numberline {3.1}Wz\'or trapez\'ow}{34}{section.3.1}
-\contentsline {section}{\numberline {3.2}Wz\'or Simpsona}{34}{section.3.2}
-\contentsline {section}{\numberline {3.3}Wz\'or 'prostok\k at\'ow'}{34}{section.3.3}
-\contentsline {chapter}{\numberline {4}Zastosowanie kwadratur do obliczania ca\IeC {\l }ek po obszarach normalnych}{35}{chapter.4}
-\contentsline {chapter}{Podsumowanie}{36}{chapter*.8}
-\contentsline {chapter}{Bibliografia}{38}{chapter*.9}
-\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{39}{chapter*.9}
+\contentsline {section}{\numberline {3.1}Wz\'or trapez\'ow}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Wz\'or Simpsona}{37}{section.3.2}
+\contentsline {section}{\numberline {3.3}Wz\'or 'prostok\k at\'ow'}{37}{section.3.3}
+\contentsline {chapter}{\numberline {4}Zastosowanie kwadratur do obliczania ca\IeC {\l }ek po obszarach normalnych}{38}{chapter.4}
+\contentsline {chapter}{Podsumowanie}{39}{chapter*.8}
+\contentsline {chapter}{Bibliografia}{41}{chapter*.9}
+\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{42}{chapter*.9}
