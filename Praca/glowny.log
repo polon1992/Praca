@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  1 JUL 2017 10:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  3 JUL 2017 00:14
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1008,11 +1008,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--372
 Rozdzia\l  3.
 [34
 
-] [35] [36]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [37]
+] [35] [36]
+File: R4.eps Graphic file (type eps)
+ <R4.eps> [37])
+("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [38]
 Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [38
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [39
 
-]) [39
+]) [40
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 104--105
@@ -1054,30 +1057,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--125
 ][][][][][][][][][][][][][][]
  []
 
-[40
+[41
 
-] [41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
- [42]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
+] [42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
+ [43]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 171.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 175.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: F4689005CAC764B563EA38308668355E;1158.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
+(rerunfilecheck)             Checksum: 56E0CA811CE0C66A865FC3762DAAE9F9;1160.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12588 strings out of 493922
- 186733 string characters out of 3144896
- 297325 words of memory out of 3000000
- 15647 multiletter control sequences out of 15000+200000
+ 12596 strings out of 493922
+ 186906 string characters out of 3144896
+ 297786 words of memory out of 3000000
+ 15654 multiletter control sequences out of 15000+200000
  57738 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1131b,6075s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (42 pages, 208792 bytes).
+Output written on glowny.dvi (43 pages, 222952 bytes).

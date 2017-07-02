@@ -73,7 +73,7 @@ I_{T2}\approx \frac{h_x h_y}{4}\left\lbrace f(x_0,y_0)+f(x_0,y_m)+f(x_n,y_0)+f(x
 \end{equation}
 
 Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem rozk³adaj¹ siê wed³ug pewnego schematu. Co oznacza, ¿e je¿eli rozpisalibyœmy (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) tak, by uwzglêdniæ w nim wszystkie punkty wêz³owe postaci $(x_i,y_j)$ ( $i=0,1,\ldots,n$,\, \mbox{$j=0,1,\ldots,m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego i spe³niaj¹ce (\ref{WezlyNaObszarzeProstokatnymTrapez2}), to odpowiednio wartoœci przy kolejnych $f(x_i,y_j)$ ( $i=0,1,\ldots,n\,\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê nastêpuj¹co:
-\begin{equation}
+\begin{equation}\label{MacierzWspolczynnikowTrapez2}
 \begin{array}{ccccccccc}
 1 & 2 & 2 & 2 &\cdots & 2& 2& 2& 1\\
 2 & 4 & 4 & 4 &\cdots & 4& 4& 4& 2\\
@@ -83,7 +83,75 @@ Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿s
 1 & 2 & 2 & 2 &\cdots & 2& 2& 2& 1\\
 \end{array}
 \end{equation}
-Powy¿sza macierz znacz¹co upraszcza i przyspiesza rozpisywanie \textbf{uogólnionego wzoru trapezów dla ca³ek podwójnych po obszarach normalnych}. Dla przypadku uogólnionego wzoru trapezów dla ca³ki pojedynczej schemat ten ogranicza³ siê jedynie do pierwszego wiersza (numeracja $i$ - od lewej do prawej, $j$ - od góry do do³u).  
+Powy¿sza macierz znacz¹co upraszcza i przyspiesza rozpisywanie \textbf{uogólnionego wzoru trapezów dla ca³ek podwójnych po obszarach normalnych}. Dla przypadku uogólnionego wzoru trapezów dla ca³ki pojedynczej schemat ten ogranicza³ siê jedynie do pierwszego wiersza (numeracja $i$ - od lewej do prawej, $j$ - od góry do do³u).
+
+Obliczanie wartoœci ca³ki podwójnej metod¹ trapezów mo¿emy sprowadziæ równie¿ do  sumowania objêtoœci pewnych bry³ trapezoidalnych. Innymi s³owy - rozwa¿my podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na $n\cdot m$ podobszarów, co prezentuje rysunek \ref{R4} zamieszczony poni¿ej:
+
+\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.6]{R4.eps}
+		\end{center}
+	   \caption{\cite{klucz10} Metoda trapezów dla ca³ek podwójnych - podzia³ obszaru ca³kowania na podobszary }
+\label{R4}
+\end{figure}
+\begin{flushleft}
+Jak widaæ, ka¿dy z podobszarów jest wyznaczany przez cztery wierzcho³ki $(x_i,y_j)$ (definicja $x_i$, $y_j$ taka jak w (\ref{WezlyNaObszarzeProstokatnymTrapez2})). Do obliczenia objêtoœci ka¿dej z takich bry³ trapezoidalnych potrzebne s¹ nam pola podstawy ( ju¿ je znamy - s¹ one takie same dla ka¿dego podobszaru i wynosz¹ $h_xh_y$), oraz odpowiadaj¹ce dla nich wysokoœci. Te ostatnie okreœlimy jako œrednia arytmetyczna wartoœci funkcji $f(x,y)$ w czterech wierzcho³kach definiuj¹cych ka¿dy z podobszarów ca³kowania. Ostatecznie objêtoœæ ka¿dej bry³y definiowa³ bêdzie nastêpuj¹cy wzór \cite{klucz10}:
+\end{flushleft}
+\begin{equation}\label{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}
+V_{i,j}=h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right],
+\end{equation}
+przy czym $h_x$, $h_y$ opisane s¹ w (\ref{WezlyNaObszarzeProstokatnymTrapez2}).\\ Rozszerzaj¹c równanie (\ref{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}), charakteryzuj¹ce pojedyncz¹ objêtoœæ bry³y na ca³y obszar ca³kowania dobrnêlibyœmy do równoœci postaci  (\ref{UogolnionyWzorTrapezow2_obszarNormalny}). Analizuj¹c powy¿sze zapiski wnioskujemy i¿ zachodzi nastêpuj¹ca prawid³owoœæ: 
+\begin{equation}\label{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}
+I_{T2V} = I_{T2}\approx \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right]
+\end{equation}
+Porównuj¹c macierz (\ref{MacierzWspolczynnikowTrapez2}) z rysunkiem \ref{R4} zauwa¿ymy, ¿e elementy macierzy odzwierciedlaj¹ iloœæ podobszarów, na styku których umiejscowiony zosta³ dany wêze³. Nie jest to oczywiœcie kwesti¹ przypadku. Oznacza to, ilu krotnie dany punkt wêz³owy zostaje uwzglêdniony podczas sumowania (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).
+
+Wzór (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) podobnie jak dla przypadku ca³ki pojedynczej mo¿na równie¿ otrzymaæ wykorzystuj¹c wielomiany \textit{Lagrange'a $L_{1,1}(x,y)$}. Podamy jedynie zarys przekszta³ceñ, które doprowadzi³yby nas do wyniku: 
+\begin{equation}\label{WzorTrapezowWielomianemL11}
+\begin{array}{cc}
+\int\limits_a^b \int\limits_c^d f(x,y) dydx\approx \int\limits_a^b \int\limits_c^d L_{1,1}(x,y) dydx = 
+\sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1}\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx =\\
+\frac{h_xh_y}{4} \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} \left[f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})\right]
+\end{array}
+\end{equation}
+Mogliœmy wykonaæ ostatnie przejœcie poniewa¿ wynik dla ka¿dej ca³ki $\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx$ jest takiej samej postaci, zmienia siê jedynie numer wêz³a branego pod uwagê. Dla przyk³adu:
+\begin{equation}
+\begin{array}{cc}
+\int\limits_{x_0}^{x_{1}} \int\limits_{y_0}^{y_{1}} L_{1,1}(x,y) dydx
+ =
+ \int\limits_{x_0}^{x_{1}} \int\limits_{y_0}^{y_{1}}\left( f(x_0,y_0)\left(\frac{x-x_1}{x_0-x_1}\frac{y-y_1}{y_0-y_1} \right)
+ +f(x_0,y_1)\left(\frac{x-x_1}{x_0-x_1}\frac{y-y_0}{y_1-y_0} \right)\right.\\
+\left. +f(x_1,y_0)\left(\frac{x-x_0}{x_1-x_0}\frac{y-y_1}{y_0-y_1} \right)
+ +f(x_1,y_1)\left(\frac{x-x_0}{x_1-x_0}\frac{y-y_0}{y_1-y_0} \right)
+ \right) dydx= \ldots =\\ 
+ \frac{h_xh_y}{4}\left[f(x_{0},y_{0})+f(x_{1},y_{0})+f(x_{0},y_{1})+f(x_{1},y_{1})\right]
+\end{array}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
      
 
 \section{Wzór Simpsona}
