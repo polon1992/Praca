@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  3 JUL 2017 00:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  3 JUL 2017 18:52
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1010,12 +1010,34 @@ Rozdzia\l  3.
 
 ] [35] [36]
 File: R4.eps Graphic file (type eps)
- <R4.eps> [37])
-("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [38]
-Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [39
+ <R4.eps> [37]
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+\T1/ptm/m/n/12 Ostatnie przej-±cie mo-gªo zo-sta¢ wy-ko-nane, po-nie-wa» wy-nik
+ dla ka»-dej caªki
+ []
 
-]) [40
+
+Underfull \hbox (badness 7047) in paragraph at lines 130--131
+[]\T1/ptm/m/n/12 Jak wi-da¢ ist-nieje wiele spo-so-bów na to, by wy-pro-wa-dzi¢
+ po-»¡-dany przez
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+\T1/ptm/m/n/12 nas dwu-wy-mia-rowy wzór tra-pe-zów. Naj-ªa-twiej-sza do zro-zu-
+mie-nia i pó¹-niej-szego
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+[38] [39]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [40]
+Rozdzia\l  4.
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [41
+
+]) [42
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 104--105
@@ -1057,30 +1079,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--125
 ][][][][][][][][][][][][][][]
  []
 
-[41
+[43
 
-] [42]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
- [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+] [44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+ [45]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: 56E0CA811CE0C66A865FC3762DAAE9F9;1160.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
+(rerunfilecheck)             Checksum: A75C8F895204E94D08E36BA8210907A4;1368.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12596 strings out of 493922
- 186906 string characters out of 3144896
- 297786 words of memory out of 3000000
- 15654 multiletter control sequences out of 15000+200000
+ 12599 strings out of 493922
+ 186983 string characters out of 3144896
+ 298125 words of memory out of 3000000
+ 15657 multiletter control sequences out of 15000+200000
  57738 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,13n,77p,1131b,6075s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,13n,77p,1131b,6164s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (43 pages, 222952 bytes).
+Output written on glowny.dvi (45 pages, 233432 bytes).

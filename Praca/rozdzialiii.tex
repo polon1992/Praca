@@ -18,10 +18,9 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 \section{Wzór trapezów}
 W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Rozpocznijmy od wariantu, dla którego obszar ca³kowania jest obszarem normalnym ze wzglêdu na dwie zmienne.  
 
-
+\subsection{Ca³kowanie po obszarze normalnym}
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $\frac{N_x}{2}=n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $\frac{N_y}{2}=m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
-
 \begin{center}
 $a=x_0\leq x_1\leq x_2\ldots\leq x_n=b$ \,\,\,\,($i=0,1,\ldots ,n$) \\ 
 $c=y_0\leq y_1\leq y_2\ldots\leq y_m=d$ \,\,\,\,($j=0,1,\ldots ,m$)\\
@@ -49,7 +48,7 @@ przy czym ( rozbudowuj¹c (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) o dodatko
 \begin{equation}\label{Wyjasnienie_g(x)_metodaTrapezow2}
 g(x)=\int\limits_c^d f(x,y)dy\approx\frac{h_y}{2}\left[ f(x,y_0)+f(x,y_m)+2\sum\limits_{j=1}^{m-1}f(x,y_j)\right].
 \end{equation}   
-Podstawmy opisan¹ przez równanie (\ref{Wyjasnienie_g(x)_metodaTrapezow2}) postaæ $g(x)$ do (\ref{CalkaPodwojna}). Skutkuje to tym, ¿e:
+Podstawmy opisan¹ przez równanie (\ref{Wyjasnienie_g(x)_metodaTrapezow2}) postaæ $g(x)$ do (\ref{CalkaPodwojna}). Zaskutkuje to tym, ¿e:
 \begin{equation}\label{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}
 I_{T2}=\int\limits_a^b\int\limits_c^d f(x,y)dydx\approx\int\limits_a^b \frac{h_y}{2}\left[ f(x,y_0)+f(x,y_m)+2\sum\limits_{j=1}^{m-1}f(x,y_j)\right] dx  \,.
 \end{equation}
@@ -89,7 +88,7 @@ Obliczanie wartoœci ca³ki podwójnej metod¹ trapezów mo¿emy sprowadziæ równie¿ do
 
 \begin{figure}[H]
 		\begin{center}
-		\includegraphics[scale=0.6]{R4.eps}
+		\includegraphics[scale=0.7]{R4.eps}
 		\end{center}
 	   \caption{\cite{klucz10} Metoda trapezów dla ca³ek podwójnych - podzia³ obszaru ca³kowania na podobszary }
 \label{R4}
@@ -104,17 +103,17 @@ przy czym $h_x$, $h_y$ opisane s¹ w (\ref{WezlyNaObszarzeProstokatnymTrapez2}).\
 \begin{equation}\label{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}
 I_{T2V} = I_{T2}\approx \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right]
 \end{equation}
-Porównuj¹c macierz (\ref{MacierzWspolczynnikowTrapez2}) z rysunkiem \ref{R4} zauwa¿ymy, ¿e elementy macierzy odzwierciedlaj¹ iloœæ podobszarów, na styku których umiejscowiony zosta³ dany wêze³. Nie jest to oczywiœcie kwesti¹ przypadku. Oznacza to, ilu krotnie dany punkt wêz³owy zostaje uwzglêdniony podczas sumowania (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).
+Porównuj¹c macierz (\ref{MacierzWspolczynnikowTrapez2}) z rysunkiem \ref{R4} zauwa¿ymy, ¿e elementy macierzy odzwierciedlaj¹ iloœæ podobszarów, na styku których umiejscowiony zosta³ dany wêze³. Mo¿na to te¿ traktowaæ jako informacjê ilu krotnie dany punkt wêz³owy zostaje uwzglêdniony podczas sumowania w (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).
 
 Wzór (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) podobnie jak dla przypadku ca³ki pojedynczej mo¿na równie¿ otrzymaæ wykorzystuj¹c wielomiany \textit{Lagrange'a $L_{1,1}(x,y)$}. Podamy jedynie zarys przekszta³ceñ, które doprowadzi³yby nas do wyniku: 
 \begin{equation}\label{WzorTrapezowWielomianemL11}
 \begin{array}{cc}
-\int\limits_a^b \int\limits_c^d f(x,y) dydx\approx \int\limits_a^b \int\limits_c^d L_{1,1}(x,y) dydx = 
+I_{T2L} = \int\limits_a^b \int\limits_c^d f(x,y) dydx\approx \int\limits_a^b \int\limits_c^d L_{1,1}(x,y) dydx = 
 \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1}\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx =\\
 \frac{h_xh_y}{4} \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} \left[f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})\right]
 \end{array}
 \end{equation}
-Mogliœmy wykonaæ ostatnie przejœcie poniewa¿ wynik dla ka¿dej ca³ki $\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx$ jest takiej samej postaci, zmienia siê jedynie numer wêz³a branego pod uwagê. Dla przyk³adu:
+Ostatnie przejœcie mog³o zostaæ wykonane, poniewa¿ wynik dla ka¿dej ca³ki $\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx$ jest takiej samej postaci, zmienia siê jedynie numer wêz³a branego pod uwagê. Dla przyk³adu:
 \begin{equation}
 \begin{array}{cc}
 \int\limits_{x_0}^{x_{1}} \int\limits_{y_0}^{y_{1}} L_{1,1}(x,y) dydx
@@ -128,6 +127,44 @@ Mogliœmy wykonaæ ostatnie przejœcie poniewa¿ wynik dla ka¿dej ca³ki $\int\limits
 \end{array}
 \end{equation}
 
+Jak widaæ istnieje wiele sposobów na to, by wyprowadziæ po¿¹dany przez nas dwuwymiarowy wzór trapezów. Naj³atwiejsza do zrozumienia i póŸniejszego zaimplementowania okazuje siê na pierwszy rzut oka jego postaæ z równoœci (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).\\ 
+\newpage
+Zechciejmy teraz wykorzystaæ zdobyt¹ wiedzê w praktyce rozwi¹zuj¹c pewien przyk³ad.
+
+\begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej wzorem trapezów)\\
+\textit{Wyznaczymy wartoœæ przybli¿on¹ $\int\limits_0^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2} dydx$ przy u¿yciu uogólnionego wzoru trapezów dla ca³ek podwójnych po obszarach normalnych. Przyjmijmy, ¿e przedzia³y ca³kowania dla obydwu zmiennych dzielimy na $n=m=2$ równe podprzedzia³y. }\\
+Zgodnie z przyjêtymi za³o¿eniami podzia³ wygl¹da nastêpuj¹co:
+\begin{center}
+$x_0=0 , x_1=\frac{1}{4} , x_2=\frac{1}{2} $\\
+$y_0=\frac{1}{2} , y_1=\frac{3}{4} , y_2=1 $.\\
+\end{center}
+Wartoœciami kroków pomiêdzy kolejnymi wêz³ami s¹: $h_x=\frac{x_2-x_0}{2}=\frac{1}{4}$, $h_y=\frac{y_2-y_0}{2}=\frac{1}{4}$.
+
+PrzejdŸmy teraz do g³ównych rachunków prowadz¹cych do wyniku, mianowicie:
+\begin{center}
+$\int\limits_0^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2} dydx \approx
+\frac{h_xh_y}{4}\left( f(x_0,y_0) + f(x_0,y_2) + f(x_2,y_0) + f(x_2,y_2)  + \right.$
+$\left. + 4 f(x_1,y_1) + 2 f(x_0,y_1) + 2 f(x_2,y_1)+ 2 f(x_1,y_0) + 2 f(x_1,y_2)\right)=$
+$=\frac{\frac{1}{16}}{4}\left( f(0,\frac{1}{2}) + f(0,1) + f(\frac{1}{2},\frac{1}{2}) + f(\frac{1}{2},1)  + \right.$
+$\left. + 4 f(\frac{1}{4},\frac{3}{4}) + 2 f(0,\frac{3}{4}) + 2 f(\frac{1}{2},\frac{3}{4})+ 2 f(\frac{1}{4},\frac{1}{2}) + 2 f(\frac{1}{4},1)\right)=$\\
+$=\frac{1}{64}\left(\frac{\frac{1}{2}}{\frac{1}{4}}+\frac{1}{1}+\frac{1}{\frac{2}{4}}+\frac{\frac{3}{2}}{\frac{5}{4}}+4 \frac{1}{\frac{10}{16}}+2\frac{\frac{3}{4}}{\frac{9}{16}}+2\frac{\frac{5}{4}}{\frac{13}{16}}+2\frac{\frac{3}{4}}{\frac{5}{16}}+2\frac{\frac{5}{4}}{\frac{17}{16}} \right)=$\\
+$=\frac{1}{64}\left( 2+1+2+\frac{12}{10}+\frac{64}{10}+\frac{48}{18}+\frac{80}{26}+\frac{48}{10}+\frac{80}{34}\right)=0,398383295625$\\
+\end{center}
+
+Wynik dok³adny otrzymany przy wykorzystaniu zaawansowanego narzêdzia matematycznego wynosi $0,399181467986$. Bardzo szybko mo¿emy zauwa¿yæ, ¿e b³¹d wzglêdny (oznaczmy go jako \textbf{BW}) nie jest znacz¹cy i wynosi zaledwie $0,2\%$ : 
+\begin{center}
+$BW = \frac{|0,399181467986 - 0,398383295625|}{0,399181467986} * 100\% \approx 0,19995\%\approx 0,2\% $ \\
+\end{center}
+Mo¿emy zatem bezwzglêdnie stwierdziæ, ¿e otrzymany wynik jest bardzo dok³adny. 
+\end{ex}
+
+Mo¿na spostrzec, ¿e przeprowadzenie pe³nych obliczeñ mo¿e staæ siê bardzo k³opotliwe w przypadku, gdy funkcja podca³kowa ma skomplikowan¹ postaæ, lub liczba wêz³ów liczona jest w dziesi¹tkach b¹dŸ setkach. W takim przypadku bardzo pomocna oka¿e siê specjalna procedura napisana w jêzyku \textit{Maple}, automatyzuj¹ca ca³y proces prowadzenia rachunków. 
+
+\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu uogólnionego wzoru trapezów)\label{MAPLE_Trapez2ObszarNormalnyWartoscCalki}
+\begin{verbatim}
+
+\end{verbatim}
+\end{proc}
 
 
 
@@ -153,6 +190,6 @@ Mogliœmy wykonaæ ostatnie przejœcie poniewa¿ wynik dla ka¿dej ca³ki $\int\limits
 
      
      
-
+\subsection{Ca³kowanie po obszarze normalnym ze wzglêdu na jedn¹ zmienn¹}
 \section{Wzór Simpsona}
 \section{Wzór 'prostok¹tów'}
