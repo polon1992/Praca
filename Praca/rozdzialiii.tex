@@ -21,12 +21,14 @@ W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów 
 \subsection{Ca³kowanie po obszarze normalnym}
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $\frac{N_x}{2}=n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $\frac{N_y}{2}=m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
-\begin{center}
-$a=x_0\leq x_1\leq x_2\ldots\leq x_n=b$ \,\,\,\,($i=0,1,\ldots ,n$) \\ 
-$c=y_0\leq y_1\leq y_2\ldots\leq y_m=d$ \,\,\,\,($j=0,1,\ldots ,m$)\\
-\end{center}
+\vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
+\begin{array}{cc}
+a=x_0\leq x_1\leq x_2\ldots\leq x_n=b \,\,\,\,(i=0,1,\ldots ,n) \\ 
+c=y_0\leq y_1\leq y_2\ldots\leq y_m=d \,\,\,\,(j=0,1,\ldots ,m)\\
+\end{array}
+\end{equation}
 Postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
-\begin{equation}\label{WezlyNaObszarzeProstokatnymTrapez2}
+\vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymTrapez2}
 \begin{array}{cc}
 x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{n}\\
 y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{m}\\
@@ -158,15 +160,56 @@ $BW = \frac{|0,399181467986 - 0,398383295625|}{0,399181467986} * 100\% \approx 0
 Mo¿emy zatem bezwzglêdnie stwierdziæ, ¿e otrzymany wynik jest bardzo dok³adny. 
 \end{ex}
 
-Mo¿na spostrzec, ¿e przeprowadzenie pe³nych obliczeñ mo¿e staæ siê bardzo k³opotliwe w przypadku, gdy funkcja podca³kowa ma skomplikowan¹ postaæ, lub liczba wêz³ów liczona jest w dziesi¹tkach b¹dŸ setkach. W takim przypadku bardzo pomocna oka¿e siê specjalna procedura napisana w jêzyku \textit{Maple}, automatyzuj¹ca ca³y proces prowadzenia rachunków. 
+Widaæ wprost, ¿e przeprowadzenie pe³nych obliczeñ mo¿e staæ siê bardzo k³opotliwe w przypadku, gdy funkcja podca³kowa ma skomplikowan¹ postaæ, lub liczba wêz³ów liczona jest w dziesi¹tkach b¹dŸ setkach. W takim przypadku bardzo pomocna oka¿e siê specjalna procedura napisana w jêzyku \textit{Maple}, automatyzuj¹ca ca³y proces prowadzenia rachunków. Skrypt z implementacj¹ oraz jego pe³en opis znajdziemy poni¿ej.
 
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu uogólnionego wzoru trapezów)\label{MAPLE_Trapez2ObszarNormalnyWartoscCalki}
 \begin{verbatim}
+> Trapez2 := proc (a, b, c, d, n, m) 
+local h, k, i, j, p, q, x, y, z, T2, WynikT2; 
+h := (b-a)/n; 
+k := (d-c)/m; 
 
+for i from 0 to n 
+	do x := i -> a+i*h od;
+ 
+for j from 0 to m 
+	do y := j -> c+j*k od; 
+
+for i from 0 to n 
+	do for j from 0 to m 
+	do z := (i, j) -> f(x(i), y(j)) od 
+	od;
+
+T2 := (h*k)/4*(sum(sum(z(p, q)+z(p+1, q)+z(p, q+1)+z(p+1, q+1)
+				, p = 0 .. n-1), q = 0 .. m-1)); 
+
+WynikT2 := evalf(T2) 
+end;
 \end{verbatim}
 \end{proc}
 
+Przed wykorzystaniem zamieszczonej procedury nr \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} do wykonania g³ównych obliczeñ, opiszmy zasadê jej dzia³ania. Tak wiêc pierwsza linia jest nag³ówkiem procedury i odpowiada za definicjê jej nazwy oraz parametrów wejœciowych. Ich znaczenie jest nastêpuj¹ce:\\
+\textit{a, b} - granice ca³kowania po zmiennej $x$\\  
+\textit{c, d} - granice ca³kowania po zmiennej $y$\\
+\textit{n} - iloœæ $x_i$ bêd¹cych wspó³rzêdnymi $x$-owymi wêz³ów na przedziale $[a,b]$\\
+\textit{m} - iloœæ $y_j$ bêd¹cych wspó³rzêdnymi $y$-owymi wêz³ów na przedziale $[c,d]$\\
+(Zrozumienie ca³ego powy¿szego opisu ma kluczowe znaczenie w tym, by potrafiæ prawid³owo wywo³aæ procedurê \textit{Trapez2}.)
+Kolejno zadeklarowane zosta³y pomocnicze zmienne lokalne wykorzystane wewn¹trz algorytmu. Nastêpne dwa kroki odpowiadaj¹ za okreœlenie odleg³oœci pomiêdzy kolejnymi wêz³ami - zgodnie z tym co mówi równanie  (\ref{WezlyNaObszarzeProstokatnymTrapez2}). Dalsza czêœæ procedury sk³adaj¹ca siê kolejno z dwóch pêtli \textit{for} powoduje wyliczenie wartoœci wspó³rzêdnych $x_i$ oraz $y_j$, bêd¹cych po³¹czeniem (\ref{WezlyTrapez2}) oraz  (\ref{WezlyNaObszarzeProstokatnymTrapez2}). Trzecia z pêtli u¿yta w procedurze s³u¿y do obliczania i zapamiêtywania wartoœci funkcji $f(x,y)$ w wyznaczonych przed chwil¹ punktach wêz³owych. Najwa¿niejszy fragment odpowiadaj¹cy bezpoœrednio za wyznaczenie wyniku ca³kowania to ostatni blok z³o¿ony z dwóch zagnie¿d¿onych pêtli (przypisanie wartoœci do zmiennej \textit{T2}). Wykonywane w tym miejscu obliczenia s¹ w pe³ni zgodne ze wzorem (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}) - to w³aœnie on zosta³ u¿yty w implementacji. Ostatecznie wynik sumowania zostaje przekszta³cony do klarownej postaci oraz zwrócony jako wartoœæ \textit{WynikT2}.
 
+Posiadaj¹c ju¿ kompletne informacje dotycz¹ce kwestii sposobu dzia³ania procedury, u¿yjmy jej do obliczenia wartoœci dwóch ca³ek:
+\begin{itemize}
+\item[a)] $\int\limits_0^\frac{1}{2}\int\limits_\frac{1}{2}^1 \frac{x+y}{x^2+y^2} dydx$
+\item[b)] $\int\limits_0^1\int\limits_1^2 e^\frac{x^2}{y^3} dydx$
+\end{itemize}
+Otrzymane wyniki zaprezentujemy w formie tabel. Przyjmijmy, ¿e $n$ oznacza³o bêdzie iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$, zaœ $W_{trapez2}$ to wynik \textit{Trapez2} dla coraz wiêkszych wartoœci $n$ i $m$. Ponadto niech \textit{$BBT2_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2}, przy jej wywo³aniu dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obci¹¿ony ten sam wynik wykonania \textit{Trapez2}, co w przypadku wyliczania \textit{$BWT2_{n,m}$}.
+\begin{definition}(B³¹d wzglêdny)\\
+B³¹d wzglêdny informuje nas o ile procent wartoœæ zmierzona odbiega od wartoœci dok³adnej. Wyliczamy go ze wzoru:
+$$BW=\frac{BB}{x}*100\%=\frac{|x-\widehat{x}|}{x}*100\% \,,$$ 
+gdzie $x$ - wartoœæ dok³adna, $\widehat{x}$ - wartoœæ oszacowana, $BB$ - b³¹d bezwzglêdny pomiaru.  
+\end{definition}
+
+Wartoœæ dok³adna ca³ki z przyk³adu a) to...
+%+ tabela z wynikami  
 
 
 
