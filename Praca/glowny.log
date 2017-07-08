@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  4 JUL 2017 23:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 JUL 2017 11:59
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -875,13 +875,17 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.toc"
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 4.
-)
-\tf@toc=\write4
 
-("F:\SEMESTR 4\PracaMagisterska\Praca\wstep.tex" [5
+Overfull \hbox (58.99486pt too wide) in paragraph at lines 19--19
+ [] [] []  
+ []
+
+[5
 
 ])
-("F:\SEMESTR 4\PracaMagisterska\Praca\rozdziali.tex" [6
+\tf@toc=\write4
+ ("F:\SEMESTR 4\PracaMagisterska\Praca\wstep.tex" [6])
+("F:\SEMESTR 4\PracaMagisterska\Praca\rozdziali.tex" [7
 
 ]
 Rozdzia\l  1.
@@ -895,11 +899,11 @@ nia ota-cza-j°-cego nas ±wiata.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
-[7
+[8
 
 ]
 File: R1.eps Graphic file (type eps)
- <R1.eps> [8] [9]
+ <R1.eps> [9] [10]
 Underfull \hbox (badness 1648) in paragraph at lines 82--86
 \T1/ptm/m/it/12 Zbu-du-jemy wie-lo-mian in-ter-po-la-cyjny $\OML/plm/m/it/12 L[
 ]\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 x\OMX/MnSymbolE/m/n/12 ç$ \T1/ptm/m/it
@@ -908,43 +912,43 @@ MX/MnSymbolE/m/n/12 ç \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 e[]$ \T1/ptm/m/it/
 12 roz-pa-try-wa-nej na
  []
 
-[10] [11]
+[11] [12]
 Underfull \hbox (badness 1762) in paragraph at lines 164--165
 \T1/ptm/m/n/12 jed-nej zmien-nej nie-za-leª-nej $\OML/plm/m/it/12 x$\T1/ptm/m/n
 /12 . W rze-czy-wi-sto-±ci z pew-no-±ci° cz¶-sto ze-tkniemy si¶ z
  []
 
-[12] [13]
+[13] [14]
 Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
-[14] [15]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialii.tex" [16]
+[15] [16]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialii.tex" [17]
 Rozdzia\l  2.
-[17
+[18
 
-] [18]
+] [19]
 File: R2.eps Graphic file (type eps)
- <R2.eps> [19]
+ <R2.eps> [20]
 Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
-[20]
+[21]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 146.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [21]
+) [22]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
-[23] [24]
+[24] [25]
 File: R3.eps Graphic file (type eps)
  <R3.eps>
 Underfull \hbox (badness 1867) in paragraph at lines 264--265
@@ -952,7 +956,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 264--265
 /it/12 x[]$\T1/ptm/m/n/12 . W celu wy-pro-wa-dze-nia wzoru
  []
 
-[25]
+[26]
 Overfull \hbox (29.69785pt too wide) detected at line 270
 [] \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 h []  []\OMX/MnSymbolE/m/n/12 à\OML/p
 lm/m/it/12 s\OMX/MnSymbolE/m/n/12 ç\OML/plm/m/it/12 ds \U/MnSymbolD/m/n/12   \O
@@ -960,12 +964,12 @@ ML/plm/m/it/12 h [] [] ds \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 h [] [] ds \U/
 MnSymbolD/m/n/12   \OML/plm/m/it/12 h [] []ds \U/MnSymbolD/m/n/12  
  []
 
-[26]
+[27]
 Overfull \hbox (27.29793pt too wide) detected at line 292
 []
  []
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
@@ -975,7 +979,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
-[28]
+[29]
 Overfull \hbox (17.39494pt too wide) in paragraph at lines 342--342
 []\T1/pcr/m/n/12 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N
 <=0)[] 
@@ -987,7 +991,7 @@ Overfull \hbox (31.79494pt too wide) in paragraph at lines 342--342
  \2m')[] 
  []
 
-[29]
+[30]
 Overfull \hbox (17.39494pt too wide) in paragraph at lines 367--367
 []\T1/pcr/m/n/12 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N
 <=0)[] 
@@ -1004,13 +1008,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
-[30] [31]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [32] [33]
+[31] [32]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [33] [34]
 Rozdzia\l  3.
-[34
+[35
 
-] [35] [36]
+] [36] [37]
 File: R4.eps Graphic file (type eps)
- <R4.eps> [37]
+ <R4.eps> [38]
 Underfull \hbox (badness 10000) in paragraph at lines 117--119
 \T1/ptm/m/n/12 Ostatnie przej-±cie mo-g™o zo-sta¢ wy-ko-nane, po-nie-waª wy-nik
  dla kaª-dej ca™ki
@@ -1033,12 +1037,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[38] [39] [40] [41]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex"
-[42]
+[39] [40] [41] [42] [43]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex"
+[44]
 Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [43
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [45
 
-]) [44
+]) [46
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1080,17 +1084,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 ][][][][][][][][][][][][][][]
  []
 
-[45
+[47
 
-] [46]
+] [48]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
- [47]
+ [49]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 174.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: A75C8F895204E94D08E36BA8210907A4;1368.
+(rerunfilecheck)             Checksum: BF5457931F631983ABE96CE4FBF6FBE3;1595.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  )
 (\end occurred inside a group at level 1)
@@ -1098,12 +1102,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12600 strings out of 493922
- 186997 string characters out of 3144896
- 298188 words of memory out of 3000000
- 15658 multiletter control sequences out of 15000+200000
+ 12604 strings out of 493922
+ 187086 string characters out of 3144896
+ 298687 words of memory out of 3000000
+ 15662 multiletter control sequences out of 15000+200000
  57738 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1168b,6164s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (47 pages, 241008 bytes).
+Output written on glowny.dvi (49 pages, 252444 bytes).

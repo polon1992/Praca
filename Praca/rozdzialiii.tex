@@ -201,18 +201,99 @@ Posiadaj¹c ju¿ kompletne informacje dotycz¹ce kwestii sposobu dzia³ania procedur
 \item[a)] $\int\limits_0^\frac{1}{2}\int\limits_\frac{1}{2}^1 \frac{x+y}{x^2+y^2} dydx$
 \item[b)] $\int\limits_0^1\int\limits_1^2 e^\frac{x^2}{y^3} dydx$
 \end{itemize}
-Otrzymane wyniki zaprezentujemy w formie tabel. Przyjmijmy, ¿e $n$ oznacza³o bêdzie iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$, zaœ $W_{trapez2}$ to wynik \textit{Trapez2} dla coraz wiêkszych wartoœci $n$ i $m$. Ponadto niech \textit{$BBT2_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2}, przy jej wywo³aniu dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obci¹¿ony ten sam wynik wykonania \textit{Trapez2}, co w przypadku wyliczania \textit{$BWT2_{n,m}$}.
+Otrzymane wyniki zaprezentujemy poni¿ej w formie tabel. Przyjmijmy, ¿e $n$ oznacza³o bêdzie iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$, zaœ $W_{trapez2}$ to wynik \textit{Trapez2} dla coraz wiêkszych wartoœci $n$ i $m$. Ponadto niech \textit{$BBT2_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2}, przy jej wywo³aniu dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obci¹¿ony ten sam wynik wykonania \textit{Trapez2}, co w przypadku wyliczania \textit{$BWT2_{n,m}$}.
 \begin{definition}(B³¹d wzglêdny)\\
 B³¹d wzglêdny informuje nas o ile procent wartoœæ zmierzona odbiega od wartoœci dok³adnej. Wyliczamy go ze wzoru:
 $$BW=\frac{BB}{x}*100\%=\frac{|x-\widehat{x}|}{x}*100\% \,,$$ 
 gdzie $x$ - wartoœæ dok³adna, $\widehat{x}$ - wartoœæ oszacowana, $BB$ - b³¹d bezwzglêdny pomiaru.  
 \end{definition}
 
-Wartoœæ dok³adna ca³ki z przyk³adu a) to...
-%+ tabela z wynikami  
+Wartoœæ dok³adna ca³ki z przyk³adu a) jest równa $0,399182$ , wiêc:. 
+%Wyniki wyznaczone procedur¹ \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} prezentuj¹ siê nastêpuj¹co:\\
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{n}$ &$\mathbf{m}$ & $\mathbf{W_{trapez2}}$ & $\mathbf{BBT2_{n,m}}$ &$\mathbf{BWT2_{n,m}}$ \\ %[0.5ex] 
+ \hline \hline
+ 2&4 &0.393439318990  &0.005742681010  &1.43861221 \%  \\  
+  \hline 
+ 4&4 &0.399131958148  &0.000050041852  &0.01253699 \% \\ 
+  \hline
+ 8&4 &0.400532451618  &0.001350451618  &0.33830474 \% \\ 
+  \hline 
+ 15&20 &0.399124607368  &0.000057392632  &0.01437756 \% \\ 
+  \hline 
+ 30&20 &0.399221938578  &0.000039938578  &0.01000510 \% \\ 
+  \hline 
+ 60&20 &0.399246265075  &0.000064265075  &0.01609919 \% \\ 
+  \hline 
+ 90&50 &0.399189533065  &0.000007533065  &0.00188713 \% \\ 
+  \hline
+ 120&50 &0.399191108640  &0.000009108640  &0.00228183 \% \\ 
+  \hline 
+ 150&50 &0.399191837902  &0.000009837902  &0.00246452 \% \\ 
+  \hline 
+ 180&100 &0.399183484400  &0.000001484400  &0.00037186 \% \\ 
+  \hline
+ 200&100 &0.399183655445  &0.000001655445  &0.00041471 \% \\ 
+  \hline 
+ 230&100 &0.399183833260  &0.000001833260  &0.00045925 \% \\  
+  \hline 
+ 260&200 &0.399181765690  &0.000000234310  &0.00005870 \% \\ 
+   \hline 
+ 300&200 &0.399181873078  &0,000000126922  &0.00003180 \% \\ 
+  \hline               
+ 400&200 &0.399182014858  &0.000000014858  &0.00000372 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki a) wzorem trapezów}
+ \label{WynikiZProceduryTrapez2a}
+\end{table}
 
+Ca³ka z podpunktu b) wynosi dok³adnie $1,14782$ , zatem:. 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{n}$ &$\mathbf{m}$ & $\mathbf{W_{trapez2}}$ & $\mathbf{BBT2_{n,m}}$ &$\mathbf{BWT2_{n,m}}$ \\ %[0.5ex] 
+  \hline \hline
+ 2&4 &1.18640582739  &0.03858582739  &3.36166188 \%  \\  
+  \hline 
+ 4&4 &1.16438017521  &0.01656017521  &1.44275019 \% \\ 
+  \hline
+ 8&4 &1.15874680449  &0.01092680449  &0.95196150 \% \\ 
+  \hline 
+ 15&20 &1.14868245908  &0.00086245908  &0.07513888 \% \\ 
+  \hline 
+ 30&20 &1.14831983810  &0.00049983810  &0.04354673 \% \\ 
+  \hline 
+ 60&20 &1.14822915032  &0.00040915032  &0.03564586 \% \\ 
+  \hline 
+ 90&50 &1.14789525293  &0.00007525293  &0.00655616 \% \\ 
+  \hline
+ 120&50 &1.14788939945  &0.00006939945  &0.00604620 \% \\ 
+  \hline 
+ 150&50 &1.14788669039  &0.00006669039  &0.00581018 \% \\ 
+  \hline 
+ 180&100 &1.14783983452  &0.00001983452  &0.00172802 \% \\ 
+  \hline
+ 200&100 &1.14783919925  &0.00001919925  &0.00167267 \% \\ 
+  \hline 
+ 230&100 &1.14783853929  &0.00001853929  &0.00161517 \% \\  
+  \hline 
+ 260&200 &1.14782674482  &0.00000674482  &0.00058762 \% \\ 
+   \hline 
+ 300&200 &1.14782634544  &0.00000634544  &0.00055283 \% \\ 
+  \hline               
+ 400&200 &1.14782581926  &0.00000581926  &0.00050698 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki b) wzorem trapezów}
+ \label{WynikiZProceduryTrapez2b}
+\end{table}
 
-
+Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoœci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwa¿amy pewn¹ prawid³owoœæ. W miarê wzrostu liczby podzia³ów ($\mathbf{n}$ i $\mathbf{m}$) przedzia³ów ca³kowania wartoœci b³êdów odznaczaj¹ siê tendencj¹ spadkow¹. Szczególnie widoczna jest ona na przyk³adzie b). W przyk³adzie a) mo¿na dostrzec jednak, ¿e b³êdy z kolejnego pomiaru s¹ czêsto wiêksze ni¿ te z poprzedniego,  pomimo to finalnie równie¿ zauwa¿alny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarów w tablicy \ref{WynikiZProceduryTrapez2a} jest w du¿ej mierze spowodowana postaci¹ równania funkcji podca³kowej oraz sposobem dzia³ania algorytmu. W miarê tego, im wiêcej jest deformacji powierzchni wykresu owej funkcji, tym czêœciej pojawi¹ siê wahania wielkoœci b³êdu dla coraz to wiêkszej liczby wêz³ów. Jak widaæ sytuacja nie jest ju¿ tak oczywista, jak by³a w przypadku u¿ycia wzoru trapezów dla ca³ek pojedynczych - tam wzrost iloœci punktów wêz³owych zapewnia³ sta³y wzrost dok³adnoœci wyniku.   
 
 
 
@@ -235,4 +316,6 @@ Wartoœæ dok³adna ca³ki z przyk³adu a) to...
      
 \subsection{Ca³kowanie po obszarze normalnym ze wzglêdu na jedn¹ zmienn¹}
 \section{Wzór Simpsona}
+\subsection{Ca³kowanie po obszarze normalnym}
+\subsection{Ca³kowanie po obszarze normalnym ze wzglêdu na jedn¹ zmienn¹}
 \section{Wzór 'prostok¹tów'}
