@@ -15,8 +15,8 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 
 \end{itemize}
 
-\section{Wzór Trapezów - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}
-W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Rozpocznijmy od wariantu, dla którego obszar ca³kowania jest obszarem normalnym ze wzglêdu na dwie zmienne.  
+\section{Wzór Trapezów - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}\label{Rozdzial3.1_WzorTrapezow2DObszNormalny}
+W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Zbadajmy wariant, dla którego obszar ca³kowania jest normalny ze wzglêdu na dwie zmienne.  
 
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $\frac{N_x}{2}=n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $\frac{N_y}{2}=m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
@@ -295,26 +295,7 @@ Ca³ka z podpunktu b) wynosi dok³adnie $1,14782$ , zatem:.
 Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoœci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwa¿amy pewn¹ prawid³owoœæ. W miarê wzrostu liczby podzia³ów ($\mathbf{n}$ i $\mathbf{m}$) przedzia³ów ca³kowania wartoœci b³êdów odznaczaj¹ siê tendencj¹ spadkow¹. Szczególnie widoczna jest ona na przyk³adzie b). W przyk³adzie a) mo¿na dostrzec jednak, ¿e b³êdy z kolejnego pomiaru s¹ czêsto wiêksze ni¿ te z poprzedniego,  pomimo to finalnie równie¿ zauwa¿alny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarów w tablicy \ref{WynikiZProceduryTrapez2a} jest w du¿ej mierze spowodowana postaci¹ równania funkcji podca³kowej oraz sposobem dzia³ania algorytmu. W miarê tego, im wiêcej jest deformacji powierzchni wykresu owej funkcji, tym czêœciej pojawi¹ siê wahania wielkoœci b³êdu dla coraz to wiêkszej liczby wêz³ów. Jak widaæ sytuacja nie jest ju¿ tak oczywista, jak by³a w przypadku u¿ycia wzoru trapezów dla ca³ek pojedynczych - tam wzrost iloœci punktów wêz³owych zapewnia³ sta³y wzrost dok³adnoœci wyniku.   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-     
-
 \section{Wzór Simpsona - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}
-
+Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy równie¿ rozszerzyæ wzór \textit{Simpsona} na przypadek, gdzie mamy do czynienia z wyznaczaniem wartoœci ca³ek podwójnych w obszarach normalny ze wzglêdu na dwie zmienne. W tym celu mo¿emy wykorzystaæ \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami})    lub wielomian \textit{Lagrange'a} $L_{2,2}(x,y)$ zbudowany w oparciu o wzór (\ref{WielomianInterpolacyjnyLagrangea2}). 
 
 %\section{Wzór 'prostok¹tów'}
