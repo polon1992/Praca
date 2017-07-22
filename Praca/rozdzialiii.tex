@@ -15,10 +15,9 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 
 \end{itemize}
 
-\section{Wzór trapezów}
+\section{Wzór Trapezów - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}
 W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Rozpocznijmy od wariantu, dla którego obszar ca³kowania jest obszarem normalnym ze wzglêdu na dwie zmienne.  
 
-\subsection{Ca³kowanie po obszarze normalnym}
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $\frac{N_x}{2}=n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $\frac{N_y}{2}=m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
 \vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
@@ -39,7 +38,7 @@ Zapiszmy wzór (\ref{OgolnyWzorTrapezow}) w nieco innej postaci, która bêdzie dla
 \begin{equation}\label{UogolnionyWzorTrapezow1Przeksztalcony}
 \int\limits_a^b f(x) dx \approx \frac{h}{2}\sum\limits_{i=0}^{n-1}[f(x_i)+f(x_{i+1})]=\frac{h}{2}\left[f(x_0)+f(x_n)+2\sum\limits_{i=1}^{n-1} f(x_i) \right].
 \end{equation} 
-Kolejno weŸmy pewn¹ oznaczon¹ ca³kê podwójn¹ postaci:
+Kolejno weŸmy pewn¹ oznaczon¹ ca³kê podwójn¹ postaci \cite{klucz11}:
 \begin{equation}\label{CalkaPodwojna}
 I_{T2}=\int\limits_a^b\int\limits_c^d f(x,y)dydx=\int\limits_a^b g(x)dx\,\, ,
 \end{equation} 
@@ -54,7 +53,7 @@ Podstawmy opisan¹ przez równanie (\ref{Wyjasnienie_g(x)_metodaTrapezow2}) postaæ
 \begin{equation}\label{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}
 I_{T2}=\int\limits_a^b\int\limits_c^d f(x,y)dydx\approx\int\limits_a^b \frac{h_y}{2}\left[ f(x,y_0)+f(x,y_m)+2\sum\limits_{j=1}^{m-1}f(x,y_j)\right] dx  \,.
 \end{equation}
-W celu wyeliminowania potrzeby ca³kowania w (\ref{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}) ponownie zostaje zastosowana metoda trapezów z równania (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) (rozszerzona w podobny sposób jak w (\ref{Wyjasnienie_g(x)_metodaTrapezow2})). Tym razem traktujemy $x$ jako zmienn¹, natomiast ca³e wyra¿enie podca³kowe jako jedn¹ funkcjê. Sprowadza to nasz problem do nastêpuj¹cego przypadku:
+W celu wyeliminowania potrzeby ca³kowania w (\ref{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}) ponownie zostaje zastosowana metoda trapezów z równania (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) (rozszerzona w podobny sposób jak w (\ref{Wyjasnienie_g(x)_metodaTrapezow2})). Tym razem traktujemy $x$ jako zmienn¹, natomiast ca³e wyra¿enie podca³kowe jako jedn¹ funkcjê. Sprowadza to nasz problem do nastêpuj¹cego przypadku \cite{klucz11}
 \begin{equation}\label{CalkaPodwojnaJakoSumaTrapez2}
 \begin{array}{cc}
 I_{T2}\approx \frac{h_x}{2} \left\lbrace \frac{h_y}{2}\left[ f(x_0,y_0)+f(x_0,y_m)+2\sum\limits_{j=1}^{m-1}f(x_0,y_j)\right] \right.\\
@@ -73,7 +72,7 @@ I_{T2}\approx \frac{h_x h_y}{4}\left\lbrace f(x_0,y_0)+f(x_0,y_m)+f(x_n,y_0)+f(x
 \end{array}
 \end{equation}
 
-Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem rozk³adaj¹ siê wed³ug pewnego schematu. Co oznacza, ¿e je¿eli rozpisalibyœmy (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) tak, by uwzglêdniæ w nim wszystkie punkty wêz³owe postaci $(x_i,y_j)$ ( $i=0,1,\ldots,n$,\, \mbox{$j=0,1,\ldots,m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego i spe³niaj¹ce (\ref{WezlyNaObszarzeProstokatnymTrapez2}), to odpowiednio wartoœci przy kolejnych $f(x_i,y_j)$ ( $i=0,1,\ldots,n\,\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê nastêpuj¹co:
+Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem rozk³adaj¹ siê wed³ug pewnego schematu. Co oznacza, ¿e je¿eli rozpisalibyœmy (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) tak, by uwzglêdniæ w nim wszystkie punkty wêz³owe postaci $(x_i,y_j)$ ( $i=0,1,\ldots,n$,\, \mbox{$j=0,1,\ldots,m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego i spe³niaj¹ce (\ref{WezlyNaObszarzeProstokatnymTrapez2}), to odpowiednio wartoœci przy kolejnych $f(x_i,y_j)$ ( $i=0,1,\ldots,n\,\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê nastêpuj¹co \cite{klucz12}:
 \begin{equation}\label{MacierzWspolczynnikowTrapez2}
 \begin{array}{ccccccccc}
 1 & 2 & 2 & 2 &\cdots & 2& 2& 2& 1\\
@@ -111,11 +110,11 @@ Wzór (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) podobnie jak dla przypadku c
 \begin{equation}\label{WzorTrapezowWielomianemL11}
 \begin{array}{cc}
 I_{T2L} = \int\limits_a^b \int\limits_c^d f(x,y) dydx\approx \int\limits_a^b \int\limits_c^d L_{1,1}(x,y) dydx = 
-\sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1}\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx =\\
+\sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1}\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_j}^{y_{j+1}} L_{1,1}(x,y) dydx =\\
 \frac{h_xh_y}{4} \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} \left[f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})\right]
 \end{array}
 \end{equation}
-Ostatnie przejœcie mog³o zostaæ wykonane, poniewa¿ wynik dla ka¿dej ca³ki $\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_i}^{y_{i+1}} L_{1,1}(x,y) dydx$ jest takiej samej postaci, zmienia siê jedynie numer wêz³a branego pod uwagê. Dla przyk³adu:
+Ostatnie przejœcie mog³o zostaæ wykonane, poniewa¿ wynik dla ka¿dej ca³ki $\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_j}^{y_{j+1}} L_{1,1}(x,y) dydx$ jest takiej samej postaci, zmienia siê jedynie numer wêz³a branego pod uwagê. Dla przyk³adu:
 \begin{equation}
 \begin{array}{cc}
 \int\limits_{x_0}^{x_{1}} \int\limits_{y_0}^{y_{1}} L_{1,1}(x,y) dydx
@@ -314,8 +313,8 @@ Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich po
 
      
      
-\subsection{Ca³kowanie po obszarze normalnym ze wzglêdu na jedn¹ zmienn¹}
-\section{Wzór Simpsona}
-\subsection{Ca³kowanie po obszarze normalnym}
-\subsection{Ca³kowanie po obszarze normalnym ze wzglêdu na jedn¹ zmienn¹}
-\section{Wzór 'prostok¹tów'}
+
+\section{Wzór Simpsona - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}
+
+
+%\section{Wzór 'prostok¹tów'}

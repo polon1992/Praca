@@ -1,3 +1,6 @@
+
+
+
 interpolacja Lagrangea 1 zmiennej:
 
 uzywa³em (rozdzia³ 1)
@@ -15,13 +18,58 @@ http://bulletin-mif.unde.ro/docs/20071/Buletin_UPG_MIF_Nr1_2007-02.pdf
 
 
 
+
+
+
+
+rozdzia³ 2 - pomoce:
+http://www.l5.pk.edu.pl/~pplucin/ms/lib/exe/fetch.php?media=pl:wyciag1011.pdf
+
 uzywa³em (rozdzia³2):
 http://www.staff.amu.edu.pl/~awoj/OLAT/kwadraturyNC.pdf
 http://home.agh.edu.pl/~morchel/files/mownit/zajecia4/zajecia4-mownit.pdf
 http://edu.pjwstk.edu.pl/wyklady/am/scb/main79.html
 
-rozdzia³ 2 - pomoce:
-http://www.l5.pk.edu.pl/~pplucin/ms/lib/exe/fetch.php?media=pl:wyciag1011.pdf
+
+
+
+
+Rozdzia³ 3
+Metoda prostok¹tów 2d wzory (uzywalem):
+http://www.ece.utah.edu/~ece6340/LECTURES/Jan30/Numerical%20Integration.pdf
+
+
+Wzór simpsona 2d - wspo³czynniki + zastosowanie do obszarów sparametryzowanych:
+http://www.physics.usyd.edu.au/teach_res/mp/doc/math_integration_2D.pdf
+http://www.ce.utexas.edu/prof/mckinney/ce311k/handouts/Integration.pdf
+
+
+B³¹d metoda trapezów 2D:
+http://www.phys.ubbcluj.ro/~amarc/interior/SuportCursMetodeCalculSimbolic/Modul_5(Calcul%20Diferential%20si%20integral)/MetNum/TrapezoidalRule.pdf
+
+B³¹d O(h):
+http://mathfaculty.fullerton.edu/mathews/n2003/BigOMod.html
+
+
+
+Rozdzia³ 3 i 4
+Wzory 2D trapezów i simpsona + procedury:
+http://mathfaculty.fullerton.edu/mathews/n2003/SimpsonsRule2DMod.html
+
+Wzór trapezów 2 normalny wzgl 1 i 2 zmiennych i wzor simpsona2 obaszar normalny wzgl 1 zmiennej:
+http://utkstair.org/clausius/docs/che505/pdf/IE_eval_N-Dints.pdf
+
+
+
+
+
+Rozdzia³ 4
+Metoda Simpsona obszar normalny wzgledem jednej zmiennej:
+http://www.math.usm.edu/lambers/mat460/fall09/lecture32.pdf
+
+
+
+
 
 
 manual do maple:

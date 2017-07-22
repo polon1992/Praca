@@ -185,7 +185,7 @@ l_i(x)=\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s} \,\,\,(i=0,1,\ldots 
 \end{equation} 
 Natomiast dla zmiennej $y$ wielomianem bazowym stopnia $m$ jest :
 \begin{equation}\label{WielomianBazowyLagr2li(y)}
-l_j(y)=\prod\limits_{s=0,\,s\neq j}^m \frac{y-y_s}{y_j-y_s}\,\,\,(j=0,1,\ldots ,m).
+l_j(y)=\prod\limits_{r=0,\,r\neq j}^m \frac{y-y_r}{y_j-y_r}\,\,\,(j=0,1,\ldots ,m).
 \end{equation} 
 
 \begin{flushleft}
@@ -203,10 +203,10 @@ l_i(x_s)=\delta_{is}=
 
 
 \begin{equation}\label{deltaKroneckeralj(ys)}
-l_j(y_s)=\delta_{js}=
+l_j(y_r)=\delta_{jr}=
 					\left\{
 							\begin{array}{lr}
-							1, \,\,\,\,gdy\,\, j=s\\
+							1, \,\,\,\,gdy\,\, j=r\\
 							0, \,\,\,\,\,\,\,w p.p.
 							\end{array}
 					\right.
@@ -214,7 +214,7 @@ l_j(y_s)=\delta_{js}=
 
 Wzoruj¹c siê na równaniu (\ref{wielomianInterpolacyjnyLagrangea}) oraz korzystaj¹c z (\ref{WielomianBazowyLagr2li(x)}) i (\ref{WielomianBazowyLagr2li(y)}) jesteœmy w stanie wyprowadziæ wzór na wielomian interpolacyjny \textit{Lagrange'a} dla funkcji dwóch zmiennych. W zwi¹zku z tym, jego postaæ jest nastêpuj¹ca:
 \begin{equation}\label{WielomianInterpolacyjnyLagrangea2}
-L_{n,m}(x,y)=\sum\limits_{i=0}^n \sum\limits_{j=0}^m f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{s=0,\,s\neq j}^m \frac{y-y_s}{y_j-y_s} \right)
+L_{n,m}(x,y)=\sum\limits_{i=0}^n \sum\limits_{j=0}^m f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{r=0,\,r\neq j}^m \frac{y-y_r}{y_j-y_r} \right)
 \end{equation} 					  
 
 Z faktu, ¿e pewna znana nam funkcja $f(x,y)$ zostaje przez nas interpolowana przy u¿yciu innej funkcji, wynika to, ¿e niemal zawsze wartoœci $f(x_i,y_j)$ i $L_{n,m}(x_i,y_j)$ bêd¹ w pewnym stopniu od siebie odbiegaæ ( pomijaj¹c punkty wêz³owe dla których zachodzi \mbox{(\ref{eq:RownoscWartosciWielomLagrange2IwartosciFkcjiwWezlach}) ).} Ró¿nica w tych¿e wartoœciach ma miejsce, gdy¿ jest to spowodowane wyst¹pieniem b³êdu interpolacji. Maksymaln¹ wielkoœæ takiego b³êdu mo¿emy okreœliæ z góry - sposób jego wyznaczania precyzuje definicja poni¿ej.
@@ -241,7 +241,7 @@ Stworzymy wielomian interpolacyjny \textit{Lagrange'a} $L_{1,2}(x,y)$ dla funkcj
 
 Chc¹c wyznaczyæ $L_{1,2}(x,y)$ niezbêdne jest okreœlenie $n+1=1+1=2$ wartoœci $x \in \Omega$ oraz $m+1=2+1=3$ wartoœci $y\in \Omega$. Wa¿ne jest, by krañcowe $x$ i $y$ zawiera³y brzegi \mbox{obszaru $\Omega$}. Zatem niech: $$x_0=0,\, x_1=\frac{1}{2}\,$$ $$  \, y_0=0,\, y_1=\frac{1}{2},\, y_2=1.$$  
 Kolejno korzystaj¹c bezpoœrednio z (\ref{WielomianInterpolacyjnyLagrangea2}) dostajemy:
-$$L_{1,2}(x,y)=\sum\limits_{i=0}^1 \sum\limits_{j=0}^2 f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^1 \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{s=0,\,s\neq j}^2 \frac{y-y_s}{y_j-y_s} \right)=$$
+$$L_{1,2}(x,y)=\sum\limits_{i=0}^1 \sum\limits_{j=0}^2 f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^1 \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{r=0,\,r\neq j}^2 \frac{y-y_r}{y_j-y_r} \right)=$$
 $$=f(x_0,y_0)\left(\frac{x-x_1}{x_0-x_1}\cdot \frac{y-y_1}{y_0-y_1}\cdot \frac{y-y_2}{y_0-y_2}\right)+
 f(x_0,y_1)\left(\frac{x-x_1}{x_0-x_1}\cdot \frac{y-y_0}{y_1-y_0}\cdot \frac{y-y_2}{y_1-y_2}\right)+$$
 $$f(x_0,y_2)\left(\frac{x-x_1}{x_0-x_1}\cdot \frac{y-y_0}{y_2-y_0}\cdot \frac{y-y_1}{y_2-y_1}\right)+
