@@ -19,18 +19,18 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Zbadajmy wariant, dla którego obszar ca³kowania jest normalny ze wzglêdu na dwie zmienne.  
 
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
-Przedzia³ $[a,b]$ zostanie podzielony na $\frac{N_x}{2}=n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $\frac{N_y}{2}=m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
+Przedzia³ $[a,b]$ zostanie podzielony na $n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
 \vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
 \begin{array}{cc}
-a=x_0\leq x_1\leq x_2\ldots\leq x_n=b \,\,\,\,(i=0,1,\ldots ,n) \\ 
-c=y_0\leq y_1\leq y_2\ldots\leq y_m=d \,\,\,\,(j=0,1,\ldots ,m)\\
+a=x_0\leq x_1\leq x_2\ldots\leq x_n=b \\
+c=y_0\leq y_1\leq y_2\ldots\leq y_m=d \\
 \end{array}
-\end{equation}
+\end{equation} 
 Postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
 \vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymTrapez2}
 \begin{array}{cc}
-x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{n}\\
-y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{m}\\
+x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{n} \,\,\,\,(i=0,1,\ldots ,n)\\
+y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{m} \,\,\,\,(j=0,1,\ldots ,m)\\
 \end{array}
 \end{equation}
 
@@ -190,8 +190,10 @@ end;
 Przed wykorzystaniem zamieszczonej procedury nr \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} do wykonania g³ównych obliczeñ, opiszmy zasadê jej dzia³ania. Tak wiêc pierwsza linia jest nag³ówkiem procedury i odpowiada za definicjê jej nazwy oraz parametrów wejœciowych. Ich znaczenie jest nastêpuj¹ce:\\
 \textit{a, b} - granice ca³kowania po zmiennej $x$\\  
 \textit{c, d} - granice ca³kowania po zmiennej $y$\\
-\textit{n} - iloœæ $x_i$ bêd¹cych wspó³rzêdnymi $x$-owymi wêz³ów na przedziale $[a,b]$\\
-\textit{m} - iloœæ $y_j$ bêd¹cych wspó³rzêdnymi $y$-owymi wêz³ów na przedziale $[c,d]$\\
+\textit{n} - iloœæ podprzedzia³ów przedzia³u $[a,b]$, które s¹ wyznaczane przez $n+1$ wêz³ów $x_i$\\ 
+ %iloœæ $x_i$ bêd¹cych wspó³rzêdnymi $x$-owymi wêz³ów na przedziale $[a,b]$\\
+\textit{m} - iloœæ podprzedzia³ów przedzia³u $[c,d]$, które s¹ wyznaczane przez $m+1$ wêz³ów $y_j$\\
+%iloœæ $y_j$ bêd¹cych wspó³rzêdnymi $y$-owymi wêz³ów na przedziale $[c,d]$\\
 (Zrozumienie ca³ego powy¿szego opisu ma kluczowe znaczenie w tym, by potrafiæ prawid³owo wywo³aæ procedurê \textit{Trapez2}.)
 Kolejno zadeklarowane zosta³y pomocnicze zmienne lokalne wykorzystane wewn¹trz algorytmu. Nastêpne dwa kroki odpowiadaj¹ za okreœlenie odleg³oœci pomiêdzy kolejnymi wêz³ami - zgodnie z tym co mówi równanie  (\ref{WezlyNaObszarzeProstokatnymTrapez2}). Dalsza czêœæ procedury sk³adaj¹ca siê kolejno z dwóch pêtli \textit{for} powoduje wyliczenie wartoœci wspó³rzêdnych $x_i$ oraz $y_j$, bêd¹cych po³¹czeniem (\ref{WezlyTrapez2}) oraz  (\ref{WezlyNaObszarzeProstokatnymTrapez2}). Trzecia z pêtli u¿yta w procedurze s³u¿y do obliczania i zapamiêtywania wartoœci funkcji $f(x,y)$ w wyznaczonych przed chwil¹ punktach wêz³owych. Najwa¿niejszy fragment odpowiadaj¹cy bezpoœrednio za wyznaczenie wyniku ca³kowania to ostatni blok z³o¿ony z dwóch zagnie¿d¿onych pêtli (przypisanie wartoœci do zmiennej \textit{T2}). Wykonywane w tym miejscu obliczenia s¹ w pe³ni zgodne ze wzorem (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}) - to w³aœnie on zosta³ u¿yty w implementacji. Ostatecznie wynik sumowania zostaje przekszta³cony do klarownej postaci oraz zwrócony jako wartoœæ \textit{WynikT2}.
 
@@ -296,6 +298,67 @@ Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich po
 
 
 \section{Wzór Simpsona - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}
-Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy równie¿ rozszerzyæ wzór \textit{Simpsona} na przypadek, gdzie mamy do czynienia z wyznaczaniem wartoœci ca³ek podwójnych w obszarach normalny ze wzglêdu na dwie zmienne. W tym celu mo¿emy wykorzystaæ \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami})    lub wielomian \textit{Lagrange'a} $L_{2,2}(x,y)$ zbudowany w oparciu o wzór (\ref{WielomianInterpolacyjnyLagrangea2}). 
+Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy równie¿ rozszerzyæ wzór \textit{Simpsona} na przypadek, gdzie mamy do czynienia z wyznaczaniem wartoœci ca³ek podwójnych w obszarach normalny ze wzglêdu na dwie zmienne. W tym celu mo¿emy wykorzystaæ na przyk³ad \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami})    lub wielomian \textit{Lagrange'a} $L_{2,2}(x,y)$ zbudowany w oparciu o wzór (\ref{WielomianInterpolacyjnyLagrangea2}). 
 
+Rozwa¿my pewien obszar ca³kowania $\Delta=\{a\leq x\leq b ; c\leq y \leq d \}$. 
+Przedzia³ $[a,b]$ zostanie podzielony na $N=2n$, $(n=1,2,\ldots)$ podprzedzia³ów postaci \mbox{$[x_{2i},x_{2i+1}] (i=0,1,\ldots, \frac{2n-1}{2})$}. Podobnie bêdzie dla $[c,d]$, podzielimy go na $M=2m$ podprzedzia³ów \mbox{$[y_{2j},y_{2j+1}]$ ($j=0,1,\ldots, \frac{2m-1}{2}$).} Z tego faktu wynika³a bêdzie nastêpuj¹ca prawid³owoœæ:
+\vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
+\begin{array}{cc}
+a=x_0\leq x_1\leq x_2\ldots\leq x_{2n}=b \\ 
+c=y_0\leq y_1\leq y_2\ldots\leq y_{2m}=d \\
+\end{array}
+\end{equation}
+Dodatkowo zauwa¿my, ¿e postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
+\vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymTrapez2}
+\begin{array}{cc}
+x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{N} \,\,\,\,(i=0,1,\ldots ,N=2n) \\
+y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{M} \,\,\,\,(j=0,1,\ldots ,M=2m)\\
+\end{array}
+\end{equation}
+
+Tak samo jak zrobiliœmy to dla przypadku wzoru trapezów, wykonajmy równie¿ przekszta³cenie uogólnionego wzoru \textit{Simpsona} (\ref{wzorSimpsonaZPodzialami}) do postaci takiej, ¿e bêdzie dla nas znacznie porêczniejsza w dalszych rozwa¿aniach. W tym momencie nale¿y powiedzieæ, ¿e zmianie ulegaj¹ indeksy pod znakiem sumowania. Ujednolicaj¹c oznaczenia tak, by wygl¹da³y jak dla wzoru trapezów w (\ref{wzorSimpsonaZPodzialami}) zastêpujemy $m$ przez $n$. Pozosta³e - dotycz¹ce punktów wêz³owych i wielkoœci kroków pomiêdzy nimi zosta³y na nowo zdefiniowane na pocz¹tku tego podrozdzia³u. W zwi¹zku z tym przekszta³cone równanie (\ref{wzorSimpsonaZPodzialami}) ze zmienionymi indeksami wygl¹da nastêpuj¹co:  
+\begin{equation}\label{UogolnionyWzorSimpsona1Rozdzial3}
+\begin{array}{cc}
+\int\limits_a^b f(x)dx = \sum\limits_{i=0}^{n-1} \int\limits_{x_{2i}}^{x_{2i+2}} f(x) dx \approx \\
+\frac{h}{3}\sum\limits_{i=0}^{n-1}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right)=\\
+\frac{h}{3}\left(f(x_{0})+4\sum\limits_{i=0}^{n-1}f(x_{2i+1})+2\sum\limits_{i=0}^{n-2}f(x_{2i+2}) + f(x_{2n})\right).
+\end{array}
+\end{equation}     
+
+WeŸmy teraz pewn¹ podwójn¹ ca³kê oznaczon¹ postaci \cite{klucz11} :
+\begin{equation}\label{CalkaPodwojnaMetodaSimpsona}
+I_{S2}=\int\limits_{a}^{b}\int\limits_{c}^{d}f(x,y)dydx=\int\limits_{a}^{b} g(x)dx \,\,,
+\end{equation}
+gdzie (rozszerzaj¹c równanie (\ref{UogolnionyWzorSimpsona1Rozdzial3}) na dwie zmienne)   
+\begin{equation}\label{Funkcja_g(x)_CalkaPodwojnaMetodaSimpsona}
+\begin{array}{cc}
+g(x)=\int\limits_{c}^{d}f(x,y)dy\approx \\
+\frac{h_y}{3}\left(f(x,y_0)+4\sum\limits_{j=0}^{m-1}f(x,y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x,y_{2j+2})+f(x,y_{2m}) \right).
+\end{array}
+\end{equation}  
+Po podstawieniu (\ref{Funkcja_g(x)_CalkaPodwojnaMetodaSimpsona}) do (\ref{CalkaPodwojnaMetodaSimpsona}) otrzymamy:
+\begin{equation}\label{WzorSimpsona2JednaCalka}
+\begin{array}{cc}
+I_{S2}=\int\limits_{a}^{b}\int\limits_{c}^{d}f(x,y)dydx \approx \\ 
+\int\limits_{a}^{b} \frac{h_y}{3}\left(f(x,y_0)+4\sum\limits_{j=0}^{m-1}f(x,y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x,y_{2j+2})+f(x,y_{2m}) \right).
+\end{array}
+\end{equation}
+W celu wyeliminowania z powy¿szego równania koniecznoœci ca³kowania, mo¿emy ponownie zastosowaæ uogólniony wzór \textit{Simpsona} - tak jak zrobiliœmy to dla przypadku (\ref{Funkcja_g(x)_CalkaPodwojnaMetodaSimpsona}).
+\newpage
+Realizacja zaproponowanego powy¿szej przepisu doprowadza (\ref{WzorSimpsona2JednaCalka}) do poni¿szej formy:
+\begin{equation}
+\begin{array}{cc}
+I_{S2}\approx \frac{h_x}{3}\left\lbrace \frac{h_y}{3} \left(f(x_0,y_0)+f(x_0,y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_0,y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_0,y_{2j+2}) \right) \right.\\
++ \frac{h_y}{3} \left(f(x_{2n},y_0)+f(x_{2n},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2n},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2n},y_{2j+2}) \right)\\
++4\sum\limits_{i=0}^{n-1} \frac{h_y}{3} \left(f(x_{2i+1},y_0)+f(x_{2i+1},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2i+1},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2i+1},y_{2j+2}) \right)\\
+\left. +2\sum\limits_{i=0}^{n-2} \frac{h_y}{3} \left(f(x_{2i+2},y_0)+f(x_{2i+2},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2i+2},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2i+2},y_{2j+2}) \right)\right\rbrace\\
+\end{array}
+\end{equation}
+
+Po dokonaniu mo¿liwie najlepszego przekszta³cenia - ostateczn¹ postaci¹ wyprowadzonego, \textit{uogólnionego wzoru Simpsona} dla ca³ek podwójnych po obszarach normalnych wzglêdem dwóch zmiennych jest: 
+\begin{equation}
+\begin{array}{cc}
+I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace \right\rbrace
+\end{array}
+\end{equation}
 %\section{Wzór 'prostok¹tów'}

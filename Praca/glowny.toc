@@ -10,9 +10,9 @@
 \contentsline {chapter}{\numberline {3}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ek podw\'ojnych}{33}{chapter.3}
 \contentsline {section}{\numberline {3.1}Wz\'or Trapez\'ow - ca\IeC {\l }kowanie po obszarze normalnym wzgl\k edem obu zmiennych}{34}{section.3.1}
 \contentsline {section}{\numberline {3.2}Wz\'or Simpsona - ca\IeC {\l }kowanie po obszarze normalnym wzgl\k edem obu zmiennych}{42}{section.3.2}
-\contentsline {chapter}{\numberline {4}U\.zycie kwadratur do obliczania ca\IeC {\l }ek w obszarach normalnych wzgl\k edem osi OX}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Wz\'or Trapez\'ow - ca\IeC {\l }kowanie po obszarze normalnym wzgl\k edem jednej zmiennej}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Wz\'or Simpsona - ca\IeC {\l }kowanie po obszarze normalnym wzgl\k edem jednej zmiennej}{43}{section.4.2}
-\contentsline {chapter}{Podsumowanie}{44}{chapter*.11}
-\contentsline {chapter}{Bibliografia}{46}{chapter*.12}
-\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{47}{chapter*.12}
+\contentsline {chapter}{\numberline {4}U\.zycie kwadratur do obliczania ca\IeC {\l }ek w obszarach normalnych wzgl\k edem osi OX}{45}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wz\'or Trapez\'ow - ca\IeC {\l }kowanie po obszarze normalnym wzgl\k edem jednej zmiennej}{45}{section.4.1}
+\contentsline {section}{\numberline {4.2}Wz\'or Simpsona - ca\IeC {\l }kowanie po obszarze normalnym wzgl\k edem jednej zmiennej}{45}{section.4.2}
+\contentsline {chapter}{Podsumowanie}{46}{chapter*.11}
+\contentsline {chapter}{Bibliografia}{48}{chapter*.12}
+\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{49}{chapter*.12}
