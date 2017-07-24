@@ -358,7 +358,24 @@ I_{S2}\approx \frac{h_x}{3}\left\lbrace \frac{h_y}{3} \left(f(x_0,y_0)+f(x_0,y_{
 Po dokonaniu mo¿liwie najlepszego przekszta³cenia - ostateczn¹ postaci¹ wyprowadzonego, \textit{uogólnionego wzoru Simpsona} dla ca³ek podwójnych po obszarach normalnych wzglêdem dwóch zmiennych jest: 
 \begin{equation}
 \begin{array}{cc}
-I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace \right\rbrace
+I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace f(x_0,y_0)+f(x_0,y_{2m})+f(x_{2n},y_0)+f(x_{2n},y_{2m})\right.\\
+
++2\left(\sum\limits_{j=0}^{m-2}\left[ f(x_0,y_{2j+2}) + f(x_{2n},y_{2j+2})\right] + \sum\limits_{i=0}^{n-2} \left[f(x_{2i+2},y_0)+f(x_{2i+2},y_{2m})\right]\right)\\
++4\left( \sum\limits_{j=0}^{m-1}\left[ f(x_0,y_{2j+1}) + f(x_{2n},y_{2j+1}) \right] + \sum\limits_{i=0}^{n-1} \left[f(x_{2i+1},y_0)+f(x_{2i+1},y_{2m}) \right]\right)\\
++8\left( \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-2}f(x_{2i+1},y_{2j+2}) + \sum\limits_{i=0}^{n-2}\sum\limits_{j=0}^{m-1}f(x_{2i+2},y_{2j+1}) \right)\\
+ +4 \sum\limits_{i=0}^{n-2}\sum\limits_{j=0}^{m-2}f(x_{2i+2},y_{2j+2}) + 16 \sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1}f(x_{2i+1},y_{2j+1})\}
+
 \end{array}
 \end{equation}
+
+
+
+
+
+
+
+
+
+
+
 %\section{Wzór 'prostok¹tów'}
