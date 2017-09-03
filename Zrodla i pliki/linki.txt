@@ -67,7 +67,7 @@ Rozdzia³ 4
 Metoda Simpsona obszar normalny wzgledem jednej zmiennej:
 http://www.math.usm.edu/lambers/mat460/fall09/lecture32.pdf
 
-
+http://jmahaffy.sdsu.edu/courses/s10/math541/
 
 
 

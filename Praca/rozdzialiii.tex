@@ -74,6 +74,7 @@ I_{T2}\approx \frac{h_x h_y}{4}\left\lbrace f(x_0,y_0)+f(x_0,y_m)+f(x_n,y_0)+f(x
 
 Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem rozk³adaj¹ siê wed³ug pewnego schematu. Co oznacza, ¿e je¿eli rozpisalibyœmy (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) tak, by uwzglêdniæ w nim wszystkie punkty wêz³owe postaci $(x_i,y_j)$ ( $i=0,1,\ldots,n$,\, \mbox{$j=0,1,\ldots,m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego i spe³niaj¹ce (\ref{WezlyNaObszarzeProstokatnymTrapez2}), to odpowiednio wartoœci przy kolejnych $f(x_i,y_j)$ ( $i=0,1,\ldots,n\,\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê nastêpuj¹co \cite{klucz12}:
 \begin{equation}\label{MacierzWspolczynnikowTrapez2}
+\left[
 \begin{array}{ccccccccc}
 1 & 2 & 2 & 2 &\cdots & 2& 2& 2& 1\\
 2 & 4 & 4 & 4 &\cdots & 4& 4& 4& 2\\
@@ -82,6 +83,7 @@ Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿s
 2 & 4 & 4 & 4 &\cdots & 4& 4& 4& 2\\
 1 & 2 & 2 & 2 &\cdots & 2& 2& 2& 1\\
 \end{array}
+\right]
 \end{equation}
 Powy¿sza macierz znacz¹co upraszcza i przyspiesza rozpisywanie \textbf{uogólnionego wzoru trapezów dla ca³ek podwójnych po obszarach normalnych}. Dla przypadku uogólnionego wzoru trapezów dla ca³ki pojedynczej schemat ten ogranicza³ siê jedynie do pierwszego wiersza (numeracja $i$ - od lewej do prawej, $j$ - od góry do do³u).
 
@@ -98,7 +100,7 @@ Obliczanie wartoœci ca³ki podwójnej metod¹ trapezów mo¿emy sprowadziæ równie¿ do
 Jak widaæ, ka¿dy z podobszarów jest wyznaczany przez cztery wierzcho³ki $(x_i,y_j)$ (definicja $x_i$, $y_j$ taka jak w (\ref{WezlyNaObszarzeProstokatnymTrapez2})). Do obliczenia objêtoœci ka¿dej z takich bry³ trapezoidalnych potrzebne s¹ nam pola podstawy ( ju¿ je znamy - s¹ one takie same dla ka¿dego podobszaru i wynosz¹ $h_xh_y$), oraz odpowiadaj¹ce dla nich wysokoœci. Te ostatnie okreœlimy jako œrednia arytmetyczna wartoœci funkcji $f(x,y)$ w czterech wierzcho³kach definiuj¹cych ka¿dy z podobszarów ca³kowania. Ostatecznie objêtoœæ ka¿dej bry³y definiowa³ bêdzie nastêpuj¹cy wzór \cite{klucz10}:
 \end{flushleft}
 \begin{equation}\label{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}
-V_{i,j}=h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right],
+T2V_{i,j}=h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right],
 \end{equation}
 przy czym $h_x$, $h_y$ opisane s¹ w (\ref{WezlyNaObszarzeProstokatnymTrapez2}).\\ Rozszerzaj¹c równanie (\ref{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}), charakteryzuj¹ce pojedyncz¹ objêtoœæ bry³y na ca³y obszar ca³kowania dobrnêlibyœmy do równoœci postaci  (\ref{UogolnionyWzorTrapezow2_obszarNormalny}). Analizuj¹c powy¿sze zapiski wnioskujemy i¿ zachodzi nastêpuj¹ca prawid³owoœæ: 
 \begin{equation}\label{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}
@@ -302,14 +304,14 @@ Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy rów
 
 Rozwa¿my pewien obszar ca³kowania $\Delta=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $N=2n$, $(n=1,2,\ldots)$ podprzedzia³ów postaci \mbox{$[x_{2i},x_{2i+1}] (i=0,1,\ldots, \frac{2n-1}{2})$}. Podobnie bêdzie dla $[c,d]$, podzielimy go na $M=2m$ podprzedzia³ów \mbox{$[y_{2j},y_{2j+1}]$ ($j=0,1,\ldots, \frac{2m-1}{2}$).} Z tego faktu wynika³a bêdzie nastêpuj¹ca prawid³owoœæ:
-\vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
+\vspace{-0.5cm}\begin{equation}\label{WezlySimpson2}
 \begin{array}{cc}
 a=x_0\leq x_1\leq x_2\ldots\leq x_{2n}=b \\ 
 c=y_0\leq y_1\leq y_2\ldots\leq y_{2m}=d \\
 \end{array}
 \end{equation}
 Dodatkowo zauwa¿my, ¿e postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
-\vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymTrapez2}
+\vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymSimpson2}
 \begin{array}{cc}
 x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{N} \,\,\,\,(i=0,1,\ldots ,N=2n) \\
 y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{M} \,\,\,\,(j=0,1,\ldots ,M=2m)\\
@@ -356,7 +358,7 @@ I_{S2}\approx \frac{h_x}{3}\left\lbrace \frac{h_y}{3} \left(f(x_0,y_0)+f(x_0,y_{
 \end{equation}
 
 Po dokonaniu mo¿liwie najlepszego przekszta³cenia - ostateczn¹ postaci¹ wyprowadzonego, \textit{uogólnionego wzoru Simpsona} dla ca³ek podwójnych po obszarach normalnych wzglêdem dwóch zmiennych jest: 
-\begin{equation}
+\begin{equation}\label{UogolnionyWzorSimpsona2_obszarNormalny}
 \begin{array}{cc}
 I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace f(x_0,y_0)+f(x_0,y_{2m})+f(x_{2n},y_0)+f(x_{2n},y_{2m})\right.\\
 
@@ -368,14 +370,97 @@ I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace f(x_0,y_0)+f(x_0,y_{2m})+f(x_{2n},y
 \end{array}
 \end{equation}
 
+Analogicznie jak dla uogólnionego wzoru trapezów (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) istnieje pewien schemat w który uk³adaj¹ siê wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem. Tak jak wczeœniej oznacza to, ¿e rozpisanie wzoru (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) w sposób taki, by uwzglêdniono w nim wszystkie punkty wêz³owe postaci $(x_{2i},y_{2j})$ ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego oraz spe³niaj¹ce równanie (\ref{WezlyNaObszarzeProstokatnymSimpson2}), skutkowa³oby tym, ¿e wartoœci przy kolejnych $f(x_{2i},y_{2j})$ ($i=0,1,\ldots,n\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê wed³ug pewnego schematu powsta³ego w wyniku mno¿enia dwóch nastêpuj¹cych wektorów:
 
+$$\qquad A= \left[
+        \begin{array}{ccccccc}
+         1 & 4 & 2 & 4 & \cdots & 4 & 1 \\
+         \end{array}
+      \right]
+      \qquad
+$$
+$$ \,\,B= \left[
+		\begin{array}{ccccccc}
+         1 & 4 & 2 & 4 & \cdots & 4 & 1 \\
+         \end{array}       
+     \right]^T 
+$$
+W zwi¹zku z tym rezultat operacji $A \times B$ jest nastêpuj¹cy \cite{klucz12}:
 
+\begin{equation}\label{MacierzWspolczynnikowSimpson2}
+A \times B = \left[
+\begin{array}{ccccccccc}
+1 & 4 & 2 & 4 &\cdots & 4& 2& 4& 1\\
+4 & 16 & 8 & 16 &\cdots & 16& 8& 16& 4\\
+2 & 8 & 4 & 8 &\cdots & 8& 4& 8& 2\\
+\vdots &\vdots &\vdots &\vdots & \ddots &\vdots &\vdots &\vdots &\vdots \\
+2 & 8 & 4 & 8 &\cdots & 8& 4& 8& 2\\
+4 & 16 & 8 & 16 &\cdots & 16& 8& 16& 4\\
+1 & 4 & 2 & 4 &\cdots & 4& 2& 4& 1\\
+\end{array}
+\right]
+\end{equation}\\
 
+Zaprezentowana macierz jak nie trudno zauwa¿yæ diametralnie upraszcza zapis \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych}. Pewien jej fragment, a dok³adniej pierwszy wiersz pojawi³ siê ju¿ dla przypadku uogólnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
 
+Przybli¿anie wartoœci ca³ki podwójnej obliczanej metod¹ Simpsona mo¿na równie¿ sprowadziæ do sumowania objêtoœci pewnych bry³ parabolicznych. WeŸmy pewien podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarów, co dok³adniej \mbox{prezentuje rysunek \ref{R5}:}
+\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.6]{R5.eps}
+		\end{center}
+	   \caption{Metoda Simpsona dla ca³ek podwójnych - podzia³ obszaru ca³kowania na podobszary }
+\label{R5}
+\end{figure}
 
+Ka¿dy z podobszarów obszaru $\Omega$ jest ograniczonych pogrubion¹ krawêdzi¹ i sk³ada siê zawsze z dok³adnie czterech mniejszych podpodobszarów wyznaczanych przez dziewiêæ wêz³ów ($x_{2i},y_{2j}$) ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ). Objêtoœæ dowolnego z tych podobszarów wyra¿a nastêpuj¹cy wzór:
 
+\begin{equation}\label{ObjetoscPodobszaruSimpson2D}
+\begin{array}{c}
+S2V_{i,j}=\frac{h_xh_y}{9}\left[f(x_{2i},y_{2j})+4 f(x_{2i+1},y_{2j})+f(x_{2i+2},y_{2j})+\right.\\
+4 f(x_{2i},y_{2j+1})+16 f(x_{2i+1},y_{2j+1})+4 f(x_{2i+2},y_{2j+1})+\\
+\left.f(x_{2i},y_{2j+2})+4 f(x_{2i+1},y_{2j+1})+ f(x_{2i+2},y_{2j+2})\right]
+\end{array}
+\end{equation}\\       
+Wspó³czynniki, które pojawi³y siê w powy¿szym zapisie przy wartoœciach funkcji $f(x,y)$  nie s¹ przypadkowe. Powsta³y one w wyniku przemno¿enia okrojonej wersji wektorów $A$ i $B$, których u¿ywaliœmy do wyprowadzenia macierzy (\ref{MacierzWspolczynnikowSimpson2}) tzn.:
+$$\qquad a= \left[
+        \begin{array}{ccc}
+         1 & 4 & 1 \\
+         \end{array}
+      \right]
+      \qquad
+ \,\,b= \left[
+		\begin{array}{c}
+         1 \\
+         4\\
+         1\\
+         \end{array}       
+     \right] 
+$$ 
+W zwi¹zku z tym:
 
+\begin{equation}\label{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}
+a \times b = \left[
+\begin{array}{ccc}
+ 		 1 & 4 & 1 \\
+         4 & 16 & 4 \\
+         1 & 4 & 1 \\
+\end{array}
+\right]
+\end{equation}\\
+ 
+Rozszerzaj¹c zakres sumowania z jednego podobszaru na ca³y obszar ca³kowania $\Omega$ nasz wzór przyjmie ostatecznie poni¿sz¹, zwiêz³¹ formê:
+\begin{equation}\label{SumaObjetosciDlaCalegoObszaruSimpson2D}
+\begin{array}{c}
+I_{S2V}=I_{S2}\approx\frac{h_xh_y}{9}\sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1}\left[f(x_{2i},y_{2j})+4 f(x_{2i+1},y_{2j})+f(x_{2i+2},y_{2j})+\right.\\
+4 f(x_{2i},y_{2j+1})+16 f(x_{2i+1},y_{2j+1})+4 f(x_{2i+2},y_{2j+1})+\\
+\left.f(x_{2i},y_{2j+2})+4 f(x_{2i+1},y_{2j+1})+ f(x_{2i+2},y_{2j+2})\right]
+\end{array}
+\end{equation}  
+  
+Zauwa¿my, ¿e (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) oraz (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) mo¿emy stosowaæ zamiennie, gdy¿ s¹ one równowa¿ne.
 
+ $Lagrange_{2,2}$\\
+ przyk³ad jakiœ recznie liczony
 
 
 %\section{Wzór 'prostok¹tów'}
