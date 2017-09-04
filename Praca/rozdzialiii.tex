@@ -401,14 +401,14 @@ A \times B = \left[
 \right]
 \end{equation}\\
 
-Zaprezentowana macierz jak nie trudno zauwa¿yæ diametralnie upraszcza zapis \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych}. Pewien jej fragment, a dok³adniej pierwszy wiersz pojawi³ siê ju¿ dla przypadku uogólnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
+Zaprezentowana macierz jak warto zauwa¿yæ diametralnie upraszcza zapis \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych}. Pewien jej fragment, a dok³adniej pierwszy wiersz, pojawi³ siê ju¿ dla przypadku uogólnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
 
-Przybli¿anie wartoœci ca³ki podwójnej obliczanej metod¹ Simpsona mo¿na równie¿ sprowadziæ do sumowania objêtoœci pewnych bry³ parabolicznych. WeŸmy pewien podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarów, co dok³adniej \mbox{prezentuje rysunek \ref{R5}:}
+Przybli¿anie wartoœci ca³ki podwójnej obliczanej metod¹ Simpsona mo¿na równie¿ sprowadziæ do sumowania objêtoœci pewnych bry³ parabolicznych. WeŸmy podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarów, co dok³adniej \mbox{prezentuje rysunek \ref{R5}:}
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.6]{R5.eps}
 		\end{center}
-	   \caption{Metoda Simpsona dla ca³ek podwójnych - podzia³ obszaru ca³kowania na podobszary }
+	   \caption{Metoda Simpsona dla ca³ek podwójnych po obszarze normalnym wzglêdem dwóch zmiennych - podzia³ obszaru ca³kowania na podobszary }
 \label{R5}
 \end{figure}
 
@@ -421,12 +421,12 @@ S2V_{i,j}=\frac{h_xh_y}{9}\left[f(x_{2i},y_{2j})+4 f(x_{2i+1},y_{2j})+f(x_{2i+2}
 \left.f(x_{2i},y_{2j+2})+4 f(x_{2i+1},y_{2j+1})+ f(x_{2i+2},y_{2j+2})\right]
 \end{array}
 \end{equation}\\       
-Wspó³czynniki, które pojawi³y siê w powy¿szym zapisie przy wartoœciach funkcji $f(x,y)$  nie s¹ przypadkowe. Powsta³y one w wyniku przemno¿enia okrojonej wersji wektorów $A$ i $B$, których u¿ywaliœmy do wyprowadzenia macierzy (\ref{MacierzWspolczynnikowSimpson2}) tzn.:
+Wspó³czynniki, które pojawi³y siê w powy¿szym zapisie przy wartoœciach funkcji $f(x,y)$  nie s¹ przypadkowe i tak intuicyjne jak dla \textit{wzoru Trapezów}. Powsta³y one w wyniku przemno¿enia \textit{'okrojonej'} wersji wektorów $A$ i $B$, których to u¿ywaliœmy do wyprowadzenia macierzy (\ref{MacierzWspolczynnikowSimpson2}). S¹ one nastêpuj¹cej postaci:
 $$\qquad a= \left[
         \begin{array}{ccc}
          1 & 4 & 1 \\
          \end{array}
-      \right]
+      \right],
       \qquad
  \,\,b= \left[
 		\begin{array}{c}
@@ -434,9 +434,9 @@ $$\qquad a= \left[
          4\\
          1\\
          \end{array}       
-     \right] 
+     \right]. 
 $$ 
-W zwi¹zku z tym:
+W zwi¹zku z tym ich iloczyn to:
 
 \begin{equation}\label{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}
 a \times b = \left[
@@ -445,7 +445,7 @@ a \times b = \left[
          4 & 16 & 4 \\
          1 & 4 & 1 \\
 \end{array}
-\right]
+\right].
 \end{equation}\\
  
 Rozszerzaj¹c zakres sumowania z jednego podobszaru na ca³y obszar ca³kowania $\Omega$ nasz wzór przyjmie ostatecznie poni¿sz¹, zwiêz³¹ formê:
@@ -453,14 +453,55 @@ Rozszerzaj¹c zakres sumowania z jednego podobszaru na ca³y obszar ca³kowania $\O
 \begin{array}{c}
 I_{S2V}=I_{S2}\approx\frac{h_xh_y}{9}\sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1}\left[f(x_{2i},y_{2j})+4 f(x_{2i+1},y_{2j})+f(x_{2i+2},y_{2j})+\right.\\
 4 f(x_{2i},y_{2j+1})+16 f(x_{2i+1},y_{2j+1})+4 f(x_{2i+2},y_{2j+1})+\\
-\left.f(x_{2i},y_{2j+2})+4 f(x_{2i+1},y_{2j+1})+ f(x_{2i+2},y_{2j+2})\right]
+\left.f(x_{2i},y_{2j+2})+4 f(x_{2i+1},y_{2j+1})+ f(x_{2i+2},y_{2j+2})\right].
 \end{array}
-\end{equation}  
-  
-Zauwa¿my, ¿e (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) oraz (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) mo¿emy stosowaæ zamiennie, gdy¿ s¹ one równowa¿ne.
+\end{equation}   
+Zauwa¿my, ¿e (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) oraz (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) s¹ równowa¿ne. Mo¿na siê o tym przekonaæ rozpisuj¹c (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) ju¿ dla kilku pierwszych wartoœci $i$ oraz $j$.
 
- $Lagrange_{2,2}$\\
- przyk³ad jakiœ recznie liczony
+Zaprezentowane dotychczas sposoby wyprowadzania \textit{uogólnionego wzoru Simpsona} nie s¹ jedynymi nam znanymi. Nale¿y równie¿ pokazaæ, ¿e ten sam wzór mo¿emy otrzymaæ poprzez ca³kowanie wielomianu \textit{Lagrange'a} $L_{2,2}(x,y)$. Ca³ka taka jest nastêpuj¹cej postaci:
+\begin{equation}\label{WzorSimpsona2DZCalkiL22}
+\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} L_{2,2}(x,y) dydx=\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \sum\limits_{i=0}^2 \sum\limits_{j=0}^2 f(x_i,y_j) \left(\prod\limits_{s=0, s\neq i}^2 \frac{x-x_s}{x_i-x_s}\prod\limits_{r=0, r\neq j}^2 \frac{y-y_r}{y_j-y_r}\right)dydx
+\end{equation}       
+Przyjmuj¹c nastêpuj¹ce wartoœci $x_0=0$, $x_1=h$, $x_2=2h$, $y_0=0$, $y_1=k$ oraz $y_2=2k$ mo¿emy powy¿sz¹ ca³kê rozbiæ na dziewiêæ ca³ek bêd¹cych sk³adowymi (\ref{WzorSimpsona2DZCalkiL22}). Wyznaczenie ich spowoduje otrzymanie wspó³czynników przy wartoœciach funkcji $f(x_i,y_j)$ w kolejnych wêz³ach zgodnych z (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}), tzn.:
+
+\begin{small}
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_1)(x-x_2)(y-y_1)(y-y_2)}{(x_0-x_1)(x_0-x_2)(y_0-y_1)(y_0-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-h)(x-2h)(y-k)(y-2k)}{(0-h)(0-2h)(0-k)(0-2k)} dydx = \frac{hk}{9}$$
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_1)(x-x_2)(y-y_0)(y-y_2)}{(x_0-x_1)(x_0-x_2)(y_1-y_0)(y_1-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-h)(x-2h)(y-0)(y-2k)}{(0-h)(0-2h)(k-0)(k-2k)} dydx = \frac{4hk}{9}$$
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_1)(x-x_2)(y-y_0)(y-y_1)}{(x_0-x_1)(x_0-x_2)(y_2-y_0)(y_2-y_1)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-h)(x-2h)(y-0)(y-k)}{(0-h)(0-2h)(2k-0)(2k-k)} dydx = \frac{hk}{9}$$
+
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_2)(y-y_1)(y-y_2)}{(x_1-x_0)(x_1-x_2)(y_0-y_1)(y_0-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-2h)(y-k)(y-2k)}{(h-0)(h-2h)(0-k)(0-2k)} dydx = \frac{4hk}{9}$$
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_2)(y-y_0)(y-y_2)}{(x_1-x_0)(x_1-x_2)(y_1-y_0)(y_1-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-2h)(y-0)(y-2k)}{(h-0)(h-2h)(k-0)(k-2k)} dydx = \frac{16hk}{9}$$
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_2)(y-y_0)(y-y_1)}{(x_1-x_0)(x_1-x_2)(y_2-y_0)(y_2-y_1)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-2h)(y-0)(y-k)}{(h-0)(h-2h)(2k-0)(2k-k)} dydx = \frac{4hk}{9}$$
+
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_1)(y-y_2)}{(x_2-x_0)(x_2-x_1)(y_0-y_1)(y_0-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-h)(y-k)(y-2k)}{(2h-0)(2h-h)(0-k)(0-2k)} dydx = \frac{hk}{9}$$
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_0)(y-y_2)}{(x_2-x_0)(x_2-x_1)(y_1-y_0)(y_1-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-h)(y-0)(y-2k)}{(2h-0)(2h-h)(k-0)(k-2k)} dydx = \frac{4hk}{9}$$
+$$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_0)(y-y_1)}{(x_2-x_0)(x_2-x_1)(y_2-y_0)(y_2-y_1)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-h)(y-0)(y-k)}{(2h-0)(2h-h)(2k-0)(2k-k)} dydx = \frac{hk}{9}$$
+
+\end{small}
+Tak jak wspomnieliœmy tu¿ przed przeprowadzeniem obliczeñ, powy¿ej wyznaczone wspó³czynniki tworz¹ macierz (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}). Wyjaœniaj¹c - ka¿de kolejne trzy wartoœci pocz¹wszy od pierwszej, czwartej i siódmej tworz¹ jeden osobny jej wiersz. Obliczenia te s¹ jednak zbyt zawi³e, by wykorzystywaæ je bezpoœrednio w naszych póŸniejszych rachunkach, dlatego zosta³y one zaprezentowane tylko w celu informacyjnym.  
+
+Wykorzystuj¹c (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) lub sam¹ macierz (\ref{MacierzWspolczynnikowSimpson2}) wyznaczmy przybli¿on¹ wartoœæ pewnej ca³ki:
+
+\begin{ex}
+Tutaj przyk³ad
+\end{ex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %\section{Wzór 'prostok¹tów'}

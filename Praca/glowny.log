@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  4 SEP 2017 00:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  5 SEP 2017 01:33
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1067,11 +1067,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [46] [47]
-Rozdzia\l  4.
-) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [48
+[46]
+Overfull \hbox (0.66805pt too wide) detected at line 468
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
 
-]) [49
+
+Overfull \hbox (5.57274pt too wide) detected at line 469
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (4.57405pt too wide) detected at line 470
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (5.30913pt too wide) detected at line 472
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (10.88298pt too wide) detected at line 473
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (10.88298pt too wide) detected at line 474
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (4.83766pt too wide) detected at line 476
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+[47]
+Overfull \hbox (10.88298pt too wide) detected at line 477
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (10.88298pt too wide) detected at line 478
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [48]
+Rozdzia\l  4.
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [49
+
+]) [50
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1112,7 +1166,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 ][]
  []
 
-[50
+[51
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 138--140
@@ -1126,9 +1180,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--140
 , []
  []
 
-[51]
+[52]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
- [52]
+ [53]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 179.
@@ -1142,12 +1196,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12685 strings out of 493922
- 188274 string characters out of 3144896
- 299940 words of memory out of 3000000
- 15711 multiletter control sequences out of 15000+200000
- 69247 words of font info for 109 fonts, out of 3000000 for 9000
+ 12699 strings out of 493922
+ 188534 string characters out of 3144896
+ 300089 words of memory out of 3000000
+ 15725 multiletter control sequences out of 15000+200000
+ 72975 words of font info for 121 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1168b,6164s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (52 pages, 281204 bytes).
+Output written on glowny.dvi (53 pages, 293944 bytes).
