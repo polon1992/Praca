@@ -477,18 +477,45 @@ $$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_1)(y-
 $$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_0)(y-y_2)}{(x_2-x_0)(x_2-x_1)(y_1-y_0)(y_1-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-h)(y-0)(y-2k)}{(2h-0)(2h-h)(k-0)(k-2k)} dydx = \frac{4hk}{9}$$
 $$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_0)(y-y_1)}{(x_2-x_0)(x_2-x_1)(y_2-y_0)(y_2-y_1)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-0)(x-h)(y-0)(y-k)}{(2h-0)(2h-h)(2k-0)(2k-k)} dydx = \frac{hk}{9}$$
 
-\end{small}
+\end{small}\hfill\\
 Tak jak wspomnieliœmy tu¿ przed przeprowadzeniem obliczeñ, powy¿ej wyznaczone wspó³czynniki tworz¹ macierz (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}). Wyjaœniaj¹c - ka¿de kolejne trzy wartoœci pocz¹wszy od pierwszej, czwartej i siódmej tworz¹ jeden osobny jej wiersz. Obliczenia te s¹ jednak zbyt zawi³e, by wykorzystywaæ je bezpoœrednio w naszych póŸniejszych rachunkach, dlatego zosta³y one zaprezentowane tylko w celu informacyjnym.  
 
-Wykorzystuj¹c (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) lub sam¹ macierz (\ref{MacierzWspolczynnikowSimpson2}) wyznaczmy przybli¿on¹ wartoœæ pewnej ca³ki:
+Wykorzystuj¹c (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) lub sam¹ macierz (\ref{MacierzWspolczynnikowSimpson2}) wyznaczmy przybli¿on¹ wartoœæ pewnej ca³ki, mianowicie:
 
-\begin{ex}
-Tutaj przyk³ad
+\begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej \textit{wzorem Simpsona})\\\hfill
+\textit{Obliczymy przybli¿on¹ wartoœæ  $\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx$ wykorzystuj¹c uogólniony wzór Simpsona dla ca³ek podwójnych po obszarach normalnych. Dla rozpatrywanego przypadku przyjmijmy, ¿e przedzia³ ca³kowania zarówno dla zmiennej $x$ jak i $y$ zostanie podzielony na dwa podwójne podprzedzia³y wyznaczone przez równo odleg³e wêz³y. }\\
+
+\hspace{-1cm}Z powy¿szego opisu wynika, ¿e bêdziemy potrzebowaæ $n=5$ wspó³rzêdnych $x$ oraz $m=5$ wspó³rzêdnych $y$.
+Podzia³ przedzia³ów ca³kowania przyjmuj¹c, ¿e $h_x=\frac{\frac{4}{8}-0}{4}=\frac{4}{32}=\frac{1}{8}$ oraz $h_y=\frac{1-\frac{4}{8}}{4}=\frac{4}{32}=\frac{1}{8}$ prezentuje siê nastêpuj¹co:
+$$x_0=0,\, x_1=\frac{1}{8},\, x_2=\frac{2}{8},\, x_3=\frac{3}{8},\, x_4=\frac{4}{8}$$
+$$y_0=\frac{4}{8},\, y_1=\frac{5}{8},\, y_2=\frac{6}{8},\, y_3=\frac{7}{8},\, y_4=1.$$ 
+
+Przechodz¹c teraz do obliczenia wartoœci ca³ki przy wykorzystaniu wzoru \textit{Simpsona} rozpisanego na podstawie (\ref{MacierzWspolczynnikowSimpson2}) dostajemy:
+$$\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx\approx
+\frac{h_xh_y}{9} \left(f(x_0,y_0)+4f(x_1,y_0)+2f(x_2,y_0)+4f(x_3,y_0)+f(x_4,y_0)+\right.$$
+$$4f(x_0,y_1)+16f(x_1,y_1)+8f(x_2,y_1)+16f(x_3,y_1)+4f(x_4,y_1)+$$
+$$ 2f(x_0,y_2)+8f(x_1,y_2)+4f(x_2,y_2)+8f(x_3,y_2)+2(x_4,y_2)+$$
+$$4f(x_0,y_3)+16f(x_1,y_3)+8f(x_2,y_3)+16f(x_3,y_3)+4f(x_4,y_3)+$$
+$$\left.f(x_0,y_4)+4f(x_1,y_4)+2f(x_2,y_4)+4f(x_3,y_4)+f(x_4,y_4)\right)=$$
+$$=\frac{\frac{1}{8}\frac{1}{8}}{9}\left( \frac{\frac{4}{8}}{\left(\frac{4}{8}\right)^2} + 4\cdot \frac{\frac{5}{8}}{\left(\frac{1}{8}\right)^2+\left(\frac{4}{8}\right)^2} + 2 \cdot \frac{\frac{6}{8}}{\left(\frac{2}{8}\right)^2+\left(\frac{4}{8}\right)^2} + 4 \cdot \frac{\frac{7}{8}}{\left(\frac{3}{8}\right)^2+\left(\frac{4}{8}\right)^2} +\frac{1}{\left(\frac{4}{8}\right)^2+\left(\frac{4}{8}\right)^2} +  \right.$$
+$$4\cdot\frac{ \frac{5}{8}}{\left(\frac{5}{8}\right)^2} + 16\cdot \frac{\frac{6}{8}}{\left(\frac{1}{8}\right)^2+\left(\frac{5}{8}\right)^2} + 8 \cdot \frac{\frac{7}{8}}{\left(\frac{2}{8}\right)^2+\left(\frac{5}{8}\right)^2} + 16 \cdot \frac{1}{\left(\frac{3}{8}\right)^2+\left(\frac{5}{8}\right)^2} + 4\cdot\frac{\frac{9}{8}}{\left(\frac{4}{8}\right)^2+\left(\frac{5}{8}\right)^2} +$$
+$$2\cdot\frac{ \frac{6}{8}}{\left(\frac{6}{8}\right)^2} + 8\cdot \frac{\frac{7}{8}}{\left(\frac{1}{8}\right)^2+\left(\frac{6}{8}\right)^2} + 4 \cdot \frac{1}{\left(\frac{2}{8}\right)^2+\left(\frac{6}{8}\right)^2} + 8 \cdot \frac{\frac{9}{8}}{\left(\frac{3}{8}\right)^2+\left(\frac{6}{8}\right)^2} + 2\cdot\frac{\frac{10}{8}}{\left(\frac{4}{8}\right)^2+\left(\frac{6}{8}\right)^2} +$$
+$$4\cdot\frac{ \frac{7}{8}}{\left(\frac{7}{8}\right)^2} + 16\cdot \frac{1}{\left(\frac{1}{8}\right)^2+\left(\frac{7}{8}\right)^2} + 8 \cdot \frac{\frac{9}{8}}{\left(\frac{2}{8}\right)^2+\left(\frac{7}{8}\right)^2} + 16 \cdot \frac{\frac{10}{8}}{\left(\frac{3}{8}\right)^2+\left(\frac{7}{8}\right)^2} + 4\cdot\frac{\frac{11}{8}}{\left(\frac{4}{8}\right)^2+\left(\frac{7}{8}\right)^2} +$$
+$$\left.1 + 4\cdot \frac{\frac{9}{8}}{\left(\frac{1}{8}\right)^2+\left(1\right)^2} + 2 \cdot \frac{\frac{10}{8}}{\left(\frac{2}{8}\right)^2+\left(1\right)^2} + 4 \cdot \frac{\frac{11}{8}}{\left(\frac{3}{8}\right)^2+\left(1\right)^2} +\frac{\frac{12}{8}}{\left(\frac{4}{8}\right)^2+\left(1\right)^2} \right) \approx$$
+$$\approx\frac{1}{576}\cdot(27,17176470588235 + 88,52877470325647 + 37,05169785169785 + $$
+$$+ 63,40370323235645 + 13,80562821545899)=0,399238834563632$$
+
+W zaokr¹gleniu wartoœæ dok³adna rozwi¹zywanej ca³ki, otrzymana przy wykorzystaniu kalkulatora to: $\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx \approx 0.399181467986060$
+
+Analizuj¹c wielkoœæ b³êdu wzglêdnego (\textbf{BW}), którym jest obci¹¿ony wynik, zauwa¿amy ¿e nie jest znacz¹cy i wynosi jedynie $0,014\%$. Wynika to z poni¿szych rachunków: 
+\begin{center}
+$BW = \frac{|0,399181467986 - 0,399238834563632|}{0,399181467986} * 100\% \approx 0,01437\%\approx 0,014\% $ \\
+\end{center}
+W tym momencie uwidacznia siê zdecydowanie wiêksza dok³adnoœæ \textit{uogólnionego wzoru Simpsona} w zestawieniu go z \textit{uogólnionym wzorem Trapezów}. Dla Tego drugiego wielkoœæ BW (dla takiej samej ca³ki) przy wykonanych dwóch podzia³ach przedzia³u ca³kowania oscylowa³a w granicach $0,2\%$, zatem by³ on o rz¹d wielkoœci wiêkszy.
 \end{ex}
 
-
-
-
+Pomimo tego, ¿e algorytm \textit{Simpsona} (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) na pierwszy rzut oka wydaje siê byæ efektywniejszy ni¿  wspomniany \textit{wzór Trapezów} (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}), to jest on równie¿ du¿o bardziej skomplikowany je¿eli chodzi o z³o¿onoœæ rachunków jakie nale¿y wykonaæ. Ka¿de zwiêkszenie liczby wêz³ów powoduje bardzo szybki rozrost iloœci wartoœci funkcji, które nale¿y wyznaczyæ dla danych ich kombinacji. W zwi¹zku z tym, by kontynuowaæ rozwa¿ania zaprezentujmy stworzon¹ procedurê automatyzuj¹c¹ obliczanie wartoœci ca³ek podwójnych po obszarach normalnych \textit{uogólnionym wzorem Simpsona}.
+  
 
 
 
