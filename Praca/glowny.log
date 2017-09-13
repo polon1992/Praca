@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  12 SEP 2017 01:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  14 SEP 2017 00:31
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1063,36 +1063,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
 File: R5.eps Graphic file (type eps)
 <R5.eps> [45]
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
 [46]
-Overfull \hbox (0.66805pt too wide) detected at line 468
+Overfull \hbox (0.66805pt too wide) detected at line 469
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (5.57274pt too wide) detected at line 469
+Overfull \hbox (5.57274pt too wide) detected at line 470
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (4.57405pt too wide) detected at line 470
+Overfull \hbox (4.57405pt too wide) detected at line 471
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (5.30913pt too wide) detected at line 472
-[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
-/10.95 dydx \U/MnSymbolD/m/n/10.95   []
- []
-
-
-Overfull \hbox (10.88298pt too wide) detected at line 473
+Overfull \hbox (5.30913pt too wide) detected at line 473
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
@@ -1104,53 +1098,69 @@ Overfull \hbox (10.88298pt too wide) detected at line 474
  []
 
 
-Overfull \hbox (4.83766pt too wide) detected at line 476
+Overfull \hbox (10.88298pt too wide) detected at line 475
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Overfull \hbox (4.83766pt too wide) detected at line 477
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 [47]
-Overfull \hbox (10.88298pt too wide) detected at line 477
-[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
-/10.95 dydx \U/MnSymbolD/m/n/10.95   []
- []
-
-
 Overfull \hbox (10.88298pt too wide) detected at line 478
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--487
+Overfull \hbox (10.88298pt too wide) detected at line 479
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
 
  []
 
 [48] [49]
-Overfull \hbox (8.66458pt too wide) in paragraph at lines 551--551
+Overfull \hbox (8.66458pt too wide) in paragraph at lines 553--553
 []\T1/pcr/m/n/10.95 if ((((ceil(N)>N) or (floor(N)<N)) or (mod(N,2) = 1 and N>0
 ) or N <= 0)[] 
  []
 
 
-Overfull \hbox (8.66458pt too wide) in paragraph at lines 551--551
+Overfull \hbox (8.66458pt too wide) in paragraph at lines 553--553
 []\T1/pcr/m/n/10.95 or (((ceil(M)>M) or (floor(M)<M)) or (mod(M,2) = 1 and M>0)
  or M <= 0))[] 
  []
 
 
-Overfull \hbox (2.09459pt too wide) in paragraph at lines 551--551
+Overfull \hbox (2.09459pt too wide) in paragraph at lines 553--553
 []\T1/pcr/m/n/10.95 ERROR('Ostatnie dwa parametry musza byc liczba naturalna po
 staci \2k')[] 
  []
 
 [50]
-Underfull \hbox (badness 1590) in paragraph at lines 555--561
+Underfull \hbox (badness 1590) in paragraph at lines 557--563
 \T1/ptm/m/n/12 nie jest liczb¡ na-tu-raln¡ pa-rzy-st¡ to zwra-cany jest sto-sow
 ny ko-mu-ni-kat o bª¦-dzie. W
  []
 
-[51] [52]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [53]
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--613
+
+ []
+
+[52]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiv.tex" [53]
 Rozdzia\l  4.
 ) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [54
 
@@ -1233,4 +1243,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1432b,6219s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (58 pages, 323140 bytes).
+Output written on glowny.dvi (58 pages, 324756 bytes).
