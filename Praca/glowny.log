@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  14 SEP 2017 00:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  7 OCT 2017 19:14
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1208,39 +1208,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 [56
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []\T1/ptm/m/n/12 Mathews J.H., Ca-li-for-nia State Univ. Ful-ler-ton, [][][][][
 ][][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]\T1/ptm/m/n/12 
-, []
+,
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 141--142
+[]\T1/ptm/m/n/12 Runborg O., Kun-gliga Tek-ni-ska Hög-sko-lan, []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
 [57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
  [58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 180.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: FBE5591C1531C1E2BEEBEF9E47F796E7;1431.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
+(rerunfilecheck)             Checksum: 947834A642A393C79EF60D8DD9084E1B;1460.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12703 strings out of 493922
- 188646 string characters out of 3144896
- 301574 words of memory out of 3000000
- 15729 multiletter control sequences out of 15000+200000
+ 12707 strings out of 493922
+ 188690 string characters out of 3144896
+ 300635 words of memory out of 3000000
+ 15733 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1432b,6219s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (58 pages, 324756 bytes).
+Output written on glowny.dvi (58 pages, 331912 bytes).

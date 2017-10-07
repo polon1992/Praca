@@ -1,4 +1,4 @@
-\chapter{Kwadratury Newtona-Cotesa dla ca³ek podwójnych w obszarach prostok¹tnych}
+\chapter{Kwadratury Newtona-Cotesa dla ca³ek podwójnych w prostok¹cie}
 W ca³ym poprzednim rozdziale skupialiœmy siê na metodach ca³kowania numerycznego. Odnosi³y siê one jednak tylko do funkcji jednej zmiennej - zatem ca³kowanie odbywa³o siê na pewnym przedziale domkniêtym. Teraz chcemy poszerzyæ nasz¹ wiedzê i przejœæ o jeden krok dalej. Nasze rozwa¿ania zostan¹ skierowane ponownie na te same, co poprzednio metody ca³kowania numerycznego. Znacz¹ca ró¿nica polega³a bêdzie na tym, ¿e zajmiemy siê ca³kowaniem funkcji dwóch zmiennych. Wszystkie nasze dzia³ania maj¹ na celu wy³onienie najdok³adniejszej metody wyznaczania wartoœci ca³ek podwójnych przy pomocy prezentowanych algorytmów.  W badaniach wyró¿nimy dwa typy obszarów ca³kowania, bêd¹ to:
 \begin{itemize}
 \item[a)] Obszar normalny ze wzglêdu na zmienn¹ $x$ i $y$
@@ -15,7 +15,7 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 
 \end{itemize}
 
-\section{Wzór Trapezów - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}\label{Rozdzial3.1_WzorTrapezow2DObszNormalny}
+\section{Wzór trapezów }\label{Rozdzial3.1_WzorTrapezow2DObszNormalny}
 W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Zbadajmy wariant, dla którego obszar ca³kowania jest normalny ze wzglêdu na dwie zmienne.  
 
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
@@ -299,7 +299,7 @@ Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:.
 Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoœci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwa¿amy pewn¹ prawid³owoœæ. W miarê wzrostu liczby podzia³ów ($\mathbf{n}$ i $\mathbf{m}$) przedzia³ów ca³kowania wartoœci b³êdów odznaczaj¹ siê tendencj¹ spadkow¹. Szczególnie widoczna jest ona na przyk³adzie b). W przyk³adzie a) mo¿na dostrzec jednak, ¿e b³êdy z kolejnego pomiaru s¹ czêsto wiêksze ni¿ te z poprzedniego,  pomimo to jednak równie¿ zauwa¿alny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarów w tablicy \ref{WynikiZProceduryTrapez2a} jest w du¿ej mierze spowodowana postaci¹ równania funkcji podca³kowej oraz sposobem dzia³ania algorytmu. W miarê tego, im wiêcej jest deformacji powierzchni wykresu owej funkcji, tym czêœciej pojawi¹ siê wahania wielkoœci b³êdu dla coraz to wiêkszej liczby wêz³ów. Jak widaæ sytuacja nie jest ju¿ tak oczywista, jak by³a w przypadku u¿ycia wzoru trapezów dla ca³ek pojedynczych - tam wzrost iloœci punktów wêz³owych zapewnia³ sta³y wzrost dok³adnoœci wyniku.   
 
 
-\section{Wzór Simpsona - ca³kowanie po obszarze normalnym wzglêdem obu zmiennych}
+\section{Wzór Simpsona}
 Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy równie¿ rozszerzyæ wzór \textit{Simpsona} na przypadek, gdzie mamy do czynienia z wyznaczaniem wartoœci ca³ek podwójnych w obszarach normalny ze wzglêdu na dwie zmienne. W tym celu mo¿emy wykorzystaæ na przyk³ad \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami})    lub wielomian \textit{Lagrange'a} $L_{2,2}(x,y)$ zbudowany w oparciu o wzór (\ref{WielomianInterpolacyjnyLagrangea2}). 
 
 Rozwa¿my pewien obszar ca³kowania $\Delta=\{a\leq x\leq b ; c\leq y \leq d \}$. 
@@ -370,7 +370,7 @@ I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace f(x_0,y_0)+f(x_0,y_{2m})+f(x_{2n},y
 \end{array}
 \end{equation}
 
-Analogicznie jak dla uogólnionego wzoru trapezów (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) istnieje pewien schemat w który uk³adaj¹ siê wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem. Tak jak wczeœniej oznacza to, ¿e rozpisanie  (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) w sposób taki, by uwzglêdniono w nim wszystkie punkty wêz³owe postaci $(x_{2i},y_{2j})$ ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego oraz spe³niaj¹ce równanie (\ref{WezlyNaObszarzeProstokatnymSimpson2}), skutkowa³oby tym, ¿e wartoœci przy kolejnych $f(x_{2i},y_{2j})$ ($i=0,1,\ldots,n\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê wed³ug pewnego schematu powsta³ego w wyniku mno¿enia dwóch nastêpuj¹cych wektorów:
+Tak jak zauwa¿yliœmy wczeœniej dla uogólnionego wzoru trapezów (\ref{UogolnionyWzorTrapezow2_obszarNormalny}), rozpisanie  (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) w sposób taki, by uwzglêdniono w nim wszystkie mo¿liwe punkty wêz³owe postaci $(x_{2i},y_{2j})$ ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego oraz spe³niaj¹ce równanie (\ref{WezlyNaObszarzeProstokatnymSimpson2}), skutkowa³oby tym, ¿e wartoœci przy kolejnych $f(x_{2i},y_{2j})$ ($i=0,1,\ldots,n\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê wed³ug pewnego schematu powsta³ego w wyniku mno¿enia dwóch nastêpuj¹cych wektorów:
 
 $$\qquad A= \left[
         \begin{array}{ccccccc}
@@ -401,7 +401,7 @@ A \times B = \left[
 \right]
 \end{equation}\\
 
-Zaprezentowana macierz jak warto zauwa¿yæ diametralnie upraszcza zapis \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych}. Pewien jej fragment, a dok³adniej pierwszy wiersz, pojawi³ siê ju¿ dla przypadku uogólnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
+Zaprezentowana macierz diametralnie upraszcza zapis \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych}. Pewien jej fragment, a dok³adniej pierwszy wiersz, pojawi³ siê ju¿ dla przypadku uogólnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
 
 Przybli¿anie wartoœci ca³ki podwójnej obliczanej metod¹ Simpsona mo¿na równie¿ sprowadziæ do sumowania objêtoœci pewnych bry³ parabolicznych. WeŸmy podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarów, co dok³adniej \mbox{prezentuje rysunek \ref{R5}:}
 \begin{figure}[H]
@@ -463,7 +463,7 @@ Zaprezentowane dotychczas sposoby wyprowadzania \textit{uogólnionego wzoru Simps
 \begin{equation}\label{WzorSimpsona2DZCalkiL22}
 \int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} L_{2,2}(x,y) dydx=\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \sum\limits_{i=0}^2 \sum\limits_{j=0}^2 f(x_i,y_j) \left(\prod\limits_{s=0, s\neq i}^2 \frac{x-x_s}{x_i-x_s}\prod\limits_{r=0, r\neq j}^2 \frac{y-y_r}{y_j-y_r}\right)dydx
 \end{equation}       
-Przyjmuj¹c nastêpuj¹ce wartoœci $x_0=0$, $x_1=h$, $x_2=2h$, $y_0=0$, $y_1=k$ oraz $y_2=2k$ mo¿emy (\ref{WzorSimpsona2DZCalkiL22}) rozbiæ na dziewiêæ ca³ek. Wyznaczenie ich spowoduje otrzymanie wspó³czynników wystêpuj¹cych przy wartoœciach funkcji $f(x_i,y_j)$ w kolejnych wêz³ach zgodnych z (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}), tzn.:
+Przyjmuj¹c nastêpuj¹ce wartoœci $x_0=0$, $x_1=h$, $x_2=2h$, $y_0=0$, $y_1=k$ oraz $y_2=2k$ mo¿emy w (\ref{WzorSimpsona2DZCalkiL22}) wyszczególniæ dziewiêæ ca³ek. Wyznaczenie ich spowoduje otrzymanie wspó³czynników wystêpuj¹cych przy wartoœciach funkcji $f(x_i,y_j)$ w kolejnych wêz³ach zgodnych z (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}), tzn.:
 
 \begin{small}
 $$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_1)(x-x_2)(y-y_1)(y-y_2)}{(x_0-x_1)(x_0-x_2)(y_0-y_1)(y_0-y_2)} dydx =\int\limits_{0}^{2h} \int\limits_{0}^{2k} \frac{(x-h)(x-2h)(y-k)(y-2k)}{(0-h)(0-2h)(0-k)(0-2k)} dydx = \frac{hk}{9}$$
@@ -515,7 +515,7 @@ $BW = \frac{|0,399181467986 - 0,399238834563632|}{0,399181467986} * 100\% \appro
 %W tym momencie uwidacznia siê zdecydowanie wiêksza dok³adnoœæ \textit{uogólnionego wzoru Simpsona} w zestawieniu go z \textit{uogólnionym wzorem Trapezów}. 
 Dla \textit{wzoru trapezów }wielkoœæ BW (dla takiej samej ca³ki) przy wykonanych dwóch podzia³ach przedzia³u ca³kowania oscylowa³a w granicach $0,2\%$, wiêc by³a ona niemal 15 krotnie wiêksza!
 \end{ex}
-Algorytm \textit{Simpsona} (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) pomimo tego, ¿e na pierwszy rzut oka wydaje siê byæ skuteczniejszy ni¿  wspomniany \textit{wzór Trapezów} (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}), to jest on równie¿ du¿o bardziej skomplikowany je¿eli chodzi o z³o¿onoœæ rachunków jakie nale¿y wykonaæ. Ka¿de zwiêkszenie liczby wêz³ów powoduje bardzo szybki rozrost iloœci wartoœci funkcji do wyznaczenia. W zwi¹zku z tym, by kontynuowaæ rozwa¿ania zaprezentujmy stworzon¹ procedurê automatyzuj¹c¹ obliczanie wartoœci ca³ek podwójnych po obszarach normalnych \textit{uogólnionym wzorem Simpsona}.
+Algorytm \textit{Simpsona} (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) pomimo tego, ¿e na pierwszy rzut oka wydaje siê byæ skuteczniejszy ni¿  wspomniany \textit{wzór Trapezów} (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}), to jest równie¿ du¿o bardziej skomplikowany je¿eli chodzi o z³o¿onoœæ rachunków jakie nale¿y wykonaæ. Ka¿de zwiêkszenie liczby wêz³ów powoduje bardzo szybki rozrost iloœci wartoœci funkcji do wyznaczenia. W zwi¹zku z tym, by kontynuowaæ rozwa¿ania zaprezentujmy stworzon¹ procedurê automatyzuj¹c¹ obliczanie wartoœci ca³ek podwójnych po obszarach normalnych \textit{uogólnionym wzorem Simpsona}.
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu uogólnionego wzoru Simpsona)\label{MAPLE_Simpson2ObszarNormalnyWartoscCalki}
 \begin{small}
 \begin{verbatim}

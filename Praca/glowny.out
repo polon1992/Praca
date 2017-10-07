@@ -5,12 +5,14 @@
 \BOOKMARK [0][-]{chapter.2}{Kwadratury Newtona-Cotesa dla ca\233ki pojedynczej}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Wz\363r trapez\363w}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{Wz\363r Simpsona}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Kwadratury Newtona-Cotesa dla ca\233ek podw\363jnych w obszarach prostokatnych}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Wz\363r Trapez\363w - ca\233kowanie po obszarze normalnym wzgledem obu zmiennych}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Wz\363r Simpsona - ca\233kowanie po obszarze normalnym wzgledem obu zmiennych}{chapter.3}% 10
-\BOOKMARK [0][-]{chapter.4}{Uzycie kwadratur do obliczania ca\233ek w obszarach normalnych wzgledem osi OX}{}% 11
-\BOOKMARK [1][-]{section.4.1}{Wz\363r Trapez\363w - ca\233kowanie po obszarze normalnym wzgledem jednej zmiennej}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{Wz\363r Simpsona - ca\233kowanie po obszarze normalnym wzgledem jednej zmiennej}{chapter.4}% 13
-\BOOKMARK [0][-]{chapter*.14}{Podsumowanie}{}% 14
-\BOOKMARK [0][-]{chapter*.15}{Bibliografia}{}% 15
-\BOOKMARK [0][-]{chapter*.15}{Spis procedur w jezyku Maple}{}% 16
+\BOOKMARK [0][-]{chapter.3}{Kwadratury Newtona-Cotesa dla ca\233ek podw\363jnych w prostokacie}{}% 8
+\BOOKMARK [1][-]{section.3.1}{Wz\363r trapez\363w }{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Wz\363r Simpsona}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{Kwadratury Newtona-Cotesa dla ca\233ek podw\363jnych w obszarach normalnych}{}% 11
+\BOOKMARK [1][-]{section.4.1}{Wz\363r trapez\363w dla obszaru normalnego wed\233ug osi Ox}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{Wz\363r Simpsona dla obszaru normalnego wed\233ug osi Ox}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{Wz\363r trapez\363w dla obszaru normalnego wed\233ug osi Oy}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.4}{Wz\363r Simpsona dla obszaru normalnego wed\233ug osi Oy}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter*.14}{Podsumowanie}{}% 16
+\BOOKMARK [0][-]{chapter*.15}{Bibliografia}{}% 17
+\BOOKMARK [0][-]{chapter*.15}{Spis procedur w jezyku Maple}{}% 18
