@@ -4,7 +4,7 @@ Poprzedni rozdzia³ pracy zwi¹zany by³ z wyznaczaniem wzorów na dwu wymiarowe kwa
 
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Ox}
 WeŸmy pewien obszar postaci \mbox{$D=\{a < x < b\,;\, c(x)\leq y \leq d(x) \}$},  normalny wzglêdem osi $Ox$ ( definicja pojêcia na str. \pageref{ObszaryNormalneOx} ) oraz funkcjê $f(x,y)$ okreœlon¹ na tym obszarze. Naszym aktualnym celem jest wyprowadzenie wzoru trapezów dla ca³ki 
-\begin{equation}
+\begin{equation}\label{Trapez2DVar_postacOgolnaCalki}
 I_{VyT2}=\int\int_D f(x,y)dydx=\int\limits_{a}^b\int\limits_{c(x)}^{d(x)} f(x,y) dydx \,.
 \end{equation}
 Niech przedzia³ $[a,b]$ zostanie podzielony na $n$ podprzedzia³ów $[x_i,x_{i+1}]$ $(i=0, 1, \ldots, n-1)$ takich, ¿e:
@@ -12,8 +12,35 @@ $$a=x_0 \leq x_1 \leq x_2 \leq \ldots  \leq x_{n-1} \leq x_n=b\,.$$
 Ka¿dy wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, n-1)$, gdzie $h_x$ okreœlamy jako równowartoœæ \mbox{$h_x=\frac{b-a}{n}$}.\\ 
 Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y (z regu³y) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, uzale¿nione od postaci funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $m$ równych podprzedzia³ów $[y_{i,j}, y_{i,j+1}]$ $(j=0, 1, \ldots ,m-1;\, i=0, 1, \ldots ,n)$ spe³niaj¹cych zale¿noœæ:
 $$c(x_i)=y_{i,0}\leq y_{i,1} \leq y_{i,2}\leq \ldots  \leq y_{i,m}=d(x_i).$$
-Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,m;\, i=0, 1, \ldots ,n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{m}$. Innymi s³owy wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego $x_i$ jest wyliczana. Mo¿emy spotkaæ siê z tak¹ sytuacj¹, gdzie na ca³ym obszarze ca³kowania dla ró¿nych $x_i$ nie znajdziemy dwóch wielkoœci $h_{y,i}$, które bêd¹ sobie równe.        
-
+Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,m;\, i=0, 1, \ldots ,n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{m}$. Innymi s³owy wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego $x_i$ jest wyliczana. W przeciwieñstwie do przypadku ca³kowania w prostok¹cie, mo¿emy spotkaæ siê z tak¹ sytuacj¹, gdzie na ca³ym obszarze $D$ dla ró¿nych $x_i$ nie znajdziemy dwóch wielkoœci $h_{y,i}$, które bêd¹ sobie równe. Poni¿szy obraz wyjaœnia opisywan¹ logikê podzia³u obszaru ca³kowania:
+\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.45]{R6.eps}
+		\end{center}
+	   \caption{Podzia³ obszaru ca³kowania dla \textit{metody Trapezów} - obszar normalny wzglêdem $x$ }
+\label{R6}
+\end{figure}
+        
+Ca³kê z równania (\ref{Trapez2DVar_postacOgolnaCalki}) przedstawimy w innej formie, tak by umo¿liwiæ jej zapis w postaci sumy. Zrobimy to analogicznie jak dla \textit{wzoru Trapezów} i \textit{wzoru Simpsona} po prostok¹cie. Niech 
+$$F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,$$ wtedy $$I_{VyT2}=\int\limits_a^b F(x)dx.$$ Po zastosowaniu z³o¿onego \textit{wzoru Trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VyT2}$ zyskamy wstêpn¹ formê przybli¿enia wartoœci ca³ki $I_{VyT2}$, tzn.: 
+\begin{equation}\label{OgolnaFormaTrapez2DVar}
+I_{VyT2}\approx \frac{h_x}{2}\left(F(x_0)+2F(x_1)+2F(x_2)+\cdots+2F(x_{n-1})+F(x_n)\right).
+\end{equation}
+Ka¿dy ze sk³adników $F(x_i)$, $(i=0,1,\ldots, n)$ jest rozumiany jako:
+\begin{equation}\label{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}
+\begin{array}{cc}
+F(x_i)=\int\limits_{c(x_i)}^{d(x_i)} f(x_i,y)dy\approx \\
+\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+2f(x_i,y_{i,1})+2f(x_i,y_{i,2})+\cdots +2f(x_i,y_{i,m-1})+f(x_i,y_{i,m})\right)
+\end{array}
+\end{equation} 
+Po po³¹czeniu (\ref{OgolnaFormaTrapez2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) dostajemy uogólniony wzór trapezów dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Ox$:
+\begin{equation}\label{UogolnionyWzorTrapezow_Trapez2DVar}
+\begin{array}{cc}
+I_{VyT2}\approx \frac{h_x}{2}\left\lbrace \frac{h_{y,0}}{2}\left(f(x_0,y_{0,0})+f(x_0,y_{0,m})+2\sum\limits_{j=1}^{m-1} f(x_0,y_{0,j})\right)\right.\\
++\frac{h_{y,n}}{2}\left(f(x_n,y_{n,0})+f(x_n,y_{n,m})+2\sum\limits_{j=1}^{m-1} f(x_n,y_{n,j})\right)\\
++\left. 2\sum\limits_{i=1}^{n-1}\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+f(x_i,y_{i,m})+2\sum\limits_{j=1}^{m-1}f(x_i,y_{i,j})\right)\right\rbrace
+\end{array}
+\end{equation}
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Ox}
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}
