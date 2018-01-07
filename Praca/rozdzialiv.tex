@@ -26,7 +26,7 @@ $$F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,$$ wtedy $$I_{VyT2}=\int\limits_a^b 
 \begin{equation}\label{OgolnaFormaTrapez2DVar}
 I_{VyT2}\approx \frac{h_x}{2}\left(F(x_0)+2F(x_1)+2F(x_2)+\cdots+2F(x_{n-1})+F(x_n)\right).
 \end{equation}
-Ka¿dy ze sk³adników $F(x_i)$, $(i=0,1,\ldots, n)$ jest rozumiany jako:
+Ka¿dy ze sk³adników $F(x_i)$, $(i=0,1,\ldots, n)$ jest rozumiany jako \cite{klucz13}:
 \begin{equation}\label{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}
 \begin{array}{cc}
 F(x_i)=\int\limits_{c(x_i)}^{d(x_i)} f(x_i,y)dy\approx \\
@@ -36,11 +36,126 @@ F(x_i)=\int\limits_{c(x_i)}^{d(x_i)} f(x_i,y)dy\approx \\
 Po po³¹czeniu (\ref{OgolnaFormaTrapez2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) dostajemy uogólniony wzór trapezów dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Ox$:
 \begin{equation}\label{UogolnionyWzorTrapezow_Trapez2DVar}
 \begin{array}{cc}
-I_{VyT2}\approx \frac{h_x}{2}\left\lbrace \frac{h_{y,0}}{2}\left(f(x_0,y_{0,0})+f(x_0,y_{0,m})+2\sum\limits_{j=1}^{m-1} f(x_0,y_{0,j})\right)\right.\\
-+\frac{h_{y,n}}{2}\left(f(x_n,y_{n,0})+f(x_n,y_{n,m})+2\sum\limits_{j=1}^{m-1} f(x_n,y_{n,j})\right)\\
-+\left. 2\sum\limits_{i=1}^{n-1}\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+f(x_i,y_{i,m})+2\sum\limits_{j=1}^{m-1}f(x_i,y_{i,j})\right)\right\rbrace
+I_{VyT2}\approx \frac{h_x}{2}\left\lbrace \frac{h_{y,0}}{2}\left(f(x_0,y_{0,0})+2\sum\limits_{j=1}^{m-1} f(x_0,y_{0,j})+f(x_0,y_{0,m})\right)\right.\\
++2\sum\limits_{i=1}^{n-1}\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+2\sum\limits_{j=1}^{m-1}f(x_i,y_{i,j})+f(x_i,y_{i,m})\right)\\
++\left. 
+\frac{h_{y,n}}{2}\left(f(x_n,y_{n,0})+2\sum\limits_{j=1}^{m-1} f(x_n,y_{n,j})+f(x_n,y_{n,m})\right)
+\right\rbrace
 \end{array}
 \end{equation}
+
+Jak mo¿na by siê spodziewaæ, przeprowadzenie rêcznych wyliczenia dla np. $n = m = 10$ podzia³ów przedzia³ów ca³kowania by³oby nie lada wyzwaniem. Wykonajmy jednak pewne rachunki wykorzystuj¹c (\ref{UogolnionyWzorTrapezow_Trapez2DVar}) i ograniczaj¹c siê do zdecydowanie mniejszej liczby podzia³ów.
+
+\begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej w obszarze normalnym wzglêdem $X$ przy u¿yciu uogólnionego wzoru \textit{trapezów})\\
+Wyznaczmy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 \int\limits_{x-1}^{x+1} xy\, dydx$ wykorzystuj¹c uogólniony wzór trapezów dla ca³ek podwójnych w obszarze normalnym wzglêdem osi $Ox$. Przedzia³ ca³kowania po zmiennej $x$ podzielmy na $n=4$ równe podprzedzia³y, natomiast po zmiennej $y$ na $m=3$ podprzedzia³y równej d³ugoœci.\\
+
+Odleg³oœæ pomiêdzy kolejnymi wêz³ami $x_i$ wynosi³a bêdzie $h_x=\frac{b-a}{n}=\frac{1-0}{4}=\frac{1}{4}$. Zatem:
+$$x_0=a=0,\,\, x_1=\frac{1}{4},\,\, x_2=\frac{1}{2},\,\, x_3=\frac{3}{4},\,\, x_4=b=1.$$
+Wielkoœci $h_{y,i}$ nale¿y osobno wyznaczyæ dla ka¿dego z przed chwil¹ wyliczonych $x_i$, tzn.:
+
+\begin{flushleft}
+$h_{y,0}=\frac{d(x_0)-c(x_0)}{m}=\frac{(0+1)-(0-1)}{3}=\frac{2}{3}$\\
+$h_{y,1}=\frac{d(x_1)-c(x_1)}{m}=\frac{(\frac{1}{4} +1)-(\frac{1}{4}-1)}{3}=\frac{\frac{5}{4}+\frac{3}{4}}{3}=\frac{2}{3}$\\
+$h_{y,2}=\frac{d(x_2)-c(x_2)}{m}=\frac{(\frac{2}{4} +1)-(\frac{2}{4}-1)}{3}=\frac{\frac{6}{4}+\frac{2}{4}}{3}=\frac{2}{3}$ \\
+$h_{y,3}=\frac{d(x_3)-c(x_3)}{m}=\frac{(\frac{3}{4} +1)-(\frac{3}{4}-1)}{3}=\frac{\frac{7}{4}+\frac{1}{4}}{3}=\frac{2}{3}$ \\ 
+$h_{y,4}=\frac{d(x_4)-c(x_4)}{m}=\frac{(1+1)-(1-1)}{3}=\frac{2}{3}$
+\end{flushleft}
+Przy u¿yciu powy¿szych wyników $h_{y,i}$ oraz $x_i$ wyznaczymy wartoœci $20$ wêz³ów $y_{i,j}$, których potrzebujemy:
+
+\begin{flushleft}
+$y_{0,0}=c(x_0)+0\cdot h_{y,0}=(0-1)+0\cdot \frac{2}{3}=-1$\\
+$y_{0,1}=c(x_0)+1\cdot h_{y,0}=(0-1)+1\cdot \frac{2}{3}=-\frac{1}{3}$\\
+$y_{0,2}=c(x_0)+2\cdot h_{y,0}=(0-1)+2\cdot \frac{2}{3}=\frac{1}{3}$\\
+$y_{0,3}=c(x_0)+3\cdot h_{y,0}=(0-1)+3\cdot \frac{2}{3}=1$\\
+
+$y_{1,0}=c(x_1)+0\cdot h_{y,1}=(\frac{1}{4}-1)+0\cdot \frac{2}{3}=-\frac{3}{4}$\\
+$y_{1,1}=c(x_1)+1\cdot h_{y,1}=(\frac{1}{4}-1)+1\cdot \frac{2}{3}=-\frac{3}{4}+\frac{2}{3}=-\frac{9}{12}+\frac{8}{12}=-\frac{1}{12}$\\
+$y_{1,2}=c(x_1)+2\cdot h_{y,1}=(\frac{1}{4}-1)+2\cdot \frac{2}{3}=-\frac{3}{4}+\frac{4}{3}=-\frac{9}{12}+\frac{16}{12}=\frac{7}{12}$\\
+$y_{1,3}=c(x_1)+3\cdot h_{y,1}=(\frac{1}{4}-1)+3\cdot \frac{2}{3}=-\frac{3}{4}+2=\frac{5}{4}$\\
+
+$y_{2,0}=c(x_2)+0\cdot h_{y,2}=(\frac{2}{4}-1)+0\cdot \frac{2}{3}=-\frac{2}{4}$\\
+$y_{2,1}=c(x_2)+1\cdot h_{y,2}=(\frac{2}{4}-1)+1\cdot \frac{2}{3}=-\frac{2}{4}+\frac{2}{3}=-\frac{6}{12}+\frac{8}{12}=\frac{2}{12}$\\
+$y_{2,2}=c(x_2)+2\cdot h_{y,2}=(\frac{2}{4}-1)+2\cdot \frac{2}{3}=-\frac{2}{4}+\frac{4}{3}=-\frac{6}{12}+\frac{16}{12}=\frac{10}{12}$\\
+$y_{2,3}=c(x_2)+3\cdot h_{y,2}=(\frac{2}{4}-1)+3\cdot \frac{2}{3}=-\frac{2}{4}+2=\frac{6}{4}$\\
+
+$y_{3,0}=c(x_3)+0\cdot h_{y,3}=(\frac{3}{4}-1)+0\cdot \frac{2}{3}=-\frac{1}{4}$\\
+$y_{3,1}=c(x_3)+1\cdot h_{y,3}=(\frac{3}{4}-1)+1\cdot \frac{2}{3}=-\frac{1}{4}+\frac{2}{3}=-\frac{3}{12}+\frac{8}{12}=\frac{5}{12}$\\
+$y_{3,2}=c(x_3)+2\cdot h_{y,3}=(\frac{3}{4}-1)+2\cdot \frac{2}{3}=-\frac{1}{4}+\frac{4}{3}=-\frac{3}{12}+\frac{16}{12}=\frac{13}{12}$\\
+$y_{3,3}=c(x_3)+3\cdot h_{y,3}=(\frac{3}{4}-1)+3\cdot \frac{2}{3}=-\frac{1}{4}+2=\frac{7}{4}$\\
+
+$y_{4,0}=c(x_4)+0\cdot h_{y,4}=(1-1)+0\cdot \frac{2}{3}=0$\\
+$y_{4,1}=c(x_4)+1\cdot h_{y,4}=(1-1)+1\cdot \frac{2}{3}=\frac{2}{3}$\\
+$y_{4,2}=c(x_4)+2\cdot h_{y,4}=(1-1)+2\cdot \frac{2}{3}=\frac{4}{3}$\\
+$y_{4,3}=c(x_4)+3\cdot h_{y,4}=(1-1)+3\cdot \frac{2}{3}=2$\\
+\end{flushleft}
+Mo¿emy przyst¹piæ do podstawiania konkretnych wartoœci do wzoru (\ref{UogolnionyWzorTrapezow_Trapez2DVar}):
+\begin{flushleft}
+$\int\limits_0^1\int\limits_{x-1}^{x+1} xy\,dydx \approx \frac{h_x}{2}\left\lbrace\frac{h_{y,0}}{2}\left(f(x_0,y_{0,0})+2f(x_0,y_{0,1})+2f(x_0,y_{0,2})+f(x_0,y_{0,3})\right)\right.$
+\end{flushleft}\begin{center}
+$+ h_{y,1}(f(x_1,y_{1,0})+2f(x_1,y_{1,1})+2f(x_1,y_{1,2})+f(x_1,y_{1,3}))$\\
+$+ h_{y,2}(f(x_2,y_{2,0})+2f(x_2,y_{2,1})+2f(x_2,y_{2,2})+f(x_2,y_{2,3}))$\\
+$+ h_{y,3}(f(x_3,y_{3,0})+2f(x_3,y_{3,1})+2f(x_3,y_{3,2})+f(x_3,y_{3,3}))$\\
+$\left.+ \frac{h_{y,4}}{2}(f(x_4,y_{4,0})+2f(x_4,y_{4,1})+2f(x_4,y_{4,2})+f(x_4,y_{4,3}))\right\rbrace$\\
+$=\frac{\frac{1}{4}}{2}\left\lbrace\frac{\frac{2}{3}}{2}(0+(2\cdot 0)+(2\cdot 0)+0)\right.$
+$ + \frac{2}{3}\left((\frac{1}{4}\cdot (-\frac{3}{4}))+2(\frac{1}{4}\cdot (-\frac{1}{12}))+2(\frac{1}{4}\cdot \frac{7}{12})+(\frac{1}{4}\cdot \frac{5}{4})\right)$
+$ + \frac{2}{3}\left((\frac{1}{2}\cdot (-\frac{2}{4}))+2(\frac{1}{2}\cdot \frac{2}{12})+2(\frac{1}{2}\cdot \frac{10}{12})+(\frac{1}{2}\cdot \frac{6}{4})\right)$\\
+$ + \frac{2}{3}\left((\frac{3}{4}\cdot (-\frac{1}{4}))+2(\frac{3}{4}\cdot \frac{5}{12})+2(\frac{3}{4}\cdot \frac{13}{12})+(\frac{3}{4}\cdot \frac{7}{4})\right)$
+$\left. + \frac{\frac{2}{3}}{2}\left((1\cdot 0) + 2(1\cdot\frac{2}{3})+2(1\cdot\frac{4}{3})+(1\cdot 2)\right)\right\rbrace$\\
+
+$=\frac{1}{8}\left\lbrace 0+\frac{2}{3}(-\frac{3}{16}-\frac{2}{48}+\frac{14}{48}+\frac{5}{16})
++\frac{2}{3}(-\frac{2}{8}+\frac{4}{24}+\frac{20}{24}+\frac{6}{8})+\frac{2}{3}(-\frac{3}{16}+\frac{30}{48}+\frac{78}{48}+\frac{21}{16})+\frac{1}{3}(\frac{4}{3}+\frac{8}{3}+2)\right\rbrace$\\
+$=\frac{1}{8}\left(\frac{6}{3}+\frac{2}{3}(\frac{2}{16}+\frac{12}{48})+\frac{2}{3}(\frac{4}{8}+1)+\frac{2}{3}(\frac{18}{16}+\frac{108}{48})\right)
+=\frac{1}{8}\left(\frac{6}{3}+\frac{2}{3}\left(\frac{18}{48}+\frac{72}{48}+\frac{162}{48}\right)\right)
+=\frac{1}{8}\left(\frac{6}{3}+\frac{2}{3}\cdot\frac{252}{48}\right)$\\
+$=\frac{1}{8}\left(\frac{6}{3}+\frac{7}{2}\right)=\frac{1}{8}\left(\frac{12+21}{6}\right)=\frac{33}{48}=0,6875$
+\end{center}
+\end{ex}
+Wartoœæ dok³adna rozpatrywanej ca³ki  wyliczona przy pomocy kalkulatora wynosi: $\int\limits_0^1\int\limits_{x-1}^{x+1} xy\,dydx=\frac{2}{3}\approx 0,666667.$ Zatem b³¹d wzglêdny przybli¿onego wyniku to:
+$$BW=\frac{\left|\frac{2}{3}-\frac{33}{48}\right|}{\frac{2}{3}}*100\%=0,03125*100\%=3,125\%$$
+Jak mo¿na zauwa¿yæ wielkoœæ b³êdu wzglêdnego jest dosyæ znacz¹ca. Niewielka dok³adnoœæ wyniku spowodowana jest doborem zbyt ma³ych $n$ i $m$. Nie podlega dyskusji fakt, ¿e mimo tego, i¿ liczba dokonanych podzia³ów przedzia³ów ca³kowania by³a pozornie niewielka, to iloœæ obliczeñ jak¹ nale¿a³o wykonaæ okaza³a siê zatrwa¿aj¹co du¿a. W zwi¹zku z tym dalsze badania wykonamy w oparciu o napisan¹ w tym celu procedurê \textit{Maple} implementuj¹c¹ wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVar}).
+
+\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych w obszarach normalnych wzglêdem osi $Ox$ przy u¿yciu \textit{uogólnionego wzoru trapezów})\label{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}\\
+\begin{small}
+\begin{verbatim}
+Trapez2_VarY := proc(a, b, n, m) 
+local hx, hy, PoczKoniecP, PozostaleP, i, j, s1, s2,
+	      ix, yi, Ps, WynCzesciowy, WynikT2vY, T2vY; 
+
+if n < ceil(n) or floor(n) < n or n <= 0 or 
+   m < ceil(m) or floor(m) < m or m <= 0 
+then ERROR('Ostatnie dwa parametry musza byc liczba naturalna postaci \2k') 
+else 
+    hx := (b-a)/n; 
+    PoczKoniecP := 0; 
+    PozostaleP := 0; 
+
+for i from 0 to n 
+ do ix := a+i*hx; 
+    s1 := f(ix, c(ix))+f(ix, d(ix)); # suma pierwszy + ostatni wyraz
+    s2 := 0;                         # suma wyrazow dla parzystego i 
+    hy := (d(ix)-c(ix))/m; #wielk. kroku pomiedzy y-ami dla i-tego pkt. x
+  for j from 1 to m-1 
+   do yi := c(ix)+j*hy; #wartosc kolejnych yi dla zadanego i-tego x
+      Ps := f(ix, yi);  #wartosc calkowanej funkcji w f(ix,yi)
+      s2 := s2+Ps 
+   od; 
+
+ WynCzesciowy := (1/2)*hy*(s1+2*s2); 
+  if i = 0 or i = n 
+  then PoczKoniecP := PoczKoniecP+WynCzesciowy 
+   elif 0 < i and i < n 
+  then PozostaleP := PozostaleP+WynCzesciowy 
+  fi; 
+ od; 
+ 
+T2vY := (1/2)*hx*(PoczKoniecP+2*PozostaleP);
+WynikT2vY := evalf(T2vY) 
+fi; 
+end;
+
+\end{verbatim}
+\end{small}
+\end{proc}          
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Ox}
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}

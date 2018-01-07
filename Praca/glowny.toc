@@ -12,9 +12,9 @@
 \contentsline {section}{\numberline {3.2}Wz\'or Simpsona}{42}{section.3.2}
 \contentsline {chapter}{\numberline {4}Kwadratury Newtona-Cotesa dla ca\IeC {\l }ek podw\'ojnych w obszarach normalnych}{54}{chapter.4}
 \contentsline {section}{\numberline {4.1}Wz\'or trapez\'ow dla obszaru normalnego wzgl\k edem osi Ox}{54}{section.4.1}
-\contentsline {section}{\numberline {4.2}Wz\'or Simpsona dla obszaru normalnego wzgl\k edem osi Ox}{56}{section.4.2}
-\contentsline {section}{\numberline {4.3}Wz\'or trapez\'ow dla obszaru normalnego wzgl\k edem osi Oy}{56}{section.4.3}
-\contentsline {section}{\numberline {4.4}Wz\'or Simpsona dla obszaru normalnego wzgl\k edem osi Oy}{56}{section.4.4}
-\contentsline {chapter}{Podsumowanie}{57}{chapter*.15}
-\contentsline {chapter}{Bibliografia}{59}{chapter*.16}
-\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{60}{chapter*.16}
+\contentsline {section}{\numberline {4.2}Wz\'or Simpsona dla obszaru normalnego wzgl\k edem osi Ox}{60}{section.4.2}
+\contentsline {section}{\numberline {4.3}Wz\'or trapez\'ow dla obszaru normalnego wzgl\k edem osi Oy}{60}{section.4.3}
+\contentsline {section}{\numberline {4.4}Wz\'or Simpsona dla obszaru normalnego wzgl\k edem osi Oy}{60}{section.4.4}
+\contentsline {chapter}{Podsumowanie}{61}{chapter*.15}
+\contentsline {chapter}{Bibliografia}{63}{chapter*.16}
+\contentsline {chapter}{Spis procedur w j\k ezyku Maple}{64}{chapter*.16}
