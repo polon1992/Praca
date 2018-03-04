@@ -9,7 +9,7 @@ I_{VyT2}=\int\int_D f(x,y)dydx=\int\limits_{a}^b\int\limits_{c(x)}^{d(x)} f(x,y)
 \end{equation}
 Niech przedzia³ $[a,b]$ zostanie podzielony na $n$ podprzedzia³ów $[x_i,x_{i+1}]$ $(i=0, 1, \ldots, n-1)$ takich, ¿e:
 $$a=x_0 \leq x_1 \leq x_2 \leq \ldots  \leq x_{n-1} \leq x_n=b\,.$$ 
-Ka¿dy wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, n-1)$, gdzie $h_x$ okreœlamy jako równowartoœæ \mbox{$h_x=\frac{b-a}{n}$}.\\ 
+Ka¿dy wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, n)$, gdzie $h_x$ okreœlamy jako równowartoœæ \mbox{$h_x=\frac{b-a}{n}$}.\\ 
 Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y (z regu³y) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, uzale¿nione od postaci funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $m$ równych podprzedzia³ów $[y_{i,j}, y_{i,j+1}]$ $(j=0, 1, \ldots ,m-1;\, i=0, 1, \ldots ,n)$ spe³niaj¹cych zale¿noœæ:
 $$c(x_i)=y_{i,0}\leq y_{i,1} \leq y_{i,2}\leq \ldots  \leq y_{i,m}=d(x_i).$$
 Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,m;\, i=0, 1, \ldots ,n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{m}$. Innymi s³owy wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego $x_i$ jest wyliczana. W przeciwieñstwie do przypadku ca³kowania w prostok¹cie, mo¿emy spotkaæ siê z tak¹ sytuacj¹, gdzie na ca³ym obszarze $D$ dla ró¿nych $x_i$ nie znajdziemy dwóch wielkoœci $h_{y,i}$, które bêd¹ sobie równe. Poni¿szy obraz wyjaœnia opisywan¹ logikê podzia³u obszaru ca³kowania:
@@ -152,10 +152,11 @@ T2vY := (1/2)*hx*(PoczKoniecP+2*PozostaleP);
 WynikT2vY := evalf(T2vY) 
 fi; 
 end;
-
 \end{verbatim}
 \end{small}
-\end{proc}          
+\end{proc}
+
+Opis procedury, 2 przyk³ady z pomiarami procedura, wnioski          
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Ox}
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}
