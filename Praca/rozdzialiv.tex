@@ -155,8 +155,106 @@ end;
 \end{verbatim}
 \end{small}
 \end{proc}
+Na pocz¹tku nale¿y zaznaczyæ, ¿e granice ca³kowania po zmiennej $y$ s¹ opisane za pomoc¹ funkcji $c(x)$ i $d(x)$. Musz¹ one zostaæ zadeklarowane ju¿ przed wywo³aniem \textit{Trapez2\_VarY}, tak by algorytm móg³ swobodnie z nich korzystaæ w wewnêtrznych wyliczeniach.
 
-Opis procedury, 2 przyk³ady z pomiarami procedura, wnioski          
+Przedstawiona powy¿ej procedura rozpoczyna siê od deklaracji zmiennych lokalnych wykorzystywanych w kodzie. Nastêpnie sprawdzana zostaje poprawnoœæ zadanych parametrów $n$ i $m$, opisuj¹cych iloœæ podzia³ów przedzia³ów ca³kowania na podprzedzia³y. Obydwie wielkoœci musz¹ byæ liczbami naturalnymi. W zwi¹zku z tym, ¿e procedura s³u¿y do obliczania ca³ek po obszarach normalnych wzglêdem osi $Ox$, to tylko ca³kowanie po zmiennej $x$ bêdzie wykonywane w sta³ych granicach, tzn. $[a,b]=[x_0,x_n]$. 
+Na pocz¹tku instrukcji warunkowej \textit{else} obliczany jest rozmiar kroku $h_x$, dodatkowo zerowane s¹ zmienne pomocnicze, które bêd¹ przechowywa³y wielkoœci u¿ywane do wyznaczenia ostatecznego wyniku. G³ówna czêœæ algorytmu to zagnie¿d¿one w sobie dwie pêtle \textit{for}. W tym w³aœnie miejscu wyliczane zostaj¹ kolejne wartoœci $F(x_i)$ zgodnie ze wzorem (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) oraz $x_i$ i $h_{y,i}$,  których to definicjê znajdziemy w naszych wczeœniejszych rozwa¿aniach na pocz¹tku rozdzia³u. \textit{T2vY} obliczono wykorzysuj¹c przybli¿enie opisywane przez (\ref{UogolnionyWzorTrapezow_Trapez2DVar}). Finalnym rezultatem procedury jest natomiast \textit{WynikT2vY}, bêd¹cy uproszczon¹ postaci¹ \textit{T2vY}.
+
+Procedurê \textit{Trapez2\_VarY} wykorzystajmy teraz do obliczenia dwóch przyk³adów ca³ek w obszarach normalnych wzglêdem $Ox$, rozpatruj¹c coraz to wiêksze wartoœci parametrów $n$ i $m$. Niech bêd¹ to:
+
+\begin{itemize}
+\item[a)] $\int\limits_{0}^{1}\int\limits_{(x-1)^2}^{4-(x-1)^2} x^{3y} dydx$
+\item[b)] $\int\limits_{0}^{2}\int\limits_{0}^{\frac{x}{2}} xy^2 dydx$
+\end{itemize} 
+ %a) 0.722928
+ %b) 0.266666666666666
+Analogicznie do wczeœniejszych podrozdzia³ów wyniki pomiarów zostan¹ pokazane w formie tabelek. Podobnie wiêc niech $n$ oznacza iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$, oraz $W_{T2Vy}$ bêdzie wynikiem \textit{Trapez2\_VarY} dla coraz wiêkszych wartoœci $n$ i $m$. Co wiêcej niech \textit{$BBT2Vy_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2\_VarY}, dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2Vy_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obarczony ten sam wynik wykonania \textit{Trapez2\_VarY}, co  w przypadku wyznaczania \textit{$BBT2Vy_{n,m}$}.
+
+Dok³adna wartoœæ ca³ki z przyk³adu a) jest równa $0.722928$ , wiêc:. 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{n}$ &$\mathbf{m}$ & $\mathbf{W_{T2Vy}}$ & $\mathbf{BBT2Vy_{n,m}}$ &$\mathbf{BWT2Vy_{n,m}}$ \\ %[0.5ex] 
+ \hline \hline
+ 2&4 &1.18027324965570  &0.45734524965570  &28.932988815294 \%  \\  
+  \hline 
+ 4&4 &0.87973755605211  &0.15680955605211  &3.4013396727281 \% \\ 
+  \hline
+ 8&4 &0.79191547780437  &0.06898747780437    &0.6583327930041 \% \\ 
+  \hline 
+ 16&20 &0.73230741854138  &0.00937941854138  &0.0121690530972 \% \\ 
+  \hline 
+ 30&20 &0.72673912697612  &0.00381112697612  &0.0020091473602 \% \\ 
+  \hline 
+ 60&20 &0.72507427753583  &0.00214627753583  &0.0006372013895 \% \\ 
+  \hline 
+ 90&50 &0.72342957309980  &0.00050157309980   &0.0000347995339 \% \\ 
+  \hline
+ 120&50 &0.72332156473382  &0.00039356473382  &0.0000214258128 \% \\ 
+  \hline 
+ 150&50 &0.72327156919528  &0.00034356919528   &0.0000163280150 \% \\ 
+  \hline 
+ 180&100 &0.72305318231451  &0.00012518231451  &0.0000021676587 \% \\ 
+  \hline
+ 200&100 &0.72304145443267  &0.00011345443267  &0.0000017805242 \% \\ 
+  \hline 
+ 230&100 &0.72302926203467  &0.00010126203467  &0.0000014183985 \% \\  
+  \hline 
+ 260&200 &0.72297322021213  &0.00004522021213  &0.0000002828591 \% \\ 
+   \hline 
+ 300&200 &0.72296585678509  &0.00003785678509  &0.0000001982405 \% \\ 
+   \hline               
+ 600&500 &0.72293579953250  &0.00000779953250  &0.0000000084148 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Rezultaty pomiarów dok³adnoœci przybli¿ania ca³ki a) \textit{uogólnionym wzorem trapezów} w obszarze normalnym wzglêdem osi Ox}
+ \label{WynikiZProceduryTrapez2VarYa}
+\end{table}
+
+Zaokr¹glona wartoœæ ca³ki z podpunktu b) to $0.2666666666666667$ , zatem:. 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{n}$ &$\mathbf{m}$ & $\mathbf{W_{T2Vy}}$ & $\mathbf{BBT2Vy_{n,m}}$ &$\mathbf{BWT2Vy_{n,m}}$ \\ %[0.5ex] 
+  \hline \hline
+ 2&4 &0.38671875000000  &0.12005208333333  &5.4046885172523 \%  \\  
+  \hline 
+ 4&4 &0.30346679687500  &0.03680013020833  &0.5078435937562 \% \\ 
+  \hline
+ 8&4 &0.28215026855469  &0.01548360188802    &0.0899032227850 \% \\ 
+  \hline 
+ 16&20 &0.26873760223389  &0.00207093556722  &0.0016082902963 \% \\ 
+  \hline 
+ 30&20 &0.26749438950617  &0.00082772283950  &0.0002569219121 \% \\ 
+  \hline 
+ 60&20 &0.26712360767747  &0.00045694101080  &0.0000782981578 \% \\ 
+  \hline 
+ 90&50 &0.26677487998090  &0.00010821331423   &0.0000043912955 \% \\ 
+  \hline
+ 120&50 &0.26675087015599  &0.00008420348932  &0.0000026588354 \% \\ 
+  \hline 
+ 150&50 &0.26673975694923  &0.00007309028256  &0.0000020033210 \% \\ 
+  \hline 
+ 180&100 &0.26669371806466  &0.00002705139799 &0.0000002744168 \% \\ 
+  \hline
+ 200&100 &0.26669111163889  &0.00002444497222  &0.0000002240838 \% \\ 
+  \hline 
+ 230&100 &0.26668840200050  &0.00002173533383  &0.0000001771593 \% \\  
+  \hline 
+ 260&200 &0.26667657469442  &0.00000990802775  &0.0000000368134 \% \\ 
+   \hline 
+ 300&200 &0.26667493832785  &0.00000827166118  &0.0000000256576 \% \\ 
+  \hline               
+ 600&500 &0.26666843457003  &0.00000176790336  &0.0000000011721 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Rezultaty pomiarów dok³adnoœci przybli¿ania ca³ki b) \textit{uogólnionym wzorem trapezów} w obszarze normalnym wzglêdem osi Ox}
+ \label{WynikiZProceduryTrapez2VarYb}
+\end{table}
+
+ 
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Ox}
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}
