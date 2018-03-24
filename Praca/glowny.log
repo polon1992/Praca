@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  23 MAR 2018 17:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  24 MAR 2018 09:53
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1207,7 +1207,7 @@ Overfull \hbox (21.80457pt too wide) in paragraph at lines 155--155
  i-tego pkt. x[] 
  []
 
-[59] [60]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [61]
+[59] [60] [61]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex"
 [62]) [63
 
 ]
@@ -1297,4 +1297,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1432b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (66 pages, 377508 bytes).
+Output written on glowny.dvi (66 pages, 378776 bytes).
