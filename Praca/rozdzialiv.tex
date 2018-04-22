@@ -33,7 +33,7 @@ F(x_i)=\int\limits_{c(x_i)}^{d(x_i)} f(x_i,y)dy\approx \\
 \frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+2f(x_i,y_{i,1})+2f(x_i,y_{i,2})+\cdots +2f(x_i,y_{i,m-1})+f(x_i,y_{i,m})\right)
 \end{array}
 \end{equation} 
-Po po³¹czeniu (\ref{OgolnaFormaTrapez2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) dostajemy uogólniony wzór trapezów dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Ox$:
+Po po³¹czeniu (\ref{OgolnaFormaTrapez2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) dostajemy uogólniony wzór trapezów dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Ox$ \cite{klucz11}:
 \begin{equation}\label{UogolnionyWzorTrapezow_Trapez2DVar}
 \begin{array}{cc}
 I_{VyT2}\approx \frac{h_x}{2}\left\lbrace \frac{h_{y,0}}{2}\left(f(x_0,y_{0,0})+2\sum\limits_{j=1}^{m-1} f(x_0,y_{0,j})+f(x_0,y_{0,m})\right)\right.\\
@@ -281,8 +281,15 @@ Znaczenie opisanych wy¿ej zmiennych oraz logikê podzia³u obszaru ca³kowania na p
 \label{R7}
 \end{figure}
       
-Id¹c takim samym tokiem rozumowania jak w przypadku \textit{wzoru Trapezów} w obszarze normalnym wzglêdem $Ox$ (patrz str. \pageref{OgolnaFormaTrapez2DVar}) - zapiszmy ca³kê z równania (\ref{Simpson2DVar_postacOgolnaCalki}) w nieco innej formie tak, by mo¿na by³o j¹ wygodnie przedstawiæ w postaci pewnej sumy. Zatem, niech 
-$$F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,$$ co powoduje, ¿e $$I_{VyS2}=\int\limits_a^b F(x)dx.$$ Stosuj¹c teraz \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami}) dla powy¿szej ca³ki $I_{VyS2}$, uzyskujemy  wyra¿enie bêd¹ce przepisem na przybli¿enie jej wartoœci, tzn.: 
+Id¹c takim samym tokiem rozumowania jak w przypadku \textit{wzoru Trapezów} w obszarze normalnym wzglêdem $Ox$ (patrz str. \pageref{OgolnaFormaTrapez2DVar}) - zapiszmy ca³kê z równania (\ref{Simpson2DVar_postacOgolnaCalki}) w nieco innej formie tak, by mo¿na by³o j¹ wygodnie przedstawiæ w postaci pewnej sumy. Zatem niech 
+\begin{equation}\label{SimpsonVyCalkaPoYjakoFunkcjaX_r1}
+F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,
+\end{equation} 
+co powoduje, ¿e 
+\begin{equation}\label{SimpsonVyCalkaPoYjakoFunkcjaX_r2}
+I_{VyS2}=\int\limits_{a}^b\int\limits_{c(x)}^{d(x)} f(x,y) dydx=\int\limits_a^b F(x)dx.
+\end{equation}
+ Stosuj¹c teraz \textit{uogólniony wzór Simpsona}  (\ref{wzorSimpsonaZPodzialami})  dla powy¿szej ca³ki $I_{VyS2}$, uzyskujemy  wyra¿enie bêd¹ce przepisem na przybli¿enie jej wartoœci, tzn.: 
 \begin{equation}\label{OgolnaFormaSimpson2DVar}
 I_{VyS2}\approx \frac{h_x}{3}\left(F(x_0)+4F(x_1)+2F(x_2)+4F(x_3)+2F(x_4)+\cdots+4F(x_{2n-1})+F(x_{2n})\right).
 \end{equation}
@@ -313,6 +320,66 @@ I_{VyS2}\approx \frac{h_x}{3}\left\lbrace \frac{h_{y,0}}{3}\left(f(x_0,y_{0,0})+
 \end{small}
 \end{equation}
 
+Bazuj¹c na doœwiadczeniach z poprzedniego podrozdzia³u wiemy, ¿e rêczne wyliczenie przybli¿onej wartoœci przyk³adowej ca³ki w oparciu o wzór (\ref{UogolnionyWzorSimpsona_Simpson2DVar}) by³oby bardzo pracoch³onne. PodejdŸmy zatem do naszego problemu w nieco inny sposób. Wykorzystamy \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami}) oraz przedstawione przekszta³cenia ca³ki podwójnej (\ref{Simpson2DVar_postacOgolnaCalki}), które opisuj¹ równania (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r1}) i (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r2}). To wszystko zobrazuje nam poni¿szy przyk³ad:
+
+
+\begin{ex}(Obliczanie ca³ki podwójnej w obszarze normalnym wzglêdem osi $Ox$ przy wykorzystaniu \textit{uogólnionego wzoru Simpsona})\\
+Wykorzystuj¹c \textit{uogólniony wzór Simpsona} obliczmy przybli¿on¹ wartoœæ ca³ki podwójnej $$P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx,$$ dla przypadku, gdzie przedzia³ ca³kowania po zmiennej $x$ bêdzie podzielony na $N = 2$, natomiast po zmiennej $y$ na $M = 4$ podprzedzia³y.\\
+
+Niech ca³ka wyjœciowa przyjmie postaæ $P=\int\limits_0^1 F(x)dx$, przy czym  $F(x)=\int\limits_x^{2x}(x^2+y^3) dy$.
+Do obliczeñ potrzebowali bêdziemy pocz¹tkowo rozwiniêcia (\ref{wzorSimpsonaZPodzialami}) dla trzech pierwszych punktów wêz³owych $x_0,x_1,x_2$ tzn.:
+$$\int\limits_a^b f(x)dx\approx \frac{h_x}{3}\left(f(x_0)+4f\left(x_1\right)+f(x_2)\right)\,,\,\,\,h=h_x=\frac{b-a}{N},\,\,\,x_i=x_0+N\cdot h_x.$$
+Podstawiaj¹c  $a=0$, $b=1$, $N=2$, wielkoœæ kroku pomiêdzy wêz³ami $h=h_x=\frac{1-0}{2}=\frac{1}{2}$ oraz wartoœci wêz³ów $x_0=a=0$, $x_1=x_0+h_x=\frac{1}{2}$, $x_2=x_0+2\cdot h_x=b=1$  otrzymamy: $$\int\limits_0^1 f(x)dx\approx \frac{\frac{1}{2}}{3}\left(f(0)+4f\left(\frac{1}{2}\right)+f(1)\right).$$
+U¿ywamy teraz powy¿szego wyra¿enia do oszacowania wielkoœci ca³ki $P$, gdy ca³kowanie odbywa siê po zmiennej $x$:
+\begin{center}
+$P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx=\int\limits_0^1 F(x)dx \approx \frac{1}{6} \left(F(0)+4F\left(\frac{1}{2}\right)+F(1)\right)$\\
+$\approx \frac{1}{6} \left( \int\limits_0^0 (0^2+y^3)dy + 4\int\limits_{\frac{1}{2}}^1 \left(\left(\frac{1}{2}\right)^2 +y^3\right)dy + \int\limits_1^2 (1^2+y^3)dy\right)$\\
+$\approx \frac{1}{6}\left(4\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy + \int\limits_1^2 (1+y^3)dy\right).$
+\end{center}
+Jak widaæ, nasze przybli¿enie jest nadal w postaci funkcji. W zwi¹zku z tym wykorzystajmy ponownie  \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami}), jednak teraz do ca³kowania po zmiennej $y$. Potrzebne bêdzie nam jego rozwiniêcie dla piêciu pierwszych wêz³ów ( chcemy uzyskaæ $M=4$ podprzedzia³y).
+Jako, ¿e granice ca³kowania po $y$ s¹ funkcjami $c(x)=x$ i $d(x)=2x$, to wielkoœci kroków zostan¹ uzale¿nione od wartoœci tych funkcji w punktach wêz³owych $x_i$. Dla naszego przypadku bêd¹ to $x_1=\frac{1}{2}$ i $x_2=1$. Zatem niech $h_{y,i}=\frac{d(x_i)-c(x_i)}{M}=\frac{x_i-2 x_i}{4}=\frac{x_i}{4}$, wtedy  $h_{y,1}=\frac{\frac{1}{2}}{4}=\frac{1}{8}$ bêdzie rozmiarem kroku miêdzy wêz³ami dla  $\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy$ zaœ    $h_{y,2}=\frac{1}{4}$  dla $\int\limits_1^2 (1+y^3)dy$.\\
+Ogólna postaæ przybli¿enia ca³ki $P$, gdy ca³kujemy po zmiennej $y$ to:
+\begin{equation}\label{PostacOgSimpsonPoY}
+\int\limits_a^b f(y)dy=\int\limits_{c(x_i)}^{d(x_i)}f(y)dy\approx\frac{h_{y,i}}{3}(f(y_{i,0})+4f(y_{i,1})+2f(y_{i,2})+4f(y_{i,3})+f(y_{i,4})),
+\end{equation}
+gdzie $y_{i,0}$ oznacza wêze³ $y$ z indeksem $0$ wyznaczony w zale¿noœci od wielkoœci $x_i$. Zaznaczmy te¿, ¿e $y_{i,0}$ jest odpowiednikiem $x_0$ z wzoru (\ref{wzorSimpsonaZPodzialami}), $y_{i,1}$ odpowiada $x_1$ itd..
+Wielkoœci wêz³ów $y_{i,j}$ wyznaczymy korzystaj¹c z równoœci $y_{i,j}=c(x_i)+jh_{y,i}$ gdzie $(i \in \{ 1, 2\},\, j \in \{0, 1, 2, 3, 4\})$. \\
+Zatem:\begin{center}
+$y_{1,0}=\frac{1}{2}, y_{1,1}=\frac{5}{8}, y_{1,2}=\frac{6}{8}, y_{1,3}=\frac{7}{8}, y_{1,4}=1$,\\
+$y_{2,0}=1, y_{2,1}=\frac{5}{4}, y_{2,2}=\frac{6}{4}, y_{2,3}=\frac{7}{4}, y_{2,4}=2.$
+\end{center}
+Wykorzystuj¹c (\ref{PostacOgSimpsonPoY}) oraz powy¿sze punkty $y_{i,j}$ do przybli¿enia $P$  po $y$ otrzymujemy:
+\begin{center}
+$P\approx \frac{1}{6}\left(4\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy + \int\limits_1^2 (1+y^3)dy\right)$\\
+$\approx \frac{1}{6}\left\lbrace
+4\cdot\frac{h_{y,1}}{3}\left[f(y_{1,0})+4f(y_{1,1})+2f(y_{1,2})+4f(y_{1,3})+f(y_{1,4})\right]\right.+$\\
+$\left. \frac{h_{y,2}}{3}\left[f(y_{2,0})+4f(y_{2,1})+2f(y_{2,2})+4f(y_{2,3})+f(y_{2,4})\right]
+\right\rbrace$\\
+$\approx\frac{1}{6}\left\lbrace  
+4\cdot\frac{\frac{1}{8}}{3}\left[
+\left(\frac{1}{4}+\left(\frac{1}{2}\right)^3\right)+4\left(\frac{1}{4}+\left(\frac{5}{8}\right)^3\right)
++2\left(\frac{1}{4}+\left(\frac{6}{8}\right)^3\right)+4\left(\frac{1}{4}+\left(\frac{7}{8}\right)^3\right)+\left(\frac{1}{4}+1^3\right)
+\right]\right.$\\
+$\left.+\frac{\frac{1}{4}}{3}\left[
+(1+1^3)+4\left(1+\left(\frac{5}{4}\right)^3\right)+2\left(1+\left(\frac{6}{4}\right)^3\right)+
+4\left(1+\left(\frac{7}{4}\right)^3\right)+(1+2^3)
+\right]\right\rbrace$\\
+$\approx\frac{1}{6}\left(\frac{1}{6}\left(\frac{69}{8}\right)+\frac{1}{12}\cdot 57\right)\approx
+$
+$\frac{1}{6}(1.4375+4.75)\approx 1.03125$
+\end{center}
+Wartoœæ dok³adna liczonej ca³ki $P$ wynosi $P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx=1$. Zatem b³¹d wzglêdny jest równy:
+$$BW=\frac{\left|1-1.03125\right|}{1}*100\%=0.03125*100\%=3.125\%$$
+Jest on dosyæ znacz¹cy i z pewnoœci¹ nieco lepszy wynik otrzymalibyœmy, gdybyœmy przedzia³y ca³kowania podzielili na wiêksz¹ liczbê podprzedzia³ów. 
+\end{ex}
+
+Dok³adnoœæ wzoru (\ref{UogolnionyWzorSimpsona_Simpson2DVar}) sprawdzimy dziêki poni¿szej implementacji algorytmu wykonanej w jêzyku \textit{Maple}.
+
+\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych w obszarach normalnych wzglêdem osi $Ox$ przy u¿yciu \textit{uogólnionego wzoru Simpsona})\label{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}\\
+tres procedury
+% dodac to literatury http://www.math.usm.edu/lambers/mat460/fall09/lecture32.pdf
+\end{proc}
+  
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Oy}
 
