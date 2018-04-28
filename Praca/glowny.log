@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  25 APR 2018 07:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  28 APR 2018 17:28
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1274,7 +1274,31 @@ Overfull \hbox (8.66458pt too wide) in paragraph at lines 426--426
  dla pkt. ix[] 
  []
 
-[67]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [68]) [69
+[67]
+Underfull \hbox (badness 1748) in paragraph at lines 432--433
+\T1/ptm/m/n/12 i pa-rzy-stymi. Je-»eli wa-li-da-cja N i M prze-bie-gnie pra-wi-
+dªowo to al-go-rytm roz-pocz-nie
+ []
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 443--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--527
+
+ []
+
+
+Underfull \hbox (badness 2573) in paragraph at lines 443--527
+\T1/ptm/m/n/12 Zaokr¡glona war-to±¢ caªki z pod-punktu $[] [] \OML/plm/m/it/12 
+xy[]dydx$ \T1/ptm/m/n/12 to $\OT4/cmr/m/n/12 0\OML/plm/m/it/12 :\OT4/cmr/m/n/12
+ 2666666666666667$\T1/ptm/m/n/12 , za-tem:.
+ []
+
+[69]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [70] [71])
+[72
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1315,7 +1339,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 ][]
  []
 
-[70
+[73
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
@@ -1339,15 +1363,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
-[71]
+[74]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
- [72]
+ [75]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: 4896613143568E6CD6F9072FD5AFCD9B;1456.
+(rerunfilecheck)             Checksum: 40722ED58ACB8A8498DE63BBB0FB03F0;1456.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1359,12 +1383,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12730 strings out of 493922
- 189261 string characters out of 3144896
- 305159 words of memory out of 3000000
- 15754 multiletter control sequences out of 15000+200000
+ 12732 strings out of 493922
+ 189323 string characters out of 3144896
+ 305467 words of memory out of 3000000
+ 15756 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,13n,77p,1432b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (72 pages, 415768 bytes).
+Output written on glowny.dvi (75 pages, 431160 bytes).

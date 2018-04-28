@@ -429,7 +429,105 @@ end proc;
 
 Przedstawiona powy¿ej implementacja jest bardzo zbli¿ona do \textit{Procedury  \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}}. Tak samo ca³kowanie po $y$ odbywa siê w zmiennych granicach opisanych za pomoc¹ funkcji $c(x)$ i $d(x)$, zatem obydwie one musz¹ byæ zadeklarowane przed wywo³aniem \textit{Simpson2\_VarY}. 
 
-Algorytm rozpoczyna siê standardowo od nag³ówka i podania parametrów wejœciowych, gdzie a,b to kolejno dolna i górna granica ca³kowania po zmiennej $x$. N, M to odpowiednio iloœæ podprzedzia³ów na które podzielone zostan¹ przedzia³y ca³kowania po zmiennej $x$ i $y$. Nastêpna jest deklaracja zmiennych pomocniczych, oraz sprawdzenie poprawnoœci parametrów N i M - zgodnie z za³o¿eniem \textit{uogolnionego wzoru Simpsona} musz¹ byæ one liczbami naturalnymi i parzystymi. Je¿eli walidacja N i M przebiegnie prawid³owo to algorytm rozpocznie wykonywanie g³ównej czêœci kodu rozpoczynaj¹c od ustawienia wartoœci zmiennej n -    
+Algorytm rozpoczyna siê standardowo od nag³ówka i podania parametrów wejœciowych, gdzie \textit{a,b} to kolejno dolna i górna granica ca³kowania po zmiennej $x$. \textit{N, M} to odpowiednio iloœæ podprzedzia³ów na które podzielone zostan¹ przedzia³y ca³kowania po zmiennej $x$ i $y$. Nastêpna jest deklaracja zmiennych pomocniczych, oraz sprawdzenie poprawnoœci parametrów \textit{N i M} - zgodnie z za³o¿eniem \textit{uogolnionego wzoru Simpsona} musz¹ byæ one liczbami naturalnymi i parzystymi. Je¿eli walidacja N i M przebiegnie prawid³owo to algorytm rozpocznie wykonywanie g³ównej czêœci kodu rozpoczynaj¹c od ustawienia wartoœci zmiennych \textit{n, m} - liczby opisuj¹ce iloœci s¹siaduj¹cych ze sob¹ dwóch nie powtarzaj¹cych siê podprzedzia³ów na które podzielono kolejno obszar ca³kowania po zmiennej $x$ i $y$. \textit{$h_x$} jest odleg³oœci¹ pomiêdzy nastêpuj¹cymi po sobie wêz³ami $x_i$. \textit{PoczKoniecP, ParzP i NieParzP} bêd¹ przechowywa³y wyliczone algorytmem wartoœci \textit{uogólnionego wzoru Simpsona} dla pocz¹tkowego i koñcowego przedzia³u oraz parzystych i ostatecznie nieparzystych przedzia³ów. Zewnêtrzna pêtla \textit{for} rozpoczyna obliczenia zwi¹zane bezpoœrednio z implementacj¹ wzoru (\ref{OgolnaFormaSimpson2DVar}), której to opis pominiemy z powodu pozostawionych w kodzie komentarzy. Po wykonaniu obydwu pêtli na podstawie \textit{PoczKoniecP, ParzP i NieParzP} wyznaczany jest ostateczny wynik procedury.
+
+Dzia³anie \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}} sprawdzimy poprzez wykonanie obliczeñ dla poni¿szych ca³ek:
+%%%%%
+\begin{itemize}
+\item[a)] $\int\limits_{0}^{1}\int\limits_{(x-1)^2}^{4-(x-1)^2} x^{3y} dydx$
+\item[b)] $\int\limits_{0}^{2}\int\limits_{0}^{\frac{x}{2}} xy^2 dydx$
+\end{itemize}
+ %a) 0.722928
+ %b) 0.266666666666666
+ 
+Otrzymane wyniki zaprezentujemy w formie tabelarycznej. Tak wiêc niech $N$ oznacza iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $x$, oraz $M$ po zmiennej $y$. Dodatkowo $W_{S2Vy}$ bêdzie wynikiem \textit{Simpson2\_VarY} dla rosn¹cych wartoœci parametrów $N$ i $M$. Niech \textit{$BBS2Vy_{N,M}$} opisuje b³¹d bezwzglêdny przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Ox$ procedur¹ \textit{Simpson2\_VarY}, dla pewnych wartoœci $N$ i $M$. Przez \textit{$BWS2Vy_{N,M}$} rozumieæ bêdziemy wielkoœæ b³êdu wzglêdnego obci¹¿aj¹cego ten sam wynik wykonania \textit{Simpson2\_VarY}, co  w przypadku wyznaczania \textit{$BBS2Vy_{N,M}$}.\\ \\
+Dok³adna wartoœæ ca³ki $\int\limits_{0}^{1}\int\limits_{(x-1)^2}^{4-(x-1)^2} x^{3y} dydx$ jest równa $0.722928$, wiêc:. 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{N}$ &$\mathbf{M}$ & $\mathbf{W_{S2Vy}}$ & $\mathbf{BBS2Vy_{N,M}}$ &$\mathbf{BWS2Vy_{N,M}}$ \\ %[0.5ex] 
+ \hline \hline
+ 2&4 &0.86537885882744  &0.14245085882744  &19.704709020461 \%  \\  
+  \hline 
+ 4&4 &0.74622075889675  &0.02329275889675    &3.2220025917865 \% \\ 
+  \hline
+ 8&4 &0.72929964393082  &0.00637164393082    &0.8813663229007 \% \\ 
+  \hline 
+ 16&20 &0.72303422870369  &0.00010622870369  &0.0146942300879 \% \\ 
+  \hline 
+ 30&20 &0.72294728180731  &0.00001928180731  &0.0026671822518 \% \\ 
+  \hline 
+ 60&20 &0.72294005232173  &0.00001205232173  &0.0016671538147 \% \\ 
+  \hline 
+ 90&50 &0.72292809870004  &0.00000009870004  &0.0000136528174 \% \\ 
+  \hline
+ 120&50 &0.72292803345484  &0.00000003345484   &0.0000046276863 \% \\ 
+  \hline 
+ 150&50 &0.72292801562160  &0.00000001562160   &0.0000021608791 \% \\ 
+  \hline 
+ 180&100 &0.72292771871527  &0.00000028128473  &0.0000389090933 \% \\ 
+  \hline
+ 200&100 &0.72292771666335  &0.00000028333665  &0.0000391929280 \% \\ 
+  \hline 
+ 230&100 &0.72292771498616  &0.00000028501384  &0.0000394249275 \% \\  
+  \hline 
+ 260&200 &0.72292769590819  &0.00000030409181  &0.0000420639137 \% \\ 
+   \hline 
+ 300&200 &0.72292769531153  &0.00000030468847  &0.0000421464475 \% \\ 
+   \hline               
+ 600&500 &0.72292769339702  &0.00000030660298  &0.0000424112747 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Rezultaty pomiarów dok³adnoœci przybli¿ania ca³ki a) \textit{uogólnionym wzorem Simpsona} w obszarze normalnym wzglêdem osi Ox}
+ \label{WynikiZProcedurySimpson2VarYa}
+\end{table}
+\\ \\
+Zaokr¹glona wartoœæ ca³ki z podpunktu $\int\limits_{0}^{2}\int\limits_{0}^{\frac{x}{2}} xy^2 dydx$ to $0.2666666666666667$, zatem:. 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{N}$ &$\mathbf{M}$ & $\mathbf{W_{S2Vy}}$ & $\mathbf{BBS2Vy_{N,M}}$ &$\mathbf{BWS2Vy_{N,M}}$ \\ %[0.5ex] 
+  \hline \hline
+ 2&4 &0.27777777777778  &0.01111111111111  &4.1666666666662 \%  \\  
+  \hline 
+ 4&4 &0.26736111111111  &0.00069444444444    &0.2604166666650 \% \\ 
+  \hline
+ 8&4 &0.26671006944444  &0.00004340277777    &0.0162760416638 \% \\ 
+  \hline 
+ 16&20 &0.26666937934028  &0.00000271267361  &0.0010172526038 \% \\ 
+  \hline 
+ 30&20 &0.26666688614540  &0.00000021947873  &0.0000823045238 \% \\ 
+  \hline 
+ 60&20 &0.26666668038409  &0.00000001371742  &0.0000051440325 \% \\ 
+  \hline 
+ 90&50 &0.26666666937628  &0.00000000270961  &0.0000010161038 \% \\ 
+  \hline
+ 120&50 &0.26675087015599  &0.00000000085734 &0.0000003215025 \% \\ 
+  \hline 
+ 150&50 &0.26666666752401  &0.00000000035116  &0.0000001316850 \% \\ 
+  \hline 
+ 180&100 &0.26666666683602  &0.00000000016935  &0.0000000635063 \% \\ 
+  \hline
+ 200&100 &0.26666666677778  &0.00000000011111  &0.0000000416663 \% \\ 
+  \hline 
+ 230&100 &0.26666666673019  &0.00000000006352  &0.0000000238200 \% \\  
+  \hline 
+ 260&200 &0.26666666670557  &0.00000000003890  &0.0000000145875 \% \\ 
+   \hline 
+ 300&200 &0.26666666668861  &0.00000000002194  &0.0000000082275 \% \\ 
+  \hline               
+ 600&500 &0.26666666666804  &0.00000000000137  &0.0000000000514 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Rezultaty pomiarów dok³adnoœci przybli¿ania ca³ki b) \textit{uogólnionym wzorem Simpsona} w obszarze normalnym wzglêdem osi Ox}
+ \label{WynikiZProcedurySimpson2VarYb}
+\end{table}
+
+Analizuj¹c powy¿sze pomiary, mo¿na zaobserwowaæ pewn¹ w³asnoœæ. Zarówno w pierwszym jak i w drugim przypadku odpowiednio dok³adny wynik uzyskaliœmy ju¿ dla $N=150$ i $M=50$. Jednak¿e co najdziwniejsze dla przyk³adu a) przyjêcie wielkoœci parametru $M>50$ skutkowa³o sta³ym zwiêkszaniem siê b³êdu wzglêdnego i bezwzglêdnego. Nie mia³o to jednak zbyt wielkiego wp³ywu na wielkoœæ wyniku. Sytuacja taka zaistnia³a jak mo¿na domniemaæ z powodu postaci wyk³adniczej funkcji podca³kowej oraz tak zwanej kumulacji b³êdu pomiaru.\\
+ Zestawiaj¹c ze sob¹ wyniki dla tych samych ca³ek zawarte w \textit{Tablicy \ref{WynikiZProceduryTrapez2VarYa}} i \textit{Tablicy \ref{WynikiZProcedurySimpson2VarYa}} oraz  wartoœci z \textit{Tablicy \ref{WynikiZProceduryTrapez2VarYb}} i \textit{Tablicy \ref{WynikiZProcedurySimpson2VarYb}} zauwa¿yæ mo¿na, ¿e \textit{procedura \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}} zwraca wyniki z b³êdami o nawet szeœæ rzêdów wielkoœci mniejszymi ni¿ \textit{procedura \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}} ! Oznacza to, ¿e \textit{uogólniony wzór Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem osi $Ox$ pozwala uzyskaæ znacznie dok³adniejsze przybli¿enie ni¿ \textit{uogólniony wzór trapezów}, przy zachowaniu takiej samej liczby wywo³añ obydwu procedur.  
+      
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Oy}
 
