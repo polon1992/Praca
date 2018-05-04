@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  3 MAY 2018 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  4 MAY 2018 20:58
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1307,14 +1307,61 @@ Underfull \hbox (badness 5217) in paragraph at lines 532--533
  []
 
 [70]
+Underfull \hbox (badness 2846) in paragraph at lines 537--540
+\T1/ptm/m/n/12 Dodatkowo dla kaª-dego $\OML/plm/m/it/12 y[] \U/MnSymbolD/m/n/12
+ > \OMX/MnSymbolE/m/n/12  \OML/plm/m/it/12 a; b\OMX/MnSymbolE/m/n/12 $ \T1/ptm
+/m/n/12 wy-rÛª-nijmy prze-dzia™y $\OMX/MnSymbolE/m/n/12  \OML/plm/m/it/12 c\OMX
+/MnSymbolE/m/n/12 à\OML/plm/m/it/12 y[]\OMX/MnSymbolE/m/n/12 ç\OML/plm/m/it/12 
+; d\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 y[]\OMX/MnSymbolE/m/n/12 ç$\T1/ptm/
+m/n/12 , za-zwy-czaj
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 537--540
+\T1/ptm/m/n/12 rÛª-nej d™u-go-±ci, uza-leª-nione od po-staci funk-cji $\OML/plm
+/m/it/12 c\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 y\OMX/MnSymbolE/m/n/12 ç$\T1/
+ptm/m/n/12 , $\OML/plm/m/it/12 d\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 y\OMX/M
+nSymbolE/m/n/12 ç$ \T1/ptm/m/n/12 i ar-gu-mentu $\OML/plm/m/it/12 y \U/MnSymbol
+D/m/n/12   \OML/plm/m/it/12 y[]$\T1/ptm/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--540
+\T1/ptm/m/n/12 Kaªdy z nich po-dzie-lony zo-sta-nie na do-k™ad-nie $\OML/plm/m/
+it/12 m$ \T1/ptm/m/n/12 rÛw-nych pod-prze-dzia-™Ûw
+ []
+
 File: R6.eps Graphic file (type eps)
- <R6.eps>
-Overfull \hbox (6.2532pt too wide) in paragraph at lines 547--547
+<R6.eps>
+Overfull \hbox (6.2532pt too wide) in paragraph at lines 546--546
 []\T1/ptm/m/n/12 Rysunek 4.3: |[]| 
  []
 
-[71] [72]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [73])
-[74
+[71] [72]
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 611--611
+[]  \T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natur
+. postaci \2k');[] 
+ []
+
+
+Overfull \hbox (2.09459pt too wide) in paragraph at lines 611--611
+[]       \T1/pcr/m/n/10.95 s2 := 0;                         #suma wyrazow dla p
+arzystego i[] 
+ []
+
+
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 611--611
+[]       \T1/pcr/m/n/10.95 hx := (d(yi)-c(yi))/m; #wielk. kroku pomiedzy x-ami 
+dla i-tego pkt y[] 
+ []
+
+
+Overfull \hbox (21.80457pt too wide) in paragraph at lines 611--611
+[]            \T1/pcr/m/n/10.95 ix := c(yi)+j*hx; #wartosc kolejnych ix dla zad
+anego i-tego y[] 
+ []
+
+[73]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [74]) [75
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1355,7 +1402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 ][]
  []
 
-[75
+[76
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
@@ -1379,32 +1426,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
-[76]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
- [77]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+[77]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
+ [78]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 194.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
 (rerunfilecheck)             Checksum: 1740BBBC34129FFB9A4C5A36BC9B16C9;1456.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12736 strings out of 493922
- 189457 string characters out of 3144896
- 305799 words of memory out of 3000000
- 15760 multiletter control sequences out of 15000+200000
+ 12738 strings out of 493922
+ 189532 string characters out of 3144896
+ 305841 words of memory out of 3000000
+ 15762 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (77 pages, 440908 bytes).
+Output written on glowny.dvi (78 pages, 444368 bytes).
