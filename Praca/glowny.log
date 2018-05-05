@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  4 MAY 2018 20:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  5 MAY 2018 06:41
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -706,6 +706,12 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 LaTeX Warning: Label `R6' multiply defined.
 
 
+LaTeX Warning: Label `WynikiZProcedurySimpson2VarYa' multiply defined.
+
+
+LaTeX Warning: Label `WynikiZProcedurySimpson2VarYb' multiply defined.
+
+
 LaTeX Warning: Label `klucz14' multiply defined.
 
 )
@@ -1293,13 +1299,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 443--527
 
  []
 
-
-Underfull \hbox (badness 2573) in paragraph at lines 443--527
-\T1/ptm/m/n/12 Zaokr¡glona war-to±¢ caªki z pod-punktu $[] [] \OML/plm/m/it/12 
-xy[]dydx$ \T1/ptm/m/n/12 to $\OT4/cmr/m/n/12 0\OML/plm/m/it/12 :\OT4/cmr/m/n/12
- 2666666666666667$\T1/ptm/m/n/12 , za-tem:.
- []
-
 [69]
 Underfull \hbox (badness 5217) in paragraph at lines 532--533
 []\T1/ptm/m/n/12 Rozwa»my ob-szar [], nor-malny wzgl¦-dem osi $\OML/plm/m/it/12
@@ -1361,7 +1360,8 @@ Overfull \hbox (21.80457pt too wide) in paragraph at lines 611--611
 anego i-tego y[] 
  []
 
-[73]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [74]) [75
+[73] [74]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [75]
+[76]) [77
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1402,7 +1402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 ][]
  []
 
-[76
+[78
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
@@ -1426,15 +1426,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
-[77]
+[79]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
- [78]
+ [80]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 194.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: 1740BBBC34129FFB9A4C5A36BC9B16C9;1456.
+(rerunfilecheck)             Checksum: 1390D95165B6521E68837F840D38FF84;1456.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1454,4 +1454,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (78 pages, 444368 bytes).
+Output written on glowny.dvi (80 pages, 455952 bytes).
