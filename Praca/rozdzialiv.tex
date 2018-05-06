@@ -615,97 +615,100 @@ Powy¿szy algorytm powsta³ po przekszta³ceniu znanego nam ju¿ kodu procedury \ref
 
 Wykorzystuj¹c procedurê \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki} wyznaczmy przybli¿one wartoœci ca³ek:
  \begin{itemize}
-\item[a)] $\int\limits_{1}^{2}\int\limits_{y}^{2y} \frac{x^2}{xy} dxdy$
+\item[a)] $\int\limits_{1}^{2}\int\limits_{y}^{2y} \frac{x+y}{\sqrt{y}} dxdy$
 \item[b)] $\int\limits_{1}^{2}\int\limits_{\sqrt{y}}^{y} xy^3 dxdy$
 \end{itemize}     
 zmieniaj¹c w ka¿dej z kolejnych iteracji wielkoœci parametrów \textit{n} i \textit{m}.
-%a) 2.25%
+%a) 4.65685424949238019520675485%
 %b) 2.15%
 %od tad poprawic%
-Otrzymane wyniki zaprezentujemy w formie tabelarycznej. Tak wiêc niech $N$ oznacza iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $x$, oraz $M$ po zmiennej $y$. Dodatkowo $W_{S2Vy}$ bêdzie wynikiem \textit{Simpson2\_VarY} dla rosn¹cych wartoœci parametrów $N$ i $M$. Niech \textit{$BBS2Vy_{N,M}$} opisuje b³¹d bezwzglêdny przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Ox$ procedur¹ \textit{Simpson2\_VarY}, dla pewnych wartoœci $N$ i $M$. Przez \textit{$BWS2Vy_{N,M}$} rozumieæ bêdziemy wielkoœæ b³êdu wzglêdnego obci¹¿aj¹cego ten sam wynik wykonania \textit{Simpson2\_VarY}, co  w przypadku wyznaczania \textit{$BBS2Vy_{N,M}$}.
+
+Otrzymane wyniki zaprezentujemy w formie tabelarycznej. Tak wiêc niech $N$ oznacza iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $x$, oraz $M$ po zmiennej $y$. Dodatkowo $W_{S2Vy}$ bêdzie wynikiem \textit{Simpson2\_VarY} dla rosn¹cych wartoœci parametrów $N$ i $M$. Niech \textit{$BBS2Vy_{N,M}$} opisuje b³¹d bezwzglêdny przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Ox$ procedur¹ \textit{Simpson2\_VarY}, dla pewnych wartoœci $N$ i $M$. Przez \textit{$BWS2Vy_{N,M}$} rozumieæ bêdziemy wielkoœæ b³êdu wzglêdnego obci¹¿aj¹cego ten sam wynik wykonania \textit{Simpson2\_VarY}, co  w przypadku wyznaczania 
+\textit{$BBS2Vy_{N,M}$}.
+%do tad%
 \newpage
-Dok³adna wartoœæ ca³ki z punktu a) jest równa $2.25$, zatem:. 
+Wartoœæ przybli¿ona ca³ki z punktu a) to $4.6568542494923802$, zatem: 
 \begin{table}[h!]
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
- $\mathbf{N}$ &$\mathbf{M}$ & $\mathbf{W_{S2Vy}}$ & $\mathbf{BBS2Vy_{N,M}}$ &$\mathbf{BWS2Vy_{N,M}}$ \\ %[0.5ex] 
+ $\mathbf{n}$ &$\mathbf{m}$ & $\mathbf{W_{T2Vx}}$ & $\mathbf{BBT2Vx_{n,m}}$ &$\mathbf{BWT2Vx_{n,m}}$ \\ %[0.5ex] 
  \hline \hline
- 2&4 &0.86537885882744  &0.14245085882744  &19.704709020461 \%  \\  
+ 2&4 &4.68916358682561 &0.03230933733323     &0.0224162755153 \%  \\  
   \hline 
- 4&4 &0.74622075889675  &0.02329275889675    &3.2220025917865 \% \\ 
+ 4&4 &4.66494109536211  &0.00808684586973    &0.0014043187228 \% \\ 
   \hline
- 8&4 &0.72929964393082  &0.00637164393082    &0.8813663229007 \% \\ 
+ 8&4 &4.65887657155422  &0.00202232206184    &0.0000878229445 \% \\ 
   \hline 
- 16&20 &0.72303422870369  &0.00010622870369  &0.0146942300879 \% \\ 
+ 16&20 &4.65735986844494  &0.00050561895256  &0.0000054897687 \% \\ 
   \hline 
- 30&20 &0.72294728180731  &0.00001928180731  &0.0026671822518 \% \\ 
+ 30&20 &4.65699807260695  &0.00014382311457  &0.0000004441859 \% \\ 
   \hline 
- 60&20 &0.72294005232173  &0.00001205232173  &0.0016671538147 \% \\ 
+ 60&20 &4.65689020546581  &0.00003595597343  &0.0000000277619 \% \\ 
   \hline 
- 90&50 &0.72292809870004  &0.00000009870004  &0.0000136528174 \% \\ 
+ 90&50 &4.65687022994106  &0.00001598044868    &0.0000000054838 \% \\ 
   \hline
- 120&50 &0.72292803345484  &0.00000003345484   &0.0000046276863 \% \\ 
+ 120&50 &4.65686323849792  &0.00000898900554   &0.0000000017351 \% \\ 
   \hline 
- 150&50 &0.72292801562160  &0.00000001562160   &0.0000021608791 \% \\ 
+ 150&50 &4.65686000245691  &0.00000575296453   &0.0000000007107 \% \\ 
   \hline 
- 180&100 &0.72292771871527  &0.00000028128473  &0.0000389090933 \% \\ 
+ 180&100 &4.65685824460696  &0.00000399511458  &0.0000000003427 \% \\ 
   \hline
- 200&100 &0.72292771666335  &0.00000028333665  &0.0000391929280 \% \\ 
+ 200&100 &4.65685748553527  &0.00000323604289  &0.0000000002249 \% \\ 
   \hline 
- 230&100 &0.72292771498616  &0.00000028501384  &0.0000394249275 \% \\  
+ 230&100 &4.65685669640587  &0.00000244691349  &0.0000000001286 \% \\  
   \hline 
- 260&200 &0.72292769590819  &0.00000030409181  &0.0000420639137 \% \\ 
+ 260&200 &4.65685616431083  &0.00000191481845  &0.0000000000787 \% \\ 
    \hline 
- 300&200 &0.72292769531153  &0.00000030468847  &0.0000421464475 \% \\ 
+ 300&200 &4.65685568773384  &0.00000143824146  &0.0000000000444 \% \\ 
    \hline               
- 600&500 &0.72292769339702  &0.00000030660298  &0.0000424112747 \%  \\%[0.5ex] 
+ 600&500 &4.65685460905281  &0.00000035956043  &0.0000000000028 \%  \\%[0.5ex] 
  \hline 
  \end{tabular}\\ \hfill
- \caption{Rezultaty pomiarów dok³adnoœci przybli¿ania ca³ki a) \textit{uogólnionym wzorem Simpsona} w obszarze normalnym wzglêdem osi Ox}
- \label{WynikiZProcedurySimpson2VarYa}
+ \caption{Rezultaty pomiarów dok³adnoœci przybli¿enia ca³ki a) \textit{uogólnionym wzorem trapezów} w obszarze normalnym wzglêdem osi $Oy$}
+ \label{WynikiZProceduryTrapez2VarXa}
 \end{table}
 
-Wartoœæ ca³ki z punktu b) to $2.15$, wiêc:. 
+Wartoœæ ca³ki z punktu b) to $2.15$, tak wiêc: 
 \begin{table}[h!]
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
- $\mathbf{N}$ &$\mathbf{M}$ & $\mathbf{W_{S2Vy}}$ & $\mathbf{BBS2Vy_{N,M}}$ &$\mathbf{BWS2Vy_{N,M}}$ \\ %[0.5ex] 
+ $\mathbf{n}$ &$\mathbf{m}$ & $\mathbf{W_{T2Vx}}$ & $\mathbf{BBT2Vx_{n,m}}$ &$\mathbf{BWT2Vx_{n,m}}$ \\ %[0.5ex] 
   \hline \hline
- 2&4 &0.27777777777778  &0.01111111111111  &4.1666666666662 \%  \\  
+ 2&4 &2.63281249999998  &0.48281249999998    &10.8422283793596 \%  \\  
   \hline 
- 4&4 &0.26736111111111  &0.00069444444444    &0.2604166666650 \% \\ 
+ 4&4 &2.27197265624999  &0.12197265624999    &0.6919687847757 \% \\ 
   \hline
- 8&4 &0.26671006944444  &0.00004340277777    &0.0162760416638 \% \\ 
+ 8&4 &2.18057250976562  &0.03057250976562    &0.0434734117846 \% \\ 
   \hline 
- 16&20 &0.26666937934028  &0.00000271267361  &0.0010172526038 \% \\ 
+ 16&20 &2.15764808654785  &0.00764808654785  &0.0027206152485 \% \\ 
   \hline 
- 30&20 &0.26666688614540  &0.00000021947873  &0.0000823045238 \% \\ 
+ 30&20 &2.15217579218106  &0.00217579218106  &0.0002201893775 \% \\ 
   \hline 
- 60&20 &0.26666668038409  &0.00000001371742  &0.0000051440325 \% \\ 
+ 60&20 &2.15054397312245  &0.00054397312245  &0.0000137631050 \% \\ 
   \hline 
- 90&50 &0.26666666937628  &0.00000000270961  &0.0000010161038 \% \\ 
+ 90&50 &2.15024176789614  &0.00024176789614  &0.0000027186844 \% \\ 
   \hline
- 120&50 &0.26675087015599  &0.00000000085734 &0.0000003215025 \% \\ 
+ 120&50 &2.15013599484792  &0.00013599484792  &0.0000008602139 \% \\ 
   \hline 
- 150&50 &0.26666666752401  &0.00000000035116  &0.0000001316850 \% \\ 
+ 150&50 &2.15008703682300  &0.00008703682300  &0.0000003523446 \% \\ 
   \hline 
- 180&100 &0.26666666683602  &0.00000000016935  &0.0000000635063 \% \\ 
+ 180&100 &2.15006044228362  &0.00006044228362 &0.0000001699195 \% \\ 
   \hline
- 200&100 &0.26666666677778  &0.00000000011111  &0.0000000416663 \% \\ 
+ 200&100 &2.15004895826563  &0.00004895826563  &0.0000001114843 \% \\ 
   \hline 
- 230&100 &0.26666666673019  &0.00000000006352  &0.0000000238200 \% \\  
+ 230&100 &2.15003701949499  &0.00003701949499  &0.0000000637415 \% \\  
   \hline 
- 260&200 &0.26666666670557  &0.00000000003890  &0.0000000145875 \% \\ 
+ 260&200 &2.15002896940429  &0.00002896940429  &0.0000000390338 \% \\ 
    \hline 
- 300&200 &0.26666666668861  &0.00000000002194  &0.0000000082275 \% \\ 
+ 300&200 &2.15002175924596  &0.00002175924596  &0.0000000220216 \% \\ 
   \hline               
- 600&500 &0.26666666666804  &0.00000000000137  &0.0000000000514 \%  \\%[0.5ex] 
+ 600&500 &2.15000543981395  &0.00000543981395  &0.0000000013764 \%  \\%[0.5ex] 
  \hline 
  \end{tabular}\\ \hfill
- \caption{Rezultaty pomiarów dok³adnoœci przybli¿ania ca³ki b) \textit{uogólnionym wzorem Simpsona} w obszarze normalnym wzglêdem osi Ox}
- \label{WynikiZProcedurySimpson2VarYb}
+ \caption{Rezultaty pomiarów dok³adnoœci przybli¿enia ca³ki b) \textit{uogólnionym wzorem trapezów} w obszarze normalnym wzglêdem osi $Oy$}
+ \label{WynikiZProceduryTrapez2VarXb}
 \end{table}
 
 

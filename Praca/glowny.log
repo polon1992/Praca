@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  5 MAY 2018 06:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  6 MAY 2018 15:28
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -704,12 +704,6 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux"
 
 LaTeX Warning: Label `R6' multiply defined.
-
-
-LaTeX Warning: Label `WynikiZProcedurySimpson2VarYa' multiply defined.
-
-
-LaTeX Warning: Label `WynikiZProcedurySimpson2VarYb' multiply defined.
 
 
 LaTeX Warning: Label `klucz14' multiply defined.
@@ -1446,12 +1440,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12738 strings out of 493922
- 189532 string characters out of 3144896
- 305841 words of memory out of 3000000
- 15762 multiletter control sequences out of 15000+200000
+ 12740 strings out of 493922
+ 189592 string characters out of 3144896
+ 306153 words of memory out of 3000000
+ 15764 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (80 pages, 455952 bytes).
+Output written on glowny.dvi (80 pages, 455996 bytes).
