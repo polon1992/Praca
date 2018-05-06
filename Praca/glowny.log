@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  6 MAY 2018 15:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  6 MAY 2018 20:22
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -703,9 +703,6 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux"
 
-LaTeX Warning: Label `R6' multiply defined.
-
-
 LaTeX Warning: Label `klucz14' multiply defined.
 
 )
@@ -1201,7 +1198,12 @@ Overfull \hbox (21.80457pt too wide) in paragraph at lines 155--155
  i-tego pkt. x[] 
  []
 
-[59] [60] [61]
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+[60] [61]
 Underfull \hbox (badness 1997) in paragraph at lines 262--263
 []\T1/ptm/m/n/12 Pocz¡tkowo zde-fi-niujmy pe-wien ob-szar [], nor-malny
  []
@@ -1324,8 +1326,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 537--540
 it/12 m$ \T1/ptm/m/n/12 rów-nych pod-prze-dzia-ªów
  []
 
-File: R6.eps Graphic file (type eps)
-<R6.eps>
+File: R8.eps Graphic file (type eps)
+<R8.eps>
 Overfull \hbox (6.2532pt too wide) in paragraph at lines 546--546
 []\T1/ptm/m/n/12 Rysunek 4.3: |[]| 
  []
@@ -1354,8 +1356,20 @@ Overfull \hbox (21.80457pt too wide) in paragraph at lines 611--611
 anego i-tego y[] 
  []
 
-[73] [74]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [75]
-[76]) [77
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
+
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 625--626
+\T1/ptm/m/n/12 dla co-raz to wi¦k-szych $\OML/plm/m/it/12 n$ \T1/ptm/m/n/12 i $
+\OML/plm/m/it/12 m$\T1/ptm/m/n/12 . W $\OML/plm/m/it/12 BBT\OT4/cmr/m/n/12 2\OM
+L/plm/m/it/12 Vx[]$ \T1/ptm/m/n/12 zo-stan¡ za-warte bª¦dy bez-wzgl¦dne
+ []
+
+[74]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [75] [76])
+[77
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1440,12 +1454,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12740 strings out of 493922
- 189592 string characters out of 3144896
- 306153 words of memory out of 3000000
- 15764 multiletter control sequences out of 15000+200000
+ 12743 strings out of 493922
+ 189608 string characters out of 3144896
+ 306251 words of memory out of 3000000
+ 15766 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (80 pages, 455996 bytes).
+Output written on glowny.dvi (80 pages, 455968 bytes).
