@@ -741,7 +741,7 @@ Przez symbol $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,2n;
 Poni¿szy rysunek \ref{R9} przybli¿y nam sens przedstawionych powy¿ej oznaczeñ niezbêdnych do wyprowadzenia \textit{wzoru Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$. 
 \begin{figure}[H]
 		\begin{center}
-		\includegraphics[scale=0.45]{R8.eps}
+		\includegraphics[scale=0.45]{R9.eps}
 		\end{center}
 	   \caption{\mbox{Podzia³ obszaru ca³kowania dla \textit{wzoru Simpsona} - obszar normalny wzglêdem $Oy$} }
 \label{R9}
@@ -794,7 +794,6 @@ I_{VxS2}\approx \frac{h_y}{3}\left\lbrace \frac{h_{x,0}}{3}\left(f(x_{0,0},y_0)+
 Simpson2_VarX := proc (a, b, N, M) 
 local hx, hy, PoczKoniecP, NieParzP, ParzP, i, j, s1, s2,
       s3, ix, yi, Ps, WynCzesciowy, S2vX, WynikS2vX, m, n; 
-
 if (N < ceil(N) or floor(N) < N or (mod(N, 2) = 1 and 0 < N) or N <= 0) or 
    (M < ceil(M) or floor(M) < M or (mod(M, 2) = 1 and 0 < M) or M <= 0)
 then ERROR('Ostatnie dwa parametry musza byc liczba naturalna postaci \2k') 
@@ -808,26 +807,28 @@ else
   for i from 0 to 2*n 
      do 
       yi := a+i*hy; 
-      s1 := f(c(yi), yi)+f(d(yi), yi); 
-      s2 := 0; 
-      s3 := 0; 
-      hx := (1/2)*(d(yi)-c(yi))/m; 
+      s1 := f(c(yi), yi)+f(d(yi), yi);#suma pierwszy + ostatni wyraz 
+      s2 := 0;                        #suma wyrazow dla parzystego i
+      s3 := 0;                        #suma wyrazow dla nie parzystego i
+      hx := (1/2)*(d(yi)-c(yi))/m;    # wielkosc kroku pomiedzy 
+                                      # x-ami dla zadanego i-tego punktu y
       for j from 1 to 2*m-1 
          do 
-           ix := c(yi)+j*hx; 
-           Ps := f(ix, yi); 
-           if mod(j, 2) = 0 
-             then s2 := s2+Ps 
-           else s3 := s3+Ps 
-           end if 
+           ix := c(yi)+j*hx; #wartosc kolejnych xi dla zadanego i-tego y
+           Ps := f(ix, yi);  #wartosc calkowanej f-kcji f w (ix,yi)
+           if mod(j, 2) = 0  #podzial wartosci funkcji 
+                             #pomiedzy parzyste i nie parzyste wsp. j
+             then s2 := s2+Ps; 
+           else s3 := s3+Ps;
+           end if; 
           end do; 
        WynCzesciowy := (1/3)*hx*(s1+2*s2+4*s3); 
        if i = 0 or i = 2*n 
-         then PoczKoniecP := PoczKoniecP+WynCzesciowy 
+         then PoczKoniecP := PoczKoniecP+WynCzesciowy; 
        elif mod(i, 2) = 0 and 0 < i and i < 2*n 
-         then ParzP := ParzP+WynCzesciowy 
+         then ParzP := ParzP+WynCzesciowy; 
        elif mod(i, 2) = 1 and 0 < i and i < 2*n 
-         then NieParzP := NieParzP+WynCzesciowy 
+         then NieParzP := NieParzP+WynCzesciowy; 
        end if; 
      end do; 
  S2vX := (1/3)*hy*(PoczKoniecP+2*ParzP+4*NieParzP); 

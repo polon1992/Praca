@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  15 MAY 2018 16:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  15 MAY 2018 21:48
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1375,8 +1375,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 732--734
  []
 
 [76]
-File: R8.eps Graphic file (type eps)
- <R8.eps>
+File: R9.eps Graphic file (type eps)
+ <R9.eps>
 Overfull \hbox (1.10518pt too wide) in paragraph at lines 746--746
 []\T1/ptm/m/n/12 Rysunek 4.4: |[]| 
  []
@@ -1391,24 +1391,42 @@ Overfull \hbox (34.43146pt too wide) detected at line 788
  []
 
 
-Overfull \hbox (28.37456pt too wide) in paragraph at lines 837--837
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 838--838
 []\T1/pcr/m/n/10.95 if (N < ceil(N) or floor(N) < N or (mod(N, 2) = 1 and 0 < N
 ) or N <= 0) or[] 
  []
 
 
-Overfull \hbox (8.66458pt too wide) in paragraph at lines 837--837
+Overfull \hbox (8.66458pt too wide) in paragraph at lines 838--838
 []   \T1/pcr/m/n/10.95 (M < ceil(M) or floor(M) < M or (mod(M, 2) = 1 and 0 < M
 ) or M <= 0)[] 
  []
 
 
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 837--837
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 838--838
 []\T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natural
 na postaci \2k')[] 
  []
 
-[78]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [79]) [80
+[78]
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 838--838
+[]      \T1/pcr/m/n/10.95 s3 := 0;                        #suma wyrazow dla nie
+ parzystego i[] 
+ []
+
+
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 838--838
+[]                                      \T1/pcr/m/n/10.95 # x-ami dla zadanego 
+i-tego punktu y[] 
+ []
+
+
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 838--838
+[]           \T1/pcr/m/n/10.95 ix := c(yi)+j*hx; #wartosc kolejnych xi dla zada
+nego i-tego y[] 
+ []
+
+) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [79]) [80
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1489,12 +1507,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12756 strings out of 493922
- 189996 string characters out of 3144896
+ 12758 strings out of 493922
+ 190008 string characters out of 3144896
  307213 words of memory out of 3000000
- 15779 multiletter control sequences out of 15000+200000
+ 15780 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (83 pages, 472748 bytes).
+Output written on glowny.dvi (83 pages, 473100 bytes).
