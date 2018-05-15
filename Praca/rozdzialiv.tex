@@ -22,7 +22,12 @@ Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1,
 \end{figure}
         
 Ca³kê z równania (\ref{Trapez2DVar_postacOgolnaCalki}) przedstawimy w innej formie, tak by umo¿liwiæ jej zapis w postaci sumy. Zrobimy to analogicznie jak dla \textit{wzoru Trapezów} i \textit{wzoru Simpsona} po prostok¹cie. Niech 
-$$F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,$$ wtedy $$I_{VyT2}=\int\limits_a^b F(x)dx.$$ Po zastosowaniu z³o¿onego \textit{wzoru Trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VyT2}$ zyskamy wstêpn¹ formê przybli¿enia wartoœci ca³ki $I_{VyT2}$, tzn.: 
+\begin{equation}\label{CalkaWewnetrznaF(x)TrapezVarY}
+F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,
+\end{equation} wtedy 
+\begin{equation}\label{CalkazewnetrznaF(x)TrapezVarY}
+I_{VyT2}=\int\limits_a^b F(x)dx.
+\end{equation} Po zastosowaniu z³o¿onego \textit{wzoru Trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VyT2}$ zyskamy wstêpn¹ formê przybli¿enia wartoœci ca³ki $I_{VyT2}$, tzn.: 
 \begin{equation}\label{OgolnaFormaTrapez2DVar}
 I_{VyT2}\approx \frac{h_x}{2}\left(F(x_0)+2F(x_1)+2F(x_2)+\cdots+2F(x_{n-1})+F(x_n)\right).
 \end{equation}
@@ -277,7 +282,7 @@ Znaczenie opisanych wy¿ej zmiennych oraz logikê podzia³u obszaru ca³kowania na p
 		\begin{center}
 		\includegraphics[scale=0.45]{R7.eps}
 		\end{center}
-	   \caption{\mbox{Podzia³ obszaru ca³kowania dla \textit{metody Simpsona} - obszar normalny wzglêdem $Ox$} }
+	   \caption{\mbox{Podzia³ obszaru ca³kowania dla \textit{wzoru Simpsona} - obszar normalny wzglêdem $Ox$} }
 \label{R7}
 \end{figure}
       
@@ -548,7 +553,12 @@ Ponadto, przez $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,n
 \end{figure}
         
 Podobnie jak zrobiliœmy to dla ca³ki podwójnej po obszarze normalnym wzglêdem $Ox$ liczonej przy pomocy \textit{wzoru Trapezów} i \textit{wzoru Simpsona}, tak i teraz ca³kê z równania (\ref{Trapez2DVarX_postacOgolnaCalki}) przekszta³æmy do nieco innej formy. Niech 
-$$F(y)=\int\limits_{c(y)}^{d(y)} f(x,y)dx\,,$$ wtedy $$I_{VxT2}=\int\limits_a^b F(y)dy.$$ Po zastosowaniu z³o¿onego \textit{wzoru Trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VxT2}$ otrzymamy wstêpn¹ postaæ przybli¿enia wartoœci ca³ki $I_{VxT2}$, tzn.: 
+\begin{equation}\label{CalkaWewnetrznaF(y)TrapezVarX}
+F(y)=\int\limits_{c(y)}^{d(y)} f(x,y)dx\,,\end{equation}
+ wtedy 
+ \begin{equation}\label{CalkaZewnetrznaF(y)TrapezVarX}
+ I_{VxT2}=\int\limits_a^b F(y)dy.
+ \end{equation} Po zastosowaniu z³o¿onego \textit{wzoru Trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VxT2}$ otrzymamy wstêpn¹ postaæ przybli¿enia wartoœci ca³ki $I_{VxT2}$, tzn.: 
 \begin{equation}\label{OgolnaFormaTrapez2DVarX}
 I_{VxT2}\approx \frac{h_y}{2}\left(F(y_0)+2F(y_1)+2F(y_2)+\cdots+2F(y_{n-1})+F(y_n)\right).
 \end{equation}
@@ -727,30 +737,31 @@ Nastêpnie dla ka¿dego $y_i \in [a,b]$ wyznaczmy przedzia³y  $[c(y_i),d(y_i)]$, u
 $$c(y_i)=x_{i,0}\leq x_{i,1} \leq x_{i,2}\leq \ldots  \leq x_{i,2m}=d(y_i).$$
 
 Przez symbol $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,2n;\,j=0, 1, \ldots ,2m )$, natomiast $h_{x,i}=\frac{d(y_i)-c(y_i)}{2m}$. Jak mo¿na zauwa¿yæ, wielkoœæ kroku $h_{x,i}$ jest  zale¿na od powi¹zanego z nim $y_i$.  
-%%od tad poprawic:
-Znaczenie opisanych wy¿ej zmiennych oraz logikê podzia³u obszaru ca³kowania na potrzeby wykorzystania \textit{wzoru Simpsona} prezentuje poni¿sza grafika:
+
+Poni¿szy rysunek \ref{R9} przybli¿y nam sens przedstawionych powy¿ej oznaczeñ niezbêdnych do wyprowadzenia \textit{wzoru Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$. 
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.45]{R8.eps}
 		\end{center}
-	   \caption{\mbox{Podzia³ obszaru ca³kowania dla \textit{metody Simpsona} - obszar normalny wzglêdem $Oy$} }
+	   \caption{\mbox{Podzia³ obszaru ca³kowania dla \textit{wzoru Simpsona} - obszar normalny wzglêdem $Oy$} }
 \label{R9}
 \end{figure}
       
-Id¹c takim samym tokiem rozumowania jak w przypadku \textit{wzoru Trapezów} w obszarze normalnym wzglêdem $Oy$ (patrz str. \pageref{OgolnaFormaTrapez2DVarX}) - zapiszmy ca³kê z równania (\ref{Simpson2DVarX_postacOgolnaCalki}) w nieco innej formie tak, by mo¿na by³o j¹ wygodnie przedstawiæ w postaci pewnej sumy. Zatem niech 
+Wykorzystuj¹c metodê zastosowan¹ w poprzednich podrozdzia³ach, zapiszmy ca³kê podwójn¹ z równania (\ref{Simpson2DVarX_postacOgolnaCalki}) przy pomocy ca³ki pojedynczej - u¿ywaj¹c w tym celu odpowiednich podstawieñ. Niech 
 \begin{equation}\label{SimpsonVxCalkaPoYjakoFunkcjaY_r1}
 F(y)=\int\limits_{c(y)}^{d(y)} f(x,y)dx\,,
 \end{equation} 
-co powoduje, ¿e 
+st¹d 
 \begin{equation}\label{SimpsonVyCalkaPoYjakoFunkcjaX_r2}
 I_{VxS2}=\int\limits_{a}^b\int\limits_{c(y)}^{d(y)} f(x,y) dxdy=\int\limits_a^b F(y)dy.
 \end{equation}
- Stosuj¹c teraz \textit{uogólniony wzór Simpsona}  (\ref{wzorSimpsonaZPodzialami})  dla powy¿szej ca³ki $I_{VxS2}$, uzyskujemy  wyra¿enie bêd¹ce przepisem na przybli¿enie jej wartoœci, tzn.: 
+
+ U¿ywaj¹c w tym momencie \textit{uogólnionego wzoru Simpsona}  (\ref{wzorSimpsonaZPodzialami})  dla ca³ki z równania (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r2}), otrzymamy pocz¹tkow¹ formê wyra¿enia prowadz¹cego do przybli¿enia jej wartoœci: 
 \begin{equation}\label{OgolnaFormaSimpson2DVarX}
 I_{VxS2}\approx \frac{h_y}{3}\left(F(y_0)+4F(y_1)+2F(y_2)+4F(y_3)+2F(y_4)+\cdots+4F(y_{2n-1})+F(y_{2n})\right).
 \end{equation}
 
-Ka¿dy ze sk³adników $F(y_i)$, $(i=0,1,\ldots, 2n)$ jest rozumiany jako:
+Dowolny ze sk³adników $F(y_i)$, $(i=0,1,\ldots, 2n)$, pojawiaj¹cych siê w (\ref{OgolnaFormaSimpson2DVarX}) mo¿na rozumieæ jako:
 \begin{equation}\label{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}
 \begin{array}{cc}
 F(y_i)=\int\limits_{c(y_i)}^{d(y_i)} f(x,y_i)dx\approx \\
@@ -758,8 +769,8 @@ F(y_i)=\int\limits_{c(y_i)}^{d(y_i)} f(x,y_i)dx\approx \\
 \left. +2f(x_{i,2m-2},y_i)+4f(x_{i,2m-1},y_i)+f(x_{i,2m},y_i)\right)
 \end{array}
 \end{equation} 
-Po po³¹czeniu (\ref{OgolnaFormaSimpson2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}) dostajemy \textit{uogólniony wzór Simpsona} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Oy$:
-%%%%%%%%
+Finalnie ³¹cz¹c ze sob¹ (\ref{OgolnaFormaSimpson2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}) zyskujemy \textit{uogólniony wzór Simpsona} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Oy$:
+
 \begin{equation}\label{UogolnionyWzorSimpsona_Simpson2DVarX}
 \begin{small}
 \begin{array}{cc}
