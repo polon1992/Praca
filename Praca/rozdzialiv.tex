@@ -257,7 +257,7 @@ Zaokr¹glona wartoœæ ca³ki z podpunktu b) to $0.2666666666666667$ , zatem:.
 Analizuj¹c otrzymane powy¿ej wyniki zauwa¿amy, ¿e dla obydwu przypadków pierwsze trzy pomiary zwraca³y wyniki dosyæ mocno odbiegaj¹ce od rzeczywistych (przyk³. a)) lub zaokr¹glonych (przyk³. b)). Ich b³êdy wzglêdne wynosi³y od $0.09\%$ do $28.93\%$.  Jednak¿e ka¿de z nastêpnych wywo³añ procedury sprawia³o, ¿e otrzymany rezultat mo¿na by³o ju¿ uznaæ za akceptowalne przybli¿enie. Zwróæmy dodatkowo uwagê na to, ¿e ostatecznie dla \mbox{przyk³adu a)} pomimo przyjêcia du¿ych wartoœci $n=600$ i $m=500$ podzia³ów przedzia³ów \mbox{ca³kowania -} wynik w pewnym stopniu stale odbiega³ od dok³adnego. Nale¿a³oby wykonaæ kolejne iteracje, by nie zauwa¿yæ ró¿nicy na 5 i 6 miejscu po przecinku. Wartoœæ ca³ki z przyk³adu b) mo¿emy jedynie zaokr¹gliæ, zatem ostateczna forma tego zaokr¹glenia jest kwesti¹ indywidualnego wyboru. Zauwa¿ymy jedynie, ¿e ka¿de kolejne wykonanie \textit{Trapez2\_VarY} zbli¿a nas do poszukiwanej \mbox{wielkoœci $2.6(6)$.}       
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Ox}
-Podobnie jak mia³o to miejsce w poprzednich rozdzia³ach, zaprezentujmy równie¿ i teraz intuicyjny do wzoru (\ref{UogolnionyWzorTrapezow_Trapez2DVar}) \textit{wzór Simpsona} dla obszaru normalnego wzglêdem $Ox$.
+Podobnie jak mia³o to miejsce w poprzednich rozdzia³ach, zaprezentujmy równie¿ i teraz analogiczny do wzoru (\ref{UogolnionyWzorTrapezow_Trapez2DVar}) \textit{wzór Simpsona} dla obszaru normalnego wzglêdem $Ox$.
 
 Pocz¹tkowo zdefiniujmy pewien obszar \mbox{$G=\{a \leq x \leq b\,;\, c(x)\leq y \leq d(x) \}$}, normalny wzglêdem osi $Ox$ (patrz str. \pageref{ObszaryNormalneOx} ). Dodatkowo niech $f(x,y)$ bêdzie funkcj¹ okreœlon¹ na owym obszarze. W podrozdziale tym przedstawimy \textit{wzór Simpsona} dla ca³ek podwójnych nastêpuj¹cej postaci:
 \begin{equation}\label{Simpson2DVar_postacOgolnaCalki}
@@ -268,7 +268,7 @@ $$a=x_0 \leq x_1 \leq x_2 \leq \ldots  \leq x_{2n-1} \leq x_{2n}=b\,.$$
 Ka¿dy wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, 2n=N)$, zaœ $h_x$ okreœlamy jako \mbox{$h_x=\frac{b-a}{2n}$}.\\ 
 
 
-Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y g³ównie ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, zale¿ne od funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $M=2m$  podprzedzia³ów równej d³ugoœci $[y_{2i,2j}, y_{2i,2j+1}]$ \mbox{$(j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2};\, i=0, 1, \ldots ,n)$} spe³niaj¹cych poni¿sz¹ zale¿noœæ:
+Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y g³ównie ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, zale¿ne od funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $M=2m$  podprzedzia³ów równej d³ugoœci $[y_{i,2j}, y_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,n;\,j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych poni¿sz¹ zale¿noœæ:
 $$c(x_i)=y_{i,0}\leq y_{i,1} \leq y_{i,2}\leq \ldots  \leq y_{i,2m}=d(x_i).$$
 Oznaczenie $y_{i,j}$ rozumieæ bêdziemy jako $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,2m;\, i=0, 1, \ldots ,2n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{2m}$. Zatem tak jak i w przypadku \textit{wzoru Trapezów} wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego argumentu $x_i$ jest ona wyliczana. 
 
@@ -712,7 +712,69 @@ Wartoœæ ca³ki z punktu b) to $2.15$, tak wiêc:
 Poddaj¹c analizie powy¿sze wyniki zawarte w tabelach \ref{WynikiZProceduryTrapez2VarXa} i \ref{WynikiZProceduryTrapez2VarXb} zauwa¿amy, ¿e w obydwu przypadkach b³¹d przybli¿enia w miarê wzrostu parametrów $n$ i $m$ sukcesywnie mala³. Wyniki zosta³y przybli¿one z dok³adnoœci¹ wiêksz¹ ni¿ $0.01$   przy $n = m = 4$ dla przyk³adu a) oraz  $n = 16$ i $m = 20$ dla ca³ki z podpunktu b). Mo¿na stwierdziæ, ¿e wielkoœci tych parametrów s¹ dosyæ niskie w stosunku do dok³adnoœci wyniku jaki otrzymaliœmy.
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Oy}
+W podrozdziale tym podamy \textit{wzór Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$.
 
+Niech \mbox{$S=\{a \leq y \leq b\,;\, c(y)\leq x \leq d(y) \}$} bêdzie obszarem normalnym wzglêdem osi $Oy$ a $f(x,y)$ funkcj¹ okreœlon¹ na tym obszarze. WyprowadŸmy \textit{wzór Simpsona} dla ca³ek postaci:
+\begin{equation}\label{Simpson2DVarX_postacOgolnaCalki}
+I_{VxS2}=\iint_S f(x,y)dxdy=\int\limits_{a}^b\int\limits_{c(y)}^{d(y)} f(x,y) dxdy \,.
+\end{equation}
+Zadany przedzia³ ca³kowania $a \leq y \leq b$ zostanie podzielony na $N=2n$ $(n=1,2,\ldots)$ podprzedzia³ów  $[y_{2i},y_{2i+1}]$ $(i=0, \frac{1}{2}, \ldots, \frac{2n-1}{2})$, z tym ¿e:
+$$a=y_0 \leq y_1 \leq y_2 \leq \ldots  \leq y_{2n-1} \leq y_{2n}=b\,.$$ 
+Dowolny wêze³ $y_i$ mo¿na przedstawiæ jako $y_i=a+ih_y$ $(i=0, 1, \ldots, 2n=N)$, natomiast samo $h_y$ definiujemy przez \mbox{$h_y=\frac{b-a}{2n}$}.\\ 
+
+
+Nastêpnie dla ka¿dego $y_i \in [a,b]$ wyznaczmy przedzia³y  $[c(y_i),d(y_i)]$, uzale¿nione od postaci funkcji $c(y)$ i $d(y)$, jak te¿ i argumentu $y=y_i$. Ka¿dy z takich przedzia³ów podzielimy na $M=2m$  podprzedzia³ów równej d³ugoœci $[x_{i,2j}, x_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,n;\, j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych zale¿noœæ:
+$$c(y_i)=x_{i,0}\leq x_{i,1} \leq x_{i,2}\leq \ldots  \leq x_{i,2m}=d(y_i).$$
+
+Przez symbol $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,2n;\,j=0, 1, \ldots ,2m )$, natomiast $h_{x,i}=\frac{d(y_i)-c(y_i)}{2m}$. Jak mo¿na zauwa¿yæ, wielkoœæ kroku $h_{x,i}$ jest  zale¿na od powi¹zanego z nim $y_i$.  
+%%od tad poprawic:
+Znaczenie opisanych wy¿ej zmiennych oraz logikê podzia³u obszaru ca³kowania na potrzeby wykorzystania \textit{wzoru Simpsona} prezentuje poni¿sza grafika:
+\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.45]{R8.eps}
+		\end{center}
+	   \caption{\mbox{Podzia³ obszaru ca³kowania dla \textit{metody Simpsona} - obszar normalny wzglêdem $Oy$} }
+\label{R9}
+\end{figure}
+      
+Id¹c takim samym tokiem rozumowania jak w przypadku \textit{wzoru Trapezów} w obszarze normalnym wzglêdem $Oy$ (patrz str. \pageref{OgolnaFormaTrapez2DVarX}) - zapiszmy ca³kê z równania (\ref{Simpson2DVarX_postacOgolnaCalki}) w nieco innej formie tak, by mo¿na by³o j¹ wygodnie przedstawiæ w postaci pewnej sumy. Zatem niech 
+\begin{equation}\label{SimpsonVxCalkaPoYjakoFunkcjaY_r1}
+F(y)=\int\limits_{c(y)}^{d(y)} f(x,y)dx\,,
+\end{equation} 
+co powoduje, ¿e 
+\begin{equation}\label{SimpsonVyCalkaPoYjakoFunkcjaX_r2}
+I_{VxS2}=\int\limits_{a}^b\int\limits_{c(y)}^{d(y)} f(x,y) dxdy=\int\limits_a^b F(y)dy.
+\end{equation}
+ Stosuj¹c teraz \textit{uogólniony wzór Simpsona}  (\ref{wzorSimpsonaZPodzialami})  dla powy¿szej ca³ki $I_{VxS2}$, uzyskujemy  wyra¿enie bêd¹ce przepisem na przybli¿enie jej wartoœci, tzn.: 
+\begin{equation}\label{OgolnaFormaSimpson2DVarX}
+I_{VxS2}\approx \frac{h_y}{3}\left(F(y_0)+4F(y_1)+2F(y_2)+4F(y_3)+2F(y_4)+\cdots+4F(y_{2n-1})+F(y_{2n})\right).
+\end{equation}
+
+Ka¿dy ze sk³adników $F(y_i)$, $(i=0,1,\ldots, 2n)$ jest rozumiany jako:
+\begin{equation}\label{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}
+\begin{array}{cc}
+F(y_i)=\int\limits_{c(y_i)}^{d(y_i)} f(x,y_i)dx\approx \\
+\frac{h_{x,i}}{3}\left(f(x_{i,0},y_i)+4f(x_{i,1},y_i)+2f(x_{i,2},y_i)+4f(x_{i,3},y_i)+\cdots\right.\\
+\left. +2f(x_{i,2m-2},y_i)+4f(x_{i,2m-1},y_i)+f(x_{i,2m},y_i)\right)
+\end{array}
+\end{equation} 
+Po po³¹czeniu (\ref{OgolnaFormaSimpson2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}) dostajemy \textit{uogólniony wzór Simpsona} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Oy$:
+%%%%%%%%
+\begin{equation}\label{UogolnionyWzorSimpsona_Simpson2DVarX}
+\begin{small}
+\begin{array}{cc}
+
+I_{VxS2}\approx \frac{h_y}{3}\left\lbrace \frac{h_{x,0}}{3}\left(f(x_{0,0},y_0)+4\sum\limits_{j=0}^{m-1} f(x_{0,2j+1},y_0)+2\sum\limits_{j=0}^{m-2} f(x_{0,2j+2},y_0)+f(x_{0,2m},y_0)\right)\right.\\
+
++ 4\sum\limits_{i=0}^{n-1}\frac{h_{x,2i+1}}{3}\left(f(x_{2i+1,0},y_{2i+1})+4\sum\limits_{j=0}^{m-1} f(x_{2i+1,2j+1},y_{2i+1})+2\sum\limits_{j=0}^{m-2} f(x_{2i+1,2j+2},y_{2i+1})+f(x_{2i+1,2m},y_{2i+1})\right)\\
+
++ 2\sum\limits_{i=0}^{n-2}\frac{h_{x,2i+2}}{3}\left(f(x_{2i+2,0},y_{2i+2})+4\sum\limits_{j=0}^{m-1} f(x_{2i+2,2j+1},y_{2i+2})+2\sum\limits_{j=0}^{m-2} f(x_{2i+2,2j+2},y_{2i+2})+f(x_{2i+2,2m},y_{2i+2})\right)\\
+
+
+\left.+ \frac{h_{x,2n}}{3}\left(f(x_{2n,0},y_{2n})+4\sum\limits_{j=0}^{m-1} f(x_{2n,2j+1},y_{2n})+2\sum\limits_{j=0}^{m-2} f(x_{2n,2j+2},y_{2n})+f(x_{2n,2m},y_{2n})\right)\right\rbrace
+\end{array}
+\end{small}
+\end{equation}
 
 
    
