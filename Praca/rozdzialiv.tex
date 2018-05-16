@@ -624,7 +624,7 @@ end proc;
 Powy¿szy algorytm powsta³ po przekszta³ceniu znanego nam ju¿ kodu procedury \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}. G³ówn¹ ró¿nic¹ jest to, ¿e tym razem obs³ugujemy obszary normalne wzglêdem osi $Oy$, zaœ sama procedura jest oparta g³ównie o wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) oraz podane definicje $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ oraz $h_{x,i}$ (zmienna \textit{hx}). Parametry wejœciowe to \textit{a,b} - czyli pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. Kolejno \textit{n} i \textit{m} to iloœci podzia³ów przedzia³ów ca³kowania po zmiennej $y$ i $x$. Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.\\
 
 Wykorzystuj¹c procedurê \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki} wyznaczmy przybli¿one wartoœci ca³ek:
- \begin{itemize}
+ \begin{itemize}\label{PrzykladoweCalkiTrapez2VarX}
 \item[a)] $\int\limits_{1}^{2}\int\limits_{y}^{2y} \frac{x+y}{\sqrt{y}} dxdy$
 \item[b)] $\int\limits_{1}^{2}\int\limits_{\sqrt{y}}^{y} xy^3 dxdy$
 \end{itemize}     
@@ -787,6 +787,7 @@ I_{VxS2}\approx \frac{h_y}{3}\left\lbrace \frac{h_{x,0}}{3}\left(f(x_{0,0},y_0)+
 \end{small}
 \end{equation}
 
+Procedura, któr¹ odnajdziemy nieco ni¿ej jest implementacj¹ wyprowadzonego powy¿ej wzoru. Wykorzystamy j¹ do wyznaczenia przybli¿onych wartoœci ca³ek ze strony \pageref{PrzykladoweCalkiTrapez2VarX}, tak by mo¿liwe by³o ich porównanie z wynikami pozyskanymi procedur¹ \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki} - \textit{Trapez2\_VarX}.
 
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych w obszarach normalnych wzglêdem osi $Oy$ przy u¿yciu \textit{uogólnionego wzoru Simpsona})\label{MAPLE_Simpson2ObszarNormalnyOYWartoscCalki}
 \begin{small}
