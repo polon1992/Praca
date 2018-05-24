@@ -839,6 +839,109 @@ end proc;
 \end{verbatim}
 \end{small}
 \end{proc}
+%%od tad
+Od tad poprawic!!:\\
+Powy¿szy algorytm powsta³ po przekszta³ceniu znanego nam ju¿ kodu procedury \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}. G³ówn¹ ró¿nic¹ jest to, ¿e tym razem obs³ugujemy obszary normalne wzglêdem osi $Oy$, zaœ sama procedura jest oparta g³ównie o wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) oraz podane definicje $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ oraz $h_{x,i}$ (zmienna \textit{hx}). Parametry wejœciowe to \textit{a,b} - czyli pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. Kolejno \textit{n} i \textit{m} to iloœci podzia³ów przedzia³ów ca³kowania po zmiennej $y$ i $x$. Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.\\
+
+%%do tad
+Za pomoc¹ procedury \ref{MAPLE_Simpson2ObszarNormalnyOYWartoscCalki} obliczmy przybli¿one wartoœci nastêpuj¹cych ca³ek:
+\begin{itemize}\label{PrzykladoweCalkiSimpson2VarX}
+\item[a)] $\int\limits_{1}^{2}\int\limits_{y}^{2y} \frac{x+y}{\sqrt{y}} dxdy$
+\item[b)] $\int\limits_{1}^{2}\int\limits_{\sqrt{y}}^{y} xy^3 dxdy$
+\end{itemize}     
+operuj¹c wielkoœciami parametrów \textit{N} i \textit{M} w nastêpuj¹cych po sobie wywo³aniach procedury.
+%a) 4.65685424949238019520675485%
+%b) 2.15%
+
+Wykonane dla powy¿szych przyk³adów pomiary odnajdziemy w zamieszczonych poni¿ej tablicach \ref{WynikiZProcedurySimpson2VarXa} i \ref{WynikiZProcedurySimpson2VarXb}. Zastosujemy podobne oznaczenia kolumn jak dla \textit{wzoru Simpsona w obszarze normalnym wzglêdem osi $Oy$}. Niech kolumna z nag³ówkiem $N$ definiuje iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $y$, z nazw¹ $M$ po zmiennej $x$. Kolejno w $W_{S2Vx}$ bêdziemy gromadziæ wyniki \textit{Simpson2\_VarX} dla rosn¹cych wartoœci $N$ i $M$. Przez \textit{$BBS2Vx_{N,M}$} rozumiejmy b³êdy bezwzglêdne przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Oy$ dla zadanych  $N$ i $M$. Ostatecznie niech\textit{$BWS2Vx_{N,M}$} zawiera wielkoœæ b³êdu wzglêdnego dla wyniku wykonania \textit{Simpson2\_VarX}.
+
+\newpage
+Przybli¿ona wartoœæ ca³ki z punktu a) to $4.6568542494923802$, st¹d: 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{N}$ &$\mathbf{M}$ & $\mathbf{W_{S2Vx}}$ & $\mathbf{BBS2Vx_{N,M}}$ &$\mathbf{BWS2Vx_{N,M}}$ \\ %[0.5ex] 
+ \hline \hline
+ 2&4 &4.6570401471233 &0.0001858976309     &0.0039919143040 \%  \\  
+  \hline 
+ 4&4 &4.6568669315409  &0.0000126820485    &0.0002723308015 \% \\ 
+  \hline
+ 8&4 &4.6568550636183  &0.0000008141259    &0.0000174823144 \% \\ 
+  \hline 
+ 16&20 &4.6568543007419  &0.0000000512495  &0.0000011005176 \% \\ 
+  \hline 
+ 30&20 &4.6568542536461  &0.0000000041537  &0.0000000891954 \% \\ 
+  \hline 
+ 60&20 &4.6568542497521  &0.0000000002597    &0.0000000055767 \% \\ 
+  \hline 
+ 90&50 &4.6568542495438  &0.0000000000514    &0.0000000011037 \% \\ 
+  \hline
+ 120&50 &4.6568542495088  &0.0000000000164   &0.0000000003522 \% \\ 
+  \hline 
+ 150&50 &4.6568542494989  &0.0000000000065   &0.0000000001396 \% \\ 
+  \hline 
+ 180&100 &4.6568542494955  &0.0000000000031  &0.0000000000666 \% \\ 
+  \hline
+ 200&100 &4.6568542494943  &0.0000000000019  &0.0000000000408 \% \\ 
+  \hline 
+ 230&100 &4.6568542494938  &0.0000000000014  &0.0000000000301 \% \\  
+  \hline 
+ 260&200 &4.6568542494929  &0.0000000000005  &0.0000000000107 \% \\ 
+   \hline 
+ 300&200 &4.6568542494926  &0.0000000000002  &0.0000000000043 \% \\ 
+   \hline               
+ 600&500 &4.6568542494927  &0.0000000000003  &0.0000000000064 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Pomiary dok³adnoœci przybli¿enia ca³ki a) \textit{uogólnionym wzorem Simpsona} w obszarze normalnym wzglêdem osi $Oy$}
+ \label{WynikiZProcedurySimpson2VarXa}
+\end{table}
+
+Dok³adna wartoœæ ca³ki z punktu b) jest równa $2.15$, zatem: 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $\mathbf{N}$ &$\mathbf{M}$ & $\mathbf{W_{S2Vx}}$ & $\mathbf{BBS2Vx_{N,M}}$ &$\mathbf{BWS2Vx_{N,M}}$ \\ %[0.5ex] 
+  \hline \hline
+ 2&4 &2.1770833333333  &0.0270833333333    &1.2596899224791 \%  \\  
+  \hline 
+ 4&4 &2.1516927083332  &0.0016927083332    &0.0787306201488 \% \\ 
+  \hline
+ 8&4 &2.1501057942708  &0.0001057942708    &0.0049206637581 \% \\ 
+  \hline 
+ 16&20 &2.1500066121419  &0.0000066121419  &0.0003075414837 \% \\ 
+  \hline 
+ 30&20 &2.1500005349793  &0.0000005349793  &0.0000248827581 \% \\ 
+  \hline 
+ 60&20 &2.1500000334362  &0.0000000334362  &0.0000015551721 \% \\ 
+  \hline 
+ 90&50 &2.1500000066050  &0.0000000066050    &0.0000003072093 \% \\ 
+  \hline
+ 120&50 &2.1500000020898  &0.0000000020898   &0.0000000972000 \% \\ 
+  \hline 
+ 150&50 &2.1500000008563  &0.0000000008563   &0.0000000398279 \% \\ 
+  \hline 
+ 180&100 &2.1500000004125  &0.0000000004125  &0.0000000191860 \% \\ 
+  \hline
+ 200&100 &2.1500000002713  &0.0000000002713  &0.0000000126186 \% \\ 
+  \hline 
+ 230&100 &2.1500000001557  &0.0000000001557  &0.0000000072418 \% \\  
+  \hline 
+ 260&200 &2.1500000000951  &0.0000000000951  &0.0000000044233 \% \\ 
+   \hline 
+ 300&200 &2.1500000000542  &0.0000000000542  &0.0000000025209 \% \\ 
+  \hline               
+ 600&500 &2.1500000000028  &0.0000000000028  &0.0000000001302 \%  \\%[0.5ex] 
+ \hline 
+ \end{tabular}\\ \hfill
+ \caption{Pomiary dok³adnoœci przybli¿enia ca³ki b) \textit{uogólnionym wzorem Simpsona} w obszarze normalnym wzglêdem osi $Oy$}
+ \label{WynikiZProcedurySimpson2VarXb}
+\end{table}
+
+
+WNIOSKI i POROWNANIE Z WYNIKAMI TRAPEZ2VARX
    
    
    

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  16 MAY 2018 13:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  24 MAY 2018 10:54
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1426,7 +1426,13 @@ Overfull \hbox (15.23457pt too wide) in paragraph at lines 839--839
 nego i-tego y[] 
  []
 
-[79]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [80]) [81
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 843--845
+
+ []
+
+[80]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex" [81] [82])
+[83
 
 ]
 Overfull \hbox (32.3427pt too wide) in paragraph at lines 102--103
@@ -1467,7 +1473,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 ][]
  []
 
-[82
+[84
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
@@ -1491,15 +1497,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
-[83]
+[85]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
- [84]
+ [86]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.aux")
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 196.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `glowny.out' has not changed.
-(rerunfilecheck)             Checksum: D9D54030EB5B3CB6C21EC73DE6205A6A;1456.
+(rerunfilecheck)             Checksum: 8B2B934376EA6C97D53AF23304F8339C;1456.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  )
 (\end occurred inside a group at level 1)
@@ -1507,12 +1513,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12759 strings out of 493922
- 190037 string characters out of 3144896
- 307289 words of memory out of 3000000
- 15781 multiletter control sequences out of 15000+200000
+ 12762 strings out of 493922
+ 190129 string characters out of 3144896
+ 307655 words of memory out of 3000000
+ 15784 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (84 pages, 474516 bytes).
+Output written on glowny.dvi (86 pages, 486800 bytes).
