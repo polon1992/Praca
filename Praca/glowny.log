@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  24 MAY 2018 10:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  24 MAY 2018 13:53
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1358,76 +1358,76 @@ anego i-tego y[]
  []
 
 [73]
-Underfull \hbox (badness 10000) in paragraph at lines 624--625
+Underfull \hbox (badness 10000) in paragraph at lines 625--628
 
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 635--636
+Underfull \hbox (badness 2012) in paragraph at lines 638--639
 \T1/ptm/m/n/12 dla co-raz to wi¦k-szych $\OML/plm/m/it/12 n$ \T1/ptm/m/n/12 i $
 \OML/plm/m/it/12 m$\T1/ptm/m/n/12 . W $\OML/plm/m/it/12 BBT\OT4/cmr/m/n/12 2\OM
 L/plm/m/it/12 Vx[]$ \T1/ptm/m/n/12 zo-stan¡ za-warte bª¦dy bez-wzgl¦dne
  []
 
 [74] [75]
-Underfull \hbox (badness 10000) in paragraph at lines 732--734
+Underfull \hbox (badness 10000) in paragraph at lines 735--737
 
  []
 
 [76]
 File: R9.eps Graphic file (type eps)
  <R9.eps>
-Overfull \hbox (1.10518pt too wide) in paragraph at lines 746--746
+Overfull \hbox (1.10518pt too wide) in paragraph at lines 749--749
 []\T1/ptm/m/n/12 Rysunek 4.4: |[]| 
  []
 
 [77]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 775.
+LaTeX Font Warning: Command \small invalid in math mode on input line 778.
 
 
-Overfull \hbox (34.43146pt too wide) detected at line 788
+Overfull \hbox (34.43146pt too wide) detected at line 791
 []
  []
 
 
-Overfull \hbox (28.37456pt too wide) in paragraph at lines 839--839
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 842--842
 []\T1/pcr/m/n/10.95 if (N < ceil(N) or floor(N) < N or (mod(N, 2) = 1 and 0 < N
 ) or N <= 0) or[] 
  []
 
 
-Overfull \hbox (8.66458pt too wide) in paragraph at lines 839--839
+Overfull \hbox (8.66458pt too wide) in paragraph at lines 842--842
 []   \T1/pcr/m/n/10.95 (M < ceil(M) or floor(M) < M or (mod(M, 2) = 1 and 0 < M
 ) or M <= 0)[] 
  []
 
 
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 839--839
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 842--842
 []\T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natural
 na postaci \2k')[] 
  []
 
 [78]
-Overfull \hbox (15.23457pt too wide) in paragraph at lines 839--839
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 842--842
 []      \T1/pcr/m/n/10.95 s3 := 0;                        #suma wyrazow dla nie
  parzystego i[] 
  []
 
 
-Overfull \hbox (28.37456pt too wide) in paragraph at lines 839--839
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 842--842
 []                                      \T1/pcr/m/n/10.95 # x-ami dla zadanego 
 i-tego punktu y[] 
  []
 
 
-Overfull \hbox (15.23457pt too wide) in paragraph at lines 839--839
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 842--842
 []           \T1/pcr/m/n/10.95 ix := c(yi)+j*hx; #wartosc kolejnych xi dla zada
 nego i-tego y[] 
  []
 
 [79]
-Underfull \hbox (badness 10000) in paragraph at lines 843--845
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
 
  []
 
@@ -1521,4 +1521,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,6222s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (86 pages, 486800 bytes).
+Output written on glowny.dvi (86 pages, 487740 bytes).

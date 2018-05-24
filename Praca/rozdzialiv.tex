@@ -621,7 +621,10 @@ end proc;
 \end{verbatim}
 \end{small}
 \end{proc}
-Powy¿szy algorytm powsta³ po przekszta³ceniu znanego nam ju¿ kodu procedury \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}. G³ówn¹ ró¿nic¹ jest to, ¿e tym razem obs³ugujemy obszary normalne wzglêdem osi $Oy$, zaœ sama procedura jest oparta g³ównie o wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) oraz podane definicje $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ oraz $h_{x,i}$ (zmienna \textit{hx}). Parametry wejœciowe to \textit{a,b} - czyli pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. Kolejno \textit{n} i \textit{m} to iloœci podzia³ów przedzia³ów ca³kowania po zmiennej $y$ i $x$. Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.\\
+
+Zamieszczony powy¿ej algorytm procedury \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki} powsta³ po przekszta³ceniu znanego nam ju¿ kodu procedury \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}. G³ówn¹ ró¿nic¹ jest to, ¿e tym razem obs³ugujemy obszary normalne wzglêdem osi $Oy$, zaœ sama procedura jest oparta g³ównie o wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) oraz podane definicje $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ oraz $h_{x,i}$ (zmienna \textit{hx}). Parametry wejœciowe to \textit{a,b} - czyli pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. Kolejno \textit{n} i \textit{m} to iloœci podzia³ów przedzia³ów ca³kowania po zmiennej $y$ i $x$.
+Je¿eli chodzi o zmienn¹ $x$, to przed ca³ym kodem opisywanej procedury musz¹ pojawiæ siê definicje funkcji $c(y)$ i $d(y)$, które s¹ granicami ca³kowania po zmiennej $x$.
+Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.\\
 
 Wykorzystuj¹c procedurê \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki} wyznaczmy przybli¿one wartoœci ca³ek:
  \begin{itemize}\label{PrzykladoweCalkiTrapez2VarX}
@@ -839,11 +842,12 @@ end proc;
 \end{verbatim}
 \end{small}
 \end{proc}
-%%od tad
-Od tad poprawic!!:\\
-Powy¿szy algorytm powsta³ po przekszta³ceniu znanego nam ju¿ kodu procedury \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}. G³ówn¹ ró¿nic¹ jest to, ¿e tym razem obs³ugujemy obszary normalne wzglêdem osi $Oy$, zaœ sama procedura jest oparta g³ównie o wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) oraz podane definicje $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ oraz $h_{x,i}$ (zmienna \textit{hx}). Parametry wejœciowe to \textit{a,b} - czyli pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. Kolejno \textit{n} i \textit{m} to iloœci podzia³ów przedzia³ów ca³kowania po zmiennej $y$ i $x$. Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.\\
 
-%%do tad
+Widoczna powy¿ej implementacja algorytmu zosta³a zrealizowana poprzez wykonanie stosownych zmian w kodzie procedury \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}. 
+Wprowadzono szereg zmian pozwalaj¹cych na wykorzystanie wzoru Simpsona dla ca³ek podwójnych w obszarach normalnych wzglêdem $Oy$. G³ówna czêœæ procedury bazuje na wyprowadzonym  wzorze (\ref{UogolnionyWzorSimpsona_Simpson2DVarX}) oraz podanych równoczeœnie definicjach $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ i $h_{x,i}$ (zmienna \textit{hx}). 
+
+Do poprawnego wywo³ania procedury, niezbêdna jest nam wiedza na temat znaczenia parametrów wejœciowych. S¹ to \textit{a,b} - opisuj¹ce pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. \textit{N} i \textit{M} s¹ parametrami przez które przekazujemy liczbê podzia³ów przedzia³ów ca³kowania  po zmiennej $y$ i $x$. Dodatkowo przed implementacj¹ procedury znajdowaæ musz¹ siê definicje funkcji $c(y)$ i $d(y)$ bêd¹cych doln¹ i górn¹ granic¹ ca³kowania po zmiennej $x$\\
+
 Za pomoc¹ procedury \ref{MAPLE_Simpson2ObszarNormalnyOYWartoscCalki} obliczmy przybli¿one wartoœci nastêpuj¹cych ca³ek:
 \begin{itemize}\label{PrzykladoweCalkiSimpson2VarX}
 \item[a)] $\int\limits_{1}^{2}\int\limits_{y}^{2y} \frac{x+y}{\sqrt{y}} dxdy$
@@ -941,7 +945,7 @@ Dok³adna wartoœæ ca³ki z punktu b) jest równa $2.15$, zatem:
 \end{table}
 
 
-WNIOSKI i POROWNANIE Z WYNIKAMI TRAPEZ2VARX
+tutaj WNIOSKI i POROWNANIE Z WYNIKAMI TRAPEZ2VARX
    
    
    
