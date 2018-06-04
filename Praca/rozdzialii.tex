@@ -23,8 +23,8 @@ przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnika
 Naszym celem jest jednak to, by jak najbardziej zminimalizowaæ b³¹d pojawiaj¹cy siê podczas przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy \cite{klucz4}\cite{klucz7}
 
 \begin{equation}\label{SumaCalkowaLagrangeWkwadraturze}
-I(f)=\int\limits_a^b f(x) dx \approx \int\limits_a^b L_n(x) dx=
-\sum\limits_{i=0}^n a_i f(x_i) dx= S(f),
+I(f)=\int\limits_a^b f(x) dx \approx \int\limits_a^b L_n(x) dx\approx
+\sum\limits_{i=0}^n a_i f(x_i) \approx S(f),
 \end{equation}
 gdzie 
 \begin{equation}\label{wspolczynnikAi}
@@ -38,7 +38,7 @@ W zwi¹zku z powy¿szym, ca³kê (\ref{I(f)=Calkaf(x)}) mo¿emy wyraziæ w nastêpuj¹cy
 \begin{equation}\label{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n f(x_i)\int\limits_a^b l_i(x) dx
 \end{equation}
-Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu trzech ró¿nych przypadków, dla których kolejne wêz³y s¹ równo odleg³e - bêd¹ to: \textit{wzór trapezów}, \textit{wzór Simpsona} oraz dodatkowo \textit{wzór prostok¹tów}.
+Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu dwóch ró¿nych przypadków, dla których kolejne wêz³y s¹ równo odleg³e - bêd¹ to: \textit{wzór trapezów} oraz \textit{wzór Simpsona} .
 
 
 \section{Wzór trapezów}\label{Podrozdzial_WzorTrapezow}
@@ -111,7 +111,7 @@ PrzejdŸmy do praktycznego zastosowania  (\ref{OgolnyWzorTrapezow}) w celu pokaza
 \begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\label{PrzykladCalkaPojedynczaMetodaTrapezow}\hfill
 \textit{Wyznaczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów).}\\
 
-Do rozwi¹zania zadania skorzystamy z ogólnego wzoru trapezów. Wyznaczamy wartoœci wêz³ów oraz odleg³oœ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
+Do rozwi¹zania zadania skorzystamy z ogólnego wzoru trapezów. Wyznaczamy wartoœci wêz³ów oraz odleg³oœæ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
 $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\ 
 Wyliczone wartoœci wstawiamy do (\ref{OgolnyWzorTrapezow}):
 \begin{center}
@@ -146,14 +146,14 @@ Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ 
 \begin{verbatim}
 > trapez:=proc(a,b,n) 
 local h,j,i,x,y,t,tp;
-if (((ceil(n)>n) or (floor(n)<n)) or n<=0)
-then ERROR('Ostatni parametr musi byc liczba naturalna')else 
-h:=(b-a)/n; 
-for j from 0 to n do x:= j -> a+j*h od;  
-for j from 0 to n do y:= j -> f(x(j)) od;  
-t:= h/2 * sum(y(i)+y(i+1), i=0..n-1); 
-tp:=evalf(t,12);
-fi; 
+ if (((ceil(n)>n) or (floor(n)<n)) or n<=0)
+ then ERROR('Ostatni parametr musi byc liczba naturalna')else 
+   h:=(b-a)/n; 
+   for j from 0 to n do x:= j -> a+j*h od;  
+   for j from 0 to n do y:= j -> f(x(j)) od;  
+   t:= h/2 * sum(y(i)+y(i+1), i=0..n-1); 
+   tp:=evalf(t,12);
+ fi; 
 end;
 \end{verbatim}
 \end{proc}
@@ -213,15 +213,15 @@ Uwagê nale¿y skupiæ równie¿ na wartoœciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_
 \label{MAPLE_BladMetodyTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapezBlad:= proc (a, b, n)
-local d2ff, simd2ff, M2, deltaT;
-if (((ceil(n)>n) or (floor(n)<n)) or n<=0)
-then ERROR('Ostatni parametr musi byc liczba naturalna')
-else 
-d2ff:= diff(diff(f(x), x), x); 
-simd2ff:= simplify(d2ff); 
-M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b); 
-deltaT:= evalf(1/12*M2[1]*(b-a)^3/n^2)
-fi; 
+ local d2ff, simd2ff, M2, deltaT;
+ if (((ceil(n)>n) or (floor(n)<n)) or n<=0)
+  then ERROR('Ostatni parametr musi byc liczba naturalna')
+ else 
+  d2ff:= diff(diff(f(x), x), x); 
+  simd2ff:= simplify(d2ff); 
+  M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b); 
+  deltaT:= evalf(1/12*M2[1]*(b-a)^3/n^2)
+ fi; 
 end;
 \end{verbatim}
 \end{proc}    
@@ -233,12 +233,12 @@ Czêsto przeprowadzaj¹c obliczenia naukowe musimy zadbaæ o to, by wynik jaki otrz
 \label{MAPLE_najmniejszyNDlaMetodyTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapeznMin:= proc (a, b, blad) 
-local d2ff, simd2ff, M2, nMin, p;
-d2ff:= diff(diff(f(x), x), x);
-simd2ff:= simplify(d2ff); 
-M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b);
-p:= solve*({1/12*(b-a)^3*M2[1]/n^2 < blad, 0 < n}, {n}); 
-nMin := p[1] 
+  local d2ff, simd2ff, M2, nMin, p;
+  d2ff:= diff(diff(f(x), x), x);
+  simd2ff:= simplify(d2ff); 
+  M2:= (Optimization[Maximize])(abs(simd2ff), x = a .. b);
+  p:= solve*({1/12*(b-a)^3*M2[1]/n^2 < blad, 0 < n}, {n}); 
+  nMin := p[1] 
 end;
 \end{verbatim}
 \end{proc}
@@ -277,7 +277,7 @@ Podstawiaj¹c obliczone powy¿ej wartoœci $a_0, a_1, a_2$ do (\ref{WzorKwadratura}
 =\frac{h}{3}f(x_0)+\frac{4h}{3}f(x_1)+\frac{h}{3}f(x_2)=\frac{h}{3}(f(x_0)+4f(x_1)+f(x_2)).
 \end{array}
 \end{equation}
-Zauwa¿my, ¿e dla tego przypadku zachodzi równie¿ prawid³owoœæ zwi¹zana z wartoœci¹ sumy wspó³czynników, adekwatna do tej ze wzoru trapezów: $a_0+a_1+a_2=\frac{h}{2}+\frac{4h}{3}+\frac{h}{3}=n\cdot h=2\cdot h$. Mo¿emy zatem wnioskowaæ, ¿e powy¿sze obliczenia zosta³y przeprowadzone prawid³owo.
+Zauwa¿my, ¿e dla tego przypadku zachodzi równie¿ prawid³owoœæ zwi¹zana z wartoœci¹ sumy wspó³czynników, adekwatna do tej ze wzoru trapezów: $a_0+a_1+a_2=\frac{h}{3}+\frac{4h}{3}+\frac{h}{3}=n\cdot h=2\cdot h$. Mo¿emy zatem wnioskowaæ, ¿e powy¿sze obliczenia zosta³y przeprowadzone prawid³owo.
 
 Równanie (\ref{wzorSimpsonaBrakPodzialu}) opisuje przypadek, w którym ca³ka $\int\limits_a^b f(x)dx$ jest przybli¿ana polem znajduj¹cym siê tylko pod jedn¹ parabol¹ na przedziale $[a,b]$ (podzielono go na dwa równe podprzedzia³y $[a=x_0,x_1]$ i $[x_1,x_2=b]$). Wykres omawianej paraboli przechodzi przez punkty $(a=x_0,f(x_0))$, $(\frac{b+a}{2}=x_1,f(x_1))$, $(b=x_2,f(x_2))$. 
 
@@ -328,16 +328,16 @@ Wynik, który otrzymaliœmy w przeprowadzonych obliczeniach jest bardzo zbli¿ony d
 \begin{verbatim}
 >simpson :=proc(a,b,N) 
 local h,i,j,m,x,y,s,sp;
-if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
-then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
-else
-	m:=N/2; 
-	h:=(b-a)/(2*m); 
-	for j from 0 to 2*m do x:= j -> a+j*h od;  
-	for j from 0 to 2*m do y:= j -> f(x(j)) od;  
-	s:= h/3 * sum(y(2*i)+4*y(2*i+1)+y(2*i+2), i=0..m-1); 
-	sp:=evalf(s,12);
-fi; 
+ if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
+ then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
+ else
+    m:=N/2; 
+    h:=(b-a)/(2*m); 
+    for j from 0 to 2*m do x:= j -> a+j*h od;  
+    for j from 0 to 2*m do y:= j -> f(x(j)) od;  
+    s:= h/3 * sum(y(2*i)+4*y(2*i+1)+y(2*i+2), i=0..m-1); 
+    sp:=evalf(s,12);
+ fi; 
 end;
 \end{verbatim}
 \end{proc}      
@@ -346,7 +346,7 @@ Powy¿szy skrypt tworzy procedurê w jêzyku \textit{Maple}, realizuj¹c¹ algorytm w
 $\mathbf{a}$ - wartoœæ dolnej granicy ca³kowania\\
 $\mathbf{b}$ - wartoœæ górnej granicy ca³kowania\\
 $\mathbf{N}$ - opisuje iloœæ podzia³ów przedzia³u ca³kowania funkcji $f(x)$ (konieczne jest zdefiniowanie $f(x)$ przed wywo³aniem ka¿dej prezentowanej w tym podrozdziale procedury). Wartoœæ parametru $N$ musi byæ liczb¹ naturaln¹ i podzieln¹ przez $2$, gdy¿ zastosowanie metody parabol  wymaga co najmniej $2$ podprzedzia³ów wydzielonych przez $3$ równo odleg³e wêz³y.\\
-Kod znajduj¹cy siê po nag³ówku procedury to definicja zmiennych lokalnych, wykorzystywanych wewn¹trz owej procedury. Kolejno sprawdzana jest poprawnoœæ wprowadzonego parametru $N$. Je¿eli $N$ posiada niezerow¹ czêœæ dziesiêtn¹, b¹dŸ jest liczb¹ naturaln¹ nieparzyst¹ lub  ca³kowit¹ \mbox{$\leq 0$} wtedy algorytm koñczy swoje dzia³anie zwracaj¹c b³¹d o treœci 'Ostatni parametr musi by liczba naturalna postaci 2m'. W przeciwnym wypadku nastêpuje przejœcie do g³ównego algorytmu, który rozpoczyna siê od obliczenia iloœci par podprzedzia³ów oraz odleg³oœci $h$ pomiêdzy kolejnymi punktami wêz³owymi. Nastêpnie wyznaczane s¹ wszystkie wêz³y $x_i$ na danym przedziale $[a,b]$ oraz obliczane wartoœci funkcji $f(x)$ w tych wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci $f(x_i)$ w sposób zgodny ze wzorem (\ref{wzorSimpsonaZPodzialami}). Ostatecznie procedura upraszcza postaæ sumy i zwraca j¹ w formie 12 znakowego wyniku (nie wliczaj¹c w to przecinka).
+Kod znajduj¹cy siê po nag³ówku procedury to definicja zmiennych lokalnych, wykorzystywanych wewn¹trz owej procedury. Kolejno sprawdzana jest poprawnoœæ wprowadzonego parametru $N$. Je¿eli $N$ posiada niezerow¹ czêœæ dziesiêtn¹, b¹dŸ jest liczb¹ naturaln¹ nieparzyst¹ lub  ca³kowit¹ \mbox{$\leq 0$}, wtedy algorytm koñczy swoje dzia³anie zwracaj¹c b³¹d o treœci 'Ostatni parametr musi by liczba naturalna postaci 2m'. W przeciwnym wypadku nastêpuje przejœcie do g³ównego algorytmu, który rozpoczyna siê od obliczenia iloœci par podprzedzia³ów oraz odleg³oœci $h$ pomiêdzy kolejnymi punktami wêz³owymi. Nastêpnie wyznaczane s¹ wszystkie wêz³y $x_i$ na danym przedziale $[a,b]$ oraz obliczane wartoœci funkcji $f(x)$ w tych wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci $f(x_i)$ w sposób zgodny ze wzorem (\ref{wzorSimpsonaZPodzialami}). Ostatecznie procedura upraszcza postaæ sumy i zwraca j¹ w formie 12 znakowego wyniku (nie wliczaj¹c w to przecinka).
 
 Zanim zaprezentujemy wyniki zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}, to zechciejmy pochyliæ siê jeszcze przez moment nad kodem dodatkowej procedury umo¿liwiaj¹cej oszacowanie b³êdu $\delta_S$ z równania (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoœci bêdzie nam pomocna podczas kontroli, czy obliczenia s¹ przeprowadzane poprawnie, tzn. musi zachodziæ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wiêkszych iloœci podzia³ów przedzia³u ca³kowania.
 
@@ -355,20 +355,20 @@ Zanim zaprezentujemy wyniki zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCa
 \begin{verbatim}
 > simpsonBlad:= proc(a, b, N)
 local d4ff, simd4ff, M4, deltaS;
-if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
-then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
-else
-d4ff:= diff(diff(diff(diff(f(x),x),x),x),x); 
-simd4ff:= simplify(d4ff); 
-M4:= (Optimization[Maximize])(abs(simd4ff), x = a .. b); 
-deltaS:= evalf(1/180*M4[1]*(b-a)^5/N^4);
-fi; 
+ if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or N<=0)
+ then ERROR('Ostatni parametr musi byc liczba naturalna postaci \2m')
+ else
+  d4ff:= diff(diff(diff(diff(f(x),x),x),x),x); 
+  simd4ff:= simplify(d4ff); 
+  M4:= (Optimization[Maximize])(abs(simd4ff), x = a .. b); 
+  deltaS:= evalf(1/180*M4[1]*(b-a)^5/N^4);
+ fi; 
 end;
 \end{verbatim}
 \end{proc}
 Powy¿sza procedura ma za zadanie wyznaczyæ wartoœæ $\delta_S$, tak by prawdziwe by³o oszacowanie (\ref{NierownoscBBPrzyblizenia<=DeltaS}). Parametry $a$, $b$ i $N$ definiowane s¹ w sposób identyczny, jak w procedurze \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Aby wykona³ siê algorytm g³ówny (znajduj¹cy siê wewn¹trz procedury w bloku \textit{else}), ponownie musi zostaæ spe³niony warunek mówi¹cy o tym, ¿e $N$ jest licz¹ naturaln¹ i parzyst¹. Je¿eli taka prawid³owoœæ zachodzi, to obliczamy wartoœæ $f^{(4)}(x)$ oraz upraszczamy jej postaæ. Zgodnie z (\ref{CzynnikM4DoBleduMetodySimpsona}) wyliczamy maksimum  $f^{(4)}(x)$ na przedziale $[a,b]$ (jest to najbardziej znacz¹cy krok) i podstawiamy wszystkie znane ju¿ nam argumenty do (\ref{BladMetodySimpsona}). W ten sposób dochodzimy do po¿¹danej przez nas formy $\delta_S$. 
 
-Posiadaj¹c ju¿ odpowiednie narzêdzia (procedura \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}) oraz wiedzê z zakresu metodyki ich dzia³ania, wykonajmy pomiary, które zobrazuj¹ nam w sposób praktyczny dok³adnoœæ metody \textit{Simpsona}. Niech $N$ stanowi liczbê podzia³ów przedzia³y ca³kowania, $W_{simpson}$ opisuje wartoœci zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Ponadto  przez $|BBS_{N}|$ oznaczymy b³¹d bezwzglêdnym przybli¿enia wartoœci ca³ki metod¹ \textit{Simpsona}, natomiast przez symbol $\delta_S$ rozumieæ bêdziemy wynik wywo³ania procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}. Do obliczeñ ponownie wykorzystajmy ca³kê z przyk³adu \ref{PrzykladCalkaLiczonaWzoremSimpsona} (zastosujemy równie¿ jej wartoœæ dok³adna, która jest podana w jego rozwi¹zaniu):\\
+Posiadaj¹c ju¿ odpowiednie narzêdzia (procedura \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}) oraz wiedzê z zakresu metodyki ich dzia³ania, wykonajmy pomiary, które zobrazuj¹ nam w sposób praktyczny dok³adnoœæ metody \textit{Simpsona}. Niech $N$ stanowi liczbê podzia³ów przedzia³y ca³kowania, $W_{simpson}$ opisuje wartoœci zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Ponadto  przez $|BBS_{N}|$ oznaczymy b³¹d bezwzglêdnym przybli¿enia wartoœci ca³ki metod¹ \textit{Simpsona}, natomiast przez symbol $\delta_S$ rozumieæ bêdziemy wynik wywo³ania procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}. Do obliczeñ ponownie wykorzystajmy ca³kê z przyk³adu \ref{PrzykladCalkaLiczonaWzoremSimpsona} (zastosujemy równie¿ jej wartoœæ dok³adn¹, która jest podana w jego rozwi¹zaniu):\\
 
 \begin{table}[h!]
 
@@ -418,13 +418,13 @@ W poprzednim podrozdziale wspominaliœmy, ¿e niejednokrotnie interesuje nas minim
 \label{MAPLE_najmniejszyNDlaMetodySimpsonaCalkaPojedyncza}
 \begin{verbatim}
 > simpsonMinN:= proc (a, b, blad) 
-local d4ff, simd4ff, M4, Nmin, p;
-d4ff:= diff(diff(diff(diff(f(x),x),x),x),x);
-simd4ff:= simplify(d4ff); 
-M4:= (Optimization[Maximize])(abs(simd4ff), x = a .. b);
-p:= solve*({1/180*(b-a)^5*M4[1]/N^4 < blad, N>0}, {N}); 
-Nmin := p[1] 
-end;
+   local d4ff, simd4ff, M4, Nmin, p;
+   d4ff:= diff(diff(diff(diff(f(x),x),x),x),x);
+   simd4ff:= simplify(d4ff); 
+   M4:= (Optimization[Maximize])(abs(simd4ff), x = a .. b);
+   p:= solve*({1/180*(b-a)^5*M4[1]/N^4 < blad, N>0}, {N}); 
+   Nmin := p[1] 
+  end;
 \end{verbatim}
 \end{proc}   
 Zmiana polega na tym, ¿e ostatnim parametrem wejœciowym jest teraz nie iloœæ podzia³ów przedzia³u, lecz akceptowalna maksymalna wielkoœæ b³êdu. Równie¿ zamiast obliczaæ $\delta_S$, przekszta³camy równanie (\ref{BladMetodySimpsona}) do postaci nastêpuj¹cej nierównoœci: $$\frac{(b-a)^5}{180 \cdot N^4} \cdot M_4 < blad .$$ W linii trzeciej od koñca jest ona  rozwi¹zywana ze wzglêdu na zmienn¹ $N$, przy za³o¿eniu, ¿e interesuj¹ nas tylko takie wartoœci, gdzie $N>0$. Finalnie procedura wypisuje wynik w postaci $N > z$, przy czym $z\in\mathbb{Z_{+}}$. Nam jednak najbardziej zale¿y na  najbli¿szej, wiêkszej od $z$ liczbie naturalnej, podzielnej przez $2$. W³aœnie ta liczba jest szukanym przez nas $N$, dla którego b³¹d przybli¿enia bêdzie mniejszy ni¿ ten podany jako trzeci parametr wywolania \textit{simpsonMinN}.

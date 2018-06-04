@@ -1,8 +1,9 @@
 \chapter{Kwadratury Newtona-Cotesa dla ca³ek podwójnych w prostok¹cie}
-W ca³ym poprzednim rozdziale skupialiœmy siê na metodach ca³kowania numerycznego. Odnosi³y siê one jednak tylko do funkcji jednej zmiennej - zatem ca³kowanie odbywa³o siê na pewnym przedziale domkniêtym. Teraz chcemy poszerzyæ nasz¹ wiedzê i przejœæ o jeden krok dalej. Nasze rozwa¿ania zostan¹ skierowane ponownie na te same, co poprzednio metody ca³kowania numerycznego. Znacz¹ca ró¿nica polega³a bêdzie na tym, ¿e zajmiemy siê ca³kowaniem funkcji dwóch zmiennych. Wszystkie nasze dzia³ania maj¹ na celu wy³onienie najdok³adniejszej metody wyznaczania wartoœci ca³ek podwójnych przy pomocy prezentowanych algorytmów.  W badaniach wyró¿nimy dwa typy obszarów ca³kowania, bêd¹ to:
+W ca³ym poprzednim rozdziale skupialiœmy siê na metodach ca³kowania numerycznego. Odnosi³y siê one jednak tylko do funkcji jednej zmiennej - zatem ca³kowanie odbywa³o siê na pewnym przedziale domkniêtym. Teraz chcemy poszerzyæ nasz¹ wiedzê i przejœæ o jeden krok dalej. Nasze rozwa¿ania zostan¹ skierowane ponownie na te same, co poprzednio metody ca³kowania numerycznego. Znacz¹ca ró¿nica polega³a bêdzie na tym, ¿e zajmiemy siê ca³kowaniem funkcji dwóch zmiennych. Wszystkie nasze dzia³ania maj¹ na celu wy³onienie najdok³adniejszej metody wyznaczania wartoœci ca³ek podwójnych przy pomocy prezentowanych algorytmów.  W badaniach wyró¿nimy trzy typy obszarów ca³kowania, bêd¹ to:
 \begin{itemize}
 \item[a)] Obszar normalny ze wzglêdu na zmienn¹ $x$ i $y$
 \item[b)] Obszar normalny tylko ze wzglêdu na zmienn¹ $x$
+\item[c)] Obszar normalny tylko ze wzglêdu na zmienn¹ $y$
 \end{itemize}
 
 W celu kontynuacji rozwa¿añ musimy przypomnieæ niezbêdn¹ dla nas definicjê normalnoœci obszaru:
@@ -11,7 +12,7 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 \begin{itemize}
 \item[a)]\label{ObszaryNormalneOx}wzglêdem osi $OX$ (tj. wzglêdem $x$) mówimy, gdy podzbiór p³aszczyzny kartezjañskiej ograniczony jest przez wykresy pewnych dwóch funkcji ci¹g³ych $u(x)$ i $v(x)$ oraz dwie proste równoleg³e do osi $OY$.    
 \item[b)]\label{ObszaryNormalneOy}wzglêdem osi $OY$ (tj. wzglêdem $y$) mówimy, gdy podzbiór p³aszczyzny kartezjañskiej jest wyznaczany poprzez wykresy dwóch ró¿nych funkcji ci¹g³ych $l(y)$ i $k(y)$ oraz dwie proste, które s¹ równoleg³e do osi $OX$.
-\item[c)]ze wzglêdu na zmienne $x$ i $y$ mówimy, gdy podzbiór p³aszczyzny kartezjañskiej jest ograniczony przez dwie proste równoleg³e do osi $OX$ oraz dwie proste równoleg³e do $OY$ 
+\item[c)]ze wzglêdu na zmienne $x$ i $y$ mówimy, gdy podzbiór p³aszczyzny kartezjañskiej jest ograniczony przez dwie proste równoleg³e do osi $OX$ oraz dwie proste \mbox{równoleg³e do $OY$} 
 
 \end{itemize}
 
@@ -22,8 +23,8 @@ Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d
 Przedzia³ $[a,b]$ zostanie podzielony na $n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
 \vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
 \begin{array}{cc}
-a=x_0\leq x_1\leq x_2\ldots\leq x_n=b \\
-c=y_0\leq y_1\leq y_2\ldots\leq y_m=d \\
+a=x_0 < x_1 < x_2\ldots < x_n=b \\
+c=y_0 < y_1 < y_2\ldots < y_m=d \\
 \end{array}
 \end{equation} 
 Postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
@@ -166,26 +167,26 @@ Widaæ wprost, ¿e przeprowadzenie pe³nych obliczeñ mo¿e staæ siê bardzo k³opotliw
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu uogólnionego wzoru trapezów)\label{MAPLE_Trapez2ObszarNormalnyWartoscCalki}
 \begin{verbatim}
 > Trapez2 := proc (a, b, c, d, n, m) 
-local h, k, i, j, p, q, x, y, z, T2, WynikT2; 
-h := (b-a)/n; 
-k := (d-c)/m; 
+  local h, k, i, j, p, q, x, y, z, T2, WynikT2; 
+  h := (b-a)/n; 
+  k := (d-c)/m; 
 
-for i from 0 to n 
-	do x := i -> a+i*h od;
+  for i from 0 to n 
+      do x := i -> a+i*h od;
  
-for j from 0 to m 
-	do y := j -> c+j*k od; 
+  for j from 0 to m 
+      do y := j -> c+j*k od; 
 
-for i from 0 to n 
-	do for j from 0 to m 
-	do z := (i, j) -> f(x(i), y(j)) od 
-	od;
+  for i from 0 to n 
+      do for j from 0 to m 
+            do z := (i, j) -> f(x(i), y(j)) od 
+      od;
 
-T2 := (h*k)/4*(sum(sum(z(p, q)+z(p+1, q)+z(p, q+1)+z(p+1, q+1)
-				, p = 0 .. n-1), q = 0 .. m-1)); 
+  T2 := (h*k)/4*(sum(sum(z(p, q)+z(p+1, q)+z(p, q+1)+z(p+1, q+1)
+                                 , p = 0 .. n-1), q = 0 .. m-1)); 
 
-WynikT2 := evalf(T2) 
-end;
+  WynikT2 := evalf(T2) 
+  end;
 \end{verbatim}
 \end{proc}
 
@@ -306,8 +307,8 @@ Rozwa¿my pewien obszar ca³kowania $\Delta=\{a\leq x\leq b ; c\leq y \leq d \}$.
 Przedzia³ $[a,b]$ zostanie podzielony na $N=2n$, $(n=1,2,\ldots)$ podprzedzia³ów postaci \mbox{$[x_{2i},x_{2i+1}] (i=0,\frac{1}{2},\ldots, \frac{2n-1}{2})$}. Podobnie bêdzie dla $[c,d]$, podzielimy go na $M=2m$, $(m=1,2,\ldots)$ podprzedzia³ów \mbox{$[y_{2j},y_{2j+1}]$ ($j=0,\frac{1}{2},\ldots, \frac{2m-1}{2}$).} Z tego faktu wynika³a bêdzie nastêpuj¹ca prawid³owoœæ:
 \vspace{-0.5cm}\begin{equation}\label{WezlySimpson2}
 \begin{array}{cc}
-a=x_0\leq x_1\leq x_2\ldots\leq x_{2n}=b \\ 
-c=y_0\leq y_1\leq y_2\ldots\leq y_{2m}=d \\
+a=x_0 < x_1 < x_2\ldots < x_{2n}=b \\ 
+c=y_0 < y_1 < y_2\ldots < y_{2m}=d \\
 \end{array}
 \end{equation}
 Dodatkowo zauwa¿my, ¿e postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
@@ -520,36 +521,36 @@ Algorytm \textit{Simpsona} (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) pomimo
 \begin{small}
 \begin{verbatim}
 > Simpson2 := proc(a, b, c, d, N, M) 
-local h, k, i, j, n, m, p, q, x, y, z, S2, WynikS2; 
-if ((((ceil(N)>N) or (floor(N)<N)) or (mod(N,2) = 1 and N>0) or N <= 0)
-or (((ceil(M)>M) or (floor(M)<M)) or (mod(M,2) = 1 and M>0) or M <= 0)) 
-then 
-ERROR('Ostatnie dwa parametry musza byc liczba naturalna postaci \2k') 
+  local h, k, i, j, n, m, p, q, x, y, z, S2, WynikS2; 
+  if ((((ceil(N)>N) or (floor(N)<N)) or (mod(N,2) = 1 and N>0) or N <= 0)
+   or (((ceil(M)>M) or (floor(M)<M)) or (mod(M,2) = 1 and M>0) or M <= 0)) 
+  then 
+    ERROR('Ostatnie dwa parametry musza byc liczba naturalna postaci \2k'); 
 
-else 
-n := (1/2)*N; 
-m := (1/2)*M; 
-h := (b-a)/N; 
-k := (d-c)/M; 
+  else 
+    n := (1/2)*N; 
+    m := (1/2)*M; 
+    h := (b-a)/N; 
+    k := (d-c)/M; 
 
-for i from 0 to N 
-do x := i -> a+i*h od; 
+   for i from 0 to N 
+      do x := i -> a+i*h od; 
 
-for j from 0 to M 
-do y := j -> c+j*k od; 
+   for j from 0 to M 
+      do y := j -> c+j*k od; 
 
-for i from 0 to N 
-do for j from 0 to M 
-do z :=(i,j) -> f(x(i),y(j)) od
-od; 
+   for i from 0 to N 
+      do for j from 0 to M 
+           do z :=(i,j) -> f(x(i),y(j)) od;
+      od; 
 
-S2 := (1/9)*h*k*(sum(sum(z(2*p,2*q)+4*z(2*p+1,2*q)+z(2*p+2,2*q)
-+4*z(2*p,2*q+1)+16*z(2*p+1,2*q+1)+4*z(2*p+2,2*q+1)
-+z(2*p,2*q+2)+4*z(2*p+1,2*q+2)+z(2*p+2,2*q+2)
-, p = 0 .. n-1), q = 0 .. m-1)); 
+  S2 := (1/9)*h*k*(sum(sum(z(2*p,2*q)+4*z(2*p+1,2*q)+z(2*p+2,2*q)
+        +4*z(2*p,2*q+1)+16*z(2*p+1,2*q+1)+4*z(2*p+2,2*q+1)
+        +z(2*p,2*q+2)+4*z(2*p+1,2*q+2)+z(2*p+2,2*q+2)
+        , p = 0 .. n-1), q = 0 .. m-1)); 
 
-WynikS2 := evalf(S2) fi; 
-end;
+  WynikS2 := evalf(S2) fi; 
+  end;
 \end{verbatim}
 \end{small}
 \end{proc}  
