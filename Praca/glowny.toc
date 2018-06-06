@@ -16,5 +16,5 @@
 \contentsline {section}{\numberline {4.3}Wz\'or trapez\'ow dla obszaru normalnego wzgl\k edem osi Oy}{72}{section.4.3}
 \contentsline {section}{\numberline {4.4}Wz\'or Simpsona dla obszaru normalnego wzgl\k edem osi Oy}{77}{section.4.4}
 \contentsline {chapter}{Podsumowanie}{84}{chapter*.26}
-\contentsline {chapter}{Bibliografia}{86}{chapter*.27}
+\contentsline {chapter}{Bibliografia}{85}{chapter*.27}
 \contentsline {chapter}{Spis procedur w j\k ezyku Maple}{87}{chapter*.27}
