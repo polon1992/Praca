@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  7 JUN 2018 12:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 JUN 2018 09:28
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -917,6 +917,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
  []
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+[]\T1/ptm/m/n/12 Praca dy-plo-mowa po-±wi¦-cona zo-staªa skon-stru-owa-niu wy-b
+ra-nych kwa-dra-tur
+ []
+
+
+Underfull \hbox (badness 5696) in paragraph at lines 65--66
+\T1/ptm/m/it/12 Newtona-Cotesa \T1/ptm/m/n/12 dla po-je-dyn-czych i po-dwój-nyc
+h ca-ªek ozna-czo-nych, oraz zba-da-niu
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 65--66
+\T1/ptm/m/n/12 wpro-wa-dze-nie teo-re-tyczne po-zwa-la-j¡ce le-piej zro-zu-mie¢
+ oma-wiany te-mat. Po-ka-zano
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 65--66
+\T1/ptm/m/n/12 po-miary przed-sta-wiono w for-mie ta-be-la-rycz-nej i za-miesz-
+czono krót-kie ko-men-ta-rze z
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
@@ -1602,4 +1626,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,7027s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (87 pages, 499316 bytes).
+Output written on glowny.dvi (87 pages, 499968 bytes).
