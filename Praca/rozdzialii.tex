@@ -5,30 +5,30 @@
 Niech $f(x)$ bêdzie funkcj¹ zdefiniowan¹ na przedziale $[a,b]$ o wartoœciach rzeczywistych tzn. $f: [a,b]\rightarrow \re$. 
 Rozwa¿my pewn¹ ca³kê \cite{klucz4}
 \begin{equation}\label{I(f)=Calkaf(x)}
-I(f)=\int\limits_a^b f(x) dx
+I(f)=\int\limits_a^b f(x) dx.
 \end{equation}
 
-Funkcjê podca³kow¹ zawsze mo¿emy zast¹piæ inn¹ funkcj¹ tak¹, ¿e w miarê mo¿liwoœci poni¿sze przybli¿enie bêdzie prawdziwe:
+\hspace{-1cm}{Funkcjê podca³kow¹ mo¿emy zast¹piæ inn¹ funkcj¹ tak¹, ¿e w miarê mo¿liwoœci poni¿sze przybli¿enie bêdzie prawdziwe:}
 \begin{equation}\label{ZastapienieFunkcjiFxfunkcjaGx}
-\int\limits_a^b f(x) dx \approx \int\limits_a^b g(x) dx
+\int\limits_a^b f(x) dx \approx \int\limits_a^b g(x) dx.
 \end{equation}
 
-W praktyce czêsto spotkaæ mo¿emy siê z przypadkiem takim, ze do wyznaczenia przybli¿onych wartoœci $I(f)$  stosowane s¹ wzory nazywane kwadraturami. 
-Owe kwadratury opieraj¹ siê na wartoœciach $f(x)$ w punktach wêz³owych i mog¹ niezbyt dok³adnie przybli¿aæ wynik tzn: 
+\hspace{-1cm}{W praktyce czêsto spotkaæ mo¿emy siê z przypadkiem takim, ze do wyznaczenia przybli¿onych wartoœci $I(f)$  stosowane s¹ wzory nazywane kwadraturami. }
+Owe kwadratury opieraj¹ siê na wartoœciach $f(x)$ w punktach wêz³owych i mog¹ niezbyt dok³adnie przybli¿aæ wynik, tzn: 
 \begin{equation}\label{WzorKwadratura}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n a_if(x_i)=S(f),\,\,\,\, x_i\in[a,b],
 \end{equation}
 przy czym wspó³czynniki $a_i$ s¹ niezale¿ne od $f(x)$ (nazywamy je wspó³czynnikami wagowymi kwadratury i okreœlaj¹ one wielkoœæ udzia³u $f(x_i)$ w wartoœci ca³ej sumy $S(f)$), zaœ $x_i$ nosi miano wêz³ów kwadratury.
 
-Naszym celem jest jednak to, by jak najbardziej zminimalizowaæ b³¹d pojawiaj¹cy siê podczas przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy \cite{klucz4}\cite{klucz7}
+Naszym celem jest jednak to, by jak najbardziej zminimalizowaæ b³¹d pojawiaj¹cy siê podczas przybli¿ania wartoœci $I(f)$. W zwi¹zku z tym mo¿emy zastosowaæ zabieg zast¹pienia funkcji $f(x)$ w ca³ce $I(f)$ wielomianem interpoluj¹cym j¹. W tym celu wykorzystamy \textit{wielomian interpolacyjny Lagrange'a} (\ref{wielomianInterpolacyjnyLagrangea}). Po podstawieniu go do (\ref{WzorKwadratura}) otrzymamy \cite{klucz4}\cite{klucz7}
 
-\begin{equation}\label{SumaCalkowaLagrangeWkwadraturze}
+\vspace{-0.5cm}\begin{equation}\label{SumaCalkowaLagrangeWkwadraturze}
 I(f)=\int\limits_a^b f(x) dx \approx \int\limits_a^b L_n(x) dx\approx
 \sum\limits_{i=0}^n a_i f(x_i) \approx S(f),
 \end{equation}
 gdzie 
 \begin{equation}\label{wspolczynnikAi}
-a_i=\int\limits_a^b l_i(x),
+a_i=\int\limits_a^b l_i(x)dx,
 \end{equation}
  natomiast 
  \begin{equation}\label{l_iDlaKwadraturN-C}
@@ -36,9 +36,9 @@ a_i=\int\limits_a^b l_i(x),
  \end{equation}
 W zwi¹zku z powy¿szym, ca³kê (\ref{I(f)=Calkaf(x)}) mo¿emy wyraziæ w nastêpuj¹cy sposób:
 \begin{equation}\label{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}
-\int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n f(x_i)\int\limits_a^b l_i(x) dx
+\int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^n f(x_i)\int\limits_a^b l_i(x) dx.
 \end{equation}
-Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy kwadratur¹ \textbf{Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu dwóch ró¿nych przypadków, dla których kolejne wêz³y s¹ równo odleg³e - bêd¹ to: \textit{wzór trapezów} oraz \textit{wzór Simpsona} .
+Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozpatrzymy tylko wêz³y takie, ¿e $x_0=a$, $x_n=b$, a ka¿dy wêze³ poœredni le¿¹cy pomiêdzy $x_0$ a $x_n$ jest postaci $x_i=a+ih$ $(i=0,1,\ldots,n)$, $h=\frac{x_n-x_0}{n}$, to kwadraturê tak¹ nazwiemy \textbf{kwadratur¹ Newtona-Cotesa} \cite{klucz2}. Skupimy siê na rozwa¿eniu dwóch ró¿nych przypadków, dla których kolejne wêz³y s¹ równo odleg³e - bêd¹ to \textit{wzór trapezów} oraz \textit{wzór Simpsona} .
 
 
 \section{Wzór trapezów}\label{Podrozdzial_WzorTrapezow}
@@ -50,97 +50,93 @@ Je¿eli w (\ref{PrzyblizenieCalkiSumaCalkowaZwielomianamiBazowymiLagrangea}) rozp
 %\end{equation}
 
 
-Do wyznaczenia wzoru trapezów bêdziemy wykorzystywaæ wielomian interpolacyjny \textit{Lagrange'a} rzêdu $n=1$ ($L_1(x)$) utworzony dla wêz³ów $a$ i $b$.
-Zastosujmy w (\ref{l_iDlaKwadraturN-C}) nastêpuj¹ce podstawienie: $x=a+hs$. Wartoœci $a,h$ s¹ pewnymi sta³ymi \cite{klucz7}, natomiast $s$ jest zmienn¹ niezale¿n¹.
+Do wyznaczenia \textit{wzoru trapezów} bêdziemy wykorzystywaæ \textit{wielomian interpolacyjny Lagrange'a} rzêdu $n=1$ ($L_1(x)$) utworzony dla wêz³ów $a$ i $b$.
+Zastosujmy w (\ref{l_iDlaKwadraturN-C}) nastêpuj¹ce podstawienie: $x=a+hs$. Wartoœci $a,h$ s¹ pewnymi sta³ymi \cite{klucz7}, natomiast $s$ jest zmienn¹ niezale¿n¹:
 $$l_i(x)=\prod\limits_{j=0, j\neq i}^n \frac{x-x_j}{x_i-x_j}=
 \prod\limits_{j=0, j\neq i}^n \frac{a+hs-(a+jh)}{(a+ih)-(a+jh)}=
 \prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}$$
 Otrzymujemy zatem:
 \begin{equation}\label{WielomianLagrangeaPoPodstawieniuZaX}
-l_i(x)=\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}=\psi_i(s)
+l_i(x)=\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}=\psi_i(s),
 \end{equation}
-$\psi_i(s)$ to nasza nowa funkcja zmiennej $s$.
+gdzie $\psi_i(s)$ to nasza nowa funkcja zmiennej $s$.
 
 
-Ca³kê z równania (\ref{wspolczynnikAi}) obliczymy metod¹ ca³kowania przez podstawienie. Skorzystamy z przedstawionego przed chwil¹ podstawienia $x=a+hs$ oraz równania (\ref{WielomianLagrangeaPoPodstawieniuZaX})\\
+Ca³kê z równania (\ref{wspolczynnikAi}) obliczymy metod¹ ca³kowania przez podstawienie. Skorzystamy z przedstawionego przed chwil¹ podstawienia $x=a+hs$ oraz równania (\ref{WielomianLagrangeaPoPodstawieniuZaX}):\\
 \begin{equation}\label{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}
 a_i=\int\limits_a^b l_i(x) dx=\left\{\begin{array}{ll}
 x=a+hs\\
 dx=h ds\\
 b=a+hs \Rightarrow \frac{b-a}{h}=s\Rightarrow s=n\\
 a=a+hs \Rightarrow 0=hs \Rightarrow s=0
-\end{array}\right\}=h\int\limits_0^n \psi_i(s)ds
+\end{array}\right\}=h\int\limits_0^n \psi_i(s)ds.
 \end{equation}
 
-Chcemy wyliczyæ teraz wartoœci wspó³czynników kwadratury $a_0$ i $a_1$. Pamiêtamy o tym, ¿e  do obliczeñ wykorzystujemy postaæ wielomianu \textit{Lagrange'a} rzêdu $n=1$, zatem bêdziemy ca³kowali \cite{klucz7} w granicach $[0,n]=[0,1]$
-$$\mathbf{a_0}=h\int\limits_0^1 \psi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\int\limits_0^1(1-s)ds= h\left[s-\frac{s^2}{2}\right]_0^1=\mathbf{\frac{h}{2}}$$
-$$\mathbf{a_1}=h\int\limits_0^1 \psi_1(s) ds=h\int\limits_0^1\frac{s-0}{1-0}ds=\int\limits_0^1(s)ds= h\left[\frac{s^2}{2}\right]_0^1=\mathbf{\frac{h}{2}}$$
+Chcemy wyliczyæ teraz wartoœci wspó³czynników kwadratury $a_0$ i $a_1$. Pamiêtamy o tym, ¿e  do obliczeñ wykorzystujemy postaæ \textit{wielomianu Lagrange'a} rzêdu $n=1$, zatem bêdziemy ca³kowali \cite{klucz7} w granicach $[0,n]=[0,1]$:
+$$\mathbf{a_0}=h\int\limits_0^1 \psi_0(s) ds=h\int\limits_0^1\frac{s-1}{0-1}ds=\int\limits_0^1(1-s)ds= h\left[s-\frac{s^2}{2}\right]_0^1=\mathbf{\frac{h}{2}},$$
+$$\mathbf{a_1}=h\int\limits_0^1 \psi_1(s) ds=h\int\limits_0^1\frac{s-0}{1-0}ds=\int\limits_0^1(s)ds= h\left[\frac{s^2}{2}\right]_0^1=\mathbf{\frac{h}{2}}.$$
 Po wstawieniu wyliczonych wspó³czynników do (\ref{WzorKwadratura}) otrzymujemy 
 \begin{equation}\label{wzorTrapezowBrakPodzialu}
 \begin{array}{cc}
 \int\limits_a^b f(x) dx \approx \sum\limits_{i=0}^1 a_if(x_i)=a_0f(x_0)+a_1f(x_1)=\\
-=\frac{h}{2}f(x_0)+\frac{h}{2}f(x_1)=\frac{h}{2}(f(x_0)+f(x_1))
+=\frac{h}{2}f(x_0)+\frac{h}{2}f(x_1)=\frac{h}{2}(f(x_0)+f(x_1)).
 \end{array}
 \end{equation}
-Wzór ten nazywamy \textbf{wzorem trapezów}. Zauwa¿my, ¿e suma wspó³czynników $a_0$,$a_1$ jest równa $h\cdot n$. W póŸniejszych podrozdzia³ach równie¿ zetkniemy siê z tak¹ prawid³owoœci¹ rozpatruj¹c wy¿szy rz¹d wielomianów \textit{Lagrange'a} dla $n>1$.
+Wzór ten nazywamy \textbf{wzorem trapezów}. Zauwa¿my, ¿e suma wspó³czynników $a_0$,$a_1$ jest równa $h\cdot n$. W kolejnym rozdziale równie¿ zetkniemy siê z tak¹ prawid³owoœci¹ rozpatruj¹c wy¿szy rz¹d \textit{wielomianów Lagrange'a} dla $n>1$.
 %Gdybyœmy wyliczali wspó³czynniki dla $n=2$, to otrzymalibyœmy wzór \textit{Simpsona}
 
 Podczas wyznaczania (\ref{wzorTrapezowBrakPodzialu}) przyjêliœmy, ¿e przedzia³ ca³kowania nie zosta³ podzielony, a jedynymi wêz³ami by³y jego pocz¹tek i koniec. W rzeczywistoœci rozpatrujemy przypadki z wielokrotnym podzia³em przedzia³u. %Dzieje siê tak, poniewa¿ im wiêcej podzia³ów dokonamy tym dok³adniejszy bêdzie uzyskany wynik. 
-Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, to otrzymamy \textit{uogólniony (z³o¿ony) wzór trapezów}:
+Je¿eli przedzia³ ca³kowania $[a,b]$ podzielimy na $\geq 2$ równe czêœci takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, to otrzymamy \textbf{\textit{uogólniony (z³o¿ony) wzór trapezów}}:
 \begin{equation}\label{OgolnyWzorTrapezow}
 \begin{array}{cc}
 \int\limits_a^b f(x)dx=\sum\limits_{i=0}^{n-1}\int\limits_{x_i}^{x_{i+1}}f(x)dx\approx\\ \approx(\frac{h}{2}(f(x_0)+f(x_1))+\cdots+\frac{h}{2}(f(x_{n-1})+f(x_n)))=\\
 =\frac{h}{2}(f(x_0)+2f(x_1)+\cdots+2f(x_{n-1})+f(x_n))=\\ 
-=\frac{h}{2}\sum\limits_{i=0}^{n-1}[f(x_i)+f(x_{i+1})]
+=\frac{h}{2}\sum\limits_{i=0}^{n-1}[f(x_i)+f(x_{i+1})].
 \end{array}
 \end{equation}
 
-
-W wyprowadzonym wzorze trapezów (\ref{OgolnyWzorTrapezow}) (mówi¹c wzór trapezów bêdziemy mieli na myœli jego postaæ z³o¿on¹) przybli¿amy wartoœæ ca³ki sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R2} z pewnoœci¹ pomo¿e nam lepiej zrozumieæ to zagadnienie.
+W wyprowadzonym \textit{wzorze trapezów} (\ref{OgolnyWzorTrapezow}) (mówi¹c wzór trapezów bêdziemy mieli na myœli jego postaæ uogólnion¹) przybli¿amy wartoœæ ca³ki pojedynczej sumuj¹c pola trapezów o ustalonej wysokoœci $h$ (odleg³oœæ pomiêdzy kolejnymi wêz³ami) i podstawach o d³ugoœci $f(x_i)$ i $f(x_{i+1})$ dla $i=0,1,\ldots,n-1$. Rysunek \ref{R2} pomo¿e nam zrozumieæ omawiane zagadnienie.
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.13]{R2.eps} 
 		\end{center}
 	   \caption{Graficzne przedstawienie idei zastosowania wzoru trapezów do ca³kowania}
-%\hspace{2cm}{\footnotesize Ÿród³o: https://pl.wikipedia.org/wiki/Wzór\_trapezów}
+\hspace{0.52cm}{\footnotesize ród³o: \url{https://pl.wikipedia.org/wiki/Wzór\_trapezów}}
 \label{R2}
 \end{figure}
-PrzejdŸmy do praktycznego zastosowania  (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla zadanej funkcji przeprowadzimy rêcznie - przy relatywnie ma³ej liczbie podzia³u przedzia³ów, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla du¿o wiêkszej liczby podzia³ów. 
+PrzejdŸmy do praktycznego zastosowania  (\ref{OgolnyWzorTrapezow}) w celu pokazania jego przydatnoœci. Obliczenia dla przyk³adowej pojedynczej ca³ki oznaczonej przeprowadzimy rêcznie przyjmuj¹c relatywnie ma³¹ liczbê podzia³ów przedzia³u ca³kowania, oraz wykorzystuj¹c procedurê stworzon¹ w jêzyku \textit{Maple} dla zdecydowanie wiêkszych iloœci. 
 
+\begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu \textit{wzoru trapezów})}\label{PrzykladCalkaPojedynczaMetodaTrapezow}\hfill
+\textit{Wyznaczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów).}
 
-\begin{ex}{(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu wzoru trapezów)}\label{PrzykladCalkaPojedynczaMetodaTrapezow}\hfill
-\textit{Wyznaczymy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ przyjmuj¹c, ¿e przedzia³ ca³kowania dzielimy na n=6 równych czêœci(7 wêz³ów).}\\
-
-Do rozwi¹zania zadania skorzystamy z ogólnego wzoru trapezów. Wyznaczamy wartoœci wêz³ów oraz odleg³oœæ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
+Do rozwi¹zania zadania skorzystamy z \textit{ogólnego wzoru trapezów} (\ref{OgolnyWzorTrapezow}). Wyznaczamy wartoœci wêz³ów oraz odleg³oœæ $h=\frac{b-a}{n}$ pomiêdzy kolejnymi wêz³ami:\\
 $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\ 
 Wyliczone wartoœci wstawiamy do (\ref{OgolnyWzorTrapezow}):
 \begin{center}
 $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+2f(x_4)+2f(x_5)+f(x_6))=$\\
 $=\frac{1}{8}(e^0+2e^{{(\frac{1}{4})}^2}+2e^{{(\frac{2}{4})}^2}+2e^{{(\frac{3}{4})}^2}+2e^1+2e^{{(\frac{5}{4})}^2}+e^{{(\frac{6}{4})}^2})\approx 
-\frac{1}{8}(1+2\cdot 1,06449+2\cdot 1,28402+2\cdot 1,75505+2\cdot  2,71828+2\cdot 4,77073+9,48773)\approx 4,20911$\\
+\frac{1}{8}(1+2\cdot 1.06449+2\cdot 1.28402+2\cdot 1.75505+2\cdot  2.71828+2\cdot 4.77073+9.48773)\approx 4.20911.$\\
 \end{center}
-Wartoœæ dok³adna wynosi w zaokr¹gleniu $4,06311405862$. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów, poniewa¿ otrzymany przez nas wynik to $4,20911$.
+Wartoœæ dok³adna wynosi w zaokr¹gleniu $4.06311405862$. Jak widaæ ró¿nica w wyniku jest dosyæ znacz¹ca przy ustalonych wartoœciach wêz³ów, poniewa¿ otrzymany przez nas wynik to $4.20911$.
 \end{ex}
-
-
-Z regu³y im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze powinniœmy otrzymamy przybli¿enie. Mo¿na wnioskowaæ w ten sposób równie¿ poddaj¹c siê na analizie wzoru na b³¹d metody trapezów (im wiêkszy $n$ tym mniejsza wartoœæ $\delta_T$):
-\begin{definition}{(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
+Z regu³y im wiêcej podzia³ów przedzia³u wykonamy, tym dok³adniejsze powinniœmy otrzymamy przybli¿enie. Mo¿na równie¿ wnioskowaæ w ten sposób  poddaj¹c siê analizie wzoru na \textit{b³¹d metody trapezów} (im wiêkszy $n$ tym mniejsza wartoœæ $\delta_T$):
+\begin{definition}{(B³¹d przybli¿enia uogólnionym wzorem trapezów)}\\\hfill
 Przyjmijmy, ¿e $BBT_n$ oznacza b³¹d bezwzglêdny przybli¿enia(ró¿nica pomiêdzy wartoœci¹ dok³adn¹ i przybli¿on¹ ca³ki). Ponadto niech $f: [a,b]\rightarrow \re$ bêdzie klasy $C^2$ na $[a,b]$, oraz $n$ wyznacza iloœæ podzia³ów tego przedzia³u, wtedy spe³niona jest nastêpuj¹ca nierównoœæ \cite{klucz6}
 \begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaT}
-|BBT_n|\leq\delta_T
+|BBT_n|\leq\delta_T.
 \end{equation}
-Symbol $\delta_T$ oznacza b³¹d metody trapezów i wyra¿a go nastêpuj¹cy wzór: 
+Symbol $\delta_T$ oznacza \textit{b³¹d metody trapezów} i wyra¿a go nastêpuj¹cy wzór: 
 \begin{equation}\label{BladMetodyTrapezow}
 \delta_T = \frac{(b-a)^3}{12n^2} \cdot M_2,
 \end{equation}
 gdzie 
 \begin{equation}\label{CzynnikM2DoBleduMetodyTrapezow}
-M_2= \sup\limits_{x \in [a,b]} \, | f^{''}(x) |
+M_2= \sup\limits_{x \in [a,b]} \, | f^{''}(x) |.
 \end{equation}
 
 
 \end{definition}
-Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku Maple. Pos³u¿y nam ona do zautomatyzowania procesu obliczania przybli¿onych wartoœci ca³ek oznaczonych metod¹ trapezów:
+Sprawdzimy jednak s³usznoœæ naszego twierdzenia wykorzystuj¹c do tego stworzon¹ na nasze potrzeby procedurê w jêzyku \textit{Maple}. Pos³u¿y nam ona do zautomatyzowania procesu obliczania przybli¿onych wartoœci ca³ek oznaczonych omawian¹ metod¹:
 
 \begin{proc}{(Wznaczanie przybli¿onych wartoœci ca³ek pojedynczych metod¹ trapezów)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
@@ -166,48 +162,50 @@ end;
 Kolejno deklarujemy zmienne pomocnicze z których korzysta procedura ( nie pobierane od u¿ytkownika). Je¿eli ostatni parametr $n \nin \mathbb{N}$ to zwracany jest stosowny komunikat i procedura koñczy swoje dzia³anie, w p.p. wykonuje siê g³ówny algorytm tzn. obliczamy wartoœæ kroku $h$, czyli odleg³oœæ pomiêdzy dwoma kolejnymi wêz³ami. Nastêpnie wyznaczamy wszystkie wêz³y $x_i$ na danym przedziale oraz wyliczamy wartoœci (deklarowanej przed wywo³ywaniem procedury) funkcji $f$ w tych¿e wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci w sposób zgodny ze wzorem (\ref{OgolnyWzorTrapezow}). Algorytm koñczymy poprzez przekszta³cenie sumy do "przyjaznej" \,postaci i prezentacjê wyniku w formacie 12 znakowym. 
 
 
-Poni¿sza tabela prezentuje wyniki \textit{procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów (ozn. $n$). Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|BBT_n|$, zgodnie z (\ref{NierownoscBBPrzyblizenia<=DeltaT})). Do kalkulacji wykorzystamy funkcjê z przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 11 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4,06311405862$.  \\
+Poni¿sza tabela prezentuje wyniki \textbf{Procedury  \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}} (ozn. $W_{trapez}$) dla coraz to wiêkszej liczby podprzedzia³ów (ozn. $n$). Uwzglêdniono w niej równie¿ wartoœci b³êdów wzoru trapezów (ozn. $\delta_T$) wyliczone zgodnie ze wzorem (\ref{BladMetodyTrapezow}) oraz modu³  ró¿nicy pomiêdzy wartoœci¹ dok³adn¹ ca³ki a otrzyman¹ w ramach testów procedury (ozn. $|BBT_n|$, zgodnie z (\ref{NierownoscBBPrzyblizenia<=DeltaT})). Do kalkulacji wykorzystamy funkcjê z \textit{Przyk³adu \ref{PrzykladCalkaPojedynczaMetodaTrapezow}} oraz podan¹ w rozwi¹zaniu informacjê na temat przybli¿onej do 11 miejsca po przecinku wartoœci dok³adnej ca³ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx 4.06311405862$. \\ 
 
+\vspace{-0.4cm}
 \begin{table}[h!]
-
-
+\caption{Wyniki pomiaru dok³adnoœci przybli¿enia wartoœci ca³ki procedur¹ \textit{trapez}}
+\hspace{-4.8cm}{\footnotesize ród³o: Opracowanie w³asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|} 
  \hline
  $\mathbf{n}$ & $\mathbf{W_{trapez}}$ & $\mathbf{|BBT_n|}$ &$\mathbf{\delta_T}$ \\ [0.5ex] 
  \hline \hline
- 6 & 4,20911436529  & 0,146000306 &  0,815352298  \\ 
+ 6 & 4.20911436529  & 0.146000306 &  0.815352298  \\ 
  \hline
- 30& 4,06904019209  & 0,005926133  & 0,032614091 \\
+ 30& 4.06904019209  & 0.005926133  & 0.032614091 \\
  \hline 
- 100& 4,06364771371  &0,000533655 & 0,002935268  \\
+ 100& 4.06364771371  &0.000533655 & 0.002935268  \\
  \hline 
- 200& 4,06324747807 & 0,000133419 &  0,000733817  \\
+ 200& 4.06324747807 & 0.000133419 &  0.000733817  \\
  \hline 
- 400& 4,06314741384 & 0,000033355 &  0,000183454 \\ 
+ 400& 4.06314741384 & 0.000033355 &  0.000183454 \\ 
   \hline 
- 800& 4,06312239755  &0,000008339 & 0,000045863 \\
+ 800& 4.06312239755  &0.000008339 & 0.000045863 \\
   \hline 
- 2000& 4,06311539304  & 0,000001334 &0,000007338 \\
+ 2000& 4.06311539304  & 0.000001334 &0.000007338 \\
   \hline 
- 5000& 4,06311427243 & 0,000000213  &0,000001174 \\
+ 5000& 4.06311427243 & 0.000000213  &0.000001174 \\
   \hline 
- 7310& 4,06311415812 &  0.000000099 &0.000000549 \\
+ 7310& 4.06311415812 &  0.000000099 &0.000000549 \\
   \hline 
- 10000& 4,06311411177 & 0,000000053 &0,000000293 \\
+ 10000& 4.06311411177 & 0.000000053 &0.000000293 \\
   \hline 
- 30000& 4,06311406426 & 0,000000005 &0,000000032 \\
+ 30000& 4.06311406426 & 0.000000005 &0.000000032 \\
   \hline 
- 50000& 4,06311406037 & 0,000000002 &0,000000011 \\
+ 50000& 4.06311406037 & 0.000000002 &0.000000011 \\
   \hline 
- 70000& 4,06311406006 & 0.000000001 &0,000000005 \\[0.5ex] 
+ 70000& 4.06311406006 & 0.000000001 &0.000000005 \\[0.5ex] 
  \hline 
  \end{tabular}\\\hfill
- \caption{Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki wzorem trapezów}
- \label{WynikiZProceduryTrapez}
+ \label{WynikiZProceduryTrapez1}
+
 \end{table}
+\newpage
 Na podstawie powy¿szych pomiarów mo¿emy uznaæ i¿ nasze przewidywania odnoœnie tego, ¿e w miarê wzrostu wartoœci $n$ wynik bêdzie coraz dok³adniejszy okazuj¹ siê byæ trafne. Procedura generuje prawid³owe wyniki, co mo¿na potwierdziæ tym, ze dla $n=6$ wartoœæ obliczona "{rêcznie}"\, jest taka sama jak otrzymana w trakcie badañ. Zauwa¿my, ¿e ju¿ przy $n\geq 100$ wynik zaczyna byæ dosyæ mocno zbli¿ony do dok³adnego - ró¿nice pojawiaj¹ siê dopiero na 4 miejscu po przecinku.
-Uwagê nale¿y skupiæ równie¿ na wartoœciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_T}$ z Tablicy \ref{WynikiZProceduryTrapez}. Po ich dok³adnej analizie jesteœmy w stanie zauwa¿yæ, ¿e $\mathbf{|BBT_n|}$ jest zawsze wiêksze od $\mathbf{\delta_T}$. Nie ma znaczenia to, jaki $n$ przyjêliœmy. Nie jest to jednak przypadkowa zale¿noœæ. Fakt ten w pe³ni wyjaœnia nam definicja \ref{BladMetodyTrapezow}. Wartoœæ $\delta_T$ zosta³a wyznaczona przy wykorzystaniu nastêpuj¹cego skryptu:
+Uwagê nale¿y skupiæ równie¿ na wartoœciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_T}$ z Tablicy \ref{WynikiZProceduryTrapez1}. Po ich dok³adnej analizie jesteœmy w stanie zauwa¿yæ, ¿e $\mathbf{|BBT_n|}$ jest zawsze wiêksze od $\mathbf{\delta_T}$. Nie ma znaczenia to, jaki $n$ przyjêliœmy. Nie jest to jednak przypadkowa zale¿noœæ. Fakt ten w pe³ni wyjaœnia nam definicja \ref{BladMetodyTrapezow}. Wartoœæ $\delta_T$ zosta³a wyznaczona przy wykorzystaniu nastêpuj¹cego skryptu:
 
 \begin{proc}{(Wyznaczanie b³êdu przybli¿enia dla metody trapezów)}
 \label{MAPLE_BladMetodyTrapezowCalkaPojedyncza}
@@ -225,9 +223,9 @@ Uwagê nale¿y skupiæ równie¿ na wartoœciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_
 end;
 \end{verbatim}
 \end{proc}    
-Procedura ta opiera siê na wzorach (\ref{BladMetodyTrapezow}) oraz (\ref{CzynnikM2DoBleduMetodyTrapezow}). Wynikiem jej dzia³ania jest wartoœæ b³êdu $\delta_T$ dla ca³ki z $f$ (funkcja musi zostaæ zdefiniowana przed wywo³aniem \textit{trapezBlad}) liczonej w granicach $[a,b]$ przy dokonanych $n$ podzia³ach tego przedzia³u. Parametry wejœciowe s¹ definiowane tak samo jak dla procedury \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}. Dok³adny opis algorytmu dla tego przypadku zostaje pominiêty. 
+Procedura ta opiera siê na wzorach (\ref{BladMetodyTrapezow}) oraz (\ref{CzynnikM2DoBleduMetodyTrapezow}). Wynikiem jej dzia³ania jest wartoœæ b³êdu $\delta_T$ dla ca³ki z $f$ (funkcja musi zostaæ zdefiniowana przed wywo³aniem \textit{trapezBlad}) liczonej w granicach $[a,b]$ przy dokonanych $n$ podzia³ach tego przedzia³u. Parametry wejœciowe s¹ definiowane tak samo jak dla \textbf{Procedury \ref{MAPLE_MetodaTrapezowCalkaPojedyncza}}. Dok³adny opis algorytmu dla tego przypadku zostaje pominiêty. 
 
-Czêsto przeprowadzaj¹c obliczenia naukowe musimy zadbaæ o to, by wynik jaki otrzymamy by³ jak najdok³adniejszy i obci¹¿ony co najwy¿ej pewnym b³êdem, nie wiêkszym ni¿ dopuszczalny. Równie¿ wykorzystuj¹c wzór trapezów do ca³kowania numerycznego, mo¿emy kontrolowaæ wielkoœæ b³êdu, jaki pojawia siê podczas przybli¿ania wyniku. Sposobem na to jest odpowiedni dobór liczby podzia³ów przedzia³u ca³kowania. Poni¿sza procedura wskazuje nam, ile co najmniej owych podzia³ów powinniœmy dokonaæ, by wielkoœæ b³êdu nie przekracza³a zdefiniowanej przez nas wartoœci.\\  
+Czêsto przeprowadzaj¹c obliczenia naukowe musimy zadbaæ o to, by wynik jaki otrzymamy by³ jak najdok³adniejszy i obci¹¿ony co najwy¿ej pewnym b³êdem, nie wiêkszym ni¿ dopuszczalny. Równie¿ wykorzystuj¹c \textit{wzór trapezów} do ca³kowania numerycznego, mo¿emy kontrolowaæ wielkoœæ b³êdu, jaki pojawia siê podczas przybli¿ania wyniku. Sposobem na to jest odpowiedni dobór liczby podzia³ów przedzia³u ca³kowania. Poni¿sza procedura wskazuje nam, ile co najmniej owych podzia³ów powinniœmy dokonaæ, by wielkoœæ b³êdu nie przekracza³a zdefiniowanej przez nas wartoœci.\\  
  
 \begin{proc}{(Wyznaczanie najmniejszej liczby $n$ podzia³ów przedzia³u ca³kowania tak, by wynik by³ obci¹¿ony b³êdem nie wiêkszym ni¿ zadany)}
 \label{MAPLE_najmniejszyNDlaMetodyTrapezowCalkaPojedyncza}
@@ -251,7 +249,7 @@ Powy¿sza procedura równie¿ korzysta ze wzorów (\ref{BladMetodyTrapezow}) i (\ref
 %wyciete 2 zdanie - Charakteryzuje siê ona du¿¹ dok³adnoœci¹ przy jednoczeœnie niewielkiej z³o¿onoœci rachunków.
 Czêsto wykorzystywan¹ przy ca³kowaniu numerycznym metod¹ jest \textit{metoda Simpsona}. Zamiennie nazywana jest równie¿ \textit{metod¹ parabol}. Jej nazwa wywodzi siê od tego, ¿e funkcjê podca³kow¹ przybli¿amy na ka¿dym z podprzedzia³ów utworzonych przez \textbf{3} wêz³y za pomoc¹ paraboli. W zwi¹zku z tym, ¿e ka¿de $3$ kolejne wêz³y tworz¹ \textbf{2} podprzedzia³y wnioskujemy, ¿e ca³kowita liczba podprzedzia³ów przedzia³u ca³kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we wzorze trapezów nie by³o wymagane, by liczba podprzedzia³ów by³a parzysta). 
 
-Przybli¿onym wynikiem ca³ki obliczanej metod¹ \textit{Simpsona} jest suma pól tzw. trapezów "parabolicznych"\,  (jedno z ramion trapezu jest parabol¹). Ka¿dy z nich jest ograniczany przez wêz³y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y, wiêc jej równanie zawsze bêdzie wyznaczone w sposób jednoznaczny. Metoda ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³a przedstawiona na rysunku \ref{R3}.
+Przybli¿onym wynikiem ca³ki obliczanej metod¹ \textit{Simpsona} jest suma pól tzw. trapezów "parabolicznych"\,  (jedno z ramion trapezu jest parabol¹). Ka¿dy z nich jest ograniczany przez wêz³y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodz¹ca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Nale¿y zauwa¿yæ, ¿e istnieje dok³adnie jedna parabola zawieraj¹ca zadane trzy wêz³y, wiêc jej równanie zawsze bêdzie wyznaczone w sposób jednoznaczny. Metoda ca³kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta³a przedstawiona na Rysunku \ref{R3}.
 
 \begin{figure}[H]
 		\begin{center}
@@ -259,6 +257,7 @@ Przybli¿onym wynikiem ca³ki obliczanej metod¹ \textit{Simpsona} jest suma pól tz
 		\end{center}
 	   \caption{Graficzne przedstawienie idei zastosowania wzoru parabol do ca³kowania}
 \label{R3}
+\hspace{0.7cm}{\footnotesize ród³o: \url{https://commons.wikimedia.org/wiki/File:Composite\_Simpsons\_rule.png}}
 \end{figure}
   
 Rozpatrzmy pocz¹tkowo szczególny przypadek, w którym przedzia³ ca³kowania zostanie podzielony na dok³adnie $2$ podprzedzia³y, wydzielone przez $3$ równo odleg³e wêz³y \mbox{$a=x_0 < x_1 < x_2=b$}, dla których zachodzi $\frac{x_0+x_2}{2}=x_1$. W celu wyprowadzenia wzoru \textit{Simpsona} wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} $L_2(x)$ (wielomian rzêdu $n=2$) zbudowany zgodnie z (\ref{wielomianInterpolacyjnyLagrangea}) dla wêz³ów $a=x_0$, $x_1$, $x_2=b$. By stworzyæ $L_2(x)$, który nas interesuje, potrzebna nam jest wiedza na temat tego, jak wygl¹daj¹ wspó³czynniki \mbox{$a_0$, $a_1$, $a_2$}. Ich wartoœæ wyliczymy wykorzystuj¹c wzory  (\ref{WielomianLagrangeaPoPodstawieniuZaX}) oraz (\ref{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}). Wynika z nich, ¿e ka¿dy ze wspó³czynników $a_i$ ($i=0,1,\ldots,n$) jest postaci:
@@ -348,7 +347,7 @@ $\mathbf{b}$ - wartoœæ górnej granicy ca³kowania\\
 $\mathbf{N}$ - opisuje iloœæ podzia³ów przedzia³u ca³kowania funkcji $f(x)$ (konieczne jest zdefiniowanie $f(x)$ przed wywo³aniem ka¿dej prezentowanej w tym podrozdziale procedury). Wartoœæ parametru $N$ musi byæ liczb¹ naturaln¹ i podzieln¹ przez $2$, gdy¿ zastosowanie metody parabol  wymaga co najmniej $2$ podprzedzia³ów wydzielonych przez $3$ równo odleg³e wêz³y.\\
 Kod znajduj¹cy siê po nag³ówku procedury to definicja zmiennych lokalnych, wykorzystywanych wewn¹trz owej procedury. Kolejno sprawdzana jest poprawnoœæ wprowadzonego parametru $N$. Je¿eli $N$ posiada niezerow¹ czêœæ dziesiêtn¹, b¹dŸ jest liczb¹ naturaln¹ nieparzyst¹ lub  ca³kowit¹ \mbox{$\leq 0$}, wtedy algorytm koñczy swoje dzia³anie zwracaj¹c b³¹d o treœci 'Ostatni parametr musi by liczba naturalna postaci 2m'. W przeciwnym wypadku nastêpuje przejœcie do g³ównego algorytmu, który rozpoczyna siê od obliczenia iloœci par podprzedzia³ów oraz odleg³oœci $h$ pomiêdzy kolejnymi punktami wêz³owymi. Nastêpnie wyznaczane s¹ wszystkie wêz³y $x_i$ na danym przedziale $[a,b]$ oraz obliczane wartoœci funkcji $f(x)$ w tych wêz³ach. Przedostatni krok polega na zsumowaniu wyliczonych przed chwil¹ wartoœci $f(x_i)$ w sposób zgodny ze wzorem (\ref{wzorSimpsonaZPodzialami}). Ostatecznie procedura upraszcza postaæ sumy i zwraca j¹ w formie 12 znakowego wyniku (nie wliczaj¹c w to przecinka).
 
-Zanim zaprezentujemy wyniki zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}, to zechciejmy pochyliæ siê jeszcze przez moment nad kodem dodatkowej procedury umo¿liwiaj¹cej oszacowanie b³êdu $\delta_S$ z równania (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoœci bêdzie nam pomocna podczas kontroli, czy obliczenia s¹ przeprowadzane poprawnie, tzn. musi zachodziæ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wiêkszych iloœci podzia³ów przedzia³u ca³kowania.
+Zanim zaprezentujemy wyniki zwracane przez \textbf{Procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}}, to zechciejmy pochyliæ siê jeszcze przez moment nad kodem dodatkowej procedury umo¿liwiaj¹cej oszacowanie b³êdu $\delta_S$ z równania (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoœci bêdzie nam pomocna podczas kontroli, czy obliczenia s¹ przeprowadzane poprawnie, tzn. musi zachodziæ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wiêkszych iloœci podzia³ów przedzia³u ca³kowania.
 
 \begin{proc}{(Wyznaczanie b³êdu przybli¿enia dla metody \textit{Simpsona})}
 \label{MAPLE_BladMetodySimpsonaCalkaPojedyncza}
@@ -366,12 +365,13 @@ local d4ff, simd4ff, M4, deltaS;
 end;
 \end{verbatim}
 \end{proc}
-Powy¿sza procedura ma za zadanie wyznaczyæ wartoœæ $\delta_S$, tak by prawdziwe by³o oszacowanie (\ref{NierownoscBBPrzyblizenia<=DeltaS}). Parametry $a$, $b$ i $N$ definiowane s¹ w sposób identyczny, jak w procedurze \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Aby wykona³ siê algorytm g³ówny (znajduj¹cy siê wewn¹trz procedury w bloku \textit{else}), ponownie musi zostaæ spe³niony warunek mówi¹cy o tym, ¿e $N$ jest licz¹ naturaln¹ i parzyst¹. Je¿eli taka prawid³owoœæ zachodzi, to obliczamy wartoœæ $f^{(4)}(x)$ oraz upraszczamy jej postaæ. Zgodnie z (\ref{CzynnikM4DoBleduMetodySimpsona}) wyliczamy maksimum  $f^{(4)}(x)$ na przedziale $[a,b]$ (jest to najbardziej znacz¹cy krok) i podstawiamy wszystkie znane ju¿ nam argumenty do (\ref{BladMetodySimpsona}). W ten sposób dochodzimy do po¿¹danej przez nas formy $\delta_S$. 
+Powy¿sza procedura ma za zadanie wyznaczyæ wartoœæ $\delta_S$, tak by prawdziwe by³o oszacowanie (\ref{NierownoscBBPrzyblizenia<=DeltaS}). Parametry $a$, $b$ i $N$ definiowane s¹ w sposób identyczny, jak w \textbf{Procedurze \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}}. Aby wykona³ siê algorytm g³ówny (znajduj¹cy siê wewn¹trz procedury w bloku \textit{else}), ponownie musi zostaæ spe³niony warunek mówi¹cy o tym, ¿e $N$ jest licz¹ naturaln¹ i parzyst¹. Je¿eli taka prawid³owoœæ zachodzi, to obliczamy wartoœæ $f^{(4)}(x)$ oraz upraszczamy jej postaæ. Zgodnie z (\ref{CzynnikM4DoBleduMetodySimpsona}) wyliczamy maksimum  $f^{(4)}(x)$ na przedziale $[a,b]$ (jest to najbardziej znacz¹cy krok) i podstawiamy wszystkie znane ju¿ nam argumenty do (\ref{BladMetodySimpsona}). W ten sposób dochodzimy do po¿¹danej przez nas formy $\delta_S$. 
 
-Posiadaj¹c ju¿ odpowiednie narzêdzia (procedura \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}) oraz wiedzê z zakresu metodyki ich dzia³ania, wykonajmy pomiary, które zobrazuj¹ nam w sposób praktyczny dok³adnoœæ metody \textit{Simpsona}. Niech $N$ stanowi liczbê podzia³ów przedzia³y ca³kowania, $W_{simpson}$ opisuje wartoœci zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Ponadto  przez $|BBS_{N}|$ oznaczymy b³¹d bezwzglêdnym przybli¿enia wartoœci ca³ki metod¹ \textit{Simpsona}, natomiast przez symbol $\delta_S$ rozumieæ bêdziemy wynik wywo³ania procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}. Do obliczeñ ponownie wykorzystajmy ca³kê z przyk³adu \ref{PrzykladCalkaLiczonaWzoremSimpsona} (zastosujemy równie¿ jej wartoœæ dok³adn¹, która jest podana w jego rozwi¹zaniu):\\
+Posiadaj¹c ju¿ odpowiednie narzêdzia (Procedura \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}) oraz wiedzê z zakresu metodyki ich dzia³ania, wykonajmy pomiary, które zobrazuj¹ nam w sposób praktyczny dok³adnoœæ metody \textit{Simpsona}. Niech $N$ stanowi liczbê podzia³ów przedzia³y ca³kowania, $W_{simpson}$ opisuje wartoœci zwracane przez procedurê \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Ponadto  przez $|BBS_{N}|$ oznaczymy b³¹d bezwzglêdnym przybli¿enia wartoœci ca³ki metod¹ \textit{Simpsona}, natomiast przez symbol $\delta_S$ rozumieæ bêdziemy wynik wywo³ania \textbf{Procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}}. Do obliczeñ ponownie wykorzystajmy ca³kê z przyk³adu \ref{PrzykladCalkaLiczonaWzoremSimpsona} (zastosujemy równie¿ jej wartoœæ dok³adn¹, która jest podana w jego rozwi¹zaniu):
 
 \begin{table}[h!]
-
+\caption{Pomiar dok³adnoœci przybli¿enia wartoœci ca³ki pojedynczej procedur¹ \textit{simpson}}
+\hspace{-5.5cm}{\footnotesize ród³o: Opracowanie w³asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
@@ -406,13 +406,12 @@ Posiadaj¹c ju¿ odpowiednie narzêdzia (procedura \ref{MAPLE_MetodaSimpsonaCalkaPo
  1000& 4,06311405847 & 0,00000000015 & 0,00000000008\\ 
  \hline
  \end{tabular}\\\hfill
- \caption{Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki pojedynczej wzorem \textit{Simpsona}}
  \label{WynikiZProcedurySimpson}
 \end{table}
 
-Analizuj¹c wyniki z  powy¿szej tabeli mo¿na zauwa¿yæ, ¿e metoda \textit{parabol} jest optymalniejsza ni¿ metoda \textit{trapezów}, dla której to podobne zestawienie sporz¹dzono w \mbox{tablicy \ref{WynikiZProceduryTrapez}}. B³¹d bezwzglêdny przybli¿enia spad³ poni¿ej $0,0000001$ ju¿ dla przypadku, w którym dokonaliœmy $N=106$ podzia³ów przedzia³u ca³kowania, dla porównania w metodzie trapezów podzia³ów tych musieliœmy wykonaæ a¿ $n=7310$. Wynik zwracany przez procedurê \textit{simpson} zaczyna byæ bardzo mocno zbli¿ony do dok³adnego ($4,06311405862$) dla zaledwie $N \geq 20$ podzia³ów (ró¿nica zauwa¿alna jest dopiero na $5$ miejscu po przecinku). Ponadto mamy podstawy do tego, by uznaæ algorytm za poprawny, poniewa¿ wartoœæ zwracana przez procedurê \textit{simpson} dna $N=6$ jest taka sama, jak ta otrzymana w przykladzie \ref{PrzykladCalkaLiczonaWzoremSimpsona}. Co wiêcej dla ka¿dego z prezentowanych w tabeli przypadków spe³niona jest nierównoœæ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) z definicji \ref{Def_BladPrzyblizeniaWzoremSimpsona}.
+Analizuj¹c wyniki z  powy¿szej tabeli mo¿na zauwa¿yæ, ¿e metoda \textit{parabol} jest optymalniejsza od metody \textit{trapezów}, dla której to podobne zestawienie sporz¹dzono w \mbox{Tablicy \ref{WynikiZProceduryTrapez1}}. B³¹d bezwzglêdny przybli¿enia spad³ poni¿ej $0,0000001$ ju¿ dla przypadku, w którym dokonaliœmy $N=106$ podzia³ów przedzia³u ca³kowania, dla porównania w metodzie trapezów podzia³ów tych musieliœmy wykonaæ a¿ $n=7310$. Wynik zwracany przez procedurê \textit{simpson} zaczyna byæ bardzo mocno zbli¿ony do dok³adnego ($4,06311405862$) dla zaledwie $N \geq 20$ podzia³ów (ró¿nica zauwa¿alna jest dopiero na $5$ miejscu po przecinku). Ponadto mamy podstawy do tego, by uznaæ algorytm za poprawny, poniewa¿ wartoœæ zwracana przez procedurê \textit{simpson} dna $N=6$ jest taka sama, jak ta otrzymana w przykladzie \ref{PrzykladCalkaLiczonaWzoremSimpsona}. Co wiêcej dla ka¿dego z prezentowanych w tabeli przypadków spe³niona jest nierównoœæ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) z definicji \ref{Def_BladPrzyblizeniaWzoremSimpsona}.
 
-W poprzednim podrozdziale wspominaliœmy, ¿e niejednokrotnie interesuje nas minimalizacja b³êdu dla otrzymanego wyniku, tak by jego wielkoœæ nie przekracza³a pewnej akceptowalnej wartoœci granicznej. Wykonuj¹c drobne zmiany w procedurze \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza} jesteœmy w stanie otrzymaæ now¹ procedurê, wyznaczaj¹c¹ iloœæ podzia³ów $N$ przedzia³u ca³kowania $[a,b]$, tak by b³¹d przybli¿enia nie przekracza³ okreœlonej przez nas wartoœci:      
+W poprzednim podrozdziale wspominaliœmy, ¿e niejednokrotnie interesuje nas minimalizacja b³êdu dla otrzymanego wyniku, tak by jego wielkoœæ nie przekracza³a pewnej akceptowalnej wartoœci granicznej. Wykonuj¹c drobne zmiany w \textbf{Procedurze \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}} jesteœmy w stanie otrzymaæ now¹ procedurê, wyznaczaj¹c¹ iloœæ podzia³ów $N$ przedzia³u ca³kowania $[a,b]$, tak by b³¹d przybli¿enia nie przekracza³ okreœlonej przez nas wartoœci:      
 
 \begin{proc}{(Wyznaczanie najmniejszej liczby $N$ podzia³ów przedzia³u ca³kowania tak, by wynik by³ obci¹¿ony b³êdem nie wiêkszym ni¿ zadany)}
 \label{MAPLE_najmniejszyNDlaMetodySimpsonaCalkaPojedyncza}

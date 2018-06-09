@@ -88,7 +88,7 @@ Interesujπcym faktem jest to, øe wspÛ≥czynniki wagowe kwadratury opisanej powyøs
 \end{equation}
 Powyøsza macierz znaczπco upraszcza i przyspiesza rozpisywanie \textbf{uogÛlnionego wzoru trapezÛw dla ca≥ek podwÛjnych po obszarach normalnych}. Dla przypadku uogÛlnionego wzoru trapezÛw dla ca≥ki pojedynczej schemat ten ogranicza≥ siÍ jedynie do pierwszego wiersza (numeracja $i$ - od lewej do prawej, $j$ - od gÛry do do≥u).
 
-Obliczanie wartoúci ca≥ki podwÛjnej metodπ trapezÛw moøemy sprowadziÊ rÛwnieø do  sumowania objÍtoúci pewnych bry≥ trapezoidalnych. Innymi s≥owy - rozwaømy podzia≥ obszaru ca≥kowania $\Omega = [a,b] \times [c,d]$ na $n\cdot m$ podobszarÛw, co prezentuje rysunek \ref{R4} zamieszczony poniøej:
+Obliczanie wartoúci ca≥ki podwÛjnej metodπ trapezÛw moøemy sprowadziÊ rÛwnieø do  sumowania objÍtoúci pewnych bry≥ trapezoidalnych. Innymi s≥owy - rozwaømy podzia≥ obszaru ca≥kowania $\Omega = [a,b] \times [c,d]$ na $n\cdot m$ podobszarÛw, co prezentuje Rysunek \ref{R4} zamieszczony poniøej:
 
 \begin{figure}[H]
 		\begin{center}
@@ -107,7 +107,7 @@ przy czym $h_x$, $h_y$ opisane sπ w (\ref{WezlyNaObszarzeProstokatnymTrapez2}).\
 \begin{equation}\label{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}
 I_{T2V} = I_{T2}\approx \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right]
 \end{equation}
-PorÛwnujπc macierz (\ref{MacierzWspolczynnikowTrapez2}) z rysunkiem \ref{R4} zauwaøymy, øe elementy macierzy odzwierciedlajπ iloúÊ podobszarÛw, na styku ktÛrych umiejscowiony zosta≥ dany wÍze≥. Moøna to teø traktowaÊ jako informacjÍ ilu krotnie dany punkt wÍz≥owy zostaje uwzglÍdniony podczas sumowania w (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).
+PorÛwnujπc macierz (\ref{MacierzWspolczynnikowTrapez2}) z Rysunkiem \ref{R4} zauwaøymy, øe elementy macierzy odzwierciedlajπ iloúÊ podobszarÛw, na styku ktÛrych umiejscowiony zosta≥ dany wÍze≥. Moøna to teø traktowaÊ jako informacjÍ ilu krotnie dany punkt wÍz≥owy zostaje uwzglÍdniony podczas sumowania w (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).
 
 WzÛr (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) podobnie jak dla przypadku ca≥ki pojedynczej moøna rÛwnieø otrzymaÊ wykorzystujπc wielomiany \textit{Lagrange'a $L_{1,1}(x,y)$}. Podamy jedynie zarys przekszta≥ceÒ, ktÛre doprowadzi≥yby nas do wyniku: 
 \begin{equation}\label{WzorTrapezowWielomianemL11}
@@ -190,7 +190,7 @@ WidaÊ wprost, øe przeprowadzenie pe≥nych obliczeÒ moøe staÊ siÍ bardzo k≥opotliw
 \end{verbatim}
 \end{proc}
 
-Przed wykorzystaniem zamieszczonej procedury nr \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} do wykonania g≥Ûwnych obliczeÒ, opiszmy zasadÍ jej dzia≥ania. Tak wiÍc pierwsza linia jest nag≥Ûwkiem procedury i odpowiada za definicjÍ jej nazwy oraz parametrÛw wejúciowych. Ich znaczenie jest nastÍpujπce:\\
+Przed wykorzystaniem zamieszczonej \textbf{Procedury \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki}} do wykonania g≥Ûwnych obliczeÒ, opiszmy zasadÍ jej dzia≥ania. Tak wiÍc pierwsza linia jest nag≥Ûwkiem procedury i odpowiada za definicjÍ jej nazwy oraz parametrÛw wejúciowych. Ich znaczenie jest nastÍpujπce:\\
 \textit{a, b} - granice ca≥kowania po zmiennej $x$\\  
 \textit{c, d} - granice ca≥kowania po zmiennej $y$\\
 \textit{n} - iloúÊ podprzedzia≥Ûw przedzia≥u $[a,b]$, ktÛre sπ wyznaczane przez $n+1$ wÍz≥Ûw $x_i$\\ 
@@ -205,7 +205,7 @@ Posiadajπc juø kompletne informacje dotyczπce kwestii sposobu dzia≥ania procedur
 \item[a)] $\int\limits_0^\frac{1}{2}\int\limits_\frac{1}{2}^1 \frac{x+y}{x^2+y^2} dydx$
 \item[b)] $\int\limits_0^1\int\limits_1^2 e^\frac{x^2}{y^3} dydx$
 \end{itemize}
-Otrzymane wyniki zaprezentujemy poniøej w formie tabel. Przyjmijmy, øe $n$ oznacza≥o bÍdzie iloúÊ podzia≥Ûw przedzia≥u ca≥kowania dla zmiennej $x$, $m$ dla zmiennej $y$, zaú $W_{trapez2}$ to wynik \textit{Trapez2} dla coraz wiÍkszych wartoúci $n$ i $m$. Ponadto niech \textit{$BBT2_{n,m}$} opisuje b≥πd bezwzglÍdny przybliøenia wartoúci ca≥ki podwÛjnej procedurπ \textit{Trapez2}, przy jej wywo≥aniu dla pewnych parametrÛw $n$ i $m$. Dodatkowo \textit{$BWT2_{n,m}$} to wielkoúÊ b≥Ídu wzglÍdnego jakim jest obciπøony ten sam wynik wykonania \textit{Trapez2}, co w przypadku wyliczania \textit{$BBT2_{n,m}$}.
+Otrzymane wyniki zaprezentujemy w poniøszych tabelach. Przyjmijmy, øe $n$ oznacza≥o bÍdzie iloúÊ podzia≥Ûw przedzia≥u ca≥kowania dla zmiennej $x$, $m$ dla zmiennej $y$, zaú $W_{trapez2}$ to wynik \textit{Trapez2} dla coraz wiÍkszych wartoúci $n$ i $m$. Ponadto niech \textit{$BBT2_{n,m}$} opisuje b≥πd bezwzglÍdny przybliøenia wartoúci ca≥ki podwÛjnej procedurπ \textit{Trapez2}, przy jej wywo≥aniu dla pewnych parametrÛw $n$ i $m$. Dodatkowo \textit{$BWT2_{n,m}$} to wielkoúÊ b≥Ídu wzglÍdnego jakim jest obciπøony ten sam wynik wykonania \textit{Trapez2}, co w przypadku wyliczania \textit{$BBT2_{n,m}$}.
 \begin{definition}(B≥πd wzglÍdny)\\
 B≥πd wzglÍdny informuje nas o ile procent wartoúÊ zmierzona odbiega od wartoúci dok≥adnej. Wyliczamy go ze wzoru:
 $$BW=\frac{BB}{x}*100\%=\frac{|x-\widehat{x}|}{x}*100\% \,,$$ 
@@ -215,6 +215,8 @@ gdzie $x$ - wartoúÊ dok≥adna, $\widehat{x}$ - wartoúÊ oszacowana, $BB$ - b≥πd be
 WartoúÊ dok≥adna ca≥ki z przyk≥adu a) jest rÛwna $0,399181467986$ , wiÍc:. 
 %Wyniki wyznaczone procedurπ \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} prezentujπ siÍ nastÍpujπco:\\
 \begin{table}[h!]
+\caption{Wyniki pomiaru dok≥adnoúci przybliøenia wartoúci ca≥ki a) procedurπ \textit{Trapez2}}
+\hspace{-5.4cm}{\footnotesize èrÛd≥o: Opracowanie w≥asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
@@ -251,12 +253,14 @@ WartoúÊ dok≥adna ca≥ki z przyk≥adu a) jest rÛwna $0,399181467986$ , wiÍc:.
  400&200 &0.399182014858  &0.000000546872  &0.00013699834 \%  \\%[0.5ex] 
  \hline 
  \end{tabular}\\ \hfill
- \caption{Wyniki pomiaru dok≥adnoúci przybliøania wartoúci ca≥ki a) wzorem trapezÛw}
+ 
  \label{WynikiZProceduryTrapez2a}
 \end{table}
 
 Ca≥ka z podpunktu b) wynosi dok≥adnie $1.14782135872$ , zatem:. 
 \begin{table}[h!]
+\caption{Wyniki pomiaru dok≥adnoúci przybliøenia wartoúci ca≥ki b) procedurπ \textit{Trapez2}}
+\hspace{-5.4cm}{\footnotesize èrÛd≥o: Opracowanie w≥asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
@@ -293,11 +297,10 @@ Ca≥ka z podpunktu b) wynosi dok≥adnie $1.14782135872$ , zatem:.
  400&200 &1.14782581891  &0.00000446019  &0.0003885788 \%  \\%[0.5ex] 
  \hline 
  \end{tabular}\\ \hfill
- \caption{Wyniki pomiaru dok≥adnoúci przybliøania wartoúci ca≥ki b) wzorem trapezÛw}
  \label{WynikiZProceduryTrapez2b}
 \end{table}
 
-Analizujπc zgromadzone juø wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoúci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwaøamy pewnπ prawid≥owoúÊ. W miarÍ wzrostu liczby podzia≥Ûw ($\mathbf{n}$ i $\mathbf{m}$) przedzia≥Ûw ca≥kowania wartoúci b≥ÍdÛw odznaczajπ siÍ tendencjπ spadkowπ. SzczegÛlnie widoczna jest ona na przyk≥adzie b). W przyk≥adzie a) moøna dostrzec jednak, øe b≥Ídy z kolejnego pomiaru sπ czÍsto wiÍksze niø te z poprzedniego,  pomimo to jednak rÛwnieø zauwaøalny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarÛw w tablicy \ref{WynikiZProceduryTrapez2a} jest w duøej mierze spowodowana postaciπ rÛwnania funkcji podca≥kowej oraz sposobem dzia≥ania algorytmu. W miarÍ tego, im wiÍcej jest deformacji powierzchni wykresu owej funkcji, tym czÍúciej pojawiπ siÍ wahania wielkoúci b≥Ídu dla coraz to wiÍkszej liczby wÍz≥Ûw. Jak widaÊ sytuacja nie jest juø tak oczywista, jak by≥a w przypadku uøycia wzoru trapezÛw dla ca≥ek pojedynczych - tam wzrost iloúci punktÛw wÍz≥owych zapewnia≥ sta≥y wzrost dok≥adnoúci wyniku.   
+Analizujπc zgromadzone juø wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoúci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwaøamy pewnπ prawid≥owoúÊ. W miarÍ wzrostu liczby podzia≥Ûw ($\mathbf{n}$ i $\mathbf{m}$) przedzia≥Ûw ca≥kowania wartoúci b≥ÍdÛw odznaczajπ siÍ tendencjπ spadkowπ. SzczegÛlnie widoczna jest ona na przyk≥adzie b). W przyk≥adzie a) moøna dostrzec jednak, øe b≥Ídy z kolejnego pomiaru sπ czÍsto wiÍksze niø te z poprzedniego,  pomimo to jednak rÛwnieø zauwaøalny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarÛw w Tablicy \ref{WynikiZProceduryTrapez2a} jest w duøej mierze spowodowana postaciπ rÛwnania funkcji podca≥kowej oraz sposobem dzia≥ania algorytmu. W miarÍ tego, im wiÍcej jest deformacji powierzchni wykresu owej funkcji, tym czÍúciej pojawiπ siÍ wahania wielkoúci b≥Ídu dla coraz to wiÍkszej liczby wÍz≥Ûw. Jak widaÊ sytuacja nie jest juø tak oczywista, jak by≥a w przypadku uøycia wzoru trapezÛw dla ca≥ek pojedynczych - tam wzrost iloúci punktÛw wÍz≥owych zapewnia≥ sta≥y wzrost dok≥adnoúci wyniku.   
 
 
 \section{WzÛr Simpsona}
@@ -404,12 +407,12 @@ A \times B = \left[
 
 Zaprezentowana macierz diametralnie upraszcza zapis \textbf{uogÛlnionego wzoru Simpsona dla ca≥ek podwÛjnych po obszarach normalnych}. Pewien jej fragment, a dok≥adniej pierwszy wiersz, pojawi≥ siÍ juø dla przypadku uogÛlnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca≥ki pojedynczej.
 
-Przybliøanie wartoúci ca≥ki podwÛjnej obliczanej metodπ Simpsona moøna rÛwnieø sprowadziÊ do sumowania objÍtoúci pewnych bry≥ parabolicznych. Weümy podzia≥ obszaru ca≥kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarÛw, co dok≥adniej \mbox{prezentuje rysunek \ref{R5}:}
+Przybliøanie wartoúci ca≥ki podwÛjnej obliczanej metodπ Simpsona moøna rÛwnieø sprowadziÊ do sumowania objÍtoúci pewnych bry≥ parabolicznych. Weümy podzia≥ obszaru ca≥kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarÛw, co dok≥adniej \mbox{prezentuje Rysunek \ref{R5}:}
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.6]{R5.eps}
 		\end{center}
-	   \caption{Metoda Simpsona dla ca≥ek podwÛjnych po obszarze normalnym wzglÍdem dwÛch zmiennych - podzia≥ obszaru ca≥kowania na podobszary }
+	   \caption{Metoda Simpsona dla ca≥ek podwÛjnych po obszarze normalnym wzglÍdem dwÛch zmiennych - podzia≥ obszaru ca≥kowania na podobszary \cite{klucz10}}
 \label{R5}
 \end{figure}
 
@@ -562,7 +565,7 @@ N - liczba podpodprzedzia≥Ûw na jakie zostanie podzielony ca≥y przedzia≥ ca≥kowa
 M - liczba podpodprzedzia≥Ûw na jakie zostanie podzielony ca≥y przedzia≥ ca≥kowania $[c,d]$.\\
 Kolejno wymienione sπ wszystkie zmienne lokalne, jakie bÍdπ wykorzystane w obliczeniach wykonywanych wewnπtrz algorytmu. Pojawiajπca siÍ nastÍpnie instrukcja warunkowa \textit{if-else} decyduje o tym, czy parametry wywo≥ania zosta≥y podane prawid≥owo. Jeøeli $N$ lub $M$ nie jest liczbπ naturalnπ parzystπ to zwracany jest stosowny komunikat o b≥Ídzie. W przeciwnym przypadku rozpoczyna siÍ wykonanie w≥aúciwej czÍúci algorytmu, w sk≥ad ktÛrego wchodzi okreúlenie iloúci podprzedzia≥Ûw $n$, $m$ (kaødy podprzedzia≥ z≥oøony jest z dwÛch podpodprzedzia≥Ûw) na ktÛre podzielono przedzia≥y ca≥kowania po zmiennej $x$ i $y$. Dalej na podstawie (\ref{WezlyNaObszarzeProstokatnymSimpson2}) wyznaczane sπ wielkoúci krokÛw $h$ (dla $x$) i $k$ (dla $y$) pomiÍdzy kolejnymi wÍz≥ami definiujπcymi kraÒce owych podpodprzedzia≥Ûw. Pozyskane dane zostajπ natychmiast wykorzystywane przez pÍtle \textit{for} do obliczenia wspÛ≥rzÍdnych wÍz≥Ûw $x_i$ oraz $y_j$. Blok z dwoma zagnieødøonymi pÍtlami \textit{for} s≥uøy wyliczaniu wartoúci funkcji $z(i,j)=f(x_i,y_j)$ w okreúlonych (w poprzednich dwÛch krokach) punktach wÍz≥owych. Przedostatni krok jest implementacjπ wzoru (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}), co czyni go kluczowym dla ca≥ego algorytmu. Ostatecznie wynik procedury jest zwracany w uproszczonej i czytelnej postaci jako wartoúÊ \textit{WynikS2}.
 
-Wiedzπc juø na jakiej zasadzie dzia≥a procedura \textit{Simpson2} - uøyjmy jej do przeprowadzenia badaÒ nad dok≥adnoúciπ pozyskanych dziÍki niej przybliøonych wynikÛw ca≥kowania. Rezultaty porÛwnamy z tymi, otrzymanymi przez procedurÍ \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} (\textit{Trapez2}). Przeliczmy zatem nastÍpujπce ca≥ki: 
+Wiedzπc juø na jakiej zasadzie dzia≥a procedura \textit{Simpson2} - uøyjmy jej do przeprowadzenia badaÒ nad dok≥adnoúciπ pozyskanych dziÍki niej przybliøonych wynikÛw ca≥kowania. Rezultaty porÛwnamy z tymi, otrzymanymi przez \textbf{ProcedurÍ \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki}} (\textit{Trapez2}). Przeliczmy zatem nastÍpujπce ca≥ki: 
 \begin{itemize}
 \item[a)] $\int\limits_0^\frac{1}{2}\int\limits_\frac{1}{2}^1 \frac{x+y}{x^2+y^2} dydx$
 \item[b)] $\int\limits_0^1\int\limits_1^2 e^\frac{x^2}{y^3} dydx$
@@ -571,6 +574,8 @@ Tak jak w  podrozdziale poprzednim wyniki przedstawimy w formie tabel. Niech $N$
 
 WartoúÊ ca≥ki z przyk≥adu a) jest w zaokrπgleniu rÛwna $0,399181467986$, wiÍc:
 \begin{table}[h!]
+ \caption{Pomiary dok≥adnoúci przybliøenia wartoúci ca≥ki a) procedurπ \textit{Simpson2}}
+\hspace{-4.6cm}{\footnotesize èrÛd≥o: Opracowanie w≥asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
@@ -607,13 +612,14 @@ WartoúÊ ca≥ki z przyk≥adu a) jest w zaokrπgleniu rÛwna $0,399181467986$, wiÍc:
  400&200 &0.399181467991  &0.0000000000005  &0.000000001253  \%  \\%[0.5ex] 
  \hline 
  \end{tabular}\\ \hfill
- \caption{Pomiary dok≥adnoúci przybliøania wartoúci ca≥ki a) \textit{uogÛlnionym wzorem Simpsona}}
  \label{WynikiZProcedurySimpson2a}
 \end{table}
 \\ 
 
 Ca≥ka z podpunktu b) wynosi dok≥adnie $1.14782135872$ , zatem:. 
 \begin{table}[h!]
+ \caption{Pomiary dok≥adnoúci przybliøenia wartoúci ca≥ki b) procedurπ \textit{Simpson2}}
+\hspace{-4.6cm}{\footnotesize èrÛd≥o: Opracowanie w≥asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
  \hline
@@ -650,8 +656,7 @@ Ca≥ka z podpunktu b) wynosi dok≥adnie $1.14782135872$ , zatem:.
  400&200 &1.14782135935  &0.00000000063 & 0.000000054886 \%  \\%[0.5ex] 
  \hline 
  \end{tabular}\\ \hfill
- \caption{Pomiary dok≥adnoúci przybliøania wartoúci ca≥ki b) \textit{uogÛlnionym wzorem Simpsona}}
- \label{WynikiZProcedurySimpson2b}
+\label{WynikiZProcedurySimpson2b}
 \end{table}
 
 

@@ -5,14 +5,14 @@ W dzisiejszych czasach zaspokojenie g³odu czy pragnienia nie wystarcza, by spros
 %Wyjaœnijmy nieco pojêcie interpolacji. Ujmuj¹c w wielkim skrócie, jest ona procesem dziêki któremu jesteœmy w stanie przybli¿yæ pewn¹ funkcjê $f(x)$ (interpolowan¹) przy pomocy innej funkcji $\phi(x)$ (interpoluj¹cej). 
 %Warunkiem, który nale¿y bezwzglêdnie spe³niæ, by wyznaczyæ funkcjê interpoluj¹c¹ jest to, %¿e musimy posiadaæ wiedzê na temat dok³adnych wartoœci $f(x_i)$ w $n$ punktach nale¿¹cych %do jej dziedziny. 
 
-Funkcje interpoluj¹ce w znacznym stopniu upraszczaj¹ prowadzenie obliczeñ podczas wyznaczania przybli¿onych wartoœci funkcji, których postaæ analityczna jest bardzo skomplikowana, lub wyliczenie kolejnych jej wartoœci wymaga wykonania zawi³ych obliczeñ komputerowych. W tym rozdziale pracy skupimy siê zatem na sposobie w jaki mo¿emy wyznaczaæ tak zwane wielomiany interpolacyjne \textit{$Lagrange'a$} dla funkcji jednej oraz dwóch zmiennych.
+Funkcje interpoluj¹ce w znacznym stopniu upraszczaj¹ prowadzenie obliczeñ podczas wyznaczania przybli¿onych wartoœci funkcji, których postaæ analityczna jest bardzo skomplikowana, lub wyliczenie kolejnych jej wartoœci wymaga wykonania zawi³ych obliczeñ komputerowych. W tym rozdziale pracy skupimy siê zatem na sposobie w jaki mo¿emy wyznaczaæ tak zwane \textit{wielomiany interpolacyjne $Lagrange'a$} dla funkcji jednej oraz dwóch zmiennych.
 
 \section{Wielomiany \textit{Lagrange'a} dla funkcji jednej zmiennej}
 Jak wspomnieliœmy we wstêpie, czêsto w celu uproszczenia obliczeñ sk³aniamy siê do wykorzystania interpolacji. Stosuj¹c j¹ musimy liczyæ siê z faktem, ¿e pozyskane wyniki s¹ wartoœciami przybli¿onymi, wiêc z regu³y bêd¹ ró¿ni³y siê od wyników dok³adnych. %Mo¿emy jednak w pewien sposób kontrolowaæ to, jak bardzo bêd¹ one od siebie odbiega³y - do tego jednak wrócimy póŸniej. 
 Przed przejœciem do dalszych rozwa¿añ nale¿y zdefiniowaæ pojêcie interpolacji.
 
 \begin{definition}{Interpolacja}\\ \hfill
-Interpolacja jest metod¹ numeryczn¹ przybli¿ania funkcji. Polega ona na konstruowaniu tak zwanych \textbf{funkcji interpoluj¹cych} (przybli¿aj¹cych) $W(x)$. Wykorzystujemy do tego znane nam wartoœci \textbf{funkcji interpolowanej} (przybli¿anej) $f(x)$, dla wybranych argumentów nale¿¹cych do jej dziedziny.
+Interpolacja jest metod¹ numeryczn¹ przybli¿ania funkcji. Polega ona na konstruowaniu tak zwanych \textit{funkcji interpoluj¹cych} (przybli¿aj¹cych) $W(x)$. Wykorzystujemy do tego znane nam wartoœci \textit{funkcji interpolowanej} (przybli¿anej) $f(x)$, dla wybranych argumentów nale¿¹cych do jej dziedziny.
 \end{definition}  
 
 Wielomian $W(x)$ tworzony jest w oparciu o dwa powi¹zane ze sob¹ zbiory liczbowe \cite{klucz1}:
@@ -21,21 +21,20 @@ Wielomian $W(x)$ tworzony jest w oparciu o dwa powi¹zane ze sob¹ zbiory liczbowe
 Zbiory $X$ i $F$ s¹ równoliczne. Elementy $x_i \in X$  definiuj¹ wspó³rzêdne punktów wêz³owych w przestrzeni $\re^n$, natomiast elementy z $F$ okreœlaj¹ wartoœci funkcji $f(x)$ w wêz³ach $x_i$, tzn. 
 \begin{equation}\label{f_i=f(x_i)}
 		f_i=f(x_i),
-\end{equation} przy czym $f_i\in \re$ 
-
+\end{equation} przy czym $f_i\in \re$. \\
 Wyjaœnijmy równie¿ pojêcie wêz³a, którym przed chwil¹ operowaliœmy:
 \begin{definition}{Wêz³y (Punkty wêz³owe)}\\\hfill
 	Wêz³ami nazywamy punkty w przestrzeni $\re^n$, bêd¹ce takimi argumentami funkcji $f(x)$, dla których jesteœmy w stanie wyznaczyæ jej wartoœæ. 
 \end{definition}
 W wêz³ach wartoœci funkcji 	interpoluj¹cej i interpolowanej s¹ równe. Oznacza to, ¿e:
 \begin{equation}\label{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach}
-	W(x_i)=f(x_i) \hspace{1cm} (i=0,1,\ldots,n)
+	W(x_i)=f(x_i), \hspace{1cm} (i=0,1,\ldots,n)
 \end{equation}
 
 \begin{uw}
-W tym podrozdziale ograniczaæ bêdziemy siê jedynie do funkcji jednej zmiennej niezale¿nej. Funkcje te badane bêd¹ na ograniczonym domkniêtym przedziale $[a,b]$. W zwi¹zku z tym, zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$. Definicja zbioru $F$ nie ulega zmianie.
+W tym podrozdziale ograniczymy siê jedynie do funkcji jednej zmiennej niezale¿nej. Funkcje te badane bêd¹ na ograniczonym domkniêtym przedziale $[a,b]$. W zwi¹zku z tym, zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$. Definicja zbioru $F$ nie ulega zmianie.
 \end{uw}
-Na rysunku \ref{R1} zobrazowaliœmy w sposób symboliczny na czym polega interpolacja, oraz czym s¹ wêz³y(punkty $x_i$ przeciêcia wykresów $W(x)$ i $f(x)$, zachodzi dla nich równoœæ (\ref{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach})). 
+Na Rysunku \ref{R1} zobrazowaliœmy w sposób symboliczny na czym polega interpolacja, oraz czym s¹ wêz³y(punkty $x_i$ przeciêcia wykresów $W(x)$ i $f(x)$, zachodzi dla nich równoœæ (\ref{eq1:RownoscFkcjiInterpolacIInterpolowanejWwezlach})). 
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.3]{R1.eps}
@@ -54,15 +53,15 @@ oraz zbiór szukanych wspó³czynników
 \end{equation}
 takich, ¿e ich kombinacja liniowa z (\ref{funkcjeLiniowoNiezal}) bêdzie spe³nia³a poni¿szy uk³ad równañ:
 \begin{equation}\label{KombinacjaLiniowaAlfaiPhi}
-	\alpha_0\phi_0(x_i)+\alpha_1\phi_1(x_i)+\cdots+\alpha_n\phi_n(x_i)=f_i 
+	\alpha_0\phi_0(x_i)+\alpha_1\phi_1(x_i)+\cdots+\alpha_n\phi_n(x_i)=f_i, 
 \end{equation}
 gdzie $f_i\in F$ oraz $x_i \in X$. 
 
 W \textit{interpolacji Lagrange'a} w sk³ad (\ref{funkcjeLiniowoNiezal}) wchodz¹ wielomiany okreœlone w nastêpuj¹cy sposób:
 \begin{equation}\label{i-TeFunkcjeBazoweLagrange'a}
-	l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j} \,\,\,\,\,\,\, (i=0,1,\ldots,n).
+	l_i(x)=\prod\limits_{j=0, j\neq i}^n  \frac{x-x_j}{x_i-x_j}, \,\,\,\,\,\,\, (i=0,1,\ldots,n).
 \end{equation}
-S¹ one nazywane funkcjami bazowymi(wielomianami bazowymi) stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi nastêpuj¹ca równoœæ \cite{klucz3}: 
+S¹ one nazywane \textit{funkcjami bazowymi(wielomianami bazowymi)} stopnia $n$. Warto zauwa¿yæ, ¿e zachodzi dla nich nastêpuj¹ca równoœæ \cite{klucz3}: 
 \begin{equation}\label{deltaKroneckera}
 l_i(x_j)=\delta_{ij}=
 					\left\{
@@ -79,7 +78,7 @@ L_n(x)=\sum\limits_{i=0}^n f_i\cdot l_i(x)=\sum\limits_{i=0}^n f_i \prod\limits_
 bêdzie wielomianem o stopniu nie wiêkszym ni¿ $n$, oraz przyjmie wartoœci (\ref{f_i=f(x_i)})
 w punktach wêz³owych. Wielomian (\ref{wielomianInterpolacyjnyLagrangea}) nazywany jest \textbf{wielomianem interpolacyjnym \textit{Lagrange'a}}. Z jego pomoc¹ w dosyæ przystêpny sposób mo¿emy interpolowaæ dowoln¹ funkcjê.
 
-\begin{ex}{(Wyznaczanie wielomianu interpolacyjnego \textit{Lagrange'a} stopnia $n=2$)}\label{Przyklad_WielomianInterpolacyjnyLagrangea1}\\\hfill
+\begin{ex}{(Wyznaczanie \textit{wielomianu interpolacyjnego Lagrange'a} stopnia $n=2$)}\label{Przyklad_WielomianInterpolacyjnyLagrangea1}\\\hfill
 \textit{Zbudujemy wielomian interpolacyjny $L_2(x)$ dla funkcji $f(x)=e^{x^2}$ rozpatrywanej na ograniczonym przedziale $[0,1]$. 
 %Kolejno oblicz $L_2(0,6)$ i wynik porównaj z wartoœci¹ rzeczywist¹ wiedz¹c, ¿e $f(0,6)=e^{(0,6)^2}=1,4(3)$.
 }
@@ -89,31 +88,31 @@ $x_0=0$, $x_1=\frac{1}{2}$, $x_2=1.$
 Korzystaj¹c bezpoœrednio z równania (\ref{wielomianInterpolacyjnyLagrangea}) dostajemy:
 $$L_2(x)=f(x_0)\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}+
 f(x_1)\frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}+
-f(x_2)\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}$$
+f(x_2)\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}.$$
 Podstawiamy kolejno wartoœci wêz³ów do równania $L_2(x)$, otrzymuj¹c wielomian interpoluj¹cy nasz¹ funkcjê $f(x)=e^{x^2}$ na $[a,b]=[0,1]$:
 $$L_2(x)=e^0\frac{(x-\frac{1}{2})(x-1)}{(0-\frac{1}{2})(0-1)}+
 e^{(\frac{1}{4})} \frac{(x-0)(x-1)}{(\frac{1}{2}-0)(\frac{1}{2}-1)}+e^4\frac{(x-0)(x-\frac{1}{2})}{(1-0)(1-\frac{1}{2})}=
-2,30046x^2-0,58218x+1$$
+2,30046x^2-0,58218x+1.$$
 %Ostatecznie wyznaczamy wartoœæ $L_2(0,6)$:
 %$$L_2(0,6)=2,30046\cdot(0,6)^2-0,58218\cdot(0,6)+1=1,4788576$$
 %Wartoœæ interpolowana $L_2(0,6)$ odbiega nieco od wartoœci dok³adnej $f(0,6)$. 
 \end{ex} 
 
 Wyprowadzona w powy¿szym przyk³adzie dla funkcji $f(x)$ i zadanych wêz³ów postaæ wielomianu $L_2(x)$ jest jednoznaczna. Mówi o tym nastêpuj¹ce twierdzenie:
-\begin{theorem}{(O istnieniu i jednoznacznoœci wielomianu interpolacyjnego \textit{Lagrange'a} )}\label{TwOJednoznacznosciWielomLagrangea}\\\hfill
+\begin{theorem}{(O istnieniu i jednoznacznoœci \textit{wielomianu interpolacyjnego Lagrange'a} )}\label{TwOJednoznacznosciWielomLagrangea}\\\hfill
 Zadanie interpolacyjne \textit{Lagrange’a} ma zawsze dok³adnie jedno rozwi¹zanie, które mo¿na wyraziæ wzorem (\ref{wielomianInterpolacyjnyLagrangea}). Oznacza to, ¿e dla dowolnej funkcji $f: X\rightarrow\re$ oraz jej wartoœci $f(x_i)$ w $n+1$ zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$), istnieje dok³adnie jeden wielomian $L_n(x)$ interpoluj¹cy $f(x)$, dla którego prawdziwa jest zale¿noœæ $L_n(x_i)=f(x_i)$.
 \end{theorem}
 
 %PrzeprowadŸmy dowód twierdzenia \ref{TwOJednoznacznosciWielomLagrangea}, by wykazaæ jego s³usznoœæ.
 
 \begin{dowod*}\label{DowodTwOJednoznacznosciWielomLagrangea}\hfill\\
-Dowodzenie rozpoczniemy od wykazania faktu, ¿e rozwi¹zanie w ogóle istnieje.  Skonstruujmy je przy u¿yciu  wielomianów bazowych \textit{Lagrange'a} $l_i(x)$ z (\ref{i-TeFunkcjeBazoweLagrange'a}), oraz równania (\ref{deltaKroneckera}). Nale¿y zauwa¿yæ, ¿e odpowiadaj¹ca dla ka¿dego z wêz³ów $x_i$, gdzie ($i=0,1,\ldots,n$) funkcja $l_i(x)$ jest wielomianem $n$-tego stopnia. W zwi¹zku z tym \cite{klucz5}
+Dowodzenie rozpoczniemy od wykazania faktu, ¿e rozwi¹zanie w ogóle istnieje.  Skonstruujmy je przy u¿yciu  \textit{wielomianów bazowych Lagrange'a} $l_i(x)$ z (\ref{i-TeFunkcjeBazoweLagrange'a}), oraz równania (\ref{deltaKroneckera}). Nale¿y zauwa¿yæ, ¿e odpowiadaj¹ca dla ka¿dego z wêz³ów $x_i$, gdzie ($i=0,1,\ldots,n$) funkcja $l_i(x)$ jest wielomianem $n$-tego stopnia. W zwi¹zku z tym \cite{klucz5}
 $$L_n(x)=\sum\limits_{i=0}^n f(x_i)\cdot l_i(x)$$ 
 bêdzie wielomianem stopnia co najwy¿ej $n$. Ponadto odwo³uj¹c siê do (\ref{deltaKroneckera}) powy¿szy wzór mo¿emy przekszta³ciæ do nastêpuj¹cej postaci:
 $$L_n(x_j)=\sum\limits_{i=0}^n f(x_i)\cdot\delta_{ij}=f(x_j). $$
-Wynika  st¹d bezpoœrednio fakt, ¿e $L_n(x)$ jest wielomianem interpolacyjnym \textit{Lagrange'a}. Interpoluje on funkcjê $f(x)$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$). 
+Wynika  st¹d bezpoœrednio fakt, ¿e $L_n(x)$ jest \textit{wielomianem interpolacyjnym Lagrange'a}. Interpoluje on funkcjê $f(x)$ przy zadanych wêz³ach $x_i$ ($i=0,1,\ldots,n$). 
 
-Kolejno poka¿my, ¿e wyznaczany wielomian interpolacyjny \textit{Lagrange'a}  $L_n(x)$ jest zawsze jednoznaczny. Je¿eli zapiszemy go w postaci potêgowej (naturalnej) w bazie jednomianów \(\{1, x, x^2, \dots, x^n, \ldots\}\) tzn.$$L_n(x)=\sum\limits_{i=0}^n a_i\cdot x^i,$$
+Kolejno poka¿my, ¿e wyznaczany \textit{wielomian interpolacyjny Lagrange'a}  $L_n(x)$ jest zawsze jednoznaczny. Je¿eli zapiszemy go w postaci potêgowej (naturalnej) w bazie jednomianów \(\{1, x, x^2, \dots, x^n, \ldots\}\), tzn.:$$L_n(x)=\sum\limits_{i=0}^n a_i\cdot x^i,$$
 to zauwa¿amy, ¿e rozwi¹zanie naszego problemu sprowadza siê do wyznaczenia $n+1$ wspó³czynników $a_i$ ($i=0,1,\ldots,n$) takich, ¿e bêd¹ one spe³nia³y nastêpuj¹cy uk³ad $n+1$ równañ liniowych:
 \begin{equation}\label{Dowod_UkladWPostaciMacierzowej}
 \begin{bmatrix}
@@ -144,41 +143,41 @@ Niech symbolicznym zapisem powy¿szego uk³adu bêdzie $X \cdot A=F$. Macierz $X$ j
 \end{dowod*}
 
 
-Je¿eli obliczylibyœmy wartoœæ wielomianu interpolacyjnego  \textit{Lagrange'a} $L_2(x)$ (zbudowanego w przyk³adzie \ref{Przyklad_WielomianInterpolacyjnyLagrangea1}) dla pewnego $x$ nale¿¹cego do dziedziny $f(x)$ i porównali j¹ z wartoœci¹ dok³adn¹ $f(x)$ dla tego samego argumentu, to zauwa¿ylibyœmy, ¿e wynik jest obarczony pewnym b³êdem. Nosi on miano \textit{b³êdu interpolacji}. Dla wielomianów \textit{Lagrange'a} definiujemy go w nastêpuj¹cy sposób:
-\begin{definition}{(B³¹d interpolacji wielomianu \textit{Lagrange'a})}\\\hfill
+Je¿eli obliczylibyœmy wartoœæ \textit{wielomianu interpolacyjnego  Lagrange'a} $L_2(x)$ (zbudowanego w przyk³adzie \ref{Przyklad_WielomianInterpolacyjnyLagrangea1}) dla pewnego $x$ nale¿¹cego do dziedziny $f(x)$ i porównali j¹ z wartoœci¹ dok³adn¹ $f(x)$ dla tego samego argumentu, to zauwa¿ylibyœmy, ¿e wynik jest obarczony pewnym b³êdem. Nosi on miano \textit{b³êdu interpolacji}. Dla wielomianów \textit{Lagrange'a} definiujemy go w nastêpuj¹cy sposób:
+\begin{definition}{(B³¹d interpolacji wielomianem \textit{Lagrange'a})}\\\hfill
 WeŸmy $$M_{n+1}=\sup\limits_{x\in[a,b]}|f^{(n+1)}(x)|$$  
 %$$m_{n+1}=\sup\limits_{x\in[a,b]}|\omega_{n+1}(x)|,$$
 $$m_{n}=\sup\limits_{x\in[a,b]}|\omega_{n}(x)|,$$\\ przy czym \,$\omega_n(x)=(x-x_0)\ldots(x-x_n)=\prod\limits_{k=0}^n(x-x_k)$, zaœ $f(x)$ to funkcja interpolowana.\\
-B³êdem interpolacji wielomianem \textit{Lagrange'a} $L_n(x)$ (stopnia $n$) nazywamy wówczas takie
+B³êdem interpolacji wielomianem \textit{Lagrange'a} stopnia $n$ ($L_n(x)$) nazywamy wówczas takie
 %\delta_L=\frac{M_{n+1}\cdot m_{n+1}}{(n+1)!} %to bylo na dole w rownaniu
 \begin{equation}\label{Bl¹dInterpolacjiWielomLagrangea}
 	\delta_L=\frac{M_{n+1}\cdot m_{n}}{(n+1)!},
 \end{equation}
-dla którego zachodzi: $$|L_n(x)-f(x)|\leq\delta_L \,\,\,\,,x\in[a,b].$$
+dla którego zachodzi: $$|L_n(x)-f(x)|\leq\delta_L, \,\,\,\,x\in[a,b].$$
 
 \end{definition}    
 
   
 \section{Wielomiany \textit{Lagrange'a} dla funkcji dwóch zmiennych}
   
-W poprzednim podrozdziale rozwa¿yliœmy wielomian interpolacyjny \textit{Lagrange'a} funkcji jednej zmiennej niezale¿nej $x$. W rzeczywistoœci z pewnoœci¹ czêsto zetkniemy siê z przypadkiem, gdzie jakieœ analizowane przez nas zjawisko opisywane bêdzie przez wiêcej ni¿ jedn¹ zmienn¹. W zwi¹zku z tym rozpatrzymy przypadek, gdzie wartoœæ funkcji zale¿na jest od dwóch zmiennych niezale¿nych $x$ oraz $y$. 
+W poprzednim podrozdziale rozwa¿yliœmy \textit{wielomian interpolacyjny Lagrange'a} funkcji jednej zmiennej niezale¿nej $x$. W rzeczywistoœci z pewnoœci¹ czêsto zetkniemy siê z przypadkiem, gdzie jakieœ analizowane przez nas zjawisko opisywane bêdzie przez wiêcej ni¿ jedn¹ zmienn¹. W zwi¹zku z tym rozpatrzymy przypadek, gdzie wartoœæ funkcji zale¿na jest od dwóch zmiennych niezale¿nych $x$ oraz $y$. 
 
 \newpage
   
 Zdefiniujmy na pocz¹tku trzy pomocnicze zbiory liczbowe:
-  $$X=\{x_i: i=0,1,\ldots ,n\} \,\,\,,
-  Y=\{y_j: j=0,1,\ldots ,m\}$$
-  $$F=\{f_{i,j}=f(x_i,y_j): x_i\in X \, ,\, y_j\in Y\}$$
+  $$X=\{x_i: i=0,1,\ldots ,n\}, \,\,\,
+  Y=\{y_j: j=0,1,\ldots ,m\},$$
+  $$F=\{f_{i,j}=f(x_i,y_j): x_i\in X \, ,\, y_j\in Y\}.$$
 
-Elementy \mbox{$x_i \in X$} definiuj¹ wspó³rzêdne $x$-owe, zaœ $y_j \in Y$  wspó³rzêdne $y$-owe wszystkich wêz³ów postaci $(x_i,y_j)$  na badanym, ograniczonym obszarze. Zbiór $F$ zawiera natomiast wartoœci funkcji $f(x,y)$ we wszystkich punktach wêz³owych $(x_i,y_j)$ . Ponadto rozpatrujemy tylko takie przypadki, ¿e $f(x,y)\in \re$. Zauwa¿my dodatkowo, ¿e iloczyn kartezjañski zbiorów $X \times Y$ jest równoliczny ze zbiorem $F$. W zwi¹zku z tym dla ka¿dego wêz³a postaci $(x_i,y_j)$ istnieje dok³adnie jedna wartoœæ funkcji $f_{i,j} \in F$.
+Elementy \mbox{$x_i \in X$} definiuj¹ wspó³rzêdne $x$-owe, zaœ $y_j \in Y$  wspó³rzêdne $y$-owe wszystkich wêz³ów postaci $(x_i,y_j)$  na badanym, ograniczonym obszarze. Zbiór $F$ zawiera natomiast wartoœci funkcji $f(x,y)$ we wszystkich punktach wêz³owych $(x_i,y_j)$. Ponadto rozpatrujemy tylko takie przypadki, ¿e $f(x,y)\in \re$. Zauwa¿my dodatkowo, ¿e iloczyn kartezjañski zbiorów $X \times Y$ jest równoliczny ze zbiorem $F$. W zwi¹zku z tym dla ka¿dego wêz³a postaci $(x_i,y_j)$ istnieje dok³adnie jedna wartoœæ funkcji $f_{i,j} \in F$.
 
 
-W naszych rozwa¿aniach ograniczymy siê do funkcji zdefiniowanych na ograniczonym obszarze prostok¹tnym $D=\{(x,y)\, |\, a\leq x\leq b,\, c\leq y\leq d\}$. Zatem zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, intuicyjnie zbiór $Y$ elementy $y_i \in \re$ takie, ¿e $c=y_0<y_1<\ldots<y_m=d$. Definicja zbioru $F$ nie zmienia siê. WeŸmy $$f:D\rightarrow \re$$ tak¹, ¿e mo¿emy okreœliæ wartoœci $f(x_i,y_j)\in F$. Warto wspomnieæ, ¿e tak jak w przypadku wielomianu interpolacyjnego \textit{Lagreange'a} funkcji jednej zmiennej, wartoœci funkcji interpoluj¹cej i interpolowanej w wêz³ach równie¿ musz¹ byæ sobie równe, tzn.:
+W naszych rozwa¿aniach ograniczymy siê do funkcji zdefiniowanych na ograniczonym obszarze prostok¹tnym $D=\{(x,y)\, |\, a\leq x\leq b,\, c\leq y\leq d\}$. Zatem zbiór $X$ zawiera³ bêdzie elementy $x_i \in \re$ takie, ¿e $a=x_0<x_1<\ldots<x_n=b$, intuicyjnie zbiór $Y$ elementy $y_i \in \re$ takie, ¿e $c=y_0<y_1<\ldots<y_m=d$. Definicja zbioru $F$ nie zmienia siê. WeŸmy $$f:D\rightarrow \re$$ tak¹, ¿e mo¿emy okreœliæ wartoœci $f(x_i,y_j)\in F$. Warto wspomnieæ, ¿e tak jak w przypadku \textit{wielomianu interpolacyjnego Lagreange'a funkcji jednej zmiennej}, wartoœci funkcji interpoluj¹cej i interpolowanej w wêz³ach równie¿ musz¹ byæ sobie równe, tzn.:
 \begin{equation}\label{eq:RownoscWartosciWielomLagrange2IwartosciFkcjiwWezlach}
 L_{n,m}(x_i,y_j)=f(x_i,y_j),\,\,\,\, (i=0,1,\ldots,n \,\, ;\,\, j=0,1,\ldots ,m)
 \end{equation}
-(Przez zastosowane oznaczenie $L_{n,m}(x,y)$ bêdziemy rozumieli wielomian interpolacyjny \textit{Lagrange'a} funkcji dwóch zmiennych, gdzie stopieñ $x$ wynosi $n$, zaœ stopieñ $y$ jest \mbox{równy $m$}.)
-W sk³ad wielomianu interpolacyjnego $L_{n,m}(x,y)$ wchodzi³y bêd¹ dwie funkcje bazowe (lub inaczej - wielomiany bazowe), po jednej dla ka¿dej zmiennej niezale¿nej. \\
+(Przez zastosowane oznaczenie $L_{n,m}(x,y)$ bêdziemy rozumieli \textit{wielomian interpolacyjny Lagrange'a funkcji dwóch zmiennych}, gdzie stopieñ $x$ wynosi $n$, zaœ stopieñ $y$ jest \mbox{równy $m$}.)
+W sk³ad \textit{wielomianu interpolacyjnego $L_{n,m}(x,y)$} wchodzi³y bêd¹ dwie funkcje bazowe (lub inaczej - wielomiany bazowe), po jednej dla ka¿dej zmiennej niezale¿nej. \\
 Dla $x$ wielomian bazowy stopnia $n$ ma postaæ \cite{klucz8} : 
 \begin{equation}\label{WielomianBazowyLagr2li(x)}
 l_i(x)=\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s} \,\,\,(i=0,1,\ldots ,n).
@@ -212,9 +211,9 @@ l_j(y_r)=\delta_{jr}=
 					\right.
 \end{equation}
 
-Wzoruj¹c siê na równaniu (\ref{wielomianInterpolacyjnyLagrangea}) oraz korzystaj¹c z (\ref{WielomianBazowyLagr2li(x)}) i (\ref{WielomianBazowyLagr2li(y)}) jesteœmy w stanie wyprowadziæ wzór na wielomian interpolacyjny \textit{Lagrange'a} dla funkcji dwóch zmiennych. W zwi¹zku z tym, jego postaæ jest nastêpuj¹ca:
+Wzoruj¹c siê na równaniu (\ref{wielomianInterpolacyjnyLagrangea}) oraz korzystaj¹c z (\ref{WielomianBazowyLagr2li(x)}) i (\ref{WielomianBazowyLagr2li(y)}) jesteœmy w stanie wyprowadziæ wzór na \textit{wielomian interpolacyjny Lagrange'a dla funkcji dwóch zmiennych}. W zwi¹zku z tym jego postaæ jest nastêpuj¹ca:
 \begin{equation}\label{WielomianInterpolacyjnyLagrangea2}
-L_{n,m}(x,y)=\sum\limits_{i=0}^n \sum\limits_{j=0}^m f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{r=0,\,r\neq j}^m \frac{y-y_r}{y_j-y_r} \right)
+L_{n,m}(x,y)=\sum\limits_{i=0}^n \sum\limits_{j=0}^m f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^n \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{r=0,\,r\neq j}^m \frac{y-y_r}{y_j-y_r} \right).
 \end{equation} 					  
 
 Z faktu, ¿e pewna znana nam funkcja $f(x,y)$ zostaje przez nas interpolowana przy u¿yciu innej funkcji, wynika to, ¿e niemal zawsze wartoœci $f(x_i,y_j)$ i $L_{n,m}(x_i,y_j)$ bêd¹ w pewnym stopniu od siebie odbiegaæ ( pomijaj¹c punkty wêz³owe dla których zachodzi \mbox{(\ref{eq:RownoscWartosciWielomLagrange2IwartosciFkcjiwWezlach}) ).} Ró¿nica w tych¿e wartoœciach ma miejsce, gdy¿ jest to spowodowane wyst¹pieniem b³êdu interpolacji. Maksymaln¹ wielkoœæ takiego b³êdu mo¿emy okreœliæ z góry - sposób jego wyznaczania precyzuje definicja poni¿ej.
@@ -222,9 +221,9 @@ Z faktu, ¿e pewna znana nam funkcja $f(x,y)$ zostaje przez nas interpolowana prz
 
 \begin{definition}(B³¹d interpolacji wielomianem \textit{Lagrange'a} dla funkcji dwóch zmiennych)\\
 Niech dane bêd¹ nastêpuj¹ce równoœci \cite{klucz9}:\\
-$$M=\sup\limits_{\substack{x\in [a,b]\\ y\in [c,d]}} \left|\frac{\partial^{n+m+2}f(x,y)}{\partial x^{n+1} \partial y^{m+1}}\right|$$
-$$m_1=\sup\limits_{x\in [a,b]}\, |\omega_n(x)|$$
-$$m_2=\sup\limits_{y\in [c,d]}\, |\omega_m(y)|$$
+$$M=\sup\limits_{\substack{x\in [a,b]\\ y\in [c,d]}} \left|\frac{\partial^{n+m+2}f(x,y)}{\partial x^{n+1} \partial y^{m+1}}\right|,$$
+$$m_1=\sup\limits_{x\in [a,b]}\, |\omega_n(x)|,$$
+$$m_2=\sup\limits_{y\in [c,d]}\, |\omega_m(y)|.$$
 Przy czym $\omega_n(x)=\prod\limits_{i=0}^n(x-x_i)$ oraz $\omega_m(y)=\prod\limits_{j=0}^m(y-y_j)$, natomiast $f(x,y)$ to funkcja interpolowana. B³êdem interpolacji wielomianem \textit{Lagrange'a} $L_{n,m}(x,y)$ nazywamy takie 
 \begin{equation}\label{BladInterpolacjiWielomianemLagrangea2zmiennych}
 \delta_{L_{i,j}}=\frac{M\cdot m_1 \cdot m_2}{(n+1)!\cdot (m+1)!} \,\,\, ,
@@ -234,12 +233,12 @@ dla którego prawdziwa jest nastêpuj¹ca nierównoœæ:
 |L_{n,m}(x,y)-f(x,y)| \leq \delta_{L_{i,j}} \,\,\,\,x\in [a,b],\,\, y\in [c,d]
 \end{equation}
 \end{definition}
-W celu prezentacji metody budowania wielomianu interpolacyjnego \textit{Lagrange'a} dla funkcji dwóch zmiennych rozwi¹¿my pewien przyk³ad, który przybli¿y nam to zagadnienie.
+W celu prezentacji metody budowania \textit{wielomianu interpolacyjnego Lagrange'a dla funkcji dwóch zmiennych} rozwi¹¿my pewien przyk³ad, który przybli¿y nam to zagadnienie.
 
 \begin{ex}(Wyznaczanie wielomianu interpolacyjnego \textit{Lagrange'a} $L_{1,2}(x,y)$)\\
 Stworzymy wielomian interpolacyjny \textit{Lagrange'a} $L_{1,2}(x,y)$ dla funkcji $f(x,y)=cos(x^2+y^2)$ rozwa¿anej na domkniêtym obszarze prostok¹tnym postaci $\Omega=[0,\frac{1}{2}]\times [0,1]$.
 
-Chc¹c wyznaczyæ $L_{1,2}(x,y)$ niezbêdne jest okreœlenie $n+1=1+1=2$ wartoœci $x \in \Omega$ oraz $m+1=2+1=3$ wartoœci $y\in \Omega$. Wa¿ne jest, by krañcowe $x$ i $y$ zawiera³y brzegi \mbox{obszaru $\Omega$}. Zatem niech: $$x_0=0,\, x_1=\frac{1}{2}\,$$ $$  \, y_0=0,\, y_1=\frac{1}{2},\, y_2=1.$$  
+Chc¹c wyznaczyæ $L_{1,2}(x,y)$ niezbêdne jest okreœlenie $n+1=1+1=2$ wartoœci $x \in \Omega$ oraz $m+1=2+1=3$ wartoœci $y\in \Omega$. Wa¿ne jest, by krañcowe $x$ i $y$ zawiera³y brzegi \mbox{obszaru $\Omega$}. Zatem niech: $$x_0=0,\, x_1=\frac{1}{2},\,$$ $$  \, y_0=0,\, y_1=\frac{1}{2},\, y_2=1.$$  
 Kolejno korzystaj¹c bezpoœrednio z (\ref{WielomianInterpolacyjnyLagrangea2}) dostajemy:
 $$L_{1,2}(x,y)=\sum\limits_{i=0}^1 \sum\limits_{j=0}^2 f(x_i,y_j)\cdot\left(\prod\limits_{s=0,\,s\neq i}^1 \frac{x-x_s}{x_i-x_s}\cdot \prod\limits_{r=0,\,r\neq j}^2 \frac{y-y_r}{y_j-y_r} \right)=$$
 $$=f(x_0,y_0)\left(\frac{x-x_1}{x_0-x_1}\cdot \frac{y-y_1}{y_0-y_1}\cdot \frac{y-y_2}{y_0-y_2}\right)+
@@ -247,7 +246,7 @@ f(x_0,y_1)\left(\frac{x-x_1}{x_0-x_1}\cdot \frac{y-y_0}{y_1-y_0}\cdot \frac{y-y_
 $$f(x_0,y_2)\left(\frac{x-x_1}{x_0-x_1}\cdot \frac{y-y_0}{y_2-y_0}\cdot \frac{y-y_1}{y_2-y_1}\right)+
 f(x_1,y_0)\left(\frac{x-x_0}{x_1-x_0}\cdot \frac{y-y_1}{y_0-y_1}\cdot \frac{y-y_2}{y_0-y_2}\right)+$$
 $$f(x_1,y_1)\left(\frac{x-x_0}{x_1-x_0}\cdot \frac{y-y_0}{y_1-y_0}\cdot \frac{y-y_2}{y_1-y_2}\right)+
-f(x_1,y_2)\left(\frac{x-x_0}{x_1-x_0}\cdot \frac{y-y_0}{y_2-y_0}\cdot \frac{y-y_1}{y_2-y_1}\right)$$\\
+f(x_1,y_2)\left(\frac{x-x_0}{x_1-x_0}\cdot \frac{y-y_0}{y_2-y_0}\cdot \frac{y-y_1}{y_2-y_1}\right).$$\\
 Wstawiaj¹c do powy¿szego $L_{1,2}(x,y)$, okreœlone na pocz¹tku wartoœci $x$ i $y$ otrzymujemy:
 $$L_{1,2}(x,y)=cos(0^2+0^2)\left(\frac{x-\frac{1}{2}}{0-\frac{1}{2}}\cdot \frac{y-\frac{1}{2}}{0-\frac{1}{2}}\cdot \frac{y-1}{0-1}\right)+
 cos(0^2+\left(\frac{1}{2}\right)^2)\left(\frac{x-\frac{1}{2}}{0-\frac{1}{2}}\cdot \frac{y-0}{\frac{1}{2}-0}\cdot \frac{y-1}{\frac{1}{2}-1}\right)+$$
@@ -255,25 +254,25 @@ $$cos(0^2+1^2)\left(\frac{x-\frac{1}{2}}{0-\frac{1}{2}}\cdot \frac{y-0}{1-0}\cdo
 cos(\left(\frac{1}{2}\right)^2+0^2)\left(\frac{x-0}{\frac{1}{2}-0}\cdot \frac{y-\frac{1}{2}}{0-\frac{1}{2}}\cdot \frac{y-1}{0-1}\right)+$$
 $$cos(\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^2)\left(\frac{x-0}{\frac{1}{2}-0}\cdot \frac{y-0}{\frac{1}{2}-0}\cdot \frac{y-1}{\frac{1}{2}-1}\right)+
 cos(\left(\frac{1}{2}\right)^2+1^2)\left(\frac{x-0}{\frac{1}{2}-0}\cdot \frac{y-0}{1-0}\cdot \frac{y-\frac{1}{2}}{1-\frac{1}{2}}\right)=\ldots$$
-$$=  1 - 0,0621752 x + 0,335347 y  - 0,0941494 x y   - 0,795045 y^2 - 0,29363 x y^2 $$
+$$=  1 - 0.0621752 x + 0.335347 y  - 0.0941494 x y   - 0.795045 y^2 - 0.29363 x y^2 . $$
 \end{ex}
 
-Jak widaæ na powy¿szym przyk³adzie - wszystkie obliczenia niezbêdne do otrzymania ostatecznej formy wielomianu interpolacyjnego \textit{Lagrange'a} dla funkcji dwóch zmiennych s¹ niezwykle pracoch³onne. SprawdŸmy jeszcze jak bardzo wartoœci $L_{1,2}(x,y)$ odbiegaj¹ od wartoœci dok³adnych   $f(x,y)=cos(x^2+y^2)$ w  $z_0=\left(\frac{1}{4},\frac{1}{2}\right)$ oraz $z_1=\left(\frac{1}{3},\frac{2}{3}\right)$. Wiêc:
+Jak widaæ na powy¿szym przyk³adzie - wszystkie obliczenia niezbêdne do otrzymania ostatecznej formy \textit{wielomianu interpolacyjnego Lagrange'a dla funkcji dwóch zmiennych} s¹ niezwykle pracoch³onne. SprawdŸmy jeszcze jak bardzo wartoœci $L_{1,2}(x,y)$ odbiegaj¹ od wartoœci dok³adnych   $f(x,y)=cos(x^2+y^2)$ w  $z_0=\left(\frac{1}{4},\frac{1}{2}\right)$ oraz $z_1=\left(\frac{1}{3},\frac{2}{3}\right)$. Wiêc:
 \begin{flushleft}
 - w punkcie $z_0$:
 \end{flushleft}
-$$f\left(\frac{1}{4},\frac{1}{2}\right)=cos\left(\left(\frac{1}{4}\right)^2+\left(\frac{1}{2}\right)^2\right)=0,951567948$$
+$$f\left(\frac{1}{4},\frac{1}{2}\right)=cos\left(\left(\frac{1}{4}\right)^2+\left(\frac{1}{2}\right)^2\right)=0.951567948,$$
 \begin{center}
-$L_{1,2}\left(\frac{1}{4},\frac{1}{2}\right)=1 - 0,0621752 \left(\frac{1}{4}\right) + 0,335347\left(\frac{1}{2}\right) - 0,0941494 \left(\frac{1}{4}\right)\left(\frac{1}{2}\right)$\\ $ - 0,795045 \left(\frac{1}{2}\right)^2 - 0,29363 \left(\frac{1}{4}\right) \left(\frac{1}{2}\right)^2=0,9232479$ 
+$L_{1,2}\left(\frac{1}{4},\frac{1}{2}\right)=1 - 0.0621752 \left(\frac{1}{4}\right) + 0.335347\left(\frac{1}{2}\right) - 0.0941494 \left(\frac{1}{4}\right)\left(\frac{1}{2}\right)$\\ $ - 0.795045 \left(\frac{1}{2}\right)^2 - 0.29363 \left(\frac{1}{4}\right) \left(\frac{1}{2}\right)^2=0.9232479$ 
 \end{center}
 
 
 \begin{flushleft}
 - w punkcie $z_1$:
 \end{flushleft}
-$$f\left(\frac{1}{3},\frac{2}{3}\right)=cos\left(\left(\frac{1}{3}\right)^2+\left(\frac{2}{3}\right)^2\right)=0,849607562$$
+$$f\left(\frac{1}{3},\frac{2}{3}\right)=cos\left(\left(\frac{1}{3}\right)^2+\left(\frac{2}{3}\right)^2\right)=0.849607562,$$
 \begin{center}
-$L_{1,2}\left(\frac{1}{3},\frac{2}{3}\right)=1 - 0,0621752 \left(\frac{1}{3}\right) + 0,335347\left(\frac{2}{3}\right) - 0,0941494 \left(\frac{1}{3}\right)\left(\frac{2}{3}\right)$\\ $ - 0,795045 \left(\frac{2}{3}\right)^2 - 0,29363 \left(\frac{1}{3}\right) \left(\frac{2}{3}\right)^2=0,785063437$
+$L_{1,2}\left(\frac{1}{3},\frac{2}{3}\right)=1 - 0.0621752 \left(\frac{1}{3}\right) + 0.335347\left(\frac{2}{3}\right) - 0.0941494 \left(\frac{1}{3}\right)\left(\frac{2}{3}\right)$\\ $ - 0.795045 \left(\frac{2}{3}\right)^2 - 0.29363 \left(\frac{1}{3}\right) \left(\frac{2}{3}\right)^2=0.785063437\,.$
 \end{center}
 
 Na podstawie zaprezentowanych rachunków mo¿na zauwa¿yæ, ¿e nasze wyniki w pewnym, niezbyt znacz¹cym stopniu ró¿ni¹ siê od siebie. Poprzez zwiêkszenie liczby wêz³ów, mo¿liwe jest zmniejszenie b³êdu interpolacji jakim zosta³y one obarczone. Jednak¿e nale¿y pamiêtaæ, ¿e ka¿dy dodatkowy podzia³ obszaru $\Omega$ znacz¹co wyd³u¿y³oby obliczenia, dlatego te¿ nasze rachunki zawêziliœmy tylko do szeœciu punktów wêz³owych.   

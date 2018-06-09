@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 JUN 2018 09:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  9 JUN 2018 15:30
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -993,7 +993,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
 ]
 File: R1.eps Graphic file (type eps)
  <R1.eps> [9] [10]
-Underfull \hbox (badness 1648) in paragraph at lines 82--86
+Underfull \hbox (badness 1648) in paragraph at lines 81--85
 \T1/ptm/m/it/12 Zbu-du-jemy wie-lo-mian in-ter-po-la-cyjny $\OML/plm/m/it/12 L[
 ]\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 x\OMX/MnSymbolE/m/n/12 ç$ \T1/ptm/m/it
 /12 dla funk-cji $\OML/plm/m/it/12 f\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 x\O
@@ -1002,13 +1002,13 @@ MX/MnSymbolE/m/n/12 ç \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 e[]$ \T1/ptm/m/it/
  []
 
 [11] [12]
-Underfull \hbox (badness 1762) in paragraph at lines 164--165
+Underfull \hbox (badness 1762) in paragraph at lines 163--164
 \T1/ptm/m/n/12 jed-nej zmien-nej nie-za-leª-nej $\OML/plm/m/it/12 x$\T1/ptm/m/n
 /12 . W rze-czy-wi-sto-±ci z pew-no-±ci° cz¶-sto ze-tkniemy si¶ z
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 222--224
 
  []
 
@@ -1018,35 +1018,36 @@ Rozdzia\l  2.
 
 ] [19]
 File: R2.eps Graphic file (type eps)
- <R2.eps> [20]
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
-
- []
-
-[21]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 146.
+ <R2.eps>
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 104.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [22]
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+) [20]
+Underfull \hbox (badness 1509) in paragraph at lines 107--108
+\T1/ptm/m/n/12 re-la-tyw-nie ma™° liczb¶ po-dzia-™Ûw prze-dzia™u ca™-ko-wa-nia,
+ oraz wy-ko-rzy-stu-j°c pro-ce-dur¶
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 [24] [25]
 File: R3.eps Graphic file (type eps)
  <R3.eps>
-Underfull \hbox (badness 1867) in paragraph at lines 264--265
+Underfull \hbox (badness 1867) in paragraph at lines 263--264
 []\T1/ptm/m/n/12 , dla ktÛ-rych za-cho-dzi $[] \U/MnSymbolD/m/n/12   \OML/plm/m
 /it/12 x[]$\T1/ptm/m/n/12 . W celu wy-pro-wa-dze-nia wzoru
  []
 
 [26]
-Overfull \hbox (29.69785pt too wide) detected at line 270
+Overfull \hbox (29.69785pt too wide) detected at line 269
 [] \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 h []  []\OMX/MnSymbolE/m/n/12 à\OML/p
 lm/m/it/12 s\OMX/MnSymbolE/m/n/12 ç\OML/plm/m/it/12 ds \U/MnSymbolD/m/n/12   \O
 ML/plm/m/it/12 h [] [] ds \U/MnSymbolD/m/n/12   \OML/plm/m/it/12 h [] [] ds \U/
@@ -1054,47 +1055,42 @@ MnSymbolD/m/n/12   \OML/plm/m/it/12 h [] []ds \U/MnSymbolD/m/n/12  
  []
 
 [27]
-Overfull \hbox (27.29793pt too wide) detected at line 292
+Overfull \hbox (27.29793pt too wide) detected at line 291
 []
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 312--317
+Underfull \hbox (badness 10000) in paragraph at lines 311--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 [29]
-Overfull \hbox (24.59494pt too wide) in paragraph at lines 342--342
+Overfull \hbox (24.59494pt too wide) in paragraph at lines 341--341
 [] \T1/pcr/m/n/12 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or 
 N<=0)[] 
  []
 
 
-Overfull \hbox (38.99493pt too wide) in paragraph at lines 342--342
+Overfull \hbox (38.99493pt too wide) in paragraph at lines 341--341
 [] \T1/pcr/m/n/12 then ERROR('Ostatni parametr musi byc liczba naturalna postac
 i \2m')[] 
  []
 
 [30]
-Overfull \hbox (24.59494pt too wide) in paragraph at lines 367--367
+Overfull \hbox (24.59494pt too wide) in paragraph at lines 366--366
 [] \T1/pcr/m/n/12 if (((ceil(N)>N) or (floor(N)<N)) or (mod(N,2)=1 and N>0) or 
 N<=0)[] 
  []
 
 
-Overfull \hbox (38.99493pt too wide) in paragraph at lines 367--367
+Overfull \hbox (38.99493pt too wide) in paragraph at lines 366--366
 [] \T1/pcr/m/n/12 then ERROR('Ostatni parametr musi byc liczba naturalna postac
 i \2m')[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
-
  []
 
 [31] [32]) ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialiii.tex" [33]
@@ -1139,112 +1135,112 @@ Overfull \hbox (10.19495pt too wide) in paragraph at lines 190--190
  []
 
 [40] [41] [42]
-Underfull \hbox (badness 1484) in paragraph at lines 322--323
+Underfull \hbox (badness 1484) in paragraph at lines 325--326
 []\T1/ptm/m/n/12 Tak samo jak zro-bi-li-±my to dla przy-padku wzoru tra-pe-zÛw,
  wy-ko-najmy rÛw-nieª
  []
 
 [43] [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 File: R5.eps Graphic file (type eps)
 <R5.eps> [46]
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 [47]
-Overfull \hbox (0.66805pt too wide) detected at line 470
+Overfull \hbox (0.66805pt too wide) detected at line 473
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (5.57274pt too wide) detected at line 471
+Overfull \hbox (5.57274pt too wide) detected at line 474
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (4.57405pt too wide) detected at line 472
+Overfull \hbox (4.57405pt too wide) detected at line 475
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (5.30913pt too wide) detected at line 474
+Overfull \hbox (5.30913pt too wide) detected at line 477
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (10.88298pt too wide) detected at line 475
+Overfull \hbox (10.88298pt too wide) detected at line 478
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (10.88298pt too wide) detected at line 476
-[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
-/10.95 dydx \U/MnSymbolD/m/n/10.95   []
- []
-
-
-Overfull \hbox (4.83766pt too wide) detected at line 478
-[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
-/10.95 dydx \U/MnSymbolD/m/n/10.95   []
- []
-
-[48]
 Overfull \hbox (10.88298pt too wide) detected at line 479
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Overfull \hbox (10.88298pt too wide) detected at line 480
+Overfull \hbox (4.83766pt too wide) detected at line 481
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+[48]
+Overfull \hbox (10.88298pt too wide) detected at line 482
 [] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
 /10.95 dydx \U/MnSymbolD/m/n/10.95   []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--489
+Overfull \hbox (10.88298pt too wide) detected at line 483
+[] [] []\OML/plm/m/it/10.95 dydx \U/MnSymbolD/m/n/10.95   [] [] []\OML/plm/m/it
+/10.95 dydx \U/MnSymbolD/m/n/10.95   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--492
 
  []
 
 [49] [50]
-Overfull \hbox (21.80457pt too wide) in paragraph at lines 554--554
+Overfull \hbox (21.80457pt too wide) in paragraph at lines 557--557
 []  \T1/pcr/m/n/10.95 if ((((ceil(N)>N) or (floor(N)<N)) or (mod(N,2) = 1 and N
 >0) or N <= 0)[] 
  []
 
 
-Overfull \hbox (28.37456pt too wide) in paragraph at lines 554--554
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 557--557
 []   \T1/pcr/m/n/10.95 or (((ceil(M)>M) or (floor(M)<M)) or (mod(M,2) = 1 and M
 >0) or M <= 0))[] 
  []
 
 
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 554--554
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 557--557
 []    \T1/pcr/m/n/10.95 ERROR('Ostatnie dwa parametry musza byc liczba naturaln
 a postaci \2k');[] 
  []
 
 [51]
-Underfull \hbox (badness 1590) in paragraph at lines 558--564
+Underfull \hbox (badness 1590) in paragraph at lines 561--567
 \T1/ptm/m/n/12 nie jest liczb° na-tu-raln° pa-rzy-st° to zwra-cany jest sto-sow
 ny ko-mu-ni-kat o b™¶-dzie. W
  []
 
 [52]
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--614
+Underfull \hbox (badness 10000) in paragraph at lines 575--618
 
  []
 
@@ -1261,69 +1257,69 @@ Underfull \hbox (badness 1728) in paragraph at lines 3--4
 ]
 File: R6.eps Graphic file (type eps)
  <R6.eps>
-Overfull \hbox (6.77058pt too wide) in paragraph at lines 20--20
+Overfull \hbox (4.09445pt too wide) in paragraph at lines 20--20
 []\T1/ptm/m/n/12 Rysunek 4.1: |[]| 
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 30--31
-\T1/ptm/m/n/12 Po za-sto-so-wa-niu z™o-ªo-nego \T1/ptm/m/it/12 wzoru Tra-pe-zÛw
+Underfull \hbox (badness 1953) in paragraph at lines 31--32
+\T1/ptm/m/n/12 Po za-sto-so-wa-niu \T1/ptm/m/it/12 z™o-ªo-nego wzoru tra-pe-zÛw
  \T1/ptm/m/n/12 ([][][][][][]) dla $\OML/plm/m/it/12 I[]$ \T1/ptm/m/n/12 zy-ska
 my wst¶pn° form¶
  []
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
 [57] [58]
-Underfull \hbox (badness 5316) in paragraph at lines 122--124
+Underfull \hbox (badness 5316) in paragraph at lines 123--125
 []\T1/ptm/b/n/12 Procedura 9. []\T1/ptm/m/n/12 (Wy-zna-cza-nie przy-bli-ªo-nych
  war-to-±ci ca-™ek po-dwÛj-nych w ob-sza-rach
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
 [59]
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 160--160
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 161--161
 []\T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natural
 na postaci \2k')[] 
  []
 
 
-Overfull \hbox (21.80457pt too wide) in paragraph at lines 160--160
+Overfull \hbox (21.80457pt too wide) in paragraph at lines 161--161
 []    \T1/pcr/m/n/10.95 hy := (d(ix)-c(ix))/m; #wielk. kroku pomiedzy y-ami dla
  i-tego pkt. x[] 
  []
 
 [60]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 [61] [62]
-Underfull \hbox (badness 1997) in paragraph at lines 267--268
+Underfull \hbox (badness 1997) in paragraph at lines 272--273
 []\T1/ptm/m/n/12 Pocz°tkowo zde-fi-niujmy pe-wien ob-szar [], nor-malny
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--274
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 276--277
+Underfull \hbox (badness 2409) in paragraph at lines 281--282
 []\T1/ptm/m/n/12 Kolejno dla kaª-dego $\OML/plm/m/it/12 x[] \U/MnSymbolD/m/n/12
  > \OMX/MnSymbolE/m/n/12  \OML/plm/m/it/12 a; b\OMX/MnSymbolE/m/n/12 $ \T1/ptm
 /m/n/12 wy-rÛª-nijmy prze-dzia™y g™Ûw-nie rÛª-nej d™u-go-
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 276--277
+Underfull \hbox (badness 1902) in paragraph at lines 281--282
 \T1/ptm/m/n/12 ±ci $\OMX/MnSymbolE/m/n/12  \OML/plm/m/it/12 c\OMX/MnSymbolE/m/n
 /12 à\OML/plm/m/it/12 x[]\OMX/MnSymbolE/m/n/12 ç\OML/plm/m/it/12 ; d\OMX/MnSymb
 olE/m/n/12 à\OML/plm/m/it/12 x[]\OMX/MnSymbolE/m/n/12 ç$\T1/ptm/m/n/12 , za-le
@@ -1337,78 +1333,78 @@ szyst-
 [63]
 File: R7.eps Graphic file (type eps)
  <R7.eps>
-Overfull \hbox (1.62256pt too wide) in paragraph at lines 285--285
+Overfull \hbox (1.62256pt too wide) in paragraph at lines 290--290
 []\T1/ptm/m/n/12 Rysunek 4.2: |[]| 
  []
 
 [64]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 313.
+LaTeX Font Warning: Command \small invalid in math mode on input line 319.
 
 
-Overfull \hbox (34.25784pt too wide) detected at line 326
+Overfull \hbox (34.25784pt too wide) detected at line 332
 []
  []
 
 [65]
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 [66] [67]
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 431--431
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 437--437
 [] \T1/pcr/m/n/10.95 if (N < ceil(N) or floor(N) < N or (mod(N, 2) = 1 and 0 < 
 N) or N <= 0) or[] 
  []
 
 
-Overfull \hbox (15.23457pt too wide) in paragraph at lines 431--431
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 437--437
 []    \T1/pcr/m/n/10.95 (M < ceil(M) or floor(M) < M or (mod(M, 2) = 1 and 0 < 
 M) or M <= 0)[] 
  []
 
 
-Overfull \hbox (21.80457pt too wide) in paragraph at lines 431--431
+Overfull \hbox (21.80457pt too wide) in paragraph at lines 437--437
 [] \T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natur.
  postaci \2k')[] 
  []
 
 
-Overfull \hbox (2.09459pt too wide) in paragraph at lines 431--431
+Overfull \hbox (2.09459pt too wide) in paragraph at lines 437--437
 []        \T1/pcr/m/n/10.95 s1 := f(ix, c(ix))+f(ix, d(ix)); #suma pierwszy+ os
 tatni wyraz[] 
  []
 
 
-Overfull \hbox (8.66458pt too wide) in paragraph at lines 431--431
+Overfull \hbox (8.66458pt too wide) in paragraph at lines 437--437
 []        \T1/pcr/m/n/10.95 hy := (1/2)*(d(ix)-c(ix))/m; #wielk. kroku miedzy y
  dla pkt. ix[] 
  []
 
 [68]
-Underfull \hbox (badness 1748) in paragraph at lines 437--438
+Underfull \hbox (badness 1748) in paragraph at lines 443--444
 \T1/ptm/m/n/12 i pa-rzy-stymi. Je-ªeli wa-li-da-cja N i M prze-bie-gnie pra-wi-
 d™owo to al-go-rytm roz-pocz-nie
  []
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 448--532
+Underfull \hbox (badness 10000) in paragraph at lines 454--542
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--532
+Underfull \hbox (badness 10000) in paragraph at lines 454--542
 
  []
 
 [70]
-Underfull \hbox (badness 5217) in paragraph at lines 537--538
+Underfull \hbox (badness 5217) in paragraph at lines 548--549
 []\T1/ptm/m/n/12 Rozwaªmy ob-szar [], nor-malny wzgl¶-dem osi $\OML/plm/m/it/12
  Oy$
  []
 
 [71]
-Underfull \hbox (badness 2846) in paragraph at lines 542--545
+Underfull \hbox (badness 2846) in paragraph at lines 553--556
 \T1/ptm/m/n/12 Dodatkowo dla kaª-dego $\OML/plm/m/it/12 y[] \U/MnSymbolD/m/n/12
  > \OMX/MnSymbolE/m/n/12  \OML/plm/m/it/12 a; b\OMX/MnSymbolE/m/n/12 $ \T1/ptm
 /m/n/12 wy-rÛª-nijmy prze-dzia™y $\OMX/MnSymbolE/m/n/12  \OML/plm/m/it/12 c\OMX
@@ -1418,7 +1414,7 @@ m/n/12 , za-zwy-czaj
  []
 
 
-Underfull \hbox (badness 4467) in paragraph at lines 542--545
+Underfull \hbox (badness 4467) in paragraph at lines 553--556
 \T1/ptm/m/n/12 rÛª-nej d™u-go-±ci, uza-leª-nione od po-staci funk-cji $\OML/plm
 /m/it/12 c\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 y\OMX/MnSymbolE/m/n/12 ç$\T1/
 ptm/m/n/12 , $\OML/plm/m/it/12 d\OMX/MnSymbolE/m/n/12 à\OML/plm/m/it/12 y\OMX/M
@@ -1427,112 +1423,112 @@ D/m/n/12   \OML/plm/m/it/12 y[]$\T1/ptm/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--545
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
 \T1/ptm/m/n/12 Kaªdy z nich po-dzie-lony zo-sta-nie na do-k™ad-nie $\OML/plm/m/
 it/12 m$ \T1/ptm/m/n/12 rÛw-nych pod-prze-dzia-™Ûw
  []
 
 File: R8.eps Graphic file (type eps)
 <R8.eps>
-Overfull \hbox (6.2532pt too wide) in paragraph at lines 551--551
+Overfull \hbox (3.57707pt too wide) in paragraph at lines 562--562
 []\T1/ptm/m/n/12 Rysunek 4.3: |[]| 
  []
 
 [72] [73]
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 621--621
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 633--633
 []  \T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natur
 . postaci \2k');[] 
  []
 
 
-Overfull \hbox (2.09459pt too wide) in paragraph at lines 621--621
+Overfull \hbox (2.09459pt too wide) in paragraph at lines 633--633
 []       \T1/pcr/m/n/10.95 s2 := 0;                         #suma wyrazow dla p
 arzystego i[] 
  []
 
 
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 621--621
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 633--633
 []       \T1/pcr/m/n/10.95 hx := (d(yi)-c(yi))/m; #wielk. kroku pomiedzy x-ami 
 dla i-tego pkt y[] 
  []
 
 
-Overfull \hbox (21.80457pt too wide) in paragraph at lines 621--621
+Overfull \hbox (21.80457pt too wide) in paragraph at lines 633--633
 []            \T1/pcr/m/n/10.95 ix := c(yi)+j*hx; #wartosc kolejnych ix dla zad
 anego i-tego y[] 
  []
 
 [74]
-Underfull \hbox (badness 10000) in paragraph at lines 625--628
+Underfull \hbox (badness 10000) in paragraph at lines 637--640
 
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 638--639
+Underfull \hbox (badness 2012) in paragraph at lines 650--651
 \T1/ptm/m/n/12 dla co-raz to wi¶k-szych $\OML/plm/m/it/12 n$ \T1/ptm/m/n/12 i $
 \OML/plm/m/it/12 m$\T1/ptm/m/n/12 . W $\OML/plm/m/it/12 BBT\OT4/cmr/m/n/12 2\OM
 L/plm/m/it/12 Vx[]$ \T1/ptm/m/n/12 zo-stan° za-warte b™¶dy bez-wzgl¶dne
  []
 
 [75] [76]
-Underfull \hbox (badness 10000) in paragraph at lines 735--737
+Underfull \hbox (badness 10000) in paragraph at lines 753--755
 
  []
 
 [77]
 File: R9.eps Graphic file (type eps)
  <R9.eps>
-Overfull \hbox (1.10518pt too wide) in paragraph at lines 749--749
+Overfull \hbox (1.10518pt too wide) in paragraph at lines 767--767
 []\T1/ptm/m/n/12 Rysunek 4.4: |[]| 
  []
 
 [78]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 778.
+LaTeX Font Warning: Command \small invalid in math mode on input line 797.
 
 
-Overfull \hbox (34.43146pt too wide) detected at line 791
+Overfull \hbox (34.43146pt too wide) detected at line 810
 []
  []
 
 
-Overfull \hbox (28.37456pt too wide) in paragraph at lines 842--842
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 861--861
 []\T1/pcr/m/n/10.95 if (N < ceil(N) or floor(N) < N or (mod(N, 2) = 1 and 0 < N
 ) or N <= 0) or[] 
  []
 
 
-Overfull \hbox (8.66458pt too wide) in paragraph at lines 842--842
+Overfull \hbox (8.66458pt too wide) in paragraph at lines 861--861
 []   \T1/pcr/m/n/10.95 (M < ceil(M) or floor(M) < M or (mod(M, 2) = 1 and 0 < M
 ) or M <= 0)[] 
  []
 
 
-Overfull \hbox (34.94455pt too wide) in paragraph at lines 842--842
+Overfull \hbox (34.94455pt too wide) in paragraph at lines 861--861
 []\T1/pcr/m/n/10.95 then ERROR('Ostatnie dwa parametry musza byc liczba natural
 na postaci \2k')[] 
  []
 
 [79]
-Overfull \hbox (15.23457pt too wide) in paragraph at lines 842--842
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 861--861
 []      \T1/pcr/m/n/10.95 s3 := 0;                        #suma wyrazow dla nie
  parzystego i[] 
  []
 
 
-Overfull \hbox (28.37456pt too wide) in paragraph at lines 842--842
+Overfull \hbox (28.37456pt too wide) in paragraph at lines 861--861
 []                                      \T1/pcr/m/n/10.95 # x-ami dla zadanego 
 i-tego punktu y[] 
  []
 
 
-Overfull \hbox (15.23457pt too wide) in paragraph at lines 842--842
+Overfull \hbox (15.23457pt too wide) in paragraph at lines 861--861
 []           \T1/pcr/m/n/10.95 ix := c(yi)+j*hx; #wartosc kolejnych xi dla zada
 nego i-tego y[] 
  []
 
 [80]
-Underfull \hbox (badness 10000) in paragraph at lines 849--850
+Underfull \hbox (badness 10000) in paragraph at lines 868--869
 
  []
 
@@ -1619,11 +1615,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
 ### bottom level 
 Here is how much of TeX's memory you used:
  13707 strings out of 493922
- 203326 string characters out of 3144896
- 330309 words of memory out of 3000000
+ 203327 string characters out of 3144896
+ 330249 words of memory out of 3000000
  16706 multiletter control sequences out of 15000+200000
  73297 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1504b,7027s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (87 pages, 499968 bytes).
+Output written on glowny.dvi (87 pages, 506324 bytes).

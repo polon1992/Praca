@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 JUN 2018 09:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  8 JUN 2018 20:59
 entering extended mode
 **rozdzialii.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\rozdzialii.tex"
@@ -3815,8 +3815,8 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
-l.105 \hspace{2cm}{\footnotesize
-                                 Ÿród³o: https://pl.wikipedia.org/wiki/Wzór\...
+l.105 \hspace{0.52cm}{\footnotesize
+                                    Ÿród³o: \url{https://pl.wikipedia.org/wi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3830,6 +3830,15 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no ³ in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no : in font nullfont!
+! Undefined control sequence.
+l.105 \hspace{0.52cm}{\footnotesize Ÿród³o: \url
+                                                {https://pl.wikipedia.org/wi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -4137,7 +4146,7 @@ Missing character: There is no ó in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 104--109
+Overfull \hbox (14.79555pt too wide) in paragraph at lines 104--109
           []
  []
 
@@ -4158,7 +4167,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.111 \begin{ex}
+l.110 \begin{ex}
                 {(Wyznaczanie przybli¿onej wartoœci ca³ki przy wykorzystaniu...
 
 Your command was ignored.
@@ -4249,107 +4258,107 @@ Missing character: There is no ê in font cmti10!
 Missing character: There is no ³ in font cmti10!
 Missing character: There is no ó in font cmti10!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 111--113
+Overfull \hbox (20.0pt too wide) in paragraph at lines 110--112
 []
  []
 
 
-Overfull \hbox (22.51096pt too wide) in paragraph at lines 111--113
+Overfull \hbox (22.51096pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 Wyz-
  []
 
 
-Overfull \hbox (37.31087pt too wide) in paragraph at lines 111--113
+Overfull \hbox (37.31087pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 naczymy
  []
 
 
-Overfull \hbox (21.84984pt too wide) in paragraph at lines 111--113
+Overfull \hbox (21.84984pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 przy-
  []
 
 
-Overfull \hbox (20.95543pt too wide) in paragraph at lines 111--113
+Overfull \hbox (20.95543pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 blion
  []
 
 
-Overfull \hbox (24.4054pt too wide) in paragraph at lines 111--113
+Overfull \hbox (24.4054pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 warto
  []
 
 
-Overfull \hbox (16.86653pt too wide) in paragraph at lines 111--113
+Overfull \hbox (16.86653pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 caki
  []
 
 
-Overfull \hbox (32.84726pt too wide) in paragraph at lines 111--113
+Overfull \hbox (32.84726pt too wide) in paragraph at lines 110--112
 [] \OML/cmm/m/it/10 e[]dx$
  []
 
 
-Overfull \hbox (24.91649pt too wide) in paragraph at lines 111--113
+Overfull \hbox (24.91649pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 przyj-
  []
 
 
-Overfull \hbox (24.27763pt too wide) in paragraph at lines 111--113
+Overfull \hbox (24.27763pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 mujc,
  []
 
 
-Overfull \hbox (4.59996pt too wide) in paragraph at lines 111--113
+Overfull \hbox (4.59996pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 e
  []
 
 
-Overfull \hbox (34.8831pt too wide) in paragraph at lines 111--113
+Overfull \hbox (34.8831pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 przedzia
  []
 
 
-Overfull \hbox (34.2442pt too wide) in paragraph at lines 111--113
+Overfull \hbox (34.2442pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 cakowa-
  []
 
 
-Overfull \hbox (13.79993pt too wide) in paragraph at lines 111--113
+Overfull \hbox (13.79993pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 nia
  []
 
 
-Overfull \hbox (20.4443pt too wide) in paragraph at lines 111--113
+Overfull \hbox (20.4443pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 dzie-
  []
 
 
-Overfull \hbox (18.65544pt too wide) in paragraph at lines 111--113
+Overfull \hbox (18.65544pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 limy
  []
 
 
-Overfull \hbox (10.73328pt too wide) in paragraph at lines 111--113
+Overfull \hbox (10.73328pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 na
  []
 
 
-Overfull \hbox (18.3999pt too wide) in paragraph at lines 111--113
+Overfull \hbox (18.3999pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 n=6
  []
 
 
-Overfull \hbox (31.04979pt too wide) in paragraph at lines 111--113
+Overfull \hbox (31.04979pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 rwnych
  []
 
 
-Overfull \hbox (25.55539pt too wide) in paragraph at lines 111--113
+Overfull \hbox (25.55539pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 czci(7
  []
 
 
-Overfull \hbox (24.5332pt too wide) in paragraph at lines 111--113
+Overfull \hbox (24.5332pt too wide) in paragraph at lines 110--112
 \OT1/cmr/m/it/10 wzw). 
  []
 
@@ -4509,7 +4518,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ... `OgolnyWzorTrapezow' on page \thepage 
                                                   \space undefined\on@line .
-l.116 ...ci wstawiamy do (\ref{OgolnyWzorTrapezow}
+l.115 ...ci wstawiamy do (\ref{OgolnyWzorTrapezow}
                                                   ):
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4519,264 +4528,264 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `OgolnyWzorTrapezow' on page  undefined on input line 
-116.
+115.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.0pt too wide) in paragraph at lines 113--116
 []
  []
 
 
-Overfull \hbox (16.3171pt too wide) in paragraph at lines 114--117
+Overfull \hbox (16.3171pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 h \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (16.50432pt too wide) in paragraph at lines 114--117
+Overfull \hbox (16.50432pt too wide) in paragraph at lines 113--116
 []$
  []
 
 
-Overfull \hbox (16.3171pt too wide) in paragraph at lines 114--117
+Overfull \hbox (16.3171pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 h \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (28.99448pt too wide) in paragraph at lines 114--117
+Overfull \hbox (28.99448pt too wide) in paragraph at lines 113--116
 [] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (6.38612pt too wide) in paragraph at lines 114--117
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 113--116
 []$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 114--117
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 113--116
 \OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (6.38612pt too wide) in paragraph at lines 114--117
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 113--116
 []$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (6.38612pt too wide) in paragraph at lines 114--117
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 113--116
 []$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (6.38612pt too wide) in paragraph at lines 114--117
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 113--116
 []$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 114--117
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 113--116
 \OT1/cmr/m/n/10 1$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (6.38612pt too wide) in paragraph at lines 114--117
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 113--116
 []$
  []
 
 
-Overfull \hbox (20.75691pt too wide) in paragraph at lines 114--117
+Overfull \hbox (20.75691pt too wide) in paragraph at lines 113--116
 \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (6.38612pt too wide) in paragraph at lines 114--117
+Overfull \hbox (6.38612pt too wide) in paragraph at lines 113--116
 []$ 
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 114--117
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 113--116
 [] 
  []
 
 
-Overfull \hbox (43.40277pt too wide) in paragraph at lines 118--118
+Overfull \hbox (43.40277pt too wide) in paragraph at lines 117--117
  [] \OML/cmm/m/it/10 e[]dx \OT1/cmr/m/n/10 = 
  []
 
 
-Overfull \hbox (43.82098pt too wide) in paragraph at lines 118--118
+Overfull \hbox (43.82098pt too wide) in paragraph at lines 117--117
  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1
 /cmr/m/n/10 ) + 
  []
 
 
-Overfull \hbox (36.72928pt too wide) in paragraph at lines 118--118
+Overfull \hbox (36.72928pt too wide) in paragraph at lines 117--117
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/c
 mr/m/n/10 ) + 
  []
 
 
-Overfull \hbox (36.72928pt too wide) in paragraph at lines 118--118
+Overfull \hbox (36.72928pt too wide) in paragraph at lines 117--117
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/c
 mr/m/n/10 ) + 
  []
 
 
-Overfull \hbox (36.72928pt too wide) in paragraph at lines 118--118
+Overfull \hbox (36.72928pt too wide) in paragraph at lines 117--117
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/c
 mr/m/n/10 ) + 
  []
 
 
-Overfull \hbox (36.72928pt too wide) in paragraph at lines 118--118
+Overfull \hbox (36.72928pt too wide) in paragraph at lines 117--117
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/c
 mr/m/n/10 ) + 
  []
 
 
-Overfull \hbox (36.72928pt too wide) in paragraph at lines 118--118
+Overfull \hbox (36.72928pt too wide) in paragraph at lines 117--117
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/c
 mr/m/n/10 ) + 
  []
 
 
-Overfull \hbox (38.39587pt too wide) in paragraph at lines 118--118
+Overfull \hbox (38.39587pt too wide) in paragraph at lines 117--117
  \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )) =$ 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 119--120
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 118--119
  []$\OT1/cmr/m/n/10 = 
  []
 
 
-Overfull \hbox (27.19522pt too wide) in paragraph at lines 119--120
+Overfull \hbox (27.19522pt too wide) in paragraph at lines 118--119
  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 
  []
 
 
-Overfull \hbox (33.88977pt too wide) in paragraph at lines 119--120
+Overfull \hbox (33.88977pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 
  []
 
 
-Overfull \hbox (33.88977pt too wide) in paragraph at lines 119--120
+Overfull \hbox (33.88977pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 
  []
 
 
-Overfull \hbox (33.88977pt too wide) in paragraph at lines 119--120
+Overfull \hbox (33.88977pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 
  []
 
 
-Overfull \hbox (21.92021pt too wide) in paragraph at lines 119--120
+Overfull \hbox (21.92021pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 
  []
 
 
-Overfull \hbox (33.88977pt too wide) in paragraph at lines 119--120
+Overfull \hbox (33.88977pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 
  []
 
 
-Overfull \hbox (35.55637pt too wide) in paragraph at lines 119--120
+Overfull \hbox (35.55637pt too wide) in paragraph at lines 118--119
  \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  
  []
 
 
-Overfull \hbox (23.05284pt too wide) in paragraph at lines 119--120
+Overfull \hbox (23.05284pt too wide) in paragraph at lines 118--119
  []\OT1/cmr/m/n/10 (1 + 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 119--120
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  
  []
 
 
-Overfull \hbox (42.2223pt too wide) in paragraph at lines 119--120
+Overfull \hbox (42.2223pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 06449 + 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 119--120
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  
  []
 
 
-Overfull \hbox (42.2223pt too wide) in paragraph at lines 119--120
+Overfull \hbox (42.2223pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 28402 + 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 119--120
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  
  []
 
 
-Overfull \hbox (42.2223pt too wide) in paragraph at lines 119--120
+Overfull \hbox (42.2223pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 75505 + 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 119--120
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  
  []
 
 
-Overfull \hbox (42.2223pt too wide) in paragraph at lines 119--120
+Overfull \hbox (42.2223pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 71828 + 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 119--120
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  
  []
 
 
-Overfull \hbox (42.2223pt too wide) in paragraph at lines 119--120
+Overfull \hbox (42.2223pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 77073 + 
  []
 
 
-Overfull \hbox (48.88892pt too wide) in paragraph at lines 119--120
+Overfull \hbox (48.88892pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 48773) \OMS/cmsy/m/n/10  
 
  []
 
 
-Overfull \hbox (34.4445pt too wide) in paragraph at lines 119--120
+Overfull \hbox (34.4445pt too wide) in paragraph at lines 118--119
  \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 20911$ 
  []
 
@@ -4926,19 +4935,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123 \end{ex}
+l.122 \end{ex}
               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (64.4446pt too wide) in paragraph at lines 122--124
+Overfull \hbox (64.4446pt too wide) in paragraph at lines 121--123
      $\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 06311405862$
  []
 
 
-Overfull \hbox (34.4445pt too wide) in paragraph at lines 122--124
+Overfull \hbox (34.4445pt too wide) in paragraph at lines 121--123
 \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 20911$
  []
 
@@ -5148,7 +5157,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 \begin{definition}
+l.126 \begin{definition}
                         {(B³¹d przybli¿enia wzorem trapezów)}\\\hfill
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5298,7 +5307,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 ! Undefined control sequence.
-l.128 ...). Ponadto niech $f: [a,b]\rightarrow \re
+l.127 ...). Ponadto niech $f: [a,b]\rightarrow \re
                                                   $ bêdzie klasy $C^2$ na $[...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5405,7 +5414,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.128 ...jest nastêpuj¹ca nierównoœæ \cite{klucz6}
+l.127 ...jest nastêpuj¹ca nierównoœæ \cite{klucz6}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5414,61 +5423,61 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `klucz6' on page  undefined on input line 128.
+LaTeX Warning: Citation `klucz6' on page  undefined on input line 127.
 
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 126--129
+Overfull \hbox (20.0pt too wide) in paragraph at lines 125--128
 []
  []
 
 
-Overfull \hbox (6.00235pt too wide) in paragraph at lines 126--129
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 125--128
 \OML/cmm/m/it/10 n$
  []
 
 
-Overfull \hbox (10.7441pt too wide) in paragraph at lines 126--129
+Overfull \hbox (10.7441pt too wide) in paragraph at lines 125--128
 \OML/cmm/m/it/10 []$
  []
 
 
-Overfull \hbox (27.4607pt too wide) in paragraph at lines 126--129
+Overfull \hbox (27.4607pt too wide) in paragraph at lines 125--128
 \OML/cmm/m/it/10 BBT[]$
  []
 
 
-Overfull \hbox (11.52776pt too wide) in paragraph at lines 126--129
+Overfull \hbox (11.52776pt too wide) in paragraph at lines 125--128
 \OML/cmm/m/it/10 f \OT1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (32.35526pt too wide) in paragraph at lines 126--129
+Overfull \hbox (32.35526pt too wide) in paragraph at lines 125--128
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !$
  []
 
 
-Overfull \hbox (12.34862pt too wide) in paragraph at lines 126--129
+Overfull \hbox (12.34862pt too wide) in paragraph at lines 125--128
 \OML/cmm/m/it/10 C[]$
  []
 
 
-Overfull \hbox (19.57753pt too wide) in paragraph at lines 126--129
+Overfull \hbox (19.57753pt too wide) in paragraph at lines 125--128
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]$
  []
 
 
-Overfull \hbox (6.00235pt too wide) in paragraph at lines 126--129
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 125--128
 \OML/cmm/m/it/10 n$
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 126--129
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 125--128
 [] 
  []
 
 
-Overfull \hbox (57.09358pt too wide) detected at line 131
+Overfull \hbox (57.09358pt too wide) detected at line 130
 []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 BBT[]\OMS/cmsy/m/n/10 j  \OML/cmm/m/it/10
  []
  []
@@ -5530,12 +5539,12 @@ Missing character: There is no ó in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (10.7441pt too wide) in paragraph at lines 131--133
+Overfull \hbox (10.7441pt too wide) in paragraph at lines 130--132
  $\OML/cmm/m/it/10 []$
  []
 
 
-Overfull \hbox (80.28403pt too wide) detected at line 135
+Overfull \hbox (80.28403pt too wide) detected at line 134
 []\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10
  M[];
  []
@@ -5546,7 +5555,7 @@ Missing character: There is no z in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (85.96541pt too wide) detected at line 139
+Overfull \hbox (85.96541pt too wide) detected at line 138
 []\OML/cmm/m/it/10 M[] \OT1/cmr/m/n/10 = []  \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10
  f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j
  []
@@ -5558,7 +5567,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 \end{definition}
+l.141 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5773,7 +5782,7 @@ Missing character: There is no ó in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 143--144
+Overfull \hbox (20.0pt too wide) in paragraph at lines 142--143
 []
  []
 
@@ -5784,7 +5793,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 \begin{proc}
+l.144 \begin{proc}
                   {(Wznaczanie przybli¿onych wartoœci ca³ek pojedynczych met...
 
 Your command was ignored.
@@ -5856,63 +5865,63 @@ Missing character: There is no ó in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 145--146
+Overfull \hbox (20.0pt too wide) in paragraph at lines 144--145
 []
  []
 
 
-Overfull \hbox (110.24904pt too wide) in paragraph at lines 158--158
+Overfull \hbox (110.24904pt too wide) in paragraph at lines 157--157
 []\OT1/cmtt/m/n/10 > trapez:=proc(a,b,n)[] 
  []
 
 
-Overfull \hbox (110.24904pt too wide) in paragraph at lines 158--158
+Overfull \hbox (110.24904pt too wide) in paragraph at lines 157--157
 []\OT1/cmtt/m/n/10 local h,j,i,x,y,t,tp;[] 
  []
 
 
-Overfull \hbox (225.74803pt too wide) in paragraph at lines 158--158
+Overfull \hbox (225.74803pt too wide) in paragraph at lines 157--157
 [] \OT1/cmtt/m/n/10 if (((ceil(n)>n) or (floor(n)<n)) or n<=0)[] 
  []
 
 
-Overfull \hbox (320.24721pt too wide) in paragraph at lines 158--158
+Overfull \hbox (320.24721pt too wide) in paragraph at lines 157--157
 [] \OT1/cmtt/m/n/10 then ERROR('Ostatni parametr musi byc liczba naturalna')els
 e[] 
  []
 
 
-Overfull \hbox (73.49936pt too wide) in paragraph at lines 158--158
+Overfull \hbox (73.49936pt too wide) in paragraph at lines 157--157
 []   \OT1/cmtt/m/n/10 h:=(b-a)/n;[] 
  []
 
 
-Overfull \hbox (220.49808pt too wide) in paragraph at lines 158--158
+Overfull \hbox (220.49808pt too wide) in paragraph at lines 157--157
 []   \OT1/cmtt/m/n/10 for j from 0 to n do x:= j -> a+j*h od;[] 
  []
 
 
-Overfull \hbox (230.99799pt too wide) in paragraph at lines 158--158
+Overfull \hbox (230.99799pt too wide) in paragraph at lines 157--157
 []   \OT1/cmtt/m/n/10 for j from 0 to n do y:= j -> f(x(j)) od;[] 
  []
 
 
-Overfull \hbox (209.99817pt too wide) in paragraph at lines 158--158
+Overfull \hbox (209.99817pt too wide) in paragraph at lines 157--157
 []   \OT1/cmtt/m/n/10 t:= h/2 * sum(y(i)+y(i+1), i=0..n-1);[] 
  []
 
 
-Overfull \hbox (99.74913pt too wide) in paragraph at lines 158--158
+Overfull \hbox (99.74913pt too wide) in paragraph at lines 157--157
 []   \OT1/cmtt/m/n/10 tp:=evalf(t,12);[] 
  []
 
 
-Overfull \hbox (20.99982pt too wide) in paragraph at lines 158--158
+Overfull \hbox (20.99982pt too wide) in paragraph at lines 157--157
 [] \OT1/cmtt/m/n/10 fi;[] 
  []
 
 
-Overfull \hbox (20.99982pt too wide) in paragraph at lines 158--158
+Overfull \hbox (20.99982pt too wide) in paragraph at lines 157--157
 []\OT1/cmtt/m/n/10 end;[] 
  []
 
@@ -5923,7 +5932,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.159 \end{proc}
+l.158 \end{proc}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6052,7 +6061,7 @@ Missing character: There is no ó in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 161--162
+Overfull \hbox (20.0pt too wide) in paragraph at lines 160--161
 []
  []
 
@@ -6360,7 +6369,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 ! Undefined control sequence.
-l.166 ...kownika). Je¿eli ostatni parametr $n \nin
+l.165 ...kownika). Je¿eli ostatni parametr $n \nin
                                                    \mathbb{N}$ to zwracany j...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6369,7 +6378,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.166 .... Je¿eli ostatni parametr $n \nin \mathbb
+l.165 .... Je¿eli ostatni parametr $n \nin \mathbb
                                                   {N}$ to zwracany jest stos...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6761,7 +6770,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ... `OgolnyWzorTrapezow' on page \thepage 
                                                   \space undefined\on@line .
-l.166 ...godny ze wzorem (\ref{OgolnyWzorTrapezow}
+l.165 ...godny ze wzorem (\ref{OgolnyWzorTrapezow}
                                                   ). Algorytm koñczymy poprz...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6771,7 +6780,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `OgolnyWzorTrapezow' on page  undefined on input line 
-166.
+165.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -6877,57 +6886,57 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 163--167
+Overfull \hbox (20.0pt too wide) in paragraph at lines 162--166
 []
  []
 
 
-Overfull \hbox (25.42757pt too wide) in paragraph at lines 163--167
+Overfull \hbox (25.42757pt too wide) in paragraph at lines 162--166
 \OT1/cmr/m/it/10 trapez
  []
 
 
-Overfull \hbox (5.59023pt too wide) in paragraph at lines 163--167
+Overfull \hbox (5.59023pt too wide) in paragraph at lines 162--166
 \OT1/cmr/bx/n/10 a
  []
 
 
-Overfull \hbox (6.38885pt too wide) in paragraph at lines 163--167
+Overfull \hbox (6.38885pt too wide) in paragraph at lines 162--166
 \OT1/cmr/bx/n/10 b
  []
 
 
-Overfull \hbox (6.38885pt too wide) in paragraph at lines 163--167
+Overfull \hbox (6.38885pt too wide) in paragraph at lines 162--166
 \OT1/cmr/bx/n/10 n
  []
 
 
-Overfull \hbox (19.57753pt too wide) in paragraph at lines 163--167
+Overfull \hbox (19.57753pt too wide) in paragraph at lines 162--166
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]$ 
  []
 
 
-Overfull \hbox (15.12732pt too wide) in paragraph at lines 163--167
+Overfull \hbox (15.12732pt too wide) in paragraph at lines 162--166
 \OML/cmm/m/it/10 nN$
  []
 
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 163--167
+Overfull \hbox (5.76158pt too wide) in paragraph at lines 162--166
 \OML/cmm/m/it/10 h$
  []
 
 
-Overfull \hbox (9.04456pt too wide) in paragraph at lines 163--167
+Overfull \hbox (9.04456pt too wide) in paragraph at lines 162--166
 \OML/cmm/m/it/10 x[]$
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 163--167
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 162--166
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 163--167
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 162--166
 []
  []
 
@@ -6964,7 +6973,7 @@ Missing character: There is no i in font nullfont!
 ! Undefined control sequence.
 <write> ...pezowCalkaPojedyncza' on page \thepage 
                                                   \space undefined\on@line .
-l.169 ...ref{MAPLE_MetodaTrapezowCalkaPojedyncza}}
+l.168 ...ref{MAPLE_MetodaTrapezowCalkaPojedyncza}}
                                                    (ozn. $W_{trapez}$) dla c...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6974,7 +6983,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `MAPLE_MetodaTrapezowCalkaPojedyncza' on page  undefin
-ed on input line 169.
+ed on input line 168.
 
 Missing character: There is no ( in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -7112,7 +7121,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ... `BladMetodyTrapezow' on page \thepage 
                                                   \space undefined\on@line .
-l.169 ...odnie ze wzorem (\ref{BladMetodyTrapezow}
+l.168 ...odnie ze wzorem (\ref{BladMetodyTrapezow}
                                                   ) oraz modu³  ró¿nicy pomi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7122,7 +7131,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `BladMetodyTrapezow' on page  undefined on input line 
-169.
+168.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -7221,7 +7230,7 @@ Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
 <write> ...Przyblizenia<=DeltaT' on page \thepage 
                                                   \space undefined\on@line .
-l.169 ...z (\ref{NierownoscBBPrzyblizenia<=DeltaT}
+l.168 ...z (\ref{NierownoscBBPrzyblizenia<=DeltaT}
                                                   )). Do kalkulacji wykorzys...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7231,7 +7240,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `NierownoscBBPrzyblizenia<=DeltaT' on page  undefined 
-on input line 169.
+on input line 168.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
@@ -7280,7 +7289,7 @@ Missing character: There is no u in font nullfont!
 ! Undefined control sequence.
 <write> ...dynczaMetodaTrapezow' on page \thepage 
                                                   \space undefined\on@line .
-l.169 ...ef{PrzykladCalkaPojedynczaMetodaTrapezow}
+l.168 ...ef{PrzykladCalkaPojedynczaMetodaTrapezow}
                                                    oraz podan¹ w rozwi¹zaniu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7290,7 +7299,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `PrzykladCalkaPojedynczaMetodaTrapezow' on page  undef
-ined on input line 169.
+ined on input line 168.
 
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -7389,72 +7398,72 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 169--170
+Overfull \hbox (20.0pt too wide) in paragraph at lines 168--169
 []
  []
 
 
-Overfull \hbox (17.50542pt too wide) in paragraph at lines 169--170
+Overfull \hbox (17.50542pt too wide) in paragraph at lines 168--169
 \OT1/cmr/m/it/10 pro-
  []
 
 
-Overfull \hbox (12.26654pt too wide) in paragraph at lines 169--170
+Overfull \hbox (12.26654pt too wide) in paragraph at lines 168--169
 \OT1/cmr/m/it/10 ce-
  []
 
 
-Overfull \hbox (19.54987pt too wide) in paragraph at lines 169--170
+Overfull \hbox (19.54987pt too wide) in paragraph at lines 168--169
 \OT1/cmr/m/it/10 dury
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 169--170
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 168--169
 []
  []
 
 
-Overfull \hbox (33.25533pt too wide) in paragraph at lines 169--170
+Overfull \hbox (33.25533pt too wide) in paragraph at lines 168--169
 \OML/cmm/m/it/10 W[]$
  []
 
 
-Overfull \hbox (6.00235pt too wide) in paragraph at lines 169--170
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 168--169
 \OML/cmm/m/it/10 n$
  []
 
 
-Overfull \hbox (10.7441pt too wide) in paragraph at lines 169--170
+Overfull \hbox (10.7441pt too wide) in paragraph at lines 168--169
 \OML/cmm/m/it/10 []$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 169--170
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 168--169
 []
  []
 
 
-Overfull \hbox (33.01627pt too wide) in paragraph at lines 169--170
+Overfull \hbox (33.01627pt too wide) in paragraph at lines 168--169
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 BBT[]\OMS/cmsy/m/n/10 j$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 169--170
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 168--169
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 169--170
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 168--169
 []
  []
 
 
-Overfull \hbox (43.40277pt too wide) in paragraph at lines 169--170
+Overfull \hbox (43.40277pt too wide) in paragraph at lines 168--169
 [] \OML/cmm/m/it/10 e[]dx \OMS/cmsy/m/n/10 
  []
 
 
-Overfull \hbox (64.4446pt too wide) in paragraph at lines 169--170
+Overfull \hbox (64.4446pt too wide) in paragraph at lines 168--169
 \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 06311405862$ 
  []
 
@@ -7465,7 +7474,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.171 \begin{table}
+l.170 \begin{table}
                    [h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7476,515 +7485,8 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 171--172
+Overfull \hbox (20.0pt too wide) in paragraph at lines 170--171
 [] 
- []
-
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-
-Overfull \hbox (90.58719pt too wide) in paragraph at lines 175--205
- [][] 
  []
 
 
@@ -7994,8 +7496,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206  \caption
-               {Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki wzore...
+l.172 \caption
+              {Wyniki pomiaru dok³adnoœci przybli¿ania wartoœci ca³ki wzorem...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8063,6 +7565,518 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no ó in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 172--204
+ [] 
+ []
+
+
+Overfull \hbox (90.58719pt too wide) in paragraph at lines 172--204
+ [] 
+ []
+
 
 ! LaTeX Error: \begin{document} ended by \end{table}.
 
@@ -8070,12 +8084,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208 \end{table}
+l.207 \end{table}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+! Undefined control sequence.
+l.208  {\footnotesize
+                      Ÿród³o: Opracowanie w³asne}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ÿ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ó in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -8768,67 +8815,72 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (6.00235pt too wide) in paragraph at lines 205--211
+Overfull \hbox (20.0pt too wide) in paragraph at lines 208--211
+[]
+ []
+
+
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 208--211
 \OML/cmm/m/it/10 n$
  []
 
 
-Overfull \hbox (16.55786pt too wide) in paragraph at lines 205--211
+Overfull \hbox (16.55786pt too wide) in paragraph at lines 208--211
 \OML/cmm/m/it/10 n \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 205--211
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 208--211
 \OT1/cmr/m/n/10 6$
  []
 
 
-Overfull \hbox (16.55786pt too wide) in paragraph at lines 205--211
+Overfull \hbox (16.55786pt too wide) in paragraph at lines 208--211
 \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 
  []
 
 
-Overfull \hbox (15.00005pt too wide) in paragraph at lines 205--211
+Overfull \hbox (15.00005pt too wide) in paragraph at lines 208--211
 \OT1/cmr/m/n/10 100$
  []
 
 
-Overfull \hbox (35.44432pt too wide) in paragraph at lines 205--211
+Overfull \hbox (35.44432pt too wide) in paragraph at lines 208--211
 []$
  []
 
 
-Overfull \hbox (11.22499pt too wide) in paragraph at lines 205--211
+Overfull \hbox (11.22499pt too wide) in paragraph at lines 208--211
 []$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 205--211
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 208--211
 []
  []
 
 
-Overfull \hbox (35.44432pt too wide) in paragraph at lines 205--211
+Overfull \hbox (35.44432pt too wide) in paragraph at lines 208--211
 []$
  []
 
 
-Overfull \hbox (11.22499pt too wide) in paragraph at lines 205--211
+Overfull \hbox (11.22499pt too wide) in paragraph at lines 208--211
 []$
  []
 
 
-Overfull \hbox (6.00235pt too wide) in paragraph at lines 205--211
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 208--211
 \OML/cmm/m/it/10 n$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 205--211
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 208--211
 []
  []
 
 
-Overfull \hbox (10.7441pt too wide) in paragraph at lines 205--211
+Overfull \hbox (10.7441pt too wide) in paragraph at lines 208--211
 \OML/cmm/m/it/10 []$
  []
 
