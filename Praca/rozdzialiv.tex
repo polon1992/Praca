@@ -1,6 +1,6 @@
 
 \chapter{Kwadratury Newtona-Cotesa dla ca³ek podwójnych w obszarach normalnych}
-Poprzedni rozdzia³ pracy zwi¹zany by³ z wyznaczaniem wzorów na dwu wymiarowe kwadratury \textit{Newtona-Cotesa} w obszarach prostok¹tnych. Jest to jednak dosyæ szczególny przypadek, gdzie wartoœci ca³ek liczone s¹ w sta³ych granicach. W rzeczywistoœci czêœciej spotkamy siê z przypadkami, gdzie granice ca³kowania bêd¹ uzale¿nione od pewnych zmiennych. Na tym w³aœnie skupimy siê w kolejnych rozwa¿aniach, które rozpoczniemy od wyznaczenia wzorów na kwadratury w obszarach normalnych wzglêdem osi $OX$ (zmienna $y$ jest zale¿na od $x$), jak równie¿ w obszarach normalnych wzglêdem osi $OY$ (tutaj z kolei $x$ jest uzale¿nione od $y$).     
+Poprzedni rozdzia³ pracy zwi¹zany by³ z wyznaczaniem wzorów na dwuwymiarowe kwadratury \textit{Newtona-Cotesa} w obszarach prostok¹tnych. Jest to jednak dosyæ szczególny przypadek, gdzie wartoœci ca³ek liczone s¹ w sta³ych granicach. W rzeczywistoœci czêœciej spotkamy siê z przypadkami, gdzie granice ca³kowania bêd¹ uzale¿nione od pewnych zmiennych. Na tym miêdzy innymi skupimy siê w kolejnych rozwa¿aniach, które rozpoczniemy od wyznaczenia wzorów   dwuwymiarowych kwadratur w obszarach normalnych wzglêdem osi $OX$ (zmienna $y$ jest zale¿na od $x$), jak równie¿ w obszarach normalnych wzglêdem osi $OY$ (tutaj z kolei $x$ jest uzale¿nione od $y$).     
 
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Ox}
 WeŸmy pewien obszar postaci \mbox{$D=\{a \leq x \leq b\,;\, c(x)\leq y \leq d(x) \}$},  normalny wzglêdem osi $Ox$ ( definicja pojêcia na str. \pageref{ObszaryNormalneOx} ) oraz funkcjê $f(x,y)$ okreœlon¹ na tym obszarze. Naszym aktualnym celem jest wyprowadzenie \textit{wzoru trapezów} dla ca³ki 
@@ -22,7 +22,7 @@ Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1,
 \label{R6}
 \end{figure}
         
-Ca³kê z równania (\ref{Trapez2DVar_postacOgolnaCalki}) przedstawimy w innej formie, tak by umo¿liwiæ jej zapis w postaci sumy. Zrobimy to analogicznie jak dla \textit{wzoru trapezów} i \textit{wzoru Simpsona} po prostok¹cie. Niech 
+Ca³kê z równania (\ref{Trapez2DVar_postacOgolnaCalki}) przedstawimy w innej formie, tak by umo¿liwiæ jej zapis w postaci sumy. Zrobimy to analogicznie jak dla \textit{uogólnionego wzoru trapezów} i \textit{uogólnionego wzoru Simpsona} po prostok¹cie. Niech 
 \begin{equation}\label{CalkaWewnetrznaF(x)TrapezVarY}
 F(x)=\int\limits_{c(x)}^{d(x)} f(x,y)dy\,,
 \end{equation} wtedy 
@@ -36,24 +36,24 @@ Ka¿dy ze sk³adników $F(x_i)$, $(i=0,1,\ldots, n)$ jest rozumiany jako \cite{kluc
 \begin{equation}\label{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}
 \begin{array}{cc}
 F(x_i)=\int\limits_{c(x_i)}^{d(x_i)} f(x_i,y)dy\approx \\
-\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+2f(x_i,y_{i,1})+2f(x_i,y_{i,2})+\cdots +2f(x_i,y_{i,m-1})+f(x_i,y_{i,m})\right)
+\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+2f(x_i,y_{i,1})+2f(x_i,y_{i,2})+\cdots +2f(x_i,y_{i,m-1})+f(x_i,y_{i,m})\right).
 \end{array}
 \end{equation} 
-Po po³¹czeniu (\ref{OgolnaFormaTrapez2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) dostajemy \textit{uogólniony wzór trapezów} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Ox$ \cite{klucz11}:
+Po po³¹czeniu (\ref{OgolnaFormaTrapez2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormyTrapez2DVar}) dostajemy \textbf{uogólniony wzór trapezów dla ca³ki podwójnej po obszarze normalnym wzglêdem osi Ox} \cite{klucz11}:
 \begin{equation}\label{UogolnionyWzorTrapezow_Trapez2DVar}
 \begin{array}{cc}
 I_{VyT2}\approx \frac{h_x}{2}\left\lbrace \frac{h_{y,0}}{2}\left(f(x_0,y_{0,0})+2\sum\limits_{j=1}^{m-1} f(x_0,y_{0,j})+f(x_0,y_{0,m})\right)\right.\\
 +2\sum\limits_{i=1}^{n-1}\frac{h_{y,i}}{2}\left(f(x_i,y_{i,0})+2\sum\limits_{j=1}^{m-1}f(x_i,y_{i,j})+f(x_i,y_{i,m})\right)\\
 +\left. 
 \frac{h_{y,n}}{2}\left(f(x_n,y_{n,0})+2\sum\limits_{j=1}^{m-1} f(x_n,y_{n,j})+f(x_n,y_{n,m})\right)
-\right\rbrace
+\right\rbrace.
 \end{array}
 \end{equation}
 
-Jak mo¿na by siê spodziewaæ, przeprowadzenie rêcznych wyliczenia dla np. $n = m = 10$ podzia³ów przedzia³ów ca³kowania by³oby nie lada wyzwaniem. Wykonajmy jednak pewne rachunki wykorzystuj¹c (\ref{UogolnionyWzorTrapezow_Trapez2DVar}) i ograniczaj¹c siê do zdecydowanie mniejszej liczby podzia³ów.
+Jak mo¿na by siê spodziewaæ, przeprowadzenie rêcznych wyliczeñ dla np. $n = m = 10$ podzia³ów przedzia³ów ca³kowania by³oby nie lada wyzwaniem. Wykonajmy jednak pewne rachunki wykorzystuj¹c (\ref{UogolnionyWzorTrapezow_Trapez2DVar}) i ograniczaj¹c siê do zdecydowanie mniejszej liczby podzia³ów.
 
 \begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej w obszarze normalnym wzglêdem $X$ przy u¿yciu \textit{uogólnionego wzoru trapezów})\label{WzorTrapezowNormalnyOxPrzyklad}\\
-Wyznaczmy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 \int\limits_{x-1}^{x+1} xy\, dydx$ wykorzystuj¹c \textit{uogólniony wzór trapezów} dla ca³ek podwójnych w obszarze normalnym wzglêdem osi $Ox$. Przedzia³ ca³kowania po zmiennej $x$ podzielmy na $n=4$ równe podprzedzia³y, natomiast po zmiennej $y$ na $m=3$ podprzedzia³y równej d³ugoœci.\\
+\textit{Wyznaczmy przybli¿on¹ wartoœæ ca³ki $\int\limits_0^1 \int\limits_{x-1}^{x+1} xy\, dydx$ wykorzystuj¹c \textit{uogólniony wzór trapezów} dla ca³ek podwójnych w obszarze normalnym wzglêdem osi $Ox$ (\ref{UogolnionyWzorTrapezow_Trapez2DVar}). Przedzia³ ca³kowania po zmiennej $x$ podzielmy na $n=4$ równe podprzedzia³y, natomiast po zmiennej $y$ na $m=3$ podprzedzia³y równej d³ugoœci.\\}
 
 Odleg³oœæ pomiêdzy kolejnymi wêz³ami $x_i$ wynosi³a bêdzie $h_x=\frac{b-a}{n}=\frac{1-0}{4}=\frac{1}{4}$. Zatem:
 $$x_0=a=0,\,\, x_1=\frac{1}{4},\,\, x_2=\frac{1}{2},\,\, x_3=\frac{3}{4},\,\, x_4=b=1.$$
@@ -113,11 +113,11 @@ $=\frac{1}{8}\left\lbrace 0+\frac{2}{3}(-\frac{3}{16}-\frac{2}{48}+\frac{14}{48}
 $=\frac{1}{8}\left(\frac{6}{3}+\frac{2}{3}(\frac{2}{16}+\frac{12}{48})+\frac{2}{3}(\frac{4}{8}+1)+\frac{2}{3}(\frac{18}{16}+\frac{108}{48})\right)
 =\frac{1}{8}\left(\frac{6}{3}+\frac{2}{3}\left(\frac{18}{48}+\frac{72}{48}+\frac{162}{48}\right)\right)
 =\frac{1}{8}\left(\frac{6}{3}+\frac{2}{3}\cdot\frac{252}{48}\right)$\\
-$=\frac{1}{8}\left(\frac{6}{3}+\frac{7}{2}\right)=\frac{1}{8}\left(\frac{12+21}{6}\right)=\frac{33}{48}=0,6875$
+$=\frac{1}{8}\left(\frac{6}{3}+\frac{7}{2}\right)=\frac{1}{8}\left(\frac{12+21}{6}\right)=\frac{33}{48}=0.6875$
 \end{center}
 \end{ex}
-Wartoœæ dok³adna rozpatrywanej ca³ki  wyliczona przy pomocy kalkulatora wynosi: $\int\limits_0^1\int\limits_{x-1}^{x+1} xy\,dydx=\frac{2}{3}\approx 0,666667.$ Zatem b³¹d wzglêdny przybli¿onego wyniku to:
-$$BW=\frac{\left|\frac{2}{3}-\frac{33}{48}\right|}{\frac{2}{3}}*100\%=0,03125*100\%=3,125\%$$
+Wartoœæ dok³adna rozpatrywanej ca³ki  wyliczona przy pomocy kalkulatora wynosi: $\int\limits_0^1\int\limits_{x-1}^{x+1} xy\,dydx=\frac{2}{3}\approx 0.666667.$ Zatem b³¹d wzglêdny przybli¿onego wyniku to:
+$$BW=\frac{\left|\frac{2}{3}-\frac{33}{48}\right|}{\frac{2}{3}}\cdot 100\%=0.03125\cdot 100\%=3.125\%$$
 Jak mo¿na zauwa¿yæ wielkoœæ b³êdu wzglêdnego jest dosyæ znacz¹ca. Niewielka dok³adnoœæ wyniku spowodowana jest doborem zbyt ma³ych $n$ i $m$. Nie podlega dyskusji fakt, ¿e mimo tego, i¿ liczba dokonanych podzia³ów przedzia³ów ca³kowania by³a pozornie niewielka, to iloœæ obliczeñ jak¹ nale¿a³o wykonaæ okaza³a siê zatrwa¿aj¹co du¿a. W zwi¹zku z tym dalsze badania wykonamy w oparciu o napisan¹ w tym celu procedurê \textit{Maple} implementuj¹c¹ wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVar}).
 
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych w obszarach normalnych wzglêdem osi $Ox$ przy u¿yciu \textit{uogólnionego wzoru trapezów})\label{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}\\
@@ -174,7 +174,7 @@ Procedurê \textit{Trapez2\_VarY} wykorzystajmy teraz do obliczenia dwóch przyk³a
 \end{itemize} 
  %a) 0.722928
  %b) 0.266666666666666
-Analogicznie do wczeœniejszych podrozdzia³ów wyniki pomiarów zostan¹ pokazane w formie tabelek. Podobnie wiêc niech $n$ oznacza iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$, oraz $W_{T2Vy}$ bêdzie wynikiem \textit{Trapez2\_VarY} dla coraz wiêkszych wartoœci $n$ i $m$. Co wiêcej niech \textit{$BBT2Vy_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2\_VarY}, dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2Vy_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obarczony ten sam wynik wykonania \textit{Trapez2\_VarY}.\\
+Analogicznie do wczeœniejszych podrozdzia³ów wyniki pomiarów zamieœcimy w formie tabelek. Podobnie wiêc niech $n$ oznacza iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$ oraz $W_{T2Vy}$ bêdzie wynikiem \textit{Trapez2\_VarY} dla coraz wiêkszych wartoœci $n$ i $m$. Co wiêcej niech \textit{$BBT2Vy_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2\_VarY} dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2Vy_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obarczony ten sam wynik wykonania \textit{Trapez2\_VarY}.\\
 
 \hspace{-1cm}{Dok³adna wartoœæ ca³ki z przyk³adu a) jest równa $0.722928$, wiêc:} 
 \begin{table}[h!]
@@ -264,7 +264,7 @@ Analogicznie do wczeœniejszych podrozdzia³ów wyniki pomiarów zostan¹ pokazane w 
  \label{WynikiZProceduryTrapez2VarYb}
 \end{table}
 
-Analizuj¹c otrzymane powy¿ej wyniki zauwa¿amy, ¿e dla obydwu przypadków pierwsze trzy pomiary zwraca³y wyniki dosyæ mocno odbiegaj¹ce od rzeczywistych (przyk³. a)) lub zaokr¹glonych (przyk³. b)). Ich b³êdy wzglêdne wynosi³y od $0.09\%$ do $28.93\%$.  Jednak¿e ka¿de z nastêpnych wywo³añ procedury sprawia³o, ¿e otrzymany rezultat mo¿na by³o ju¿ uznaæ za akceptowalne przybli¿enie. Zwróæmy dodatkowo uwagê na to, ¿e ostatecznie dla \mbox{przyk³adu a)} pomimo przyjêcia du¿ych wartoœci $n=600$ i $m=500$ podzia³ów przedzia³ów \mbox{ca³kowania -} wynik w pewnym stopniu stale odbiega³ od dok³adnego. Nale¿a³oby wykonaæ kolejne iteracje, by nie zauwa¿yæ ró¿nicy na 5 i 6 miejscu po przecinku. Wartoœæ ca³ki z przyk³adu b) mo¿emy jedynie zaokr¹gliæ, zatem ostateczna forma tego zaokr¹glenia jest kwesti¹ indywidualnego wyboru. Zauwa¿ymy jedynie, ¿e ka¿de kolejne wykonanie \textit{Trapez2\_VarY} zbli¿a nas do poszukiwanej \mbox{wielkoœci $2.6(6)$.}       
+Analizuj¹c otrzymane powy¿ej wyniki zauwa¿amy, ¿e dla obydwu przypadków pierwsze trzy pomiary zwraca³y wyniki dosyæ mocno odbiegaj¹ce od rzeczywistych (przyk³. a)) lub zaokr¹glonych (przyk³. b)). Ich b³êdy wzglêdne wynosi³y od $0.09\%$ do $28.93\%$.  Jednak¿e ka¿de z nastêpnych wywo³añ procedury sprawia³o, ¿e otrzymany rezultat mo¿na by³o ju¿ uznaæ za akceptowalne przybli¿enie. Zwróæmy dodatkowo uwagê na to, ¿e ostatecznie dla \mbox{przyk³adu a)} pomimo przyjêcia du¿ych wartoœci $n=600$ i $m=500$ podzia³ów przedzia³ów \mbox{ca³kowania -} wynik w pewnym stopniu stale odbiega³ od dok³adnego. Nale¿a³oby wykonaæ kolejne iteracje, by nie zauwa¿yæ ró¿nicy na 5 i 6 miejscu po przecinku. Wartoœæ ca³ki z przyk³adu b) mo¿emy co najwy¿ej  zaokr¹gliæ, zatem ostateczna forma tego zaokr¹glenia jest kwesti¹ indywidualnego wyboru, a ka¿de kolejne wykonanie \textit{Trapez2\_VarY} zbli¿a nas jedynie do poszukiwanej \mbox{wielkoœci $2.6(6)$.}       
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Ox}
 Podobnie jak mia³o to miejsce w poprzednich rozdzia³ach, zaprezentujmy równie¿ i teraz analogiczny do wzoru (\ref{UogolnionyWzorTrapezow_Trapez2DVar}) \textit{wzór Simpsona} dla obszaru normalnego wzglêdem $Ox$.
@@ -275,14 +275,13 @@ I_{VyS2}=\iint_G f(x,y)dydx=\int\limits_{a}^b\int\limits_{c(x)}^{d(x)} f(x,y) dy
 \end{equation}
 Przedzia³ ca³kowania $[a,b]$ podzielmy na $N=2n$ $(n=1,2,\ldots)$ podprzedzia³ów  $[x_{2i},x_{2i+1}]$ $(i=0, \frac{1}{2}, \ldots, \frac{2n-1}{2})$, gdzie:
 $$a=x_0 < x_1 < x_2 < \ldots  < x_{2n-1} < x_{2n}=b\,.$$ 
-Ka¿dy wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, 2n=N)$, zaœ $h_x$ okreœlamy jako \mbox{$h_x=\frac{b-a}{2n}$}.\\ 
+Dowolny wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, 2n=N)$, zaœ $h_x$ okreœlamy jako \mbox{$h_x=\frac{b-a}{2n}$}.
 
-
-Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y g³ównie ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, zale¿ne od funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $M=2m$  podprzedzia³ów równej d³ugoœci $[y_{i,2j}, y_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,n;\,j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych poni¿sz¹ zale¿noœæ:
+Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y ( g³ównie ) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, zale¿ne od funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $M=2m$  równych podprzedzia³ów $[y_{i,2j}, y_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,n;\,j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych poni¿sz¹ zale¿noœæ:
 $$c(x_i)=y_{i,0}\leq y_{i,1} \leq y_{i,2}\leq \ldots  \leq y_{i,2m}=d(x_i).$$
-Oznaczenie $y_{i,j}$ rozumieæ bêdziemy jako $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,2m;\, i=0, 1, \ldots ,2n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{2m}$. Zatem tak jak i w przypadku \textit{wzoru trapezów} wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego argumentu $x_i$ jest ona wyliczana. 
+Oznaczenie $y_{i,j}$ rozumieæ bêdziemy jako $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,2m;\, i=0, 1, \ldots ,2n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{2m}$. Zatem tak jak i w przypadku \textit{wzoru trapezów }(\ref{UogolnionyWzorTrapezow_Trapez2DVar}) wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego argumentu $x_i$ jest ona wyliczana. 
 
-Znaczenie opisanych wy¿ej zmiennych oraz logikê podzia³u obszaru ca³kowania na potrzeby wykorzystania \textit{wzoru Simpsona} prezentuje poni¿sza grafika:
+Znaczenie opisanych wy¿ej symboli oraz logikê podzia³u obszaru ca³kowania na potrzeby wykorzystania \textit{wzoru Simpsona} prezentuje poni¿sza grafika:
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.45]{R7.eps}
@@ -304,16 +303,15 @@ I_{VyS2}=\int\limits_{a}^b\int\limits_{c(x)}^{d(x)} f(x,y) dydx=\int\limits_a^b 
 \begin{equation}\label{OgolnaFormaSimpson2DVar}
 I_{VyS2}\approx \frac{h_x}{3}\left(F(x_0)+4F(x_1)+2F(x_2)+4F(x_3)+2F(x_4)+\cdots+4F(x_{2n-1})+F(x_{2n})\right).
 \end{equation}
-
 Ka¿dy ze sk³adników $F(x_i)$, $(i=0,1,\ldots, 2n)$ jest rozumiany jako \cite{klucz13}:
 \begin{equation}\label{SkladnikiF(x_i)OgolnejFormySimpson2DVar}
 \begin{array}{cc}
 F(x_i)=\int\limits_{c(x_i)}^{d(x_i)} f(x_i,y)dy\approx \\
-\frac{h_{y,i}}{3}\left(f(x_i,y_{i,0})+4f(x_i,y_{i,1})+2f(x_i,y_{i,2})+4f(x_i,y_{i,3})+\cdots\right.\\
-\left. +2f(x_i,y_{i,2m-2})+4f(x_i,y_{i,2m-1})+f(x_i,y_{i,2m})\right)
+\frac{h_{y,i}}{3}\left(f(x_i,y_{i,0})+4f(x_i,y_{i,1})+2f(x_i,y_{i,2})+4f(x_i,y_{i,3})+ \cdots \right.\\
+\left. + 2f(x_i,y_{i,2m-2})+4f(x_i,y_{i,2m-1})+f(x_i,y_{i,2m})\right).
 \end{array}
 \end{equation} 
-Po po³¹czeniu (\ref{OgolnaFormaSimpson2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormySimpson2DVar}) dostajemy \textit{uogólniony wzór Simpsona} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Ox$:
+Po po³¹czeniu (\ref{OgolnaFormaSimpson2DVar}) i (\ref{SkladnikiF(x_i)OgolnejFormySimpson2DVar}) dostajemy \textbf{uogólniony wzór Simpsona dla ca³ki podwójnej po obszarze normalnym wzglêdem osi Ox}:
 %%%%%%%%
 \begin{equation}\label{UogolnionyWzorSimpsona_Simpson2DVar}
 \begin{small}
@@ -326,26 +324,26 @@ I_{VyS2}\approx \frac{h_x}{3}\left\lbrace \frac{h_{y,0}}{3}\left(f(x_0,y_{0,0})+
 + 2\sum\limits_{i=0}^{n-2}\frac{h_{y,2i+2}}{3}\left(f(x_{2i+2},y_{2i+2,0})+4\sum\limits_{j=0}^{m-1} f(x_{2i+2},y_{2i+2,2j+1})+2\sum\limits_{j=0}^{m-2} f(x_{2i+2},y_{2i+2,2j+2})+f(x_{2i+2},y_{2i+2,2m})\right)\\
 
 
-\left.+ \frac{h_{y,2n}}{3}\left(f(x_{2n},y_{2n,0})+4\sum\limits_{j=0}^{m-1} f(x_{2n},y_{2n,2j+1})+2\sum\limits_{j=0}^{m-2} f(x_{2n},y_{2n,2j+2})+f(x_{2n},y_{2n,2m})\right)\right\rbrace
+\left.+ \frac{h_{y,2n}}{3}\left(f(x_{2n},y_{2n,0})+4\sum\limits_{j=0}^{m-1} f(x_{2n},y_{2n,2j+1})+2\sum\limits_{j=0}^{m-2} f(x_{2n},y_{2n,2j+2})+f(x_{2n},y_{2n,2m})\right)\right\rbrace.
 \end{array}
 \end{small}
 \end{equation}
 
-Bazuj¹c na doœwiadczeniach z poprzedniego podrozdzia³u wiemy, ¿e rêczne wyliczenie przybli¿onej wartoœci przyk³adowej ca³ki w oparciu o wzór (\ref{UogolnionyWzorSimpsona_Simpson2DVar}) by³oby bardzo pracoch³onne. PodejdŸmy zatem do naszego problemu w nieco inny sposób \cite{klucz15}. Wykorzystamy \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami}) oraz przedstawione przekszta³cenia ca³ki podwójnej (\ref{Simpson2DVar_postacOgolnaCalki}), które opisuj¹ równania (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r1}) i (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r2}). To wszystko zobrazuje nam poni¿szy przyk³ad:
+Bazuj¹c na doœwiadczeniach z poprzedniego podrozdzia³u wiemy, ¿e rêczne wyliczenie przybli¿onej wartoœci przyk³adowej ca³ki w oparciu o wzór (\ref{UogolnionyWzorSimpsona_Simpson2DVar}) by³oby bardzo pracoch³onne. PodejdŸmy zatem do naszego problemu w nieco inny sposób \cite{klucz15}. Do obliczeñ wykorzystamy \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami}) oraz przedstawione przekszta³cenia ca³ki podwójnej (\ref{Simpson2DVar_postacOgolnaCalki}), które opisuj¹ równania (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r1}) i (\ref{SimpsonVyCalkaPoYjakoFunkcjaX_r2}).  Wszystko dok³adniej zobrazuje nam poni¿szy przyk³ad:
 
 
 \begin{ex}(Obliczanie ca³ki podwójnej w obszarze normalnym wzglêdem osi $Ox$ przy wykorzystaniu \textit{uogólnionego wzoru Simpsona})\\
-Wykorzystuj¹c \textit{uogólniony wzór Simpsona} obliczmy przybli¿on¹ wartoœæ ca³ki podwójnej $$P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx,$$ dla przypadku, gdzie przedzia³ ca³kowania po zmiennej $x$ bêdzie podzielony na $N = 2$, natomiast po zmiennej $y$ na $M = 4$ podprzedzia³y.\\
+\textit{Wykorzystuj¹c uogólniony wzór Simpsona obliczmy przybli¿on¹ wartoœæ ca³ki podwójnej $$P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx,$$ dla przypadku, gdzie przedzia³ ca³kowania po zmiennej $x$ bêdzie podzielony na $N = 2$, natomiast po zmiennej $y$ na $M = 4$ podprzedzia³y.\\}
 
 Niech ca³ka wyjœciowa przyjmie postaæ $P=\int\limits_0^1 F(x)dx$, przy czym  $F(x)=\int\limits_x^{2x}(x^2+y^3) dy$.
 Do obliczeñ potrzebowali bêdziemy pocz¹tkowo rozwiniêcia (\ref{wzorSimpsonaZPodzialami}) dla trzech pierwszych punktów wêz³owych $x_0,x_1,x_2$ tzn.:
-$$\int\limits_a^b f(x)dx\approx \frac{h_x}{3}\left(f(x_0)+4f\left(x_1\right)+f(x_2)\right)\,,\,\,\,h=h_x=\frac{b-a}{N},\,\,\,x_i=x_0+N\cdot h_x.$$
+$$\int\limits_a^b f(x)dx\approx \frac{h_x}{3}\left(f(x_0)+4f\left(x_1\right)+f(x_2)\right)\,,\,\,\,h=h_x=\frac{b-a}{N},\,\,\,x_i=x_0+i\cdot h_x.$$
 Podstawiaj¹c  $a=0$, $b=1$, $N=2$, wielkoœæ kroku pomiêdzy wêz³ami $h=h_x=\frac{1-0}{2}=\frac{1}{2}$ oraz wartoœci wêz³ów $x_0=a=0$, $x_1=x_0+h_x=\frac{1}{2}$, $x_2=x_0+2\cdot h_x=b=1$  otrzymamy: $$\int\limits_0^1 f(x)dx\approx \frac{\frac{1}{2}}{3}\left(f(0)+4f\left(\frac{1}{2}\right)+f(1)\right).$$
 U¿ywamy teraz powy¿szego wyra¿enia do oszacowania wielkoœci ca³ki $P$, gdy ca³kowanie odbywa siê po zmiennej $x$:
 \begin{center}
 $P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx=\int\limits_0^1 F(x)dx \approx \frac{1}{6} \left(F(0)+4F\left(\frac{1}{2}\right)+F(1)\right)$\\
-$\approx \frac{1}{6} \left( \int\limits_0^0 (0^2+y^3)dy + 4\int\limits_{\frac{1}{2}}^1 \left(\left(\frac{1}{2}\right)^2 +y^3\right)dy + \int\limits_1^2 (1^2+y^3)dy\right)$\\
-$\approx \frac{1}{6}\left(4\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy + \int\limits_1^2 (1+y^3)dy\right).$
+$= \frac{1}{6} \left( \int\limits_0^0 (0^2+y^3)dy + 4\int\limits_{\frac{1}{2}}^1 \left(\left(\frac{1}{2}\right)^2 +y^3\right)dy + \int\limits_1^2 (1^2+y^3)dy\right)$\\
+$= \frac{1}{6}\left(4\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy + \int\limits_1^2 (1+y^3)dy\right).$
 \end{center}
 Jak widaæ, nasze przybli¿enie jest nadal w postaci funkcji. W zwi¹zku z tym wykorzystajmy ponownie  \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami}), jednak teraz do ca³kowania po zmiennej $y$. Potrzebne bêdzie nam jego rozwiniêcie dla piêciu pierwszych wêz³ów ( chcemy uzyskaæ $M=4$ podprzedzia³y).
 Jako, ¿e granice ca³kowania po $y$ s¹ funkcjami $c(x)=x$ i $d(x)=2x$, to wielkoœci kroków zostan¹ uzale¿nione od wartoœci tych funkcji w punktach wêz³owych $x_i$. Dla naszego przypadku bêd¹ to $x_1=\frac{1}{2}$ i $x_2=1$. Zatem niech $h_{y,i}=\frac{d(x_i)-c(x_i)}{M}=\frac{x_i-2 x_i}{4}=\frac{x_i}{4}$, wtedy  $h_{y,1}=\frac{\frac{1}{2}}{4}=\frac{1}{8}$ bêdzie rozmiarem kroku miêdzy wêz³ami dla  $\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy$ zaœ    $h_{y,2}=\frac{1}{4}$  dla $\int\limits_1^2 (1+y^3)dy$.\\
@@ -353,20 +351,20 @@ Ogólna postaæ przybli¿enia ca³ki $P$, gdy ca³kujemy po zmiennej $y$ to:
 \begin{equation}\label{PostacOgSimpsonPoY}
 \int\limits_a^b f(y)dy=\int\limits_{c(x_i)}^{d(x_i)}f(y)dy\approx\frac{h_{y,i}}{3}(f(y_{i,0})+4f(y_{i,1})+2f(y_{i,2})+4f(y_{i,3})+f(y_{i,4})),
 \end{equation}
-gdzie $y_{i,0}$ oznacza wêze³ $y$ z indeksem $0$ wyznaczony w zale¿noœci od wielkoœci $x_i$. Zaznaczmy te¿, ¿e $y_{i,0}$ jest odpowiednikiem $x_0$ z wzoru (\ref{wzorSimpsonaZPodzialami}), $y_{i,1}$ odpowiada $x_1$ itd..
-Wielkoœci wêz³ów $y_{i,j}$ wyznaczymy korzystaj¹c z równoœci $y_{i,j}=c(x_i)+jh_{y,i}$ gdzie $(i \in \{ 1, 2\},\, j \in \{0, 1, 2, 3, 4\})$. \\
+gdzie $y_{i,0}$ oznacza wêze³ $y$ z indeksem $0$ wyznaczony w zale¿noœci od wielkoœci $x_i$. Zaznaczmy, ¿e $y_{i,0}$ jest odpowiednikiem $x_0$ z wzoru (\ref{wzorSimpsonaZPodzialami}), $y_{i,1}$ odpowiada $x_1$ itd..
+Wielkoœci wêz³ów $y_{i,j}$ wyznaczymy korzystaj¹c z równoœci $y_{i,j}=c(x_i)+jh_{y,i}$ $(i \in \{ 1, 2\},\, j \in \{0, 1, 2, 3, 4\})$. \\
 Zatem:\begin{center}
 $y_{1,0}=\frac{1}{2}, y_{1,1}=\frac{5}{8}, y_{1,2}=\frac{6}{8}, y_{1,3}=\frac{7}{8}, y_{1,4}=1$,\\
 $y_{2,0}=1, y_{2,1}=\frac{5}{4}, y_{2,2}=\frac{6}{4}, y_{2,3}=\frac{7}{4}, y_{2,4}=2.$
 \end{center}
-Wykorzystuj¹c (\ref{PostacOgSimpsonPoY}) oraz powy¿sze punkty $y_{i,j}$ do przybli¿enia $P$  po $y$ otrzymujemy:
+Wykorzystuj¹c (\ref{PostacOgSimpsonPoY}) oraz powy¿sze punkty $y_{i,j}$ do przybli¿enia $P$  po $y$ ostatecznie otrzymujemy:
 \begin{center}
 $P\approx \frac{1}{6}\left(4\int\limits_{\frac{1}{2}}^1 \left(\frac{1}{4} +y^3\right)dy + \int\limits_1^2 (1+y^3)dy\right)$\\
 $\approx \frac{1}{6}\left\lbrace
 4\cdot\frac{h_{y,1}}{3}\left[f(y_{1,0})+4f(y_{1,1})+2f(y_{1,2})+4f(y_{1,3})+f(y_{1,4})\right]\right.+$\\
 $\left. \frac{h_{y,2}}{3}\left[f(y_{2,0})+4f(y_{2,1})+2f(y_{2,2})+4f(y_{2,3})+f(y_{2,4})\right]
 \right\rbrace$\\
-$\approx\frac{1}{6}\left\lbrace  
+$=\frac{1}{6}\left\lbrace  
 4\cdot\frac{\frac{1}{8}}{3}\left[
 \left(\frac{1}{4}+\left(\frac{1}{2}\right)^3\right)+4\left(\frac{1}{4}+\left(\frac{5}{8}\right)^3\right)
 +2\left(\frac{1}{4}+\left(\frac{6}{8}\right)^3\right)+4\left(\frac{1}{4}+\left(\frac{7}{8}\right)^3\right)+\left(\frac{1}{4}+1^3\right)
@@ -375,16 +373,16 @@ $\left.+\frac{\frac{1}{4}}{3}\left[
 (1+1^3)+4\left(1+\left(\frac{5}{4}\right)^3\right)+2\left(1+\left(\frac{6}{4}\right)^3\right)+
 4\left(1+\left(\frac{7}{4}\right)^3\right)+(1+2^3)
 \right]\right\rbrace$\\
-$\approx\frac{1}{6}\left(\frac{1}{6}\left(\frac{69}{8}\right)+\frac{1}{12}\cdot 57\right)\approx
+$=\frac{1}{6}\left(\frac{1}{6}\left(\frac{69}{8}\right)+\frac{1}{12}\cdot 57\right)=
 $
-$\frac{1}{6}(1.4375+4.75)\approx 1.03125$
+$\frac{1}{6}(1.4375+4.75) = 1.03125$
 \end{center}
 Wartoœæ dok³adna liczonej ca³ki $P$ wynosi $P=\int\limits_0^1\int\limits_x^{2x} (x^2+y^3) dydx=1$. Zatem b³¹d wzglêdny jest równy:
-$$BW=\frac{\left|1-1.03125\right|}{1}*100\%=0.03125*100\%=3.125\%$$
+$$BW=\frac{\left|1-1.03125\right|}{1}\cdot 100\%=0.03125\cdot 100\%=3.125\%$$
 Jest on dosyæ znacz¹cy i z pewnoœci¹ nieco lepszy wynik otrzymalibyœmy, gdybyœmy przedzia³y ca³kowania podzielili na wiêksz¹ liczbê podprzedzia³ów. 
 \end{ex}
 
-Dok³adnoœæ wzoru (\ref{UogolnionyWzorSimpsona_Simpson2DVar}) sprawdzimy dziêki poni¿szej implementacji algorytmu wykonanej w jêzyku \textit{Maple}.
+Wróæmy jednak do \textit{uogólnionego wzoru Simpsona dla obszaru normalnego wzglêdem $Ox$} (\ref{UogolnionyWzorSimpsona_Simpson2DVar}), wyprowadzonego tu¿ przed rozwi¹zanym dopiero przyk³adem.  Jego dok³adnoœæ sprawdzimy dziêki poni¿szej implementacji algorytmu wykonanej w jêzyku \textit{Maple}.
 \newpage
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych w obszarach normalnych wzglêdem osi $Ox$ przy u¿yciu \textit{uogólnionego wzoru Simpsona})\label{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}
 \begin{small}
@@ -440,7 +438,7 @@ end proc;
 
 Przedstawiona powy¿ej implementacja jest bardzo zbli¿ona do \textbf{Procedury  \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}}. Tak samo ca³kowanie po $y$ odbywa siê w zmiennych granicach opisanych za pomoc¹ funkcji $c(x)$ i $d(x)$, zatem obydwie one musz¹ byæ zadeklarowane przed wywo³aniem \textit{Simpson2\_VarY}. 
 
-Algorytm rozpoczyna siê standardowo od nag³ówka i podania parametrów wejœciowych, gdzie \textit{a,b} to kolejno dolna i górna granica ca³kowania po zmiennej $x$. \textit{N, M} to odpowiednio iloœæ podprzedzia³ów na które podzielone zostan¹ przedzia³y ca³kowania po zmiennej $x$ i $y$. Nastêpna jest deklaracja zmiennych pomocniczych, oraz sprawdzenie poprawnoœci parametrów \textit{N i M} - zgodnie z za³o¿eniem \textit{uogolnionego wzoru Simpsona} musz¹ byæ one liczbami naturalnymi i parzystymi. Je¿eli walidacja N i M przebiegnie prawid³owo to algorytm rozpocznie wykonywanie g³ównej czêœci kodu rozpoczynaj¹c od ustawienia wartoœci zmiennych \textit{n, m} - liczby opisuj¹ce iloœci s¹siaduj¹cych ze sob¹ dwóch nie powtarzaj¹cych siê podprzedzia³ów na które podzielono kolejno obszar ca³kowania po zmiennej $x$ i $y$. \textit{$h_x$} jest odleg³oœci¹ pomiêdzy nastêpuj¹cymi po sobie wêz³ami $x_i$. \textit{PoczKoniecP, ParzP i NieParzP} bêd¹ przechowywa³y wyliczone algorytmem wartoœci \textit{uogólnionego wzoru Simpsona} dla pocz¹tkowego i koñcowego przedzia³u oraz parzystych i ostatecznie nieparzystych przedzia³ów. Zewnêtrzna pêtla \textit{for} rozpoczyna obliczenia zwi¹zane bezpoœrednio z implementacj¹ wzoru (\ref{OgolnaFormaSimpson2DVar}), której to opis pominiemy z powodu pozostawionych w kodzie komentarzy. Po wykonaniu obydwu pêtli na podstawie \textit{PoczKoniecP, ParzP i NieParzP} wyznaczany jest ostateczny wynik procedury.
+Algorytm rozpoczyna siê standardowo od nag³ówka i podania parametrów wejœciowych, gdzie \textit{a,b} to kolejno dolna i górna granica ca³kowania po zmiennej $x$. \textit{N, M} to odpowiednio iloœæ podprzedzia³ów na które podzielone zostan¹ przedzia³y ca³kowania po zmiennej $x$ i $y$. Nastêpna jest deklaracja zmiennych pomocniczych, oraz sprawdzenie poprawnoœci parametrów \textit{N i M} - zgodnie z za³o¿eniem \textit{uogolnionego wzoru Simpsona} musz¹ byæ one liczbami naturalnymi i parzystymi. Je¿eli walidacja N i M przebiegnie prawid³owo to algorytm rozpocznie wykonywanie g³ównej czêœci kodu pocz¹wszy od ustawienia wartoœci zmiennych \textit{n, m} - liczby opisuj¹ce iloœci s¹siaduj¹cych ze sob¹ dwóch nie powtarzaj¹cych siê podprzedzia³ów na które podzielono kolejno obszar ca³kowania po zmiennej $x$ i $y$.  Odleg³oœci¹ pomiêdzy nastêpuj¹cymi po sobie wêz³ami $x_i$ jest \textit{$h_x$}. \textit{PoczKoniecP, ParzP i NieParzP} bêd¹ przechowywa³y wyliczone algorytmem wartoœci \textit{uogólnionego wzoru Simpsona} dla pocz¹tkowego i koñcowego przedzia³u oraz parzystych i ostatecznie nieparzystych przedzia³ów. Zewnêtrzna pêtla \textit{for} rozpoczyna obliczenia zwi¹zane bezpoœrednio z implementacj¹ wzoru (\ref{OgolnaFormaSimpson2DVar}), której to opis pominiemy z powodu pozostawionych w kodzie komentarzy. Po wykonaniu obydwu pêtli na podstawie \textit{PoczKoniecP, ParzP i NieParzP} wyznaczany jest ostateczny wynik procedury.
 
 Dzia³anie \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}} sprawdzimy poprzez wykonanie obliczeñ dla poni¿szych ca³ek:
 %%%%%
@@ -451,7 +449,7 @@ Dzia³anie \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}} sp
  %a) 0.722928
  %b) 0.266666666666666
  
-Otrzymane wyniki zaprezentujemy w formie tabelarycznej. Tak wiêc niech $N$ oznacza iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $x$, oraz $M$ po zmiennej $y$. Dodatkowo $W_{S2Vy}$ bêdzie wynikiem \textit{Simpson2\_VarY} dla rosn¹cych wartoœci parametrów $N$ i $M$. Niech \textit{$BBS2Vy_{N,M}$} opisuje b³¹d bezwzglêdny przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Ox$ procedur¹ \textit{Simpson2\_VarY}, dla pewnych wartoœci $N$ i $M$. Przez \textit{$BWS2Vy_{N,M}$} rozumieæ bêdziemy wielkoœæ b³êdu wzglêdnego obci¹¿aj¹cego ten sam wynik wykonania \textit{Simpson2\_VarY}.\\ \\
+Otrzymane wyniki zaprezentujemy w formie tabelarycznej. Tak wiêc niech $N$ oznacza iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $x$, oraz $M$ po zmiennej $y$. Dodatkowo $W_{S2Vy}$ bêdzie wynikiem \textit{Simpson2\_VarY} dla rosn¹cych wartoœci parametrów $N$ i $M$. Niech \textit{$BBS2Vy_{N,M}$} opisuje b³¹d bezwzglêdny przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Ox$ procedur¹ \textit{Simpson2\_VarY}, dla konkretnych wartoœci $N$ i $M$. Przez \textit{$BWS2Vy_{N,M}$} rozumieæ bêdziemy wielkoœæ b³êdu wzglêdnego obci¹¿aj¹cego ten sam wynik wykonania \textit{Simpson2\_VarY}.\\ \\
 Dok³adna wartoœæ ca³ki $\int\limits_{0}^{1}\int\limits_{(x-1)^2}^{4-(x-1)^2} x^{3y} dydx$ jest równa $0.722928$, wiêc:. 
 \begin{table}[h!]
  \caption{Rezultaty pomiarów dok³adnoœci przybli¿enia ca³ki a) procedur¹ \textit{Simpson2\_VarY} w obszarze normalnym wzglêdem osi Ox}
@@ -542,17 +540,17 @@ Zaokr¹glona wartoœæ ca³ki $\int\limits_{0}^{2}\int\limits_{0}^{\frac{x}{2}} xy^2
 
 Analizuj¹c powy¿sze pomiary, mo¿na zaobserwowaæ pewn¹ w³asnoœæ. Zarówno w pierwszym jak i w drugim przypadku odpowiednio dok³adny wynik uzyskaliœmy ju¿ dla $N=150$ i $M=50$. Jednak¿e co najdziwniejsze dla przyk³adu a) przyjêcie wielkoœci parametru $M>50$ skutkowa³o sta³ym zwiêkszaniem siê b³êdu wzglêdnego i bezwzglêdnego. Nie mia³o to jednak zbyt wielkiego wp³ywu na wielkoœæ wyniku. Sytuacja taka zaistnia³a jak mo¿na domniemaæ z powodu postaci wyk³adniczej funkcji podca³kowej oraz tak zwanej kumulacji b³êdu pomiaru.
 
-Zestawiaj¹c ze sob¹ wyniki dla tych samych ca³ek zawarte w \textit{Tablicy \ref{WynikiZProceduryTrapez2VarYa}} i \textit{Tablicy \ref{WynikiZProcedurySimpson2VarYa}} oraz  wartoœci z \textit{Tablicy \ref{WynikiZProceduryTrapez2VarYb}} i \textit{Tablicy \ref{WynikiZProcedurySimpson2VarYb}} zauwa¿yæ mo¿na, ¿e \textit{procedura \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}} zwraca wyniki z b³êdami o nawet szeœæ rzêdów wielkoœci mniejszymi ni¿ \textit{procedura \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}} ! Oznacza to, ¿e \textit{uogólniony wzór Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem osi $Ox$ pozwala uzyskaæ znacznie dok³adniejsze przybli¿enie ni¿ \textit{uogólniony wzór trapezów}, przy zachowaniu takiej samej liczby wywo³añ obydwu procedur.  
+Zestawiaj¹c ze sob¹ wyniki dla tych samych ca³ek zawarte w \textit{Tablicy \ref{WynikiZProceduryTrapez2VarYa}} i \textit{Tablicy \ref{WynikiZProcedurySimpson2VarYa}} oraz  wartoœci z \textit{Tablicy \ref{WynikiZProceduryTrapez2VarYb}} i \textit{Tablicy \ref{WynikiZProcedurySimpson2VarYb}} zauwa¿yæ mo¿na, ¿e \textbf{Procedura \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}} zwraca wyniki z b³êdami o nawet szeœæ rzêdów wielkoœci mniejszymi ni¿ \textbf{Procedura \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}}! Oznacza to, ¿e wykonuj¹c takie same iloœci podzia³ów przedzia³ów ca³kowania \textit{uogólnionym wzorem Simpsona dla ca³ek podwójnych w obszarze normalnym wzglêdem osi $Ox$} uzyskamy  znacznie dok³adniejsze przybli¿enie ni¿ \textit{uogólnionym wzorem trapezów}.
       
 \section{Wzór trapezów dla obszaru normalnego wzglêdem osi Oy}
-Rozwa¿my obszar \mbox{$T=\{a \leq y \leq b\,;\, c(y)\leq x \leq d(y) \}$},  normalny wzglêdem osi $Oy$ \mbox{( def. na str. \pageref{ObszaryNormalneOx} )} i funkcjê $f(x,y)$ okreœlon¹ na $T$. Podajmy \textit{wzór trapezów} dla ca³ek postaci  
+Niech \mbox{$T=\{a \leq y \leq b\,;\, c(y)\leq x \leq d(y) \}$} bêdzie obszarem  normalnym wzglêdem osi $Oy$ \mbox{( def. na str. \pageref{ObszaryNormalneOx} )} i $f(x,y)$ to pewna funkcja okreœlona na $T$. Podajmy \textit{uogolniony wzór trapezów} dla ca³ek postaci  
 \begin{equation}\label{Trapez2DVarX_postacOgolnaCalki}
 I_{VxT2}=\iint_T f(x,y)dxdy=\int\limits_{a}^b\int\limits_{c(y)}^{d(y)} f(x,y) dxdy \,.
 \end{equation}
 Przedzia³ $[a,b]$ podzielmy na $n$ podprzedzia³ów $[y_i,y_{i+1}]$ $(i=0, 1, \ldots, n-1)$, gdzie dla dowolnego $y_i$ zachodzi:
 $$a=y_0 < y_1 < y_2 < \ldots  < y_{n-1} < y_n=b\,.$$ 
 Wszystkie wêz³y $y_i$ mo¿na przedstawiæ jako $y_i=a+ih_y$ $(i=0, 1, \ldots, n)$, gdzie  \mbox{$h_y=\frac{b-a}{n}$}.\\ 
-Dodatkowo dla ka¿dego $y_i \in [a,b]$ wyró¿nijmy przedzia³y $[c(y_i),d(y_i)]$, zazwyczaj ró¿nej d³ugoœci, uzale¿nione od postaci funkcji $c(y)$, $d(y)$ i argumentu $y=y_i$. Ka¿dy z nich podzielony zostanie na dok³adnie $m$ równych podprzedzia³ów \mbox{$[x_{i,j}, x_{i,j+1}]$ $(i=0, 1, \ldots ,n;\, j=0, 1, \ldots ,m-1)$}, gdzie $x_{i,j}$ spe³niaj¹ zale¿noœæ:
+Dodatkowo dla ka¿dego $y_i \in [a,b]$ wyró¿nijmy przedzia³y $[c(y_i),d(y_i)]$, których d³ugoœæ jest uzale¿nione od postaci funkcji $c(y)$, $d(y)$ i argumentu $y=y_i$. Ka¿dy z nich podzielony zostanie na dok³adnie $m$ równych podprzedzia³ów \mbox{$[x_{i,j}, x_{i,j+1}]$ $(i=0, 1, \ldots ,n;\, j=0, 1, \ldots ,m-1)$}, gdzie $x_{i,j}$ spe³niaj¹ zale¿noœæ:
 $$c(y_i)=x_{i,0}\leq x_{i,1} \leq x_{i,2}\leq \ldots  \leq x_{i,m}=d(y_i).$$
 Ponadto, przez $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,n;\, j=0, 1, \ldots ,m)$, przy czym $h_{x,i}=\frac{d(y_i)-c(y_i)}{m}$. Analogicznie jak mia³o to miejsce dla obszarów normalnych wzglêdem $Ox$ wielkoœæ kroku $h_{x,i}$ jest uzale¿niona od $y_i$ - co widaæ na zamieszczonym  Rysunku \ref{R8}.
 \begin{figure}[H]
@@ -564,13 +562,13 @@ Ponadto, przez $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,n
 \label{R8}
 \end{figure}
         
-Podobnie jak zrobiliœmy to dla ca³ki podwójnej po obszarze normalnym wzglêdem $Ox$ liczonej przy pomocy \textit{wzoru Trapezów} i \textit{wzoru Simpsona}, tak i teraz ca³kê z równania (\ref{Trapez2DVarX_postacOgolnaCalki}) przekszta³æmy do nieco innej formy. Niech 
+Podobnie jak zrobiliœmy to dla ca³ki podwójnej po obszarze normalnym wzglêdem $Ox$ liczonej przy pomocy \textit{uogólnionego wzoru trapezów} i \textit{uogólnionego wzoru Simpsona}, tak i teraz ca³kê z równania (\ref{Trapez2DVarX_postacOgolnaCalki}) zapiszmy w innej postaci. Niech 
 \begin{equation}\label{CalkaWewnetrznaF(y)TrapezVarX}
 F(y)=\int\limits_{c(y)}^{d(y)} f(x,y)dx\,,\end{equation}
  wtedy 
  \begin{equation}\label{CalkaZewnetrznaF(y)TrapezVarX}
  I_{VxT2}=\int\limits_a^b F(y)dy.
- \end{equation} Po zastosowaniu z³o¿onego \textit{wzoru trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VxT2}$ otrzymamy wstêpn¹ postaæ przybli¿enia wartoœci ca³ki $I_{VxT2}$, tzn.: 
+ \end{equation} Po zastosowaniu \textit{z³o¿onego wzoru trapezów} (\ref{OgolnyWzorTrapezow}) dla $I_{VxT2}$ otrzymamy wstêpn¹ postaæ przybli¿enia wartoœci ca³ki $I_{VxT2}$, tzn.: 
 \begin{equation}\label{OgolnaFormaTrapez2DVarX}
 I_{VxT2}\approx \frac{h_y}{2}\left(F(y_0)+2F(y_1)+2F(y_2)+\cdots+2F(y_{n-1})+F(y_n)\right).
 \end{equation}
@@ -578,21 +576,21 @@ Dowolny ze sk³adników $F(y_i)$, $(i=0,1,\ldots, n)$ jest rozumiany jako:
 \begin{equation}\label{SkladnikiF(y_i)OgolnejFormyTrapez2DVar}
 \begin{array}{cc}
 F(y_i)=\int\limits_{c(y_i)}^{d(y_i)} f(x,y_i)dx\approx \\
-\frac{h_{x,i}}{2}\left(f(x_{i,0},y_i)+2f(x_{i,1},y_i)+2f(x_{i,2},y_i)+\cdots +2f(x_{i,m-1},y_i)+f(x_{i,m},y_i)\right)
+\frac{h_{x,i}}{2}\left(f(x_{i,0},y_i)+2f(x_{i,1},y_i)+2f(x_{i,2},y_i)+\cdots +2f(x_{i,m-1},y_i)+f(x_{i,m},y_i)\right).
 \end{array}
 \end{equation} 
-£¹cz¹c wzory (\ref{OgolnaFormaTrapez2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormyTrapez2DVar}) dostajemy \textit{uogólniony wzór trapezów} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Oy$:
+£¹cz¹c wzory (\ref{OgolnaFormaTrapez2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormyTrapez2DVar}) dostajemy \textbf{uogólniony wzór trapezów dla ca³ki podwójnej po obszarze normalnym wzglêdem osi Oy}:
 \begin{equation}\label{UogolnionyWzorTrapezow_Trapez2DVarX}
 \begin{array}{cc}
 I_{VxT2}\approx \frac{h_y}{2}\left\lbrace \frac{h_{x,0}}{2}\left(f(x_{0,0},y_0)+2\sum\limits_{j=1}^{m-1} f(x_{0,j},y_0)+f(x_{0,m},y_0)\right)\right.\\
 +2\sum\limits_{i=1}^{n-1}\frac{h_{x,i}}{2}\left(f(x_{i,0},y_i)+2\sum\limits_{j=1}^{m-1}f(x_{i,j},y_i)+f(x_{i,m},y_i)\right)\\
 +\left. 
 \frac{h_{x,n}}{2}\left(f(x_{n,0},y_n)+2\sum\limits_{j=1}^{m-1} f(x_{n,j},y_n)+f(x_{n,m},y_n)\right)
-\right\rbrace
+\right\rbrace.
 \end{array}
 \end{equation}
 
-Jak ju¿ siê przekonaliœmy podczas rozwi¹zywania Przyk³adu \ref{WzorTrapezowNormalnyOxPrzyklad}, wykonanie rêcznych obliczeñ z zastosowaniem wzoru (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) by³oby tak samo skomplikowane i pracoch³onne. W zwi¹zku z tym, by u³atwiæ sobie zadanie wykorzystajmy napisan¹ w tym celu procedurê w jêzyku \textit{Maple}, bêd¹c¹ implementacj¹ przybli¿enia (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}).
+Jak ju¿ siê przekonaliœmy podczas rozwi¹zywania Przyk³adu \ref{WzorTrapezowNormalnyOxPrzyklad}, wykonanie rêcznych obliczeñ z zastosowaniem wzoru (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) by³oby tak samo wymagaj¹ce. W zwi¹zku z tym, by u³atwiæ sobie zadanie wykorzystajmy napisan¹ w tym celu procedurê jêzyka \textit{Maple}, bêd¹c¹ implementacj¹ (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}).
 \begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych w obszarach normalnych wzglêdem osi $Oy$ przy u¿yciu \textit{uogólnionego wzoru trapezów})\label{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki}
 \begin{small}
 \begin{verbatim}
@@ -636,7 +634,7 @@ end proc;
 
 Zamieszczony powy¿ej algorytm \textbf{Procedury \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki}} powsta³ po przekszta³ceniu znanego nam ju¿ kodu \textbf{Procedury \ref{MAPLE_Trapez2ObszarNormalnyOxWartoscCalki}}. G³ówn¹ ró¿nic¹ jest to, ¿e tym razem obs³ugujemy obszary normalne wzglêdem osi $Oy$, zaœ sama procedura jest oparta g³ównie o wzór (\ref{UogolnionyWzorTrapezow_Trapez2DVarX}) oraz podane definicje $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ oraz $h_{x,i}$ (zmienna \textit{hx}). Parametry wejœciowe to \textit{a,b} - czyli pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. Kolejno \textit{n} i \textit{m} to iloœci podzia³ów przedzia³ów ca³kowania po zmiennej $y$ i $x$.
 Je¿eli chodzi o zmienn¹ $x$, to przed ca³ym kodem opisywanej procedury musz¹ pojawiæ siê definicje funkcji $c(y)$ i $d(y)$, które s¹ granicami ca³kowania po zmiennej $x$.
-Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.\\
+Bardziej szczegó³owy opis implementacji uznajemy tym razem za zbêdny.
 
 Wykorzystuj¹c \textbf{Procedurê \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki}} wyznaczmy przybli¿one wartoœci ca³ek:
  \begin{itemize}\label{PrzykladoweCalkiTrapez2VarX}
@@ -743,7 +741,7 @@ Wykonane za chwilê pomiary zgromadzimy w tabelkach. Niech kolumna z nazw¹ $n$ za
 Poddaj¹c analizie powy¿sze wyniki zawarte w tabelach \ref{WynikiZProceduryTrapez2VarXa} i \ref{WynikiZProceduryTrapez2VarXb} zauwa¿amy, ¿e w obydwu przypadkach b³¹d przybli¿enia w miarê wzrostu parametrów $n$ i $m$ sukcesywnie mala³. Wyniki zosta³y przybli¿one z dok³adnoœci¹ wiêksz¹ ni¿ $0.01$   przy $n = m = 4$ dla przyk³adu a) oraz  $n = 16$ i $m = 20$ dla ca³ki z podpunktu b). Mo¿na stwierdziæ, ¿e wielkoœci tych parametrów s¹ dosyæ niskie w stosunku do dok³adnoœci wyniku jaki otrzymaliœmy.
 
 \section{Wzór Simpsona dla obszaru normalnego wzglêdem osi Oy}
-W podrozdziale tym podamy \textit{wzór Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$.
+W podrozdziale tym podamy \textit{uogólniony wzór Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$.
 
 Niech \mbox{$S=\{a \leq y \leq b\,;\, c(y)\leq x \leq d(y) \}$} bêdzie obszarem normalnym wzglêdem osi $Oy$ a $f(x,y)$ funkcj¹ okreœlon¹ na tym obszarze. WyprowadŸmy \textit{wzór Simpsona} dla ca³ek postaci:
 \begin{equation}\label{Simpson2DVarX_postacOgolnaCalki}
@@ -759,7 +757,7 @@ $$c(y_i)=x_{i,0}\leq x_{i,1} \leq x_{i,2}\leq \ldots  \leq x_{i,2m}=d(y_i).$$
 
 Przez symbol $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,2n;\,j=0, 1, \ldots ,2m )$, natomiast $h_{x,i}=\frac{d(y_i)-c(y_i)}{2m}$. Jak mo¿na zauwa¿yæ, wielkoœæ kroku $h_{x,i}$ jest  zale¿na od powi¹zanego z nim $y_i$.  
 
-Poni¿szy Rysunek \ref{R9} przybli¿y nam sens przedstawionych powy¿ej oznaczeñ niezbêdnych do wyprowadzenia \textit{wzoru Simpsona} dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$. 
+Poni¿szy Rysunek \ref{R9} przybli¿y nam sens przedstawionych powy¿ej oznaczeñ niezbêdnych do wyprowadzenia \textit{uogólnionego wzoru Simpsona dla ca³ek podwójnych w obszarze normalnym wzglêdem $Oy$}. 
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.45]{R9.eps}
@@ -777,21 +775,19 @@ st¹d
 \begin{equation}\label{SimpsonVxCalkaPoYjakoFunkcjaX_r2}
 I_{VxS2}=\int\limits_{a}^b\int\limits_{c(y)}^{d(y)} f(x,y) dxdy=\int\limits_a^b F(y)dy.
 \end{equation}
-
- U¿ywaj¹c w tym momencie \textit{uogólnionego wzoru Simpsona}  (\ref{wzorSimpsonaZPodzialami})  dla ca³ki z równania (\ref{SimpsonVxCalkaPoYjakoFunkcjaX_r2}), otrzymamy pocz¹tkow¹ formê wyra¿enia prowadz¹cego do przybli¿enia jej wartoœci: 
+U¿ywaj¹c w tym momencie \textit{uogólnionego wzoru Simpsona}  (\ref{wzorSimpsonaZPodzialami})  dla ca³ki z równania (\ref{SimpsonVxCalkaPoYjakoFunkcjaX_r2}), otrzymamy pocz¹tkow¹ formê wyra¿enia prowadz¹cego do przybli¿enia jej wartoœci: 
 \begin{equation}\label{OgolnaFormaSimpson2DVarX}
 I_{VxS2}\approx \frac{h_y}{3}\left(F(y_0)+4F(y_1)+2F(y_2)+4F(y_3)+2F(y_4)+\cdots+4F(y_{2n-1})+F(y_{2n})\right).
 \end{equation}
-
 Dowolny ze sk³adników $F(y_i)$, $(i=0,1,\ldots, 2n)$, pojawiaj¹cych siê w (\ref{OgolnaFormaSimpson2DVarX}) mo¿na rozumieæ jako:
 \begin{equation}\label{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}
 \begin{array}{cc}
 F(y_i)=\int\limits_{c(y_i)}^{d(y_i)} f(x,y_i)dx\approx \\
 \frac{h_{x,i}}{3}\left(f(x_{i,0},y_i)+4f(x_{i,1},y_i)+2f(x_{i,2},y_i)+4f(x_{i,3},y_i)+\cdots\right.\\
-\left. +2f(x_{i,2m-2},y_i)+4f(x_{i,2m-1},y_i)+f(x_{i,2m},y_i)\right)
+\left. +2f(x_{i,2m-2},y_i)+4f(x_{i,2m-1},y_i)+f(x_{i,2m},y_i)\right).
 \end{array}
 \end{equation} 
-Finalnie ³¹cz¹c ze sob¹ (\ref{OgolnaFormaSimpson2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}) zyskujemy \textit{uogólniony wzór Simpsona} dla ca³ki podwójnej po obszarze normalnym wzglêdem osi $Oy$:
+Finalnie ³¹cz¹c ze sob¹ (\ref{OgolnaFormaSimpson2DVarX}) i (\ref{SkladnikiF(y_i)OgolnejFormySimpson2DVarX}) zyskujemy \textbf{uogólniony wzór Simpsona dla ca³ki podwójnej w obszarze normalnym wzglêdem osi Oy}:
 
 \begin{equation}\label{UogolnionyWzorSimpsona_Simpson2DVarX}
 \begin{small}
@@ -804,7 +800,7 @@ I_{VxS2}\approx \frac{h_y}{3}\left\lbrace \frac{h_{x,0}}{3}\left(f(x_{0,0},y_0)+
 + 2\sum\limits_{i=0}^{n-2}\frac{h_{x,2i+2}}{3}\left(f(x_{2i+2,0},y_{2i+2})+4\sum\limits_{j=0}^{m-1} f(x_{2i+2,2j+1},y_{2i+2})+2\sum\limits_{j=0}^{m-2} f(x_{2i+2,2j+2},y_{2i+2})+f(x_{2i+2,2m},y_{2i+2})\right)\\
 
 
-\left.+ \frac{h_{x,2n}}{3}\left(f(x_{2n,0},y_{2n})+4\sum\limits_{j=0}^{m-1} f(x_{2n,2j+1},y_{2n})+2\sum\limits_{j=0}^{m-2} f(x_{2n,2j+2},y_{2n})+f(x_{2n,2m},y_{2n})\right)\right\rbrace
+\left.+ \frac{h_{x,2n}}{3}\left(f(x_{2n,0},y_{2n})+4\sum\limits_{j=0}^{m-1} f(x_{2n,2j+1},y_{2n})+2\sum\limits_{j=0}^{m-2} f(x_{2n,2j+2},y_{2n})+f(x_{2n,2m},y_{2n})\right)\right\rbrace.
 \end{array}
 \end{small}
 \end{equation}
@@ -862,21 +858,20 @@ end proc;
 \end{small}
 \end{proc}
 
-Widoczna powy¿ej implementacja algorytmu zosta³a zrealizowana poprzez wykonanie stosownych zmian w kodzie \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}}. 
+Powy¿sza implementacja algorytmu zosta³a zrealizowana dziêki wykonaniu stosownych zmian w kodzie \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOxWartoscCalki}}. 
 Wprowadzono szereg zmian pozwalaj¹cych na wykorzystanie wzoru Simpsona dla ca³ek podwójnych w obszarach normalnych wzglêdem $Oy$. G³ówna czêœæ procedury bazuje na wyprowadzonym  wzorze (\ref{UogolnionyWzorSimpsona_Simpson2DVarX}) oraz podanych równoczeœnie definicjach $y_i$, $x_{i,j}$ (\textit{ix} w kodzie), $h_y$ i $h_{x,i}$ (zmienna \textit{hx}). 
 
-Do poprawnego wywo³ania procedury, niezbêdna jest nam wiedza na temat znaczenia parametrów wejœciowych. S¹ to \textit{a,b} - opisuj¹ce pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. \textit{N} i \textit{M} s¹ parametrami przez które przekazujemy liczbê podzia³ów przedzia³ów ca³kowania  po zmiennej $y$ i $x$. Dodatkowo przed implementacj¹ procedury znajdowaæ musz¹ siê definicje funkcji $c(y)$ i $d(y)$ bêd¹cych doln¹ i górn¹ granic¹ ca³kowania po zmiennej $x$\\
-
+Do poprawnego wywo³ania procedury, niezbêdna jest nam wiedza na temat znaczenia parametrów wejœciowych. S¹ to \textit{a,b} - opisuj¹ce pocz¹tek i koniec przedzia³u ca³kowania po zmiennej $y$. \textit{N} i \textit{M} s¹ parametrami przez które przekazujemy liczbê podzia³ów przedzia³ów ca³kowania  po zmiennej $y$ i $x$. Dodatkowo przed implementacj¹ procedury znajdowaæ musz¹ siê definicje funkcji $c(y)$ i $d(y)$ bêd¹cych doln¹ i górn¹ granic¹ ca³kowania po $x$.\\
 Za pomoc¹ \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOYWartoscCalki}} obliczmy przybli¿one wartoœci nastêpuj¹cych ca³ek:
 \begin{itemize}\label{PrzykladoweCalkiSimpson2VarX}
 \item[a)] $\int\limits_{1}^{2}\int\limits_{y}^{2y} \frac{x+y}{\sqrt{y}} dxdy$
 \item[b)] $\int\limits_{1}^{2}\int\limits_{\sqrt{y}}^{y} xy^3 dxdy$
 \end{itemize}     
-operuj¹c wielkoœciami parametrów \textit{N} i \textit{M} w nastêpuj¹cych po sobie wywo³aniach procedury.
+zmieniaj¹c wielkoœci parametrów \textit{N} i \textit{M} w nastêpuj¹cych po sobie wywo³aniach tej¿e procedury.
 %a) 4.65685424949238019520675485%
 %b) 2.15%
 
-Wykonane dla powy¿szych przyk³adów pomiary odnajdziemy w zamieszczonych poni¿ej Tablicach \ref{WynikiZProcedurySimpson2VarXa} i \ref{WynikiZProcedurySimpson2VarXb}. Zastosujemy podobne oznaczenia kolumn jak dla \textit{wzoru Simpsona w obszarze normalnym wzglêdem osi $Oy$}. Niech kolumna z nag³ówkiem $N$ definiuje iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $y$, z nazw¹ $M$ po zmiennej $x$. Kolejno w $W_{S2Vx}$ bêdziemy gromadziæ wyniki \textit{Simpson2\_VarX} dla rosn¹cych wartoœci $N$ i $M$. Przez \textit{$BBS2Vx_{N,M}$} rozumiejmy b³êdy bezwzglêdne przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Oy$ dla zadanych  $N$ i $M$. Ostatecznie niech\textit{$BWS2Vx_{N,M}$} zawiera wielkoœæ b³êdu wzglêdnego dla wyniku wykonania \textit{Simpson2\_VarX}.
+Wykonane dla powy¿szych przyk³adów pomiary odnajdziemy w zamieszczonych w dalszej czêœci Tablicach \ref{WynikiZProcedurySimpson2VarXa} i \ref{WynikiZProcedurySimpson2VarXb}. Zastosujemy podobne oznaczenia kolumn jak dla \textit{wzoru Simpsona w obszarze normalnym wzglêdem osi $Ox$}. Niech kolumna z nag³ówkiem $N$ definiuje iloœæ podzia³ów przedzia³u ca³kowania po zmiennej $y$, z nazw¹ $M$ po zmiennej $x$. Kolejno w $W_{S2Vx}$ bêdziemy gromadziæ wyniki \textit{Simpson2\_VarX} dla rosn¹cych wartoœci $N$ i $M$. Przez \textit{$BBS2Vx_{N,M}$} rozumiejmy b³¹d bezwzglêdny przybli¿enia  ca³ki podwójnej w obszarze normalnym wzglêdem $Oy$ dla zadanych  $N$ i $M$. Ostatecznie niech\textit{$BWS2Vx_{N,M}$} zawiera wielkoœæ b³êdu wzglêdnego dla ka¿dego przedstawionego wyniku wykonania \textit{Simpson2\_VarX}.
 
 \newpage
 \hspace{-1.0cm}{Przybli¿ona wartoœæ ca³ki z punktu a) to $4.6568542494923802$, st¹d: }
@@ -967,10 +962,10 @@ Wykonane dla powy¿szych przyk³adów pomiary odnajdziemy w zamieszczonych poni¿ej 
  \label{WynikiZProcedurySimpson2VarXb}
 \end{table}
 
-Zestawiaj¹c parami wyniki zamieszczone odpowiednio w tabelach \ref{WynikiZProceduryTrapez2VarXa} i \ref{WynikiZProcedurySimpson2VarXa} oraz \ref{WynikiZProceduryTrapez2VarXb} i \ref{WynikiZProcedurySimpson2VarXb} ju¿ od pierwszych pomiarów zauwa¿alna jest znacz¹ca ró¿nica w dok³adnoœci procedur \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki} i \ref{MAPLE_Simpson2ObszarNormalnyOYWartoscCalki} - \textit{wzór Simpsona} zwraca wartoœci ze znacznie mniejszym b³êdem oszacowania ni¿ \textit{wzór trapezów}. Jednoczeœnie wielkoœci tych b³êdów dla ka¿dego z czterech zestawów pomiarów odznaczaj¹ siê siln¹ tendencj¹ spadkow¹. 
+Zestawiaj¹c parami wyniki zamieszczone odpowiednio w Tablicach \ref{WynikiZProceduryTrapez2VarXa} i \ref{WynikiZProcedurySimpson2VarXa} oraz \ref{WynikiZProceduryTrapez2VarXb} i \ref{WynikiZProcedurySimpson2VarXb} ju¿ od pierwszych pomiarów zauwa¿alna jest znacz¹ca ró¿nica w dok³adnoœci \textbf{Procedury \ref{MAPLE_Trapez2ObszarNormalnyOYWartoscCalki}} i \textbf{Procedury \ref{MAPLE_Simpson2ObszarNormalnyOYWartoscCalki}} - \textit{wzór Simpsona} zwraca wartoœci ze znacznie mniejszym b³êdem oszacowania ni¿ \textit{wzór trapezów}. Jednoczeœnie wielkoœci tych b³êdów dla ka¿dego z czterech zestawów pomiarów odznaczaj¹ siê siln¹ tendencj¹ spadkow¹. 
 Ukazuj¹c skutecznoœæ obu wzorów zauwa¿my, ¿e np. dla ca³ek z przyk³adów a) zbli¿one wyniki z dok³adnoœci¹ do 5 miejsca po przecinku otrzymaliœmy dziêki \textit{Simpson2\_VarX} obieraj¹c $N=8$ i $M=4$, gdzie dla \textit{Trapez2\_VarX} by³o to a¿ $n=180$ i $m=100$ podzia³ów przedzia³ów ca³kowania. Kolejne przybli¿enie do 6 miejsca po przecinku wymaga³o  $N=16$, $M=20$ oraz a¿ $n=600$ i $m=500$ podzia³ów dla \textit{metody trapezów}. Porównywalne wnioski mo¿emy wyci¹gn¹æ równie¿ dla ca³ek z przyk³adów b). 
 
-Ostatecznie bior¹c pod uwagê powy¿sze spostrze¿enia oraz dotycz¹ce ich pomiary, \textit{metodê Simpsona} dla ca³ek podwójnych w obszarach normalnych wzglêdem $Oy$ mo¿emy uznaæ za wielokrotnie dok³adniejsz¹ i wydajniejsz¹ od \textit{metody trapezów} dla tych samych obszarów. 
+Ostatecznie bior¹c pod uwagê powy¿sze spostrze¿enia oraz dotycz¹ce ich pomiary, \textit{metodê Simpsona dla ca³ek podwójnych w obszarach normalnych wzglêdem $Oy$} mo¿emy uznaæ za zdecydowanie dok³adniejsz¹ i wydajniejsz¹ od \textit{metody trapezów} dla tych samych obszarów. 
 
    
    

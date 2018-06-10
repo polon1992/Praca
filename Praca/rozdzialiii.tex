@@ -1,5 +1,5 @@
 \chapter{Kwadratury Newtona-Cotesa dla ca³ek podwójnych w prostok¹cie}
-W ca³ym poprzednim rozdziale skupialiœmy siê na metodach ca³kowania numerycznego. Odnosi³y siê one jednak tylko do funkcji jednej zmiennej - zatem ca³kowanie odbywa³o siê na pewnym przedziale domkniêtym. Teraz chcemy poszerzyæ nasz¹ wiedzê i przejœæ o jeden krok dalej. Nasze rozwa¿ania zostan¹ skierowane ponownie na te same, co poprzednio metody ca³kowania numerycznego. Znacz¹ca ró¿nica polega³a bêdzie na tym, ¿e zajmiemy siê ca³kowaniem funkcji dwóch zmiennych. Wszystkie nasze dzia³ania maj¹ na celu wy³onienie najdok³adniejszej metody wyznaczania wartoœci ca³ek podwójnych przy pomocy prezentowanych algorytmów.  W badaniach wyró¿nimy trzy typy obszarów ca³kowania, bêd¹ to:
+W ca³ym poprzednim rozdziale skupialiœmy siê na metodach ca³kowania numerycznego. Odnosi³y siê one jednak tylko do ca³ek funkcji jednej zmiennej - zatem obliczenia wykonywano na pewnym przedziale domkniêtym. Teraz chcemy poszerzyæ nasz¹ wiedzê i przejœæ o jeden krok dalej. Nasze rozwa¿ania zostan¹ skierowane ponownie na te same, co poprzednio kwadratury. Znacz¹ca ró¿nica polega³a bêdzie na tym, ¿e rozwa¿ymy ca³ki funkcji dwóch zmiennych. Wszystkie nasze dzia³ania maj¹ na celu wy³onienie najdok³adniejszej metody wyznaczania wartoœci oznaczonych ca³ek podwójnych przy pomocy prezentowanych algorytmów.  W dalszych badaniach wyró¿nimy trzy typy obszarów ca³kowania, bêd¹ to:
 \begin{itemize}
 \item[a)] Obszar normalny ze wzglêdu na zmienn¹ $x$ i $y$
 \item[b)] Obszar normalny tylko ze wzglêdu na zmienn¹ $x$
@@ -17,24 +17,23 @@ O obszarze normalnym w przestrzeni kartezjañskiej $\re ^2$
 \end{itemize}
 
 \section{Wzór trapezów }\label{Rozdzial3.1_WzorTrapezow2DObszNormalny}
-W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ wzór trapezów (\ref{wzorTrapezowBrakPodzialu}) i uogólniony wzór trapezów (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Zbadajmy wariant, dla którego obszar ca³kowania jest normalny ze wzglêdu na dwie zmienne.  
+W podrozdziale \ref{Podrozdzial_WzorTrapezow} wyprowadziliœmy ju¿ \textit{wzór trapezów} (\ref{wzorTrapezowBrakPodzialu}) i \textit{uogólniony wzór trapezów} (\ref{OgolnyWzorTrapezow}). Najbardziej interesuje nas drugi ze wspomnianych. Istnieje mo¿liwoœæ rozszerzenia go na przypadek ogólny dotycz¹cy funkcji dwóch zmiennych. Zbadajmy wariant, dla którego obszar ca³kowania jest normalny ze wzglêdu na dwie zmienne.  
 
 Niech ca³kowanie odbywa siê na obszarze $\Omega=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $n$ podprzedzia³ów postaci $[x_i,x_{i+1}]$ ($i=0,1,\ldots, n-1$). Podobnie bêdzie dla $[c,d]$, podzielimy go na $m$ podprzedzia³ów $[y_j,y_{j+1}]$ ($j=0,1,\ldots, m-1$). \mbox{W zwi¹zku} z tym zajdzie nastêpuj¹ca prawid³owoœæ:
 \vspace{-0.5cm}\begin{equation}\label{WezlyTrapez2}
 \begin{array}{cc}
-a=x_0 < x_1 < x_2\ldots < x_n=b \\
-c=y_0 < y_1 < y_2\ldots < y_m=d \\
+a=x_0 < x_1 < x_2\ldots < x_n=b, \\
+c=y_0 < y_1 < y_2\ldots < y_m=d. \\
 \end{array}
 \end{equation} 
 Postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
 \vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymTrapez2}
 \begin{array}{cc}
-x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{n} \,\,\,\,(i=0,1,\ldots ,n)\\
-y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{m} \,\,\,\,(j=0,1,\ldots ,m)\\
+x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{n} \,\,\,\,(i=0,1,\ldots ,n),\\
+y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{m} \,\,\,\,(j=0,1,\ldots ,m).\\
 \end{array}
 \end{equation}
-
 Zapiszmy wzór (\ref{OgolnyWzorTrapezow}) w nieco innej postaci, która bêdzie dla nas bardziej porêczna, tzn.:
 \begin{equation}\label{UogolnionyWzorTrapezow1Przeksztalcony}
 \int\limits_a^b f(x) dx \approx \frac{h}{2}\sum\limits_{i=0}^{n-1}[f(x_i)+f(x_{i+1})]=\frac{h}{2}\left[f(x_0)+f(x_n)+2\sum\limits_{i=1}^{n-1} f(x_i) \right].
@@ -45,7 +44,7 @@ I_{T2}=\int\limits_a^b\int\limits_c^d f(x,y)dydx=\int\limits_a^b g(x)dx\,\, ,
 \end{equation} 
 \end{definition}
 \begin{flushleft}
-przy czym ( rozbudowuj¹c (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) o dodatkow¹ zmienn¹\,)
+przy czym ( równoœæ (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) rozszerzona o dodatkow¹ zmienn¹\,)
 \end{flushleft}
 \begin{equation}\label{Wyjasnienie_g(x)_metodaTrapezow2}
 g(x)=\int\limits_c^d f(x,y)dy\approx\frac{h_y}{2}\left[ f(x,y_0)+f(x,y_m)+2\sum\limits_{j=1}^{m-1}f(x,y_j)\right].
@@ -54,26 +53,26 @@ Podstawmy opisan¹ przez równanie (\ref{Wyjasnienie_g(x)_metodaTrapezow2}) postaæ
 \begin{equation}\label{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}
 I_{T2}=\int\limits_a^b\int\limits_c^d f(x,y)dydx\approx\int\limits_a^b \frac{h_y}{2}\left[ f(x,y_0)+f(x,y_m)+2\sum\limits_{j=1}^{m-1}f(x,y_j)\right] dx  \,.
 \end{equation}
-W celu wyeliminowania potrzeby ca³kowania w (\ref{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}) ponownie zostaje zastosowana metoda trapezów z równania (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) (rozszerzona w podobny sposób jak w (\ref{Wyjasnienie_g(x)_metodaTrapezow2})). Tym razem traktujemy $x$ jako zmienn¹, natomiast ca³e wyra¿enie podca³kowe jako jedn¹ funkcjê. Sprowadza to nasz problem do nastêpuj¹cego przypadku \cite{klucz11}
+W celu wyeliminowania potrzeby ca³kowania w (\ref{SprowadzenieCalkiPodwDoPojedynczejZSumaTrapez2}) ponownie zostaje zastosowana \textit{metoda trapezów} z równania (\ref{UogolnionyWzorTrapezow1Przeksztalcony}) (rozszerzona w podobny sposób jak w (\ref{Wyjasnienie_g(x)_metodaTrapezow2})). Tym razem traktujemy $x$ jako zmienn¹, natomiast ca³e wyra¿enie podca³kowe jako jedn¹ funkcjê. Sprowadza to nasz problem do nastêpuj¹cego przypadku \cite{klucz11}:
 \begin{equation}\label{CalkaPodwojnaJakoSumaTrapez2}
 \begin{array}{cc}
 I_{T2}\approx \frac{h_x}{2} \left\lbrace \frac{h_y}{2}\left[ f(x_0,y_0)+f(x_0,y_m)+2\sum\limits_{j=1}^{m-1}f(x_0,y_j)\right] \right.\\
 + \frac{h_y}{2}\left[ f(x_n,y_0)+f(x_n,y_m)+2\sum\limits_{j=1}^{m-1}f(x_n,y_j)\right] \\
 + \left. 2\sum\limits_{i=1}^{n-1}\frac{h_y}{2}\left[ f(x_i,y_0)+f(x_i,y_m)+2\sum\limits_{j=1}^{m-1}f(x_i,y_j)\right]
-\right\rbrace
+\right\rbrace.
 \end{array}
 \end{equation}
-Po uproszczeniu ostateczn¹ form¹ (\ref{CalkaPodwojnaJakoSumaTrapez2}) jest:
+Ostateczn¹ form¹ \textbf{uogólnionego wzoru trapezów dla ca³ek podwójnych w prostok¹cie} jest:
 \begin{equation}\label{UogolnionyWzorTrapezow2_obszarNormalny}
 \begin{array}{cc}
 I_{T2}\approx \frac{h_x h_y}{4}\left\lbrace f(x_0,y_0)+f(x_0,y_m)+f(x_n,y_0)+f(x_n,y_m)
 + 4\sum\limits_{i=1}^{n-1}\sum\limits_{j=1}^{m-1}f(x_i,y_j)\right.\\
 \left. +2\sum\limits_{j=1}^{m-1}\left[f(x_0,y_j)+f(x_n,y_j)\right]
-+ 2\sum\limits_{i=1}^{n-1}\left[f(x_i,y_0)+f(x_i,y_m)\right]\right\rbrace
++ 2\sum\limits_{i=1}^{n-1}\left[f(x_i,y_0)+f(x_i,y_m)\right]\right\rbrace.
 \end{array}
 \end{equation}
 
-Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem rozk³adaj¹ siê wed³ug pewnego schematu. Co oznacza, ¿e je¿eli rozpisalibyœmy (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) tak, by uwzglêdniæ w nim wszystkie punkty wêz³owe postaci $(x_i,y_j)$ ( $i=0,1,\ldots,n$,\, \mbox{$j=0,1,\ldots,m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego i spe³niaj¹ce (\ref{WezlyNaObszarzeProstokatnymTrapez2}), to odpowiednio wartoœci przy kolejnych $f(x_i,y_j)$ ( $i=0,1,\ldots,n\,\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê nastêpuj¹co \cite{klucz12}:
+Wspó³czynniki wagowe kwadratury opisanej powy¿szym wzorem rozk³adaj¹ siê wed³ug pewnego schematu. Co oznacza, ¿e je¿eli rozpisalibyœmy (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) tak, by uwzglêdniæ w nim wszystkie punkty wêz³owe postaci $(x_i,y_j)$ ( $i=0,1,\ldots,n$,\, \mbox{$j=0,1,\ldots,m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego i spe³niaj¹ce (\ref{WezlyNaObszarzeProstokatnymTrapez2}), to odpowiednio wartoœci przy kolejnych $f(x_i,y_j)$ ( $i=0,1,\ldots,n\,\,\,,\,\,\,\, j=0,1,\ldots,m$ ) prezentowa³yby siê nastêpuj¹co \cite{klucz12}:
 \begin{equation}\label{MacierzWspolczynnikowTrapez2}
 \left[
 \begin{array}{ccccccccc}
@@ -86,15 +85,15 @@ Interesuj¹cym faktem jest to, ¿e wspó³czynniki wagowe kwadratury opisanej powy¿s
 \end{array}
 \right]
 \end{equation}
-Powy¿sza macierz znacz¹co upraszcza i przyspiesza rozpisywanie \textbf{uogólnionego wzoru trapezów dla ca³ek podwójnych po obszarach normalnych}. Dla przypadku uogólnionego wzoru trapezów dla ca³ki pojedynczej schemat ten ogranicza³ siê jedynie do pierwszego wiersza (numeracja $i$ - od lewej do prawej, $j$ - od góry do do³u).
+Przedstawiona macierz znacz¹co upraszcza i przyspiesza rozpisywanie wzoru (\ref{UogolnionyWzorTrapezow2_obszarNormalny}). Dla przypadku \textit{uogólnionego wzoru trapezów dla ca³ki pojedynczej} schemat ten ogranicza³ siê jedynie do pierwszego wiersza (numeracja $i$ - od lewej do prawej, $j$ - od góry do do³u).
 
-Obliczanie wartoœci ca³ki podwójnej metod¹ trapezów mo¿emy sprowadziæ równie¿ do  sumowania objêtoœci pewnych bry³ trapezoidalnych. Innymi s³owy - rozwa¿my podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na $n\cdot m$ podobszarów, co prezentuje Rysunek \ref{R4} zamieszczony poni¿ej:
+Obliczanie wartoœci ca³ki podwójnej \textit{metod¹ trapezów} mo¿emy sprowadziæ równie¿ do  sumowania objêtoœci pewnych bry³ trapezoidalnych. Innymi s³owy - rozwa¿my podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na $n\cdot m$ podobszarów, co prezentuje Rysunek \ref{R4} zamieszczony poni¿ej:
 
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.7]{R4.eps}
 		\end{center}
-	   \caption{\cite{klucz10} Metoda trapezów dla ca³ek podwójnych - podzia³ obszaru ca³kowania na podobszary }
+	   \caption{\cite{klucz10} Metoda trapezów dla ca³ek podwójnych w obszarach prostok¹tnych - podzia³ obszaru ca³kowania na podobszary }
 \label{R4}
 \end{figure}
 \begin{flushleft}
@@ -103,18 +102,18 @@ Jak widaæ, ka¿dy z podobszarów jest wyznaczany przez cztery wierzcho³ki $(x_i,y_
 \begin{equation}\label{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}
 T2V_{i,j}=h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right],
 \end{equation}
-przy czym $h_x$, $h_y$ opisane s¹ w (\ref{WezlyNaObszarzeProstokatnymTrapez2}).\\ Rozszerzaj¹c równanie (\ref{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}), charakteryzuj¹ce pojedyncz¹ objêtoœæ bry³y na ca³y obszar ca³kowania dobrnêlibyœmy do równoœci postaci  (\ref{UogolnionyWzorTrapezow2_obszarNormalny}). Analizuj¹c powy¿sze zapiski wnioskujemy i¿ zachodzi nastêpuj¹ca prawid³owoœæ: 
+przy czym $h_x$, $h_y$ opisane s¹ w (\ref{WezlyNaObszarzeProstokatnymTrapez2}).\\ Rozszerzaj¹c równanie (\ref{ObjetoscDowolnegoTrapezoiduMetodaTrapezow2}), charakteryzuj¹ce pojedyncz¹ objêtoœæ bry³y na ca³y obszar ca³kowania dobrnêlibyœmy do równoœci postaci  (\ref{UogolnionyWzorTrapezow2_obszarNormalny}). Analizuj¹c powy¿sze zapiski, wnioskujemy i¿ zachodzi nastêpuj¹ca prawid³owoœæ: 
 \begin{equation}\label{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}
-I_{T2V} = I_{T2}\approx \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right]
+I_{T2V} = I_{T2}\approx \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} h_xh_y\left[\frac{f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})}{4}\right].
 \end{equation}
 Porównuj¹c macierz (\ref{MacierzWspolczynnikowTrapez2}) z Rysunkiem \ref{R4} zauwa¿ymy, ¿e elementy macierzy odzwierciedlaj¹ iloœæ podobszarów, na styku których umiejscowiony zosta³ dany wêze³. Mo¿na to te¿ traktowaæ jako informacjê ilu krotnie dany punkt wêz³owy zostaje uwzglêdniony podczas sumowania w (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).
 
-Wzór (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) podobnie jak dla przypadku ca³ki pojedynczej mo¿na równie¿ otrzymaæ wykorzystuj¹c wielomiany \textit{Lagrange'a $L_{1,1}(x,y)$}. Podamy jedynie zarys przekszta³ceñ, które doprowadzi³yby nas do wyniku: 
+Wzór (\ref{UogolnionyWzorTrapezow2_obszarNormalny}) podobnie jak dla przypadku ca³ki pojedynczej mo¿na równie¿ otrzymaæ wykorzystuj¹c \textit{wielomiany Lagrange'a $L_{1,1}(x,y)$}. Podamy jedynie zarys przekszta³ceñ, które doprowadzi³yby nas do po¿¹danego rezultatu: 
 \begin{equation}\label{WzorTrapezowWielomianemL11}
 \begin{array}{cc}
 I_{T2L} = \int\limits_a^b \int\limits_c^d f(x,y) dydx\approx \int\limits_a^b \int\limits_c^d L_{1,1}(x,y) dydx = 
 \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1}\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_j}^{y_{j+1}} L_{1,1}(x,y) dydx =\\
-\frac{h_xh_y}{4} \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} \left[f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})\right]
+\frac{h_xh_y}{4} \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-1} \left[f(x_{i},y_{j})+f(x_{i+1},y_{j})+f(x_{i},y_{j+1})+f(x_{i+1},y_{j+1})\right].
 \end{array}
 \end{equation}
 Ostatnie przejœcie mog³o zostaæ wykonane, poniewa¿ wynik dla ka¿dej ca³ki $\int\limits_{x_i}^{x_{i+1}} \int\limits_{y_j}^{y_{j+1}} L_{1,1}(x,y) dydx$ jest takiej samej postaci, zmienia siê jedynie numer wêz³a branego pod uwagê. Dla przyk³adu:
@@ -127,23 +126,22 @@ Ostatnie przejœcie mog³o zostaæ wykonane, poniewa¿ wynik dla ka¿dej ca³ki $\int\
 \left. +f(x_1,y_0)\left(\frac{x-x_0}{x_1-x_0}\frac{y-y_1}{y_0-y_1} \right)
  +f(x_1,y_1)\left(\frac{x-x_0}{x_1-x_0}\frac{y-y_0}{y_1-y_0} \right)
  \right) dydx= \ldots =\\ 
- \frac{h_xh_y}{4}\left[f(x_{0},y_{0})+f(x_{1},y_{0})+f(x_{0},y_{1})+f(x_{1},y_{1})\right]
+ \frac{h_xh_y}{4}\left[f(x_{0},y_{0})+f(x_{1},y_{0})+f(x_{0},y_{1})+f(x_{1},y_{1})\right].
 \end{array}
 \end{equation}
 
-Jak widaæ istnieje wiele sposobów na to, by wyprowadziæ po¿¹dany przez nas dwuwymiarowy wzór trapezów. Naj³atwiejsza do zrozumienia i póŸniejszego zaimplementowania okazuje siê na pierwszy rzut oka jego postaæ z równoœci (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).\\ 
+Jak widaæ istnieje wiele sposobów na to, by wyprowadziæ poszukiwany przez nas \textit{dwuwymiarowy wzór trapezów}. Naj³atwiejsza do zrozumienia i póŸniejszego zaimplementowania okazuje siê na pierwszy rzut oka jego postaæ z równoœci (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}).\\ 
 \newpage
-Zechciejmy teraz wykorzystaæ zdobyt¹ wiedzê w praktyce rozwi¹zuj¹c pewien przyk³ad.
+Zechciejmy teraz wykorzystaæ w praktyce zdobyt¹ wiedzê i rozwi¹¿my pewien przyk³ad.
 
-\begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej wzorem trapezów)\\
-\textit{Wyznaczymy wartoœæ przybli¿on¹ $\int\limits_0^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2} dydx$ przy u¿yciu uogólnionego wzoru trapezów dla ca³ek podwójnych po obszarach normalnych. Przyjmijmy, ¿e przedzia³y ca³kowania dla obydwu zmiennych dzielimy na $n=m=2$ równe podprzedzia³y. }\\
+\begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej \textit{uogólnionym wzorem trapezów})\\
+\textit{Wyznaczymy wartoœæ przybli¿on¹ $\int\limits_0^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2} dydx$ przy u¿yciu uogólnionego wzoru trapezów dla ca³ek podwójnych w prostok¹cie. Przyjmijmy, ¿e przedzia³y ca³kowania dla obydwu zmiennych dzielimy na $n=m=2$ równe podprzedzia³y. }\\
 Zgodnie z przyjêtymi za³o¿eniami podzia³ wygl¹da nastêpuj¹co:
 \begin{center}
-$x_0=0 , x_1=\frac{1}{4} , x_2=\frac{1}{2} $\\
+$x_0=0 , x_1=\frac{1}{4} , x_2=\frac{1}{2}, $\\
 $y_0=\frac{1}{2} , y_1=\frac{3}{4} , y_2=1 $.\\
 \end{center}
 Wartoœciami kroków pomiêdzy kolejnymi wêz³ami s¹: $h_x=\frac{x_2-x_0}{2}=\frac{1}{4}$, $h_y=\frac{y_2-y_0}{2}=\frac{1}{4}$.
-
 PrzejdŸmy teraz do g³ównych rachunków prowadz¹cych do wyniku, mianowicie:
 \begin{center}
 $\int\limits_0^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2} dydx \approx
@@ -152,19 +150,18 @@ $\left. + 4 f(x_1,y_1) + 2 f(x_0,y_1) + 2 f(x_2,y_1)+ 2 f(x_1,y_0) + 2 f(x_1,y_2
 $=\frac{\frac{1}{16}}{4}\left( f(0,\frac{1}{2}) + f(0,1) + f(\frac{1}{2},\frac{1}{2}) + f(\frac{1}{2},1)  + \right.$
 $\left. + 4 f(\frac{1}{4},\frac{3}{4}) + 2 f(0,\frac{3}{4}) + 2 f(\frac{1}{2},\frac{3}{4})+ 2 f(\frac{1}{4},\frac{1}{2}) + 2 f(\frac{1}{4},1)\right)=$\\
 $=\frac{1}{64}\left(\frac{\frac{1}{2}}{\frac{1}{4}}+\frac{1}{1}+\frac{1}{\frac{2}{4}}+\frac{\frac{3}{2}}{\frac{5}{4}}+4 \frac{1}{\frac{10}{16}}+2\frac{\frac{3}{4}}{\frac{9}{16}}+2\frac{\frac{5}{4}}{\frac{13}{16}}+2\frac{\frac{3}{4}}{\frac{5}{16}}+2\frac{\frac{5}{4}}{\frac{17}{16}} \right)=$\\
-$=\frac{1}{64}\left( 2+1+2+\frac{12}{10}+\frac{64}{10}+\frac{48}{18}+\frac{80}{26}+\frac{48}{10}+\frac{80}{34}\right)=0,398383295625$\\
+$=\frac{1}{64}\left( 2+1+2+\frac{12}{10}+\frac{64}{10}+\frac{48}{18}+\frac{80}{26}+\frac{48}{10}+\frac{80}{34}\right)=0.398383295625$\\
 \end{center}
-
-Wynik dok³adny otrzymany przy wykorzystaniu zaawansowanego narzêdzia matematycznego wynosi $0,399181467986$. Bardzo szybko mo¿emy zauwa¿yæ, ¿e b³¹d wzglêdny (oznaczmy go jako \textbf{BW}) nie jest znacz¹cy i wynosi zaledwie $0,2\%$ : 
+Wynik dok³adny otrzymany przy wykorzystaniu zaawansowanego narzêdzia matematycznego wynosi $0.399181467986$. Bardzo szybko mo¿emy zauwa¿yæ, ¿e b³¹d wzglêdny (oznaczmy go jako \textbf{BW}) nie jest znacz¹cy i wynosi zaledwie $0.2\%$ : 
 \begin{center}
-$BW = \frac{|0,399181467986 - 0,398383295625|}{0,399181467986} * 100\% \approx 0,19995\%\approx 0,2\% $ \\
+$BW = \frac{|0.399181467986 - 0.398383295625|}{0,399181467986} \cdot 100\% \approx 0,19995\%\approx 0.2\% $ \\
 \end{center}
 Mo¿emy zatem bezwzglêdnie stwierdziæ, ¿e otrzymany wynik jest bardzo dok³adny. 
 \end{ex}
 
 Widaæ wprost, ¿e przeprowadzenie pe³nych obliczeñ mo¿e staæ siê bardzo k³opotliwe w przypadku, gdy funkcja podca³kowa ma skomplikowan¹ postaæ, lub liczba wêz³ów liczona jest w dziesi¹tkach b¹dŸ setkach. W takim przypadku bardzo pomocna oka¿e siê specjalna procedura napisana w jêzyku \textit{Maple}, automatyzuj¹ca ca³y proces prowadzenia rachunków. Skrypt z implementacj¹ oraz jego pe³en opis znajdziemy poni¿ej.
 
-\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu uogólnionego wzoru trapezów)\label{MAPLE_Trapez2ObszarNormalnyWartoscCalki}
+\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu \textit{uogólnionego wzoru trapezów})\label{MAPLE_Trapez2ObszarNormalnyWartoscCalki}
 \begin{verbatim}
 > Trapez2 := proc (a, b, c, d, n, m) 
   local h, k, i, j, p, q, x, y, z, T2, WynikT2; 
@@ -208,11 +205,11 @@ Posiadaj¹c ju¿ kompletne informacje dotycz¹ce kwestii sposobu dzia³ania procedur
 Otrzymane wyniki zaprezentujemy w poni¿szych tabelach. Przyjmijmy, ¿e $n$ oznacza³o bêdzie iloœæ podzia³ów przedzia³u ca³kowania dla zmiennej $x$, $m$ dla zmiennej $y$, zaœ $W_{trapez2}$ to wynik \textit{Trapez2} dla coraz wiêkszych wartoœci $n$ i $m$. Ponadto niech \textit{$BBT2_{n,m}$} opisuje b³¹d bezwzglêdny przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Trapez2}, przy jej wywo³aniu dla pewnych parametrów $n$ i $m$. Dodatkowo \textit{$BWT2_{n,m}$} to wielkoœæ b³êdu wzglêdnego jakim jest obci¹¿ony ten sam wynik wykonania \textit{Trapez2}, co w przypadku wyliczania \textit{$BBT2_{n,m}$}.
 \begin{definition}(B³¹d wzglêdny)\\
 B³¹d wzglêdny informuje nas o ile procent wartoœæ zmierzona odbiega od wartoœci dok³adnej. Wyliczamy go ze wzoru:
-$$BW=\frac{BB}{x}*100\%=\frac{|x-\widehat{x}|}{x}*100\% \,,$$ 
+$$BW=\frac{BB}{x}\cdot 100\%=\frac{|x-\widehat{x}|}{x}\cdot100\% \,,$$ 
 gdzie $x$ - wartoœæ dok³adna, $\widehat{x}$ - wartoœæ oszacowana, $BB$ - b³¹d bezwzglêdny pomiaru.  
 \end{definition}
 
-Wartoœæ dok³adna ca³ki z przyk³adu a) jest równa $0,399181467986$ , wiêc:. 
+\hspace{-0.6cm}Wartoœæ dok³adna ca³ki z przyk³adu a) jest równa $0.399181467986$ , wiêc:. 
 %Wyniki wyznaczone procedur¹ \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki} prezentuj¹ siê nastêpuj¹co:\\
 \begin{table}[h!]
 \caption{Wyniki pomiaru dok³adnoœci przybli¿enia wartoœci ca³ki a) procedur¹ \textit{Trapez2}}
@@ -257,7 +254,7 @@ Wartoœæ dok³adna ca³ki z przyk³adu a) jest równa $0,399181467986$ , wiêc:.
  \label{WynikiZProceduryTrapez2a}
 \end{table}
 
-Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:. 
+\hspace{-0.6cm}Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:. 
 \begin{table}[h!]
 \caption{Wyniki pomiaru dok³adnoœci przybli¿enia wartoœci ca³ki b) procedur¹ \textit{Trapez2}}
 \hspace{-5.4cm}{\footnotesize ród³o: Opracowanie w³asne\\}
@@ -300,29 +297,29 @@ Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:.
  \label{WynikiZProceduryTrapez2b}
 \end{table}
 
-Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoœci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwa¿amy pewn¹ prawid³owoœæ. W miarê wzrostu liczby podzia³ów ($\mathbf{n}$ i $\mathbf{m}$) przedzia³ów ca³kowania wartoœci b³êdów odznaczaj¹ siê tendencj¹ spadkow¹. Szczególnie widoczna jest ona na przyk³adzie b). W przyk³adzie a) mo¿na dostrzec jednak, ¿e b³êdy z kolejnego pomiaru s¹ czêsto wiêksze ni¿ te z poprzedniego,  pomimo to jednak równie¿ zauwa¿alny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarów w Tablicy \ref{WynikiZProceduryTrapez2a} jest w du¿ej mierze spowodowana postaci¹ równania funkcji podca³kowej oraz sposobem dzia³ania algorytmu. W miarê tego, im wiêcej jest deformacji powierzchni wykresu owej funkcji, tym czêœciej pojawi¹ siê wahania wielkoœci b³êdu dla coraz to wiêkszej liczby wêz³ów. Jak widaæ sytuacja nie jest ju¿ tak oczywista, jak by³a w przypadku u¿ycia wzoru trapezów dla ca³ek pojedynczych - tam wzrost iloœci punktów wêz³owych zapewnia³ sta³y wzrost dok³adnoœci wyniku.   
+Analizuj¹c zgromadzone ju¿ wyniki wykonania procedury, oraz wyznaczone na ich podstawie wartoœci $\mathbf{BBT2_{n,m}}$ i $\mathbf{BWT2_{n,m}}$ zauwa¿amy pewn¹ prawid³owoœæ. W miarê wzrostu liczby podzia³ów ($\mathbf{n}$ i $\mathbf{m}$) przedzia³ów ca³kowania wartoœci b³êdów odznaczaj¹ siê tendencj¹ spadkow¹. Szczególnie widoczna jest ona na przyk³adzie b). W przyk³adzie a) mo¿na dostrzec jednak, ¿e b³êdy z kolejnego pomiaru s¹ czêsto wiêksze ni¿ te z poprzedniego,  pomimo to jednak równie¿ zauwa¿alny jest ich stopniowy spadek. Sytuacja zaobserwowana dla pomiarów w Tablicy \ref{WynikiZProceduryTrapez2a} jest w du¿ej mierze spowodowana postaci¹ równania funkcji podca³kowej oraz sposobem dzia³ania algorytmu. W miarê tego, im wiêcej jest deformacji powierzchni wykresu owej funkcji, tym czêœciej pojawi¹ siê wahania wielkoœci b³êdu dla coraz to wiêkszej liczby wêz³ów. Jak widaæ sytuacja nie jest ju¿ tak oczywista, jak by³a w przypadku u¿ycia \textit{wzoru trapezów} dla ca³ek pojedynczych - tam wzrost iloœci punktów wêz³owych zapewnia³ sta³y wzrost dok³adnoœci wyniku.   
 
 
 \section{Wzór Simpsona}
-Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy równie¿ rozszerzyæ wzór \textit{Simpsona} na przypadek, gdzie mamy do czynienia z wyznaczaniem wartoœci ca³ek podwójnych w obszarach normalny ze wzglêdu na dwie zmienne. W tym celu mo¿emy wykorzystaæ na przyk³ad \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami})    lub wielomian \textit{Lagrange'a} $L_{2,2}(x,y)$ zbudowany w oparciu o wzór (\ref{WielomianInterpolacyjnyLagrangea2}). 
+Podobnie jak w rozdziale \ref{Rozdzial3.1_WzorTrapezow2DObszNormalny} mo¿emy równie¿ rozszerzyæ \textit{wzór Simpsona} na przypadek, gdzie mamy do czynienia z wyznaczaniem wartoœci ca³ek podwójnych w obszarach normalnych ze wzglêdu na dwie zmienne. W tym celu mo¿emy wykorzystaæ na przyk³ad \textit{uogólniony wzór Simpsona} (\ref{wzorSimpsonaZPodzialami})    lub \textit{wielomian Lagrange'a} $L_{2,2}(x,y)$ zbudowany w oparciu o wzór (\ref{WielomianInterpolacyjnyLagrangea2}). 
 
 Rozwa¿my pewien obszar ca³kowania $\Delta=\{a\leq x\leq b ; c\leq y \leq d \}$. 
 Przedzia³ $[a,b]$ zostanie podzielony na $N=2n$, $(n=1,2,\ldots)$ podprzedzia³ów postaci \mbox{$[x_{2i},x_{2i+1}] (i=0,\frac{1}{2},\ldots, \frac{2n-1}{2})$}. Podobnie bêdzie dla $[c,d]$, podzielimy go na $M=2m$, $(m=1,2,\ldots)$ podprzedzia³ów \mbox{$[y_{2j},y_{2j+1}]$ ($j=0,\frac{1}{2},\ldots, \frac{2m-1}{2}$).} Z tego faktu wynika³a bêdzie nastêpuj¹ca prawid³owoœæ:
 \vspace{-0.5cm}\begin{equation}\label{WezlySimpson2}
 \begin{array}{cc}
-a=x_0 < x_1 < x_2\ldots < x_{2n}=b \\ 
-c=y_0 < y_1 < y_2\ldots < y_{2m}=d \\
+a=x_0 < x_1 < x_2\ldots < x_{2n}=b, \\ 
+c=y_0 < y_1 < y_2\ldots < y_{2m}=d. \\
 \end{array}
 \end{equation}
 Dodatkowo zauwa¿my, ¿e postaæ punktów $x_i$, $y_j$ nale¿¹cych do tych przedzia³ów, jak równie¿ kroków $h_x$ i $h_y$ pomiêdzy kolejnymi wartoœciami wêz³ów to:
 \vspace{-0.5cm}\begin{equation}\label{WezlyNaObszarzeProstokatnymSimpson2}
 \begin{array}{cc}
-x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{N} \,\,\,\,(i=0,1,\ldots ,N=2n) \\
-y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{M} \,\,\,\,(j=0,1,\ldots ,M=2m)\\
+x_i=x_0+ih_x,\,\,\,\, h_x=\frac{b-a}{N} \,\,\,\,(i=0,1,\ldots ,N=2n), \\
+y_j=y_0+jh_y, \,\,\,\,h_y=\frac{d-c}{M} \,\,\,\,(j=0,1,\ldots ,M=2m).\\
 \end{array}
 \end{equation}
 
-Tak samo jak zrobiliœmy to dla przypadku wzoru trapezów, wykonajmy równie¿ przekszta³cenie uogólnionego wzoru \textit{Simpsona} (\ref{wzorSimpsonaZPodzialami}) do postaci takiej, ¿e bêdzie dla nas znacznie porêczniejsza w dalszych rozwa¿aniach. W tym momencie nale¿y powiedzieæ, ¿e zmianie ulegaj¹ indeksy pod znakiem sumowania. Ujednolicaj¹c oznaczenia tak, by wygl¹da³y jak dla wzoru trapezów w (\ref{wzorSimpsonaZPodzialami}) zastêpujemy $m$ przez $n$. Pozosta³e - dotycz¹ce punktów wêz³owych i wielkoœci kroków pomiêdzy nimi zosta³y na nowo zdefiniowane na pocz¹tku tego podrozdzia³u. W zwi¹zku z tym przekszta³cone równanie (\ref{wzorSimpsonaZPodzialami}) ze zmienionymi indeksami wygl¹da nastêpuj¹co:  
+Tak samo jak zrobiliœmy to dla przypadku \textit{wzoru trapezów}, wykonajmy równie¿ przekszta³cenie \textit{uogólnionego wzoru Simpsona} (\ref{wzorSimpsonaZPodzialami}) do postaci takiej, ¿e bêdzie dla nas znacznie porêczniejsza w dalszych rozwa¿aniach. W tym momencie nale¿y powiedzieæ, ¿e zmianie ulegaj¹ indeksy pod znakiem sumowania. Ujednolicaj¹c oznaczenia tak, by wygl¹da³y jak dla \textit{wzoru trapezów} w (\ref{wzorSimpsonaZPodzialami}) zastêpujemy $m$ przez $n$. Pozosta³e - dotycz¹ce punktów wêz³owych i wielkoœci kroków pomiêdzy nimi zosta³y na nowo zdefiniowane na pocz¹tku tego podrozdzia³u. W zwi¹zku z tym przekszta³cone równanie (\ref{wzorSimpsonaZPodzialami}) ze zmienionymi indeksami wygl¹da nastêpuj¹co:  
 \begin{equation}\label{UogolnionyWzorSimpsona1Rozdzial3}
 \begin{array}{cc}
 \int\limits_a^b f(x)dx = \sum\limits_{i=0}^{n-1} \int\limits_{x_{2i}}^{x_{2i+2}} f(x) dx \approx \\
@@ -330,12 +327,11 @@ Tak samo jak zrobiliœmy to dla przypadku wzoru trapezów, wykonajmy równie¿ przek
 \frac{h}{3}\left(f(x_{0})+4\sum\limits_{i=0}^{n-1}f(x_{2i+1})+2\sum\limits_{i=0}^{n-2}f(x_{2i+2}) + f(x_{2n})\right).
 \end{array}
 \end{equation}     
-
 WeŸmy teraz pewn¹ podwójn¹ ca³kê oznaczon¹ postaci \cite{klucz11} :
 \begin{equation}\label{CalkaPodwojnaMetodaSimpsona}
 I_{S2}=\int\limits_{a}^{b}\int\limits_{c}^{d}f(x,y)dydx=\int\limits_{a}^{b} g(x)dx \,\,,
 \end{equation}
-gdzie (rozszerzaj¹c równanie (\ref{UogolnionyWzorSimpsona1Rozdzial3}) na dwie zmienne)   
+gdzie $g(x)$ to rozszerzone do dwóch zmiennych równanie (\ref{UogolnionyWzorSimpsona1Rozdzial3})   
 \begin{equation}\label{Funkcja_g(x)_CalkaPodwojnaMetodaSimpsona}
 \begin{array}{cc}
 g(x)=\int\limits_{c}^{d}f(x,y)dy\approx \\
@@ -349,19 +345,18 @@ I_{S2}=\int\limits_{a}^{b}\int\limits_{c}^{d}f(x,y)dydx \approx \\
 \int\limits_{a}^{b} \frac{h_y}{3}\left(f(x,y_0)+4\sum\limits_{j=0}^{m-1}f(x,y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x,y_{2j+2})+f(x,y_{2m}) \right).
 \end{array}
 \end{equation}
-W celu wyeliminowania z równania (\ref{WzorSimpsona2JednaCalka}) koniecznoœci ca³kowania, mo¿emy ponownie zastosowaæ uogólniony wzór \textit{Simpsona} - tak jak zrobiliœmy to dla przypadku (\ref{Funkcja_g(x)_CalkaPodwojnaMetodaSimpsona}).
+W celu wyeliminowania z równania (\ref{WzorSimpsona2JednaCalka}) koniecznoœci ca³kowania, mo¿emy ponownie zastosowaæ \textit{uogólniony wzór Simpsona} - tak jak zrobiliœmy to w przypadku (\ref{Funkcja_g(x)_CalkaPodwojnaMetodaSimpsona}).
 \newpage
-Realizacja zaproponowanego przepisu doprowadza (\ref{WzorSimpsona2JednaCalka}) do poni¿szej formy:
+\hspace{-1cm}Realizacja zaproponowanego pomys³u doprowadza (\ref{WzorSimpsona2JednaCalka}) do poni¿szej formy:
 \begin{equation}
 \begin{array}{cc}
 I_{S2}\approx \frac{h_x}{3}\left\lbrace \frac{h_y}{3} \left(f(x_0,y_0)+f(x_0,y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_0,y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_0,y_{2j+2}) \right) \right.\\
 + \frac{h_y}{3} \left(f(x_{2n},y_0)+f(x_{2n},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2n},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2n},y_{2j+2}) \right)\\
 +4\sum\limits_{i=0}^{n-1} \frac{h_y}{3} \left(f(x_{2i+1},y_0)+f(x_{2i+1},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2i+1},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2i+1},y_{2j+2}) \right)\\
-\left. +2\sum\limits_{i=0}^{n-2} \frac{h_y}{3} \left(f(x_{2i+2},y_0)+f(x_{2i+2},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2i+2},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2i+2},y_{2j+2}) \right)\right\rbrace\\
+\left. +2\sum\limits_{i=0}^{n-2} \frac{h_y}{3} \left(f(x_{2i+2},y_0)+f(x_{2i+2},y_{2m})+4\sum\limits_{j=0}^{m-1}f(x_{2i+2},y_{2j+1})+2\sum\limits_{j=0}^{m-2}f(x_{2i+2},y_{2j+2}) \right)\right\rbrace.\\
 \end{array}
 \end{equation}
-
-Po dokonaniu mo¿liwie najlepszego przekszta³cenia - ostateczn¹ postaci¹ wyprowadzonego, \textit{uogólnionego wzoru Simpsona} dla ca³ek podwójnych po obszarach normalnych wzglêdem dwóch zmiennych jest: 
+Po dokonaniu mo¿liwie najlepszego przekszta³cenia - ostateczn¹ postaci¹ wyprowadzonego, \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych wzglêdem dwóch zmiennych} jest: 
 \begin{equation}\label{UogolnionyWzorSimpsona2_obszarNormalny}
 \begin{array}{cc}
 I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace f(x_0,y_0)+f(x_0,y_{2m})+f(x_{2n},y_0)+f(x_{2n},y_{2m})\right.\\
@@ -369,12 +364,12 @@ I_{S2}\approx \frac{h_x h_y}{9} \left\lbrace f(x_0,y_0)+f(x_0,y_{2m})+f(x_{2n},y
 +2\left(\sum\limits_{j=0}^{m-2}\left[ f(x_0,y_{2j+2}) + f(x_{2n},y_{2j+2})\right] + \sum\limits_{i=0}^{n-2} \left[f(x_{2i+2},y_0)+f(x_{2i+2},y_{2m})\right]\right)\\
 +4\left( \sum\limits_{j=0}^{m-1}\left[ f(x_0,y_{2j+1}) + f(x_{2n},y_{2j+1}) \right] + \sum\limits_{i=0}^{n-1} \left[f(x_{2i+1},y_0)+f(x_{2i+1},y_{2m}) \right]\right)\\
 +8\left( \sum\limits_{i=0}^{n-1} \sum\limits_{j=0}^{m-2}f(x_{2i+1},y_{2j+2}) + \sum\limits_{i=0}^{n-2}\sum\limits_{j=0}^{m-1}f(x_{2i+2},y_{2j+1}) \right)\\
- +4 \sum\limits_{i=0}^{n-2}\sum\limits_{j=0}^{m-2}f(x_{2i+2},y_{2j+2}) + 16 \sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1}f(x_{2i+1},y_{2j+1})\}
+ +4 \sum\limits_{i=0}^{n-2}\sum\limits_{j=0}^{m-2}f(x_{2i+2},y_{2j+2}) + 16 \sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1}f(x_{2i+1},y_{2j+1})\}.
 
 \end{array}
 \end{equation}
 
-Tak jak zauwa¿yliœmy wczeœniej dla uogólnionego wzoru trapezów (\ref{UogolnionyWzorTrapezow2_obszarNormalny}), rozpisanie  (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) w sposób taki, by uwzglêdniono w nim wszystkie mo¿liwe punkty wêz³owe postaci $(x_{2i},y_{2j})$ ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego oraz spe³niaj¹ce równanie (\ref{WezlyNaObszarzeProstokatnymSimpson2}), skutkowa³oby tym, ¿e wartoœci przy kolejnych $f(x_{2i},y_{2j})$ ($i=0,1,\ldots,n\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê wed³ug pewnego schematu powsta³ego w wyniku mno¿enia dwóch nastêpuj¹cych wektorów:
+Tak jak zauwa¿yliœmy wczeœniej dla \textit{uogólnionego wzoru trapezów} (\ref{UogolnionyWzorTrapezow2_obszarNormalny}), rozpisanie  (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) w sposób taki, by uwzglêdniono w nim wszystkie mo¿liwe punkty wêz³owe postaci $(x_{2i},y_{2j})$ ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ) nale¿¹ce do pewnego obszaru prostok¹tnego oraz spe³niaj¹ce równanie (\ref{WezlyNaObszarzeProstokatnymSimpson2}), skutkowa³oby tym, ¿e wartoœci przy kolejnych $f(x_{2i},y_{2j})$ ($i=0,1,\ldots,n\,\,,\,\,\,\, j=0,1,\ldots,m$ ) rozk³ada³yby siê wed³ug pewnego schematu powsta³ego w wyniku mno¿enia dwóch nastêpuj¹cych wektorów:
 
 $$\qquad A= \left[
         \begin{array}{ccccccc}
@@ -404,10 +399,9 @@ A \times B = \left[
 \end{array}
 \right]
 \end{equation}\\
+Zaprezentowana macierz diametralnie upraszcza zapis równania (\ref{UogolnionyWzorSimpsona2_obszarNormalny}). Pewien jej fragment, a dok³adniej pierwszy wiersz, pojawi³ siê ju¿ dla przypadku \textit{uogólnionego wzoru Simpsona} (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
 
-Zaprezentowana macierz diametralnie upraszcza zapis \textbf{uogólnionego wzoru Simpsona dla ca³ek podwójnych po obszarach normalnych}. Pewien jej fragment, a dok³adniej pierwszy wiersz, pojawi³ siê ju¿ dla przypadku uogólnionego wzoru Simpsona (\ref{wzorSimpsonaZPodzialami}) dla ca³ki pojedynczej.
-
-Przybli¿anie wartoœci ca³ki podwójnej obliczanej metod¹ Simpsona mo¿na równie¿ sprowadziæ do sumowania objêtoœci pewnych bry³ parabolicznych. WeŸmy podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarów, co dok³adniej \mbox{prezentuje Rysunek \ref{R5}:}
+Przybli¿anie wartoœci ca³ki podwójnej obliczanej \textit{metod¹ Simpsona} mo¿na równie¿ sprowadziæ do sumowania objêtoœci pewnych bry³ parabolicznych. WeŸmy podzia³ obszaru ca³kowania $\Omega = [a,b] \times [c,d]$ na  $2n\cdot 2m$ podobszarów, co dok³adniej \mbox{prezentuje Rysunek \ref{R5}:}
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.6]{R5.eps}
@@ -415,8 +409,8 @@ Przybli¿anie wartoœci ca³ki podwójnej obliczanej metod¹ Simpsona mo¿na równie¿ s
 	   \caption{Metoda Simpsona dla ca³ek podwójnych po obszarze normalnym wzglêdem dwóch zmiennych - podzia³ obszaru ca³kowania na podobszary \cite{klucz10}}
 \label{R5}
 \end{figure}
-
-Ka¿dy z podobszarów obszaru $\Omega$ jest ograniczonych pogrubion¹ krawêdzi¹ i sk³ada siê zawsze z dok³adnie czterech mniejszych podpodobszarów wyznaczanych przez dziewiêæ wêz³ów ($x_{2i},y_{2j}$) ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ). Objêtoœæ dowolnego z tych wiêkszych wyra¿a wzór:
+\newpage
+\hspace{-1cm}Ka¿dy z podobszarów obszaru $\Omega$ jest ograniczony pogrubion¹ krawêdzi¹ i sk³ada siê zawsze z dok³adnie czterech mniejszych podpodobszarów wyznaczanych przez dziewiêæ wêz³ów ($x_{2i},y_{2j}$) ( $i=0,1,\ldots, n$\,\,,\, \mbox{$j=0,1,\ldots, m$} ). Objêtoœæ dowolnego spoœród wiêkszych wyra¿a siê wzorem:
 
 \begin{equation}\label{ObjetoscPodobszaruSimpson2D}
 \begin{array}{c}
@@ -425,7 +419,7 @@ S2V_{i,j}=\frac{h_xh_y}{9}\left[f(x_{2i},y_{2j})+4 f(x_{2i+1},y_{2j})+f(x_{2i+2}
 \left.f(x_{2i},y_{2j+2})+4 f(x_{2i+1},y_{2j+1})+ f(x_{2i+2},y_{2j+2})\right]
 \end{array}
 \end{equation}\\       
-Wspó³czynniki, które pojawi³y siê w powy¿szym zapisie przy wartoœciach funkcji $f(x,y)$  nie s¹ przypadkowe i tak intuicyjne jak dla \textit{wzoru Trapezów}. Powsta³y one po przemno¿eniu \textit{'okrojonej'} wersji wektorów $A$ i $B$, których to u¿ywaliœmy do wyprowadzenia macierzy (\ref{MacierzWspolczynnikowSimpson2}). %S¹ one postaci:
+Wspó³czynniki, które pojawi³y siê w powy¿szym zapisie przy wartoœciach funkcji $f(x,y)$  nie s¹ przypadkowe i tak intuicyjne jak dla \textit{wzoru Trapezów}. Powsta³y one po przemno¿eniu \textit{'okrojonej'} wersji wektorów $A$ i $B$, których to u¿ywaliœmy do zbudowania macierzy (\ref{MacierzWspolczynnikowSimpson2}). S¹ one postaci:
 
 $$\qquad a= \left[
         \begin{array}{ccc}
@@ -463,9 +457,9 @@ I_{S2V}=I_{S2}\approx\frac{h_xh_y}{9}\sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m
 \end{equation}   
 Zauwa¿my, ¿e (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) oraz (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) s¹ równowa¿ne. Mo¿na siê o tym przekonaæ rozpisuj¹c (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) ju¿ dla kilku pierwszych wartoœci $i$ oraz $j$.
 
-Zaprezentowane dotychczas sposoby wyprowadzania \textit{uogólnionego wzoru Simpsona} nie s¹ jedynymi nam znanymi. Poka¿my, ¿e (zgodnie ze stwierdzeniem z pocz¹tku rozdzia³u) to samo równanie mo¿emy otrzymaæ poprzez ca³kowanie wielomianu \textit{Lagrange'a} $L_{2,2}(x,y)$. Ca³ka taka jest postaci:
+Zaprezentowane dotychczas sposoby wyprowadzania \textit{uogólnionego wzoru Simpsona} nie s¹ jedynymi nam znanymi. Poka¿my, ¿e (zgodnie ze stwierdzeniem z pocz¹tku rozdzia³u) to samo równanie mo¿emy otrzymaæ poprzez ca³kowanie \textit{wielomianu Lagrange'a} $L_{2,2}(x,y)$. Ca³ka taka jest postaci:
 \begin{equation}\label{WzorSimpsona2DZCalkiL22}
-\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} L_{2,2}(x,y) dydx=\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \sum\limits_{i=0}^2 \sum\limits_{j=0}^2 f(x_i,y_j) \left(\prod\limits_{s=0, s\neq i}^2 \frac{x-x_s}{x_i-x_s}\prod\limits_{r=0, r\neq j}^2 \frac{y-y_r}{y_j-y_r}\right)dydx
+\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} L_{2,2}(x,y) dydx=\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \sum\limits_{i=0}^2 \sum\limits_{j=0}^2 f(x_i,y_j) \left(\prod\limits_{s=0, s\neq i}^2 \frac{x-x_s}{x_i-x_s}\prod\limits_{r=0, r\neq j}^2 \frac{y-y_r}{y_j-y_r}\right)dydx.
 \end{equation}       
 Przyjmuj¹c nastêpuj¹ce wartoœci $x_0=0$, $x_1=h$, $x_2=2h$, $y_0=0$, $y_1=k$ oraz $y_2=2k$ mo¿emy w (\ref{WzorSimpsona2DZCalkiL22}) wyszczególniæ dziewiêæ ca³ek. Wyznaczenie ich spowoduje otrzymanie wspó³czynników wystêpuj¹cych przy wartoœciach funkcji $f(x_i,y_j)$ w kolejnych wêz³ach zgodnych z (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}), tzn.:
 
@@ -485,16 +479,15 @@ $$\int\limits_{x_0}^{x_2} \int\limits_{y_0}^{y_2} \frac{(x-x_0)(x-x_1)(y-y_0)(y-
 \end{small}\hfill\\
 Tak jak wspomnieliœmy tu¿ przed przeprowadzeniem obliczeñ, powy¿ej wyznaczone wspó³czynniki tworz¹ macierz (\ref{MacierzWspolczynnikowSimpson2_objetosc1podobszaru}). Wyjaœniaj¹c - ka¿de kolejne trzy wartoœci pocz¹wszy od pierwszej, czwartej i siódmej tworz¹ jeden osobny jej wiersz. Obliczenia te s¹ bardzo pracoch³onne, zosta³y wiêc zaprezentowane tylko w celach pogl¹dowych.  
 
-Wykorzystuj¹c (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) lub sam¹ macierz (\ref{MacierzWspolczynnikowSimpson2}) wyznaczmy przybli¿on¹ wartoœæ pewnej ca³ki, mianowicie:
+Wykorzystuj¹c (\ref{UogolnionyWzorSimpsona2_obszarNormalny}) lub sam¹ macierz (\ref{MacierzWspolczynnikowSimpson2}) wyznaczmy przybli¿on¹ wartoœæ przyk³adowej ca³ki.
 
 \begin{ex}(Wyznaczanie wartoœci ca³ki podwójnej \textit{wzorem Simpsona})\\\hfill
-\textit{Obliczymy  $\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx$ wykorzystuj¹c uogólniony wzór Simpsona dla ca³ek podwójnych po obszarach normalnych. Dla rozpatrywanego przypadku przyjmijmy, ¿e przedzia³ ca³kowania zarówno dla zmiennej $x$ jak i $y$ zostanie podzielony na dwa podwójne podprzedzia³y wyznaczone przez równo odleg³e wêz³y. }\\
+\textit{Obliczymy  $\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx$ wykorzystuj¹c uogólniony wzór Simpsona dla ca³ek podwójnych po obszarach prostok¹tnych. Dla rozpatrywanego przypadku przyjmijmy, ¿e przedzia³ ca³kowania zarówno dla zmiennej $x$ jak i $y$ zostanie podzielony na dwa podwójne podprzedzia³y wyznaczone przez równo odleg³e wêz³y. }\\
 
 \hspace{-1cm}Z powy¿szego opisu wynika, ¿e bêdziemy potrzebowaæ $n=5$ wspó³rzêdnych $x$ oraz $m=5$ wspó³rzêdnych $y$.
 Podzia³ przedzia³ów ca³kowania przyjmuj¹c, ¿e $h_x=\frac{\frac{4}{8}-0}{4}=\frac{4}{32}=\frac{1}{8}$ oraz $h_y=\frac{1-\frac{4}{8}}{4}=\frac{4}{32}=\frac{1}{8}$ prezentuje siê nastêpuj¹co:
-$$x_0=0,\, x_1=\frac{1}{8},\, x_2=\frac{2}{8},\, x_3=\frac{3}{8},\, x_4=\frac{4}{8}$$
+$$x_0=0,\, x_1=\frac{1}{8},\, x_2=\frac{2}{8},\, x_3=\frac{3}{8},\, x_4=\frac{4}{8},$$
 $$y_0=\frac{4}{8},\, y_1=\frac{5}{8},\, y_2=\frac{6}{8},\, y_3=\frac{7}{8},\, y_4=1.$$ 
-
 Do obliczeñ wykorzystamy wzór rozpisany na podstawie (\ref{MacierzWspolczynnikowSimpson2}):
 $$\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx\approx
 \frac{h_xh_y}{9} \left(f(x_0,y_0)+4f(x_1,y_0)+2f(x_2,y_0)+4f(x_3,y_0)+f(x_4,y_0)+\right.$$
@@ -507,20 +500,20 @@ $$4\cdot\frac{ \frac{5}{8}}{\left(\frac{5}{8}\right)^2} + 16\cdot \frac{\frac{6}
 $$2\cdot\frac{ \frac{6}{8}}{\left(\frac{6}{8}\right)^2} + 8\cdot \frac{\frac{7}{8}}{\left(\frac{1}{8}\right)^2+\left(\frac{6}{8}\right)^2} + 4 \cdot \frac{1}{\left(\frac{2}{8}\right)^2+\left(\frac{6}{8}\right)^2} + 8 \cdot \frac{\frac{9}{8}}{\left(\frac{3}{8}\right)^2+\left(\frac{6}{8}\right)^2} + 2\cdot\frac{\frac{10}{8}}{\left(\frac{4}{8}\right)^2+\left(\frac{6}{8}\right)^2} +$$
 $$4\cdot\frac{ \frac{7}{8}}{\left(\frac{7}{8}\right)^2} + 16\cdot \frac{1}{\left(\frac{1}{8}\right)^2+\left(\frac{7}{8}\right)^2} + 8 \cdot \frac{\frac{9}{8}}{\left(\frac{2}{8}\right)^2+\left(\frac{7}{8}\right)^2} + 16 \cdot \frac{\frac{10}{8}}{\left(\frac{3}{8}\right)^2+\left(\frac{7}{8}\right)^2} + 4\cdot\frac{\frac{11}{8}}{\left(\frac{4}{8}\right)^2+\left(\frac{7}{8}\right)^2} +$$
 $$\left.1 + 4\cdot \frac{\frac{9}{8}}{\left(\frac{1}{8}\right)^2+\left(1\right)^2} + 2 \cdot \frac{\frac{10}{8}}{\left(\frac{2}{8}\right)^2+\left(1\right)^2} + 4 \cdot \frac{\frac{11}{8}}{\left(\frac{3}{8}\right)^2+\left(1\right)^2} +\frac{\frac{12}{8}}{\left(\frac{4}{8}\right)^2+\left(1\right)^2} \right) \approx$$
-$$\approx\frac{1}{576}\cdot(27,17176470588235 + 88,52877470325647 + 37,05169785169785 + $$
-$$+ 63,40370323235645 + 13,80562821545899)\approx 0,399238834563632$$
+$$\approx\frac{1}{576}\cdot(27.17176470588235 + 88.52877470325647 + 37.05169785169785 + $$
+$$+ 63.40370323235645 + 13.80562821545899)\approx 0.399238834563632$$
 
-W zaokr¹gleniu wartoœæ dok³adna rozwi¹zywanej ca³ki, otrzymana przy wykorzystaniu kalkulatora to: $\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx \approx 0.399181467986060$
+W zaokr¹gleniu wartoœæ dok³adna rozwi¹zywanej ca³ki, otrzymana przy wykorzystaniu kalkulatora naukowego to: $\int\limits_{0}^{\frac{1}{2}}\int\limits_{\frac{1}{2}}^1 \frac{x+y}{x^2+y^2}dydx \approx 0.399181467986060$.
 
-Analizuj¹c wielkoœæ b³êdu wzglêdnego (\textbf{BW}), którym jest obci¹¿ony wynik, zauwa¿amy ¿e nie jest znacz¹cy i wynosi jedynie $0,014\%$. Wynika to z poni¿szych rachunków: 
+Analizuj¹c wielkoœæ b³êdu wzglêdnego (\textbf{BW}), którym jest obci¹¿ony wynik, zauwa¿amy ¿e nie jest znacz¹cy i wynosi jedynie $0.014\%$. Wynika to z poni¿szych rachunków: 
 \begin{center}
-$BW = \frac{|0,399181467986 - 0,399238834563632|}{0,399181467986} * 100\% \approx 0,01437\%\approx 0,014\% $ \\
+$BW = \frac{|0.399181467986 - 0.399238834563632|}{0.399181467986} \cdot 100\% \approx 0.01437\%\approx 0.014\% $ \\
 \end{center}
 %W tym momencie uwidacznia siê zdecydowanie wiêksza dok³adnoœæ \textit{uogólnionego wzoru Simpsona} w zestawieniu go z \textit{uogólnionym wzorem Trapezów}. 
 Dla \textit{wzoru trapezów }wielkoœæ BW (dla takiej samej ca³ki) przy wykonanych dwóch podzia³ach przedzia³u ca³kowania oscylowa³a w granicach $0,2\%$, wiêc by³a ona niemal 15 krotnie wiêksza!
 \end{ex}
-Algorytm \textit{Simpsona} (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) pomimo tego, ¿e na pierwszy rzut oka wydaje siê byæ skuteczniejszy ni¿  wspomniany \textit{wzór Trapezów} (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}), to jest równie¿ du¿o bardziej skomplikowany je¿eli chodzi o z³o¿onoœæ rachunków jakie nale¿y wykonaæ. Ka¿de zwiêkszenie liczby wêz³ów powoduje bardzo szybki rozrost iloœci wartoœci funkcji do wyznaczenia. W zwi¹zku z tym, by kontynuowaæ rozwa¿ania zaprezentujmy stworzon¹ procedurê automatyzuj¹c¹ obliczanie wartoœci ca³ek podwójnych po obszarach normalnych \textit{uogólnionym wzorem Simpsona}.
-\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu uogólnionego wzoru Simpsona)\label{MAPLE_Simpson2ObszarNormalnyWartoscCalki}
+Algorytm \textit{Simpsona} (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}) pomimo tego, ¿e na pierwszy rzut oka wydaje siê byæ skuteczniejszy ni¿  wspomniany \textit{wzór Trapezów} (\ref{RownoscUogWzoruTrapezow2IWzoruZObjetosciami}), to jest równie¿ du¿o bardziej skomplikowany je¿eli chodzi o z³o¿onoœæ rachunków jakie nale¿y wykonaæ. Ka¿de zwiêkszenie liczby wêz³ów powoduje bardzo szybki rozrost iloœci wartoœci funkcji do wyznaczenia. W zwi¹zku z tym, by kontynuowaæ rozwa¿ania zaprezentujmy stworzon¹ procedurê automatyzuj¹c¹ obliczanie wartoœci ca³ek podwójnych w prostok¹cie \textit{uogólnionym wzorem Simpsona}.
+\begin{proc}(Wyznaczanie przybli¿onych wartoœci ca³ek podwójnych po obszarach normalnych przy u¿yciu \textit{uogólnionego wzoru Simpsona})\label{MAPLE_Simpson2ObszarNormalnyWartoscCalki}
 \begin{small}
 \begin{verbatim}
 > Simpson2 := proc(a, b, c, d, N, M) 
@@ -565,16 +558,16 @@ N - liczba podpodprzedzia³ów na jakie zostanie podzielony ca³y przedzia³ ca³kowa
 M - liczba podpodprzedzia³ów na jakie zostanie podzielony ca³y przedzia³ ca³kowania $[c,d]$.\\
 Kolejno wymienione s¹ wszystkie zmienne lokalne, jakie bêd¹ wykorzystane w obliczeniach wykonywanych wewn¹trz algorytmu. Pojawiaj¹ca siê nastêpnie instrukcja warunkowa \textit{if-else} decyduje o tym, czy parametry wywo³ania zosta³y podane prawid³owo. Je¿eli $N$ lub $M$ nie jest liczb¹ naturaln¹ parzyst¹ to zwracany jest stosowny komunikat o b³êdzie. W przeciwnym przypadku rozpoczyna siê wykonanie w³aœciwej czêœci algorytmu, w sk³ad którego wchodzi okreœlenie iloœci podprzedzia³ów $n$, $m$ (ka¿dy podprzedzia³ z³o¿ony jest z dwóch podpodprzedzia³ów) na które podzielono przedzia³y ca³kowania po zmiennej $x$ i $y$. Dalej na podstawie (\ref{WezlyNaObszarzeProstokatnymSimpson2}) wyznaczane s¹ wielkoœci kroków $h$ (dla $x$) i $k$ (dla $y$) pomiêdzy kolejnymi wêz³ami definiuj¹cymi krañce owych podpodprzedzia³ów. Pozyskane dane zostaj¹ natychmiast wykorzystywane przez pêtle \textit{for} do obliczenia wspó³rzêdnych wêz³ów $x_i$ oraz $y_j$. Blok z dwoma zagnie¿d¿onymi pêtlami \textit{for} s³u¿y wyliczaniu wartoœci funkcji $z(i,j)=f(x_i,y_j)$ w okreœlonych (w poprzednich dwóch krokach) punktach wêz³owych. Przedostatni krok jest implementacj¹ wzoru (\ref{SumaObjetosciDlaCalegoObszaruSimpson2D}), co czyni go kluczowym dla ca³ego algorytmu. Ostatecznie wynik procedury jest zwracany w uproszczonej i czytelnej postaci jako wartoœæ \textit{WynikS2}.
 
-Wiedz¹c ju¿ na jakiej zasadzie dzia³a procedura \textit{Simpson2} - u¿yjmy jej do przeprowadzenia badañ nad dok³adnoœci¹ pozyskanych dziêki niej przybli¿onych wyników ca³kowania. Rezultaty porównamy z tymi, otrzymanymi przez \textbf{Procedurê \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki}} (\textit{Trapez2}). Przeliczmy zatem nastêpuj¹ce ca³ki: 
+Wiedz¹c ju¿ na jakiej zasadzie dzia³a procedura \textit{Simpson2} - u¿yjmy jej do przeprowadzenia badañ nad dok³adnoœci¹ pozyskanych dziêki niej przybli¿eñ wyników oznaczonych ca³ek podwójnych w obszarze normalnym wzglêdem $x$ i $y$. Rezultaty porównamy z tymi, otrzymanymi przez \textbf{Procedurê \ref{MAPLE_Trapez2ObszarNormalnyWartoscCalki}} (\textit{Trapez2}). Przeliczmy zatem nastêpuj¹ce przyk³ady: 
 \begin{itemize}
 \item[a)] $\int\limits_0^\frac{1}{2}\int\limits_\frac{1}{2}^1 \frac{x+y}{x^2+y^2} dydx$
 \item[b)] $\int\limits_0^1\int\limits_1^2 e^\frac{x^2}{y^3} dydx$
 \end{itemize}
-Tak jak w  podrozdziale poprzednim wyniki przedstawimy w formie tabel. Niech $N$ oznacza liczbê podpodprzedzia³ów na które podzielono przedzia³ ca³kowania po zmiennej $x$, $M$ po zmiennej $y$, $W_{Simpson2}$ to wynik \textit{Simpson2} dla rosn¹cych wartoœci $N$ i $M$. Niech \textit{$BBS2_{N,M}$} bêdzie b³êdem bezwzglêdnym przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Simpson2} dla pewnych parametrów $N$ i $M$. Dodatkowo \textit{$BWS2_{N,M}$} to wielkoœæ b³êdu wzglêdnego jakim jest obci¹¿ony ten sam wynik wykonania \textit{Simpson2}, co w przypadku wyliczania \textit{$BBS2_{N,M}$}.\\
+Tak jak w  podrozdziale poprzednim wyniki podamy w formie tabel. Niech $N$ oznacza liczbê podprzedzia³ów na które podzielono przedzia³ ca³kowania po zmiennej $x$, $M$ po zmiennej $y$, $W_{Simpson2}$ to wynik \textit{Simpson2} dla rosn¹cych wartoœci $N$ i $M$. Niech \textit{$BBS2_{N,M}$} bêdzie b³êdem bezwzglêdnym przybli¿enia wartoœci ca³ki podwójnej procedur¹ \textit{Simpson2} dla pewnych parametrów $N$ i $M$. Dodatkowo \textit{$BWS2_{N,M}$} to wielkoœæ b³êdu wzglêdnego jakim jest obci¹¿ony ten sam wynik wykonania \textit{Simpson2}, co w przypadku wyliczania \textit{$BBS2_{N,M}$}.\\
 
-Wartoœæ ca³ki z przyk³adu a) jest w zaokr¹gleniu równa $0,399181467986$, wiêc:
+\hspace{-1cm}Wartoœæ ca³ki z przyk³adu a) jest w zaokr¹gleniu równa $0.399181467986$, wiêc:
 \begin{table}[h!]
- \caption{Pomiary dok³adnoœci przybli¿enia wartoœci ca³ki a) procedur¹ \textit{Simpson2}}
+\hspace{-1cm} \caption{Pomiary dok³adnoœci przybli¿enia wartoœci ca³ki a) procedur¹ \textit{Simpson2}}
 \hspace{-4.6cm}{\footnotesize ród³o: Opracowanie w³asne\\}
 \centering
  \begin{tabular}{|c|c|c|c|c|} 
@@ -616,7 +609,7 @@ Wartoœæ ca³ki z przyk³adu a) jest w zaokr¹gleniu równa $0,399181467986$, wiêc:
 \end{table}
 \\ 
 
-Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:. 
+\hspace{-1cm}Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:. 
 \begin{table}[h!]
  \caption{Pomiary dok³adnoœci przybli¿enia wartoœci ca³ki b) procedur¹ \textit{Simpson2}}
 \hspace{-4.6cm}{\footnotesize ród³o: Opracowanie w³asne\\}
@@ -660,7 +653,7 @@ Ca³ka z podpunktu b) wynosi dok³adnie $1.14782135872$ , zatem:.
 \end{table}
 
 
-Dokonuj¹c przegl¹du i analizy wyników z Tablicy \ref{WynikiZProcedurySimpson2a} i Tablicy \ref{WynikiZProcedurySimpson2b} pierwsze co powinno rzuciæ siê nam w oczy to wyj¹tkowa dok³adnoœæ otrzymanych wartoœci. Wielkoœæ b³êdu bezwzglêdnego ju¿ dla pierwszego wywo³ania procedury w obydwu przyk³adach nie przekroczy³a $0.0031$, jest to bardzo dobry rezultat. Dodatkowo po ka¿dym zwiêkszeniu parametrów $N$ lub $M$ widoczna jest stanowcza tendencja spadkowa \textbf{$BBS2_{N,M}$} jak i \textbf{$BWS2_{N,M}$}. Dla koñcowych pomiarów mo¿na powiedzieæ, ¿e wynik jest niemal nie obci¹¿ony b³êdem przybli¿enia, poniewa¿ jego wielkoœæ jest bliska $0$ dla obydwu przyk³adów. Interesuj¹ce jest to, ¿e pomiêdzy b³êdami, którymi obci¹¿one s¹ wyniki otrzymane \textit{uogólnionym wzorem trapezów} a \textit{uogólnionym wzorem Simpsona} jest œrednio dwa rzêdy wielkoœci ró¿nicy (na korzyœæ wzoru \textit{Simpsona}). Fakt ten sprawia, ¿e mo¿e on zostaæ uznany za dok³adniejszy i zarazem bardziej efektywny.    
+Dokonuj¹c przegl¹du i analizy wartoœci z Tablicy \ref{WynikiZProcedurySimpson2a} i Tablicy \ref{WynikiZProcedurySimpson2b} pierwsze, co powinno rzuciæ siê nam w oczy, to wyj¹tkowa dok³adnoœæ otrzymanych wyników. Wielkoœæ b³êdu bezwzglêdnego ju¿ dla pierwszego wywo³ania procedury w obydwu przyk³adach nie przekroczy³a $0.0031$ - jest to bardzo dobry rezultat. Dodatkowo po ka¿dym zwiêkszeniu parametrów $N$ lub $M$ widoczna jest stanowcza tendencja spadkowa \textbf{$BBS2_{N,M}$} jak i \textbf{$BWS2_{N,M}$}. Dla koñcowych pomiarów mo¿na powiedzieæ, ¿e wynik jest obci¹¿ony znikomym b³êdem przybli¿enia, poniewa¿ jego wielkoœæ jest bliska $0$ dla obydwu przyk³adów. Interesuj¹ce jest to, ¿e pomiêdzy b³êdami, którymi obci¹¿one s¹ wyniki otrzymane \textit{uogólnionym wzorem trapezów} a \textit{uogólnionym wzorem Simpsona} jest œrednio dwa rzêdy wielkoœci ró¿nicy (na korzyœæ wzoru \textit{Simpsona}). Fakt ten sprawia, ¿e mo¿e on zostaæ uznany za dok³adniejsze i zarazem bardziej efektywne narzêdzie przybli¿aj¹ce wartoœci ca³ek podwójnych na obszarze prostok¹tnym.
 
 
 

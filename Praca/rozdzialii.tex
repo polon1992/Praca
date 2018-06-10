@@ -113,7 +113,7 @@ Do rozwiπzania zadania skorzystamy z \textit{ogÛlnego wzoru trapezÛw} (\ref{Ogol
 $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\ 
 Wyliczone wartoúci wstawiamy do (\ref{OgolnyWzorTrapezow}):
 \begin{center}
-$\int\limits_0^{\frac{3}{2}} e^{x^2} dx=\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+2f(x_4)+2f(x_5)+f(x_6))=$\\
+$\int\limits_0^{\frac{3}{2}} e^{x^2} dx\approx\frac{\frac{1}{4}}{2}(f(x_0)+2f(x_1)+2f(x_2)+2f(x_3)+2f(x_4)+2f(x_5)+f(x_6))=$\\
 $=\frac{1}{8}(e^0+2e^{{(\frac{1}{4})}^2}+2e^{{(\frac{2}{4})}^2}+2e^{{(\frac{3}{4})}^2}+2e^1+2e^{{(\frac{5}{4})}^2}+e^{{(\frac{6}{4})}^2})\approx 
 \frac{1}{8}(1+2\cdot 1.06449+2\cdot 1.28402+2\cdot 1.75505+2\cdot  2.71828+2\cdot 4.77073+9.48773)\approx 4.20911.$\\
 \end{center}
@@ -138,7 +138,7 @@ M_2= \sup\limits_{x \in [a,b]} \, | f^{''}(x) |.
 \end{definition}
 Sprawdzimy jednak s≥usznoúÊ naszego twierdzenia wykorzystujπc do tego stworzonπ na nasze potrzeby procedurÍ w jÍzyku \textit{Maple}. Pos≥uøy nam ona do zautomatyzowania procesu obliczania przybliøonych wartoúci ca≥ek oznaczonych omawianπ metodπ:
 
-\begin{proc}{(Wznaczanie przybliøonych wartoúci ca≥ek pojedynczych metodπ trapezÛw)}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
+\begin{proc}{(Wznaczanie przybliøonych wartoúci ca≥ek pojedynczych \textit{metodπ trapezÛw})}\label{MAPLE_MetodaTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapez:=proc(a,b,n) 
 local h,j,i,x,y,t,tp;
@@ -207,7 +207,7 @@ Poniøsza tabela prezentuje wyniki \textbf{Procedury  \ref{MAPLE_MetodaTrapezowCa
 Na podstawie powyøszych pomiarÛw moøemy uznaÊ iø nasze przewidywania odnoúnie tego, øe w miarÍ wzrostu wartoúci $n$ wynik bÍdzie coraz dok≥adniejszy okazujπ siÍ byÊ trafne. Procedura generuje prawid≥owe wyniki, co moøna potwierdziÊ tym, ze dla $n=6$ wartoúÊ obliczona "{rÍcznie}"\, jest taka sama jak otrzymana w trakcie badaÒ. Zauwaømy, øe juø przy $n\geq 100$ wynik zaczyna byÊ dosyÊ mocno zbliøony do dok≥adnego - rÛønice pojawiajπ siÍ dopiero na 4 miejscu po przecinku.
 UwagÍ naleøy skupiÊ rÛwnieø na wartoúciach $\mathbf{|BBT_n|}$ i $\mathbf{\delta_T}$ z Tablicy \ref{WynikiZProceduryTrapez1}. Po ich dok≥adnej analizie jesteúmy w stanie zauwaøyÊ, øe $\mathbf{|BBT_n|}$ jest zawsze wiÍksze od $\mathbf{\delta_T}$. Nie ma znaczenia to, jaki $n$ przyjÍliúmy. Nie jest to jednak przypadkowa zaleønoúÊ. Fakt ten w pe≥ni wyjaúnia nam definicja \ref{BladMetodyTrapezow}. WartoúÊ $\delta_T$ zosta≥a wyznaczona przy wykorzystaniu nastÍpujπcego skryptu:
 
-\begin{proc}{(Wyznaczanie b≥Ídu przybliøenia dla metody trapezÛw)}
+\begin{proc}{(Wyznaczanie b≥Ídu przybliøenia dla \textit{metody trapezÛw})}
 \label{MAPLE_BladMetodyTrapezowCalkaPojedyncza}
 \begin{verbatim}
 > trapezBlad:= proc (a, b, n)
@@ -247,9 +247,9 @@ Powyøsza procedura rÛwnieø korzysta ze wzorÛw (\ref{BladMetodyTrapezow}) i (\ref
 
 \section{WzÛr Simpsona}
 %wyciete 2 zdanie - Charakteryzuje siÍ ona duøπ dok≥adnoúciπ przy jednoczeúnie niewielkiej z≥oøonoúci rachunkÛw.
-CzÍsto wykorzystywanπ przy ca≥kowaniu numerycznym metodπ jest \textit{metoda Simpsona}. Zamiennie nazywana jest rÛwnieø \textit{metodπ parabol}. Jej nazwa wywodzi siÍ od tego, øe funkcjÍ podca≥kowπ przybliøamy na kaødym z podprzedzia≥Ûw utworzonych przez \textbf{3} wÍz≥y za pomocπ paraboli. W zwiπzku z tym, øe kaøde $3$ kolejne wÍz≥y tworzπ \textbf{2} podprzedzia≥y wnioskujemy, øe ca≥kowita liczba podprzedzia≥Ûw przedzia≥u ca≥kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we wzorze trapezÛw nie by≥o wymagane, by liczba podprzedzia≥Ûw by≥a parzysta). 
+CzÍsto wykorzystywanπ przy ca≥kowaniu numerycznym metodπ jest \textit{metoda Simpsona}. Zamiennie nazywana jest rÛwnieø \textit{metodπ parabol}. Jej nazwa wywodzi siÍ od tego, øe funkcjÍ podca≥kowπ przybliøamy na kaødym z podprzedzia≥Ûw utworzonych przez \textbf{3} wÍz≥y za pomocπ paraboli. W zwiπzku z tym, øe kaøde $3$ kolejne wÍz≥y tworzπ \textbf{2} podprzedzia≥y wnioskujemy, øe ca≥kowita liczba podprzedzia≥Ûw przedzia≥u ca≥kowania jest postaci $N=2m$ dla $m\in\mathbb{N}$ (we \textit{wzorze trapezÛw} nie by≥o wymagane, by liczba podprzedzia≥Ûw by≥a parzysta). 
 
-Przybliøonym wynikiem ca≥ki obliczanej metodπ \textit{Simpsona} jest suma pÛl tzw. trapezÛw "parabolicznych"\,  (jedno z ramion trapezu jest parabolπ). Kaødy z nich jest ograniczany przez wÍz≥y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodzπca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Naleøy zauwaøyÊ, øe istnieje dok≥adnie jedna parabola zawierajπca zadane trzy wÍz≥y, wiÍc jej rÛwnanie zawsze bÍdzie wyznaczone w sposÛb jednoznaczny. Metoda ca≥kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta≥a przedstawiona na Rysunku \ref{R3}.
+Przybliøonym wynikiem oznaczonej ca≥ki pojedynczej, obliczanej \textit{metodπ Simpsona} jest suma pÛl tzw. trapezÛw "parabolicznych"\,  (jedno z ramion trapezu jest parabolπ). Kaødy z nich jest ograniczany przez wÍz≥y $x_{2i}$ i $x_{2i+2}$ ($i=0,1,\ldots, m-1$) na osi $OX$, natomiast na osi $OY$ ogranicza je prosta $y=0$ oraz parabola przechodzπca przez $x_{2i}$, $x_{2i+1}$, $x_{2i+2}$ ($i=0,1,\ldots, m-1$). Naleøy zauwaøyÊ, øe istnieje dok≥adnie jedna parabola zawierajπca zadane trzy wÍz≥y, wiÍc jej rÛwnanie zawsze bÍdzie wyznaczone w sposÛb jednoznaczny. Metoda ca≥kowania przy wykorzystaniu wzoru \textit{Simpsona} zosta≥a przedstawiona na Rysunku \ref{R3}.
 
 \begin{figure}[H]
 		\begin{center}
@@ -260,15 +260,15 @@ Przybliøonym wynikiem ca≥ki obliczanej metodπ \textit{Simpsona} jest suma pÛl tz
 \hspace{0.7cm}{\footnotesize èrÛd≥o: \url{https://commons.wikimedia.org/wiki/File:Composite\_Simpsons\_rule.png}}
 \end{figure}
   
-Rozpatrzmy poczπtkowo szczegÛlny przypadek, w ktÛrym przedzia≥ ca≥kowania zostanie podzielony na dok≥adnie $2$ podprzedzia≥y, wydzielone przez $3$ rÛwno odleg≥e wÍz≥y \mbox{$a=x_0 < x_1 < x_2=b$}, dla ktÛrych zachodzi $\frac{x_0+x_2}{2}=x_1$. W celu wyprowadzenia wzoru \textit{Simpsona} wykorzystamy wielomian interpolacyjny \textit{Lagrange'a} $L_2(x)$ (wielomian rzÍdu $n=2$) zbudowany zgodnie z (\ref{wielomianInterpolacyjnyLagrangea}) dla wÍz≥Ûw $a=x_0$, $x_1$, $x_2=b$. By stworzyÊ $L_2(x)$, ktÛry nas interesuje, potrzebna nam jest wiedza na temat tego, jak wyglπdajπ wspÛ≥czynniki \mbox{$a_0$, $a_1$, $a_2$}. Ich wartoúÊ wyliczymy wykorzystujπc wzory  (\ref{WielomianLagrangeaPoPodstawieniuZaX}) oraz (\ref{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}). Wynika z nich, øe kaødy ze wspÛ≥czynnikÛw $a_i$ ($i=0,1,\ldots,n$) jest postaci:
+Rozpatrzmy poczπtkowo szczegÛlny przypadek, w ktÛrym przedzia≥ ca≥kowania zostanie podzielony na dok≥adnie $2$ podprzedzia≥y, wydzielone przez $3$ rÛwno odleg≥e wÍz≥y \mbox{$a=x_0 < x_1 < x_2=b$}, dla ktÛrych zachodzi $\frac{x_0+x_2}{2}=x_1$. W celu wyprowadzenia wzoru \textit{Simpsona} wykorzystamy \textit{wielomian interpolacyjny Lagrange'a} $L_2(x)$ (wielomian rzÍdu $n=2$) zbudowany zgodnie z (\ref{wielomianInterpolacyjnyLagrangea}) dla wÍz≥Ûw $a=x_0$, $x_1$, $x_2=b$. By stworzyÊ $L_2(x)$, ktÛry nas interesuje, potrzebna nam jest wiedza na temat tego, jak wyglπdajπ wspÛ≥czynniki \mbox{$a_0$, $a_1$, $a_2$}. Ich wartoúÊ wyliczymy wykorzystujπc wzory  (\ref{WielomianLagrangeaPoPodstawieniuZaX}) oraz (\ref{WzorNaWspAiWyrazonyCalkaZFunkcjiPsi}). Wynika z nich, øe kaødy ze wspÛ≥czynnikÛw $a_i$ ($i=0,1,\ldots,n$) jest postaci:
 \begin{equation}\label{WspolczynnikAiWPostaciCalkiZIloczynu}\\
 a_i=h\int\limits_0^n \psi_i(s) ds=h\int\limits_0^n \left(\prod\limits_{j=0, j\neq i}^n \frac{s-j}{i-j}\right)ds.
 \end{equation}  
 
-W tym przypadku za $n$ przyjmujemy rzπd wielomianu interpolacyjnego $L_2(x)$, zatem ca≥kowanie odbÍdzie siÍ w granicach $[0,n]=[0,2]$. 
-$$\mathbf{a_0}=h\int\limits_0^2 \psi_0(s)ds=h\int\limits_0^2\left(\prod\limits_{j=0, j\neq i}^2 \frac{s-j}{i-j}\right)ds=h\int\limits_0^2\left(\frac{(s-1)}{(0-1)}\cdot\frac{(s-2)}{(0-2)}\right)ds=h\int\limits_0^2\frac{(s^2-2s-s+2)}{2}ds=$$$$=\frac{h}{2}\int\limits_0^2\left(s^2-3s+2\right)ds=\frac{h}{2}\left[\frac{s^3}{3}-\frac{3s^2}{2}+2s\right]_0^2=\frac{h}{2}\left(\left[\frac{8}{3}-\frac{12}{2}+4\right]-0\right)=\frac{h}{2}\cdot\frac{2}{3}=\mathbf{\frac{h}{3}}$$
-$$\mathbf{a_1}=h\int\limits_0^2 \psi_1(s)ds=h\int\limits_0^2\left(\prod\limits_{j=0, j\neq i}^2 \frac{s-j}{i-j}\right)ds=h\int\limits_0^2\left(\frac{(s-0)}{(1-0)}\cdot\frac{(s-2)}{(1-2)}\right)ds=h\int\limits_0^2\frac{(s^2-2s)}{-1}ds=$$$$=h\int\limits_0^2\left(2s-s^2\right)ds=h\left[2\frac{s^2}{2}-\frac{s^3}{3}\right]_0^2=h\left(\left[4-\frac{8}{3}\right]-0\right)=h\cdot\frac{4}{3}=\mathbf{\frac{4h}{3}}$$
-$$\mathbf{a_2}=h\int\limits_0^2 \psi_2(s)ds=h\int\limits_0^2\left(\prod\limits_{j=0, j\neq i}^2 \frac{s-j}{i-j}\right)ds=h\int\limits_0^2\left(\frac{(s-0)}{(2-0)}\cdot\frac{(s-1)}{(2-1)}\right)ds=h\int\limits_0^2\frac{s(s-1)}{2}ds=$$$$=\frac{h}{2}\int\limits_0^2\left(s^2-s\right)ds=\frac{h}{2}\left[\frac{s^3}{3}-\frac{s^2}{2}\right]_0^2=\frac{h}{2}\left(\left[\frac{8}{3}-\frac{4}{2}\right]-0\right)=\frac{h}{2}\cdot\frac{2}{3}=\mathbf{\frac{h}{3}}$$
+W tym przypadku za $n$ przyjmujemy rzπd wielomianu interpolacyjnego $L_2(x)$, zatem ca≥kowanie odbÍdzie siÍ w granicach $[0,n]=[0,2]$: 
+$$\mathbf{a_0}=h\int\limits_0^2 \psi_0(s)ds=h\int\limits_0^2\left(\prod\limits_{j=0, j\neq i}^2 \frac{s-j}{i-j}\right)ds=h\int\limits_0^2\left(\frac{(s-1)}{(0-1)}\cdot\frac{(s-2)}{(0-2)}\right)ds=h\int\limits_0^2\frac{(s^2-2s-s+2)}{2}ds=$$$$=\frac{h}{2}\int\limits_0^2\left(s^2-3s+2\right)ds=\frac{h}{2}\left[\frac{s^3}{3}-\frac{3s^2}{2}+2s\right]_0^2=\frac{h}{2}\left(\left[\frac{8}{3}-\frac{12}{2}+4\right]-0\right)=\frac{h}{2}\cdot\frac{2}{3}=\mathbf{\frac{h}{3}},$$
+$$\mathbf{a_1}=h\int\limits_0^2 \psi_1(s)ds=h\int\limits_0^2\left(\prod\limits_{j=0, j\neq i}^2 \frac{s-j}{i-j}\right)ds=h\int\limits_0^2\left(\frac{(s-0)}{(1-0)}\cdot\frac{(s-2)}{(1-2)}\right)ds=h\int\limits_0^2\frac{(s^2-2s)}{-1}ds=$$$$=h\int\limits_0^2\left(2s-s^2\right)ds=h\left[2\frac{s^2}{2}-\frac{s^3}{3}\right]_0^2=h\left(\left[4-\frac{8}{3}\right]-0\right)=h\cdot\frac{4}{3}=\mathbf{\frac{4h}{3}},$$
+$$\mathbf{a_2}=h\int\limits_0^2 \psi_2(s)ds=h\int\limits_0^2\left(\prod\limits_{j=0, j\neq i}^2 \frac{s-j}{i-j}\right)ds=h\int\limits_0^2\left(\frac{(s-0)}{(2-0)}\cdot\frac{(s-1)}{(2-1)}\right)ds=h\int\limits_0^2\frac{s(s-1)}{2}ds=$$$$=\frac{h}{2}\int\limits_0^2\left(s^2-s\right)ds=\frac{h}{2}\left[\frac{s^3}{3}-\frac{s^2}{2}\right]_0^2=\frac{h}{2}\left(\left[\frac{8}{3}-\frac{4}{2}\right]-0\right)=\frac{h}{2}\cdot\frac{2}{3}=\mathbf{\frac{h}{3}}.$$
 Podstawiajπc obliczone powyøej wartoúci $a_0, a_1, a_2$ do (\ref{WzorKwadratura}) otrzymujemy szukany przez nas \textbf{wzÛr \textit{Simpsona}}: 
 \begin{equation}\label{wzorSimpsonaBrakPodzialu}
 \begin{array}{cc}
@@ -289,14 +289,14 @@ Dla przypadku ogÛlnego, w ktÛrym przedzia≥ ca≥kowania $[a,b]$ zostanie podzielon
 =\frac{h}{3}\sum\limits_{i=0}^{m-1}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right).
 \end{array}
 \end{equation}
-RÛwnanie (\ref{wzorSimpsonaZPodzialami}) nosi miano \textit{uogÛlnionego wzoru Simpsona} (mÛwiπc wzÛr \textit{Simpsona} bÍdziemy mieli na myúli tÍ postaÊ uogÛlnionπ). Nie trudno siÍ domyúleÊ, øe w zwiπzku z tym, iø wzÛr ten jedynie przybliøa dok≥adnπ wartoúÊ ca≥ki, to wiπøe siÍ z tym fakt obciπøenia wyniku pewnym b≥Ídem. Oszacowanie owego b≥Ídu przybliøenia wzorem \textit{Simpsona} wyjaúnia poniøsza definicja:
-\begin{definition}(B≥πd przybliøenia wzorem \textit{Simpsona})\\
+RÛwnanie (\ref{wzorSimpsonaZPodzialami}) nosi miano \textbf{uogÛlnionego wzoru Simpsona} (mÛwiπc wzÛr \textit{Simpsona} bÍdziemy mieli na myúli tÍ postaÊ uogÛlnionπ). W zwiπzku z tym, iø wzÛr ten jedynie przybliøa dok≥adnπ wartoúÊ ca≥ki, to wiπøe siÍ z tym fakt obciπøenia wyniku pewnym b≥Ídem. Oszacowanie owego b≥Ídu przybliøenia \textit{wzorem Simpsona} wyjaúnia poniøsza definicja:
+\begin{definition}(B≥πd przybliøenia \textit{wzorem Simpsona})\\
 \label{Def_BladPrzyblizeniaWzoremSimpsona}
 Przyjmijmy, øe $BBS_{N}$ oznacza b≥πd bezwzglÍdny przybliøenia (tzn. rÛønica pomiÍdzy wartoúciπ dok≥adnπ i przybliøonπ ca≥ki). Ponadto niech $f: [a,b]\rightarrow \re$ bÍdzie klasy $C^4$ na $[a,b]$, oraz $N=2m$ ($m\in\mathbb{N}$) wyznacza iloúÊ podzia≥Ûw przedzia≥u $[a,b]$, wtedy spe≥niona jest nastÍpujπca nierÛwnoúÊ \cite{klucz6}:
 \begin{equation}\label{NierownoscBBPrzyblizenia<=DeltaS}
-|BBS_{N}|\leq\delta_S
+|BBS_{N}|\leq\delta_S.
 \end{equation}
-Przez $\delta_S$ rozumiemy b≥πd metody \textit{Simpsona}, ktÛry jest opisany nastÍpujπcym wzorem:
+Przez $\delta_S$ rozumiemy \textit{b≥πd metody Simpsona}, ktÛry jest opisany nastÍpujπcym wzorem:
 \begin{equation}\label{BladMetodySimpsona}
 \delta_S = \frac{(b-a)^5}{180 \cdot N^4} \cdot M_4\stackrel{N=2m}{=}\frac{(b-a)^5}{2880 \cdot m^4} \cdot M_4 ,
 \end{equation}
@@ -306,24 +306,24 @@ M_4= \sup\limits_{x \in [a,b]} \, | f^{(4)}(x) |.
 \end{equation}
 \end{definition} 
 
-Zbadajmy dok≥adnoúÊ, z jakπ wzÛr (\ref{wzorSimpsonaZPodzialami}) przybliøa wartoúci ca≥ek oznaczonych. W tym celu przedstawmy kompletne wyliczenia dla przypadku, gdzie liczba podzia≥Ûw przedzia≥u ca≥kowania bÍdzie wzglÍdnie ma≥a, natomiast sama ca≥ka okreúlona tak jak w przyk≥adzie \ref{PrzykladCalkaPojedynczaMetodaTrapezow}. 
+Zbadajmy dok≥adnoúÊ, z jakπ wzÛr (\ref{wzorSimpsonaZPodzialami}) przybliøa wartoúci ca≥ek oznaczonych. W tym celu przedstawmy kompletne wyliczenia dla przypadku, gdzie liczba podzia≥Ûw przedzia≥u ca≥kowania bÍdzie wzglÍdnie ma≥a, natomiast sama ca≥ka okreúlona tak jak w \textbf{Przyk≥adzie \ref{PrzykladCalkaPojedynczaMetodaTrapezow}}. 
 
-\begin{ex}(Wyznaczanie przybliøonej wartoúci ca≥ki metodπ \textit{Simpsona})\\\hfill\label{PrzykladCalkaLiczonaWzoremSimpsona}
+\begin{ex}(Wyznaczanie przybliøonej wartoúci ca≥ki \textit{metodπ Simpsona})\\\hfill\label{PrzykladCalkaLiczonaWzoremSimpsona}
 \textit{Obliczymy przybliøonπ wartoúÊ ca≥ki $\int\limits_0^{\frac{3}{2}} e^{x^2} dx$ dzielπc przedzia≥ ca≥kowania na $N=2m=6$ podprzedzia≥Ûw rÛwnej d≥ugoúci ($7$ wÍz≥Ûw).}\\\newline
 Do wykonania rachunkÛw niezbÍdna jest nam d≥ugoúÊ podprzedzia≥u $h=\frac{b-a}{N}$ \mbox{($[a,b]=[0,\frac{3}{2}]$)} oraz wartoúci wÍz≥Ûw $x_i=a+ih$ ($i=0,1,\ldots,6$). \\
 Zatem: $h=\frac{\frac{3}{2}-0}{6}=\frac{1}{4}$, $x_0=0$, $x_1=\frac{1}{4}$, $x_2=\frac{2}{4}$, $x_3=\frac{3}{4}$, $x_4=1$, $x_5=\frac{5}{4}$, $x_6=\frac{6}{4}$.\\
-Kolejno wstawiamy powyøsze dane do (\ref{wzorSimpsonaZPodzialami}):
+Kolejno wstawiamy powyøsze dane do \textit{uogÛlnionego wzoru Simpsona }(\ref{wzorSimpsonaZPodzialami}):
 \begin{gather*}
-\int\limits_0^{\frac{3}{2}} e^{x^2} dx = \frac{\frac{1}{4}}{3}\sum\limits_{i=0}^{2}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right) = \\
+\int\limits_0^{\frac{3}{2}} e^{x^2} dx \approx \frac{\frac{1}{4}}{3}\sum\limits_{i=0}^{2}\left(f(x_{2i})+4f(x_{2i+1})+f(x_{2i+2})\right) = \\
 =\frac{1}{12}\left((f(x_0)+4f(x_1)+f(x_2))+(f(x_2)+4f(x_3)+f(x_4))+(f(x_4)+4f(x_5)+f(x_6)) \right)=\\
 =\frac{1}{12}\left(\left(e^{0^2}+4e^{{\left(\frac{1}{4}\right)}^2}+e^{{\left(\frac{2}{4}\right)}^2}\right)+\left(e^{{\left(\frac{2}{4}\right)}^2}+4e^{{\left(\frac{3}{4}\right)}^2}+e^{{1}^2}\right)+\left(e^{1^2}+4e^{{\left(\frac{5}{4}\right)}^2}+e^{{\left(\frac{6}{4}\right)}^2}\right)\right)=\\
 =\frac{1}{12}\left(e^0+4\left(e^{\left(\frac{1}{16}\right)}+e^{\left(\frac{9}{16}\right)}+e^{\left(\frac{25}{16}\right)}\right)+2\left(e^{\left(\frac{4}{16}\right)}+e\right)+e^{\left(\frac{36}{16}\right)}\right)=\\
-=\frac{1}{12}(1+4(1,06449+1,75505+4,77073)+2(1,28402+2,71828)+9,48773)=4,071123
+=\frac{1}{12}(1+4(1.06449+1.75505+4.77073)+2(1.28402+2.71828)+9.48773)=4.071123.
 \end{gather*}
 \end{ex}
-Wynik, ktÛry otrzymaliúmy w przeprowadzonych obliczeniach jest bardzo zbliøony do wartoúci dok≥adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4,06311405862...$. Chcemy jednak sprawdziÊ, przy jak duøej liczbie podzia≥Ûw przedzia≥u ca≥kowania przybliøenie zacznie siÍ stabilizowaÊ tak, byúmy mogli uznaÊ je za wystarczajπco rzetelne (przyjmijmy, øe b≥πd bezwzglÍdny przybliøenia ma byÊ nie wiÍkszy niø $0,0000001$). Podobnie jak dla wzoru trapezÛw, wykorzystajmy stworzone na nasze potrzeby procedury automatyzujπce przeprowadzanie obliczeÒ. \\ 
+Wynik, ktÛry otrzymaliúmy w przeprowadzonych obliczeniach jest bardzo zbliøony do wartoúci dok≥adnej $\int\limits_0^{\frac{3}{2}} e^{x^2} dx=4.06311405862...$. Chcemy jednak sprawdziÊ, przy jak duøej liczbie podzia≥Ûw przedzia≥u ca≥kowania przybliøenie zacznie siÍ stabilizowaÊ tak, byúmy mogli uznaÊ je za wystarczajπco rzetelne (przyjmijmy, øe b≥πd bezwzglÍdny przybliøenia ma byÊ nie wiÍkszy niø $0.0000001$). Podobnie jak dla wzoru trapezÛw, wykorzystajmy stworzone na nasze potrzeby procedury automatyzujπce przeprowadzanie obliczeÒ. \\ 
 
-\begin{proc}{(Wznaczanie przybliøonych wartoúci ca≥ek pojedynczych metodπ \textit{Simpsona})}\label{MAPLE_MetodaSimpsonaCalkaPojedyncza}
+\begin{proc}{(Wznaczanie przybliøonych wartoúci ca≥ek pojedynczych \textit{metodπ Simpsona})}\label{MAPLE_MetodaSimpsonaCalkaPojedyncza}
 \begin{verbatim}
 >simpson :=proc(a,b,N) 
 local h,i,j,m,x,y,s,sp;
@@ -349,7 +349,7 @@ Kod znajdujπcy siÍ po nag≥Ûwku procedury to definicja zmiennych lokalnych, wykor
 
 Zanim zaprezentujemy wyniki zwracane przez \textbf{ProcedurÍ \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}}, to zechciejmy pochyliÊ siÍ jeszcze przez moment nad kodem dodatkowej procedury umoøliwiajπcej oszacowanie b≥Ídu $\delta_S$ z rÛwnania (\ref{BladMetodySimpsona}). Informacja na temat jego wielkoúci bÍdzie nam pomocna podczas kontroli, czy obliczenia sπ przeprowadzane poprawnie, tzn. musi zachodziÊ $|BBS_{N}|\leq\delta_S$ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) dla coraz to wiÍkszych iloúci podzia≥Ûw przedzia≥u ca≥kowania.
 
-\begin{proc}{(Wyznaczanie b≥Ídu przybliøenia dla metody \textit{Simpsona})}
+\begin{proc}{(Wyznaczanie b≥Ídu przybliøenia dla \textit{metody Simpsona})}
 \label{MAPLE_BladMetodySimpsonaCalkaPojedyncza}
 \begin{verbatim}
 > simpsonBlad:= proc(a, b, N)
@@ -365,9 +365,9 @@ local d4ff, simd4ff, M4, deltaS;
 end;
 \end{verbatim}
 \end{proc}
-Powyøsza procedura ma za zadanie wyznaczyÊ wartoúÊ $\delta_S$, tak by prawdziwe by≥o oszacowanie (\ref{NierownoscBBPrzyblizenia<=DeltaS}). Parametry $a$, $b$ i $N$ definiowane sπ w sposÛb identyczny, jak w \textbf{Procedurze \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}}. Aby wykona≥ siÍ algorytm g≥Ûwny (znajdujπcy siÍ wewnπtrz procedury w bloku \textit{else}), ponownie musi zostaÊ spe≥niony warunek mÛwiπcy o tym, øe $N$ jest liczπ naturalnπ i parzystπ. Jeøeli taka prawid≥owoúÊ zachodzi, to obliczamy wartoúÊ $f^{(4)}(x)$ oraz upraszczamy jej postaÊ. Zgodnie z (\ref{CzynnikM4DoBleduMetodySimpsona}) wyliczamy maksimum  $f^{(4)}(x)$ na przedziale $[a,b]$ (jest to najbardziej znaczπcy krok) i podstawiamy wszystkie znane juø nam argumenty do (\ref{BladMetodySimpsona}). W ten sposÛb dochodzimy do poøπdanej przez nas formy $\delta_S$. 
+Powyøsza procedura ma za zadanie wyznaczyÊ wartoúÊ $\delta_S$, tak by prawdziwe by≥o oszacowanie (\ref{NierownoscBBPrzyblizenia<=DeltaS}). Parametry $a$, $b$ i $N$ definiowane sπ w sposÛb identyczny, jak w \mbox{\textbf{Procedurze \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}}}. Aby wykona≥ siÍ algorytm g≥Ûwny (znajdujπcy siÍ wewnπtrz procedury w bloku \textit{else}), ponownie musi zostaÊ spe≥niony warunek mÛwiπcy o tym, øe $N$ jest liczπ naturalnπ i parzystπ. Jeøeli taka prawid≥owoúÊ zachodzi, to obliczamy wartoúÊ $f^{(4)}(x)$ oraz upraszczamy jej postaÊ. Zgodnie z (\ref{CzynnikM4DoBleduMetodySimpsona}) wyliczamy maksimum  $f^{(4)}(x)$ na przedziale $[a,b]$ (jest to najbardziej znaczπcy krok) i podstawiamy wszystkie znane juø nam argumenty do (\ref{BladMetodySimpsona}). W ten sposÛb dochodzimy do poøπdanej przez nas formy $\delta_S$. 
 
-Posiadajπc juø odpowiednie narzÍdzia (Procedura \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}) oraz wiedzÍ z zakresu metodyki ich dzia≥ania, wykonajmy pomiary, ktÛre zobrazujπ nam w sposÛb praktyczny dok≥adnoúÊ metody \textit{Simpsona}. Niech $N$ stanowi liczbÍ podzia≥Ûw przedzia≥y ca≥kowania, $W_{simpson}$ opisuje wartoúci zwracane przez procedurÍ \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}. Ponadto  przez $|BBS_{N}|$ oznaczymy b≥πd bezwzglÍdnym przybliøenia wartoúci ca≥ki metodπ \textit{Simpsona}, natomiast przez symbol $\delta_S$ rozumieÊ bÍdziemy wynik wywo≥ania \textbf{Procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}}. Do obliczeÒ ponownie wykorzystajmy ca≥kÍ z przyk≥adu \ref{PrzykladCalkaLiczonaWzoremSimpsona} (zastosujemy rÛwnieø jej wartoúÊ dok≥adnπ, ktÛra jest podana w jego rozwiπzaniu):
+Posiadajπc juø odpowiednie narzÍdzia (\textbf{Procedura \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza} i \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}}) oraz wiedzÍ z zakresu metodyki ich dzia≥ania, wykonajmy pomiary, ktÛre zobrazujπ nam w sposÛb praktyczny dok≥adnoúÊ \textit{metody Simpsona}. Niech $N$ stanowi liczbÍ podzia≥Ûw przedzia≥y ca≥kowania, $W_{simpson}$ opisuje wartoúci zwracane przez \mbox{\textbf{ProcedurÍ \ref{MAPLE_MetodaSimpsonaCalkaPojedyncza}}}. Ponadto  przez $|BBS_{N}|$ oznaczymy b≥πd bezwzglÍdnym przybliøenia wartoúci ca≥ki \textit{metodπ Simpsona}, natomiast przez symbol $\delta_S$ rozumieÊ bÍdziemy wynik wywo≥ania \textbf{Procedury \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}}. Do obliczeÒ ponownie wykorzystajmy ca≥kÍ z \textbf{Przyk≥adu \ref{PrzykladCalkaLiczonaWzoremSimpsona}} (zastosujemy rÛwnieø jej wartoúÊ dok≥adnπ, ktÛra jest podana w jego rozwiπzaniu):
 
 \begin{table}[h!]
 \caption{Pomiar dok≥adnoúci przybliøenia wartoúci ca≥ki pojedynczej procedurπ \textit{simpson}}
@@ -377,39 +377,39 @@ Posiadajπc juø odpowiednie narzÍdzia (Procedura \ref{MAPLE_MetodaSimpsonaCalkaPo
  \hline
  $\mathbf{N}$ & $\mathbf{W_{simpson}}$ & $\mathbf{|BBS_N|}$ &$\mathbf{\delta_S}$ \\ [0.5ex] 
  \hline \hline
- 4   & 4,09788104673 & 0,03476698811 & 0,31426966780\\ 
+ 4   & 4.09788104673 & 0.03476698811 & 0.31426966780\\ 
  \hline
- 6   & 4,07112329317 & 0,00800923455 & 0,06207795906\\
+ 6   & 4.07112329317 & 0.00800923455 & 0.06207795906\\
 \hline 
- 10  & 4,06425014407 & 0,00113608545 & 0,00804530349\\ 
+ 10  & 4.06425014407 & 0.00113608545 & 0.00804530349\\ 
 \hline 
- 20  & 4,06318804961 & 0,00007399099 & 0,00050283147\\ 
+ 20  & 4.06318804961 & 0.00007399099 & 0.00050283147\\ 
  \hline
- 40  & 4,06311873247 & 0,00000467386 & 0,00003142697\\ 
+ 40  & 4.06311873247 & 0.00000467386 & 0.00003142697\\ 
  \hline 
- 60  & 4,06311498371 & 0,00000092509 & 0,00000620779\\ 
+ 60  & 4.06311498371 & 0.00000092509 & 0.00000620779\\ 
 \hline 
- 80  & 4,06311435154 & 0,00000029292 & 0,00000196419\\ 
+ 80  & 4.06311435154 & 0.00000029292 & 0.00000196419\\ 
  \hline
- 100 & 4,06311417861 & 0,00000011999 & 0,00000080453\\
+ 100 & 4.06311417861 & 0.00000011999 & 0.00000080453\\
 \hline 
- 104 & 4,06311416121 & 0,00000010259 & 0,00000068771\\  
+ 104 & 4.06311416121 & 0.00000010259 & 0.00000068771\\  
  \hline 
- 106 & 4,06311415370 & 0,00000009508 & 0,00000063726\\ 
+ 106 & 4.06311415370 & 0.00000009508 & 0.00000063726\\ 
 \hline 
- 150 & 4,06311408231 & 0,00000002369 & 0,00000015892\\ 
+ 150 & 4.06311408231 & 0.00000002369 & 0.00000015892\\ 
  \hline
- 200 & 4,06311406613 & 0,00000000751 & 0,00000005028\\
+ 200 & 4.06311406613 & 0.00000000751 & 0.00000005028\\
  \hline 
- 400 & 4,06311405910 & 0,00000000048 & 0,00000000314\\[0.5ex] 
+ 400 & 4.06311405910 & 0.00000000048 & 0.00000000314\\[0.5ex] 
 \hline 
- 1000& 4,06311405847 & 0,00000000015 & 0,00000000008\\ 
+ 1000& 4.06311405847 & 0.00000000015 & 0.00000000008\\ 
  \hline
  \end{tabular}\\\hfill
  \label{WynikiZProcedurySimpson}
 \end{table}
 
-Analizujπc wyniki z  powyøszej tabeli moøna zauwaøyÊ, øe metoda \textit{parabol} jest optymalniejsza od metody \textit{trapezÛw}, dla ktÛrej to podobne zestawienie sporzπdzono w \mbox{Tablicy \ref{WynikiZProceduryTrapez1}}. B≥πd bezwzglÍdny przybliøenia spad≥ poniøej $0,0000001$ juø dla przypadku, w ktÛrym dokonaliúmy $N=106$ podzia≥Ûw przedzia≥u ca≥kowania, dla porÛwnania w metodzie trapezÛw podzia≥Ûw tych musieliúmy wykonaÊ aø $n=7310$. Wynik zwracany przez procedurÍ \textit{simpson} zaczyna byÊ bardzo mocno zbliøony do dok≥adnego ($4,06311405862$) dla zaledwie $N \geq 20$ podzia≥Ûw (rÛønica zauwaøalna jest dopiero na $5$ miejscu po przecinku). Ponadto mamy podstawy do tego, by uznaÊ algorytm za poprawny, poniewaø wartoúÊ zwracana przez procedurÍ \textit{simpson} dna $N=6$ jest taka sama, jak ta otrzymana w przykladzie \ref{PrzykladCalkaLiczonaWzoremSimpsona}. Co wiÍcej dla kaødego z prezentowanych w tabeli przypadkÛw spe≥niona jest nierÛwnoúÊ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) z definicji \ref{Def_BladPrzyblizeniaWzoremSimpsona}.
+Analizujπc wyniki z  powyøszej tabeli moøna zauwaøyÊ, øe \textit{metoda parabol} jest optymalniejsza od metody \textit{trapezÛw}, dla ktÛrej to podobne zestawienie sporzπdzono w \mbox{Tablicy \ref{WynikiZProceduryTrapez1}}. B≥πd bezwzglÍdny przybliøenia spad≥ poniøej $0.0000001$ juø dla przypadku, w ktÛrym dokonaliúmy $N=106$ podzia≥Ûw przedzia≥u ca≥kowania, dla porÛwnania w metodzie trapezÛw podzia≥Ûw tych musieliúmy wykonaÊ aø $n=7310$. Wynik zwracany przez procedurÍ \textit{simpson} zaczyna byÊ bardzo mocno zbliøony do dok≥adnego ($4.06311405862$) dla zaledwie $N \geq 20$ podzia≥Ûw (rÛønica zauwaøalna jest dopiero na $5$ miejscu po przecinku). Ponadto mamy podstawy do tego, by uznaÊ algorytm za poprawny, poniewaø wartoúÊ zwracana przez procedurÍ \textit{simpson} dna $N=6$ jest taka sama, jak ta otrzymana w przykladzie \ref{PrzykladCalkaLiczonaWzoremSimpsona}. Co wiÍcej dla kaødego z prezentowanych w tabeli przypadkÛw spe≥niona jest nierÛwnoúÊ (\ref{NierownoscBBPrzyblizenia<=DeltaS}) z \textbf{Definicji \ref{Def_BladPrzyblizeniaWzoremSimpsona}}.
 
 W poprzednim podrozdziale wspominaliúmy, øe niejednokrotnie interesuje nas minimalizacja b≥Ídu dla otrzymanego wyniku, tak by jego wielkoúÊ nie przekracza≥a pewnej akceptowalnej wartoúci granicznej. Wykonujπc drobne zmiany w \textbf{Procedurze \ref{MAPLE_BladMetodySimpsonaCalkaPojedyncza}} jesteúmy w stanie otrzymaÊ nowπ procedurÍ, wyznaczajπcπ iloúÊ podzia≥Ûw $N$ przedzia≥u ca≥kowania $[a,b]$, tak by b≥πd przybliøenia nie przekracza≥ okreúlonej przez nas wartoúci:      
 
