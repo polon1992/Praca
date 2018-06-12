@@ -10,9 +10,9 @@ I_{VyT2}=\iint_D f(x,y)dydx=\int\limits_{a}^b\int\limits_{c(x)}^{d(x)} f(x,y) dy
 Niech przedzia³ $[a,b]$ zostanie podzielony na $n$ podprzedzia³ów $[x_i,x_{i+1}]$ $(i=0, 1, \ldots, n-1)$ takich, ¿e:
 $$a=x_0 < x_1 < x_2 < \ldots  < x_{n-1} < x_n=b\,.$$ 
 Ka¿dy wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, n)$, gdzie $h_x$ okreœlamy jako równowartoœæ \mbox{$h_x=\frac{b-a}{n}$}.\\ 
-Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y (z regu³y) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, uzale¿nione od postaci funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $m$ równych podprzedzia³ów $[y_{i,j}, y_{i,j+1}]$ $(j=0, 1, \ldots ,m-1;\, i=0, 1, \ldots ,n)$ spe³niaj¹cych zale¿noœæ:
+Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y (z regu³y) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, uzale¿nione od postaci funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $m$ równych podprzedzia³ów $[y_{i,j}, y_{i,j+1}]$ $(i=0, 1, \ldots ,n ;\,j=0, 1, \ldots ,m-1 )$ spe³niaj¹cych zale¿noœæ:
 $$c(x_i)=y_{i,0}\leq y_{i,1} \leq y_{i,2}\leq \ldots  \leq y_{i,m}=d(x_i).$$
-Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,m;\, i=0, 1, \ldots ,n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{m}$. Innymi s³owy wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego $x_i$ jest wyliczana. W przeciwieñstwie do przypadku ca³kowania w prostok¹cie, mo¿emy spotkaæ siê z tak¹ sytuacj¹, gdzie na ca³ym obszarze $D$ dla ró¿nych $x_i$ nie znajdziemy dwóch wielkoœci $h_{y,i}$, które bêd¹ sobie równe. Poni¿szy obraz wyjaœnia opisywan¹ logikê podzia³u obszaru ca³kowania:
+Przez oznaczenie $y_{i,j}$ rozumieæ bêdziemy $y_{i,j}=c(x_i)+jh_{y,i}$ $(i=0, 1, \ldots ,n;\, j=0, 1, \ldots ,m)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{m}$. Innymi s³owy wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego $x_i$ jest wyliczana. W przeciwieñstwie do przypadku ca³kowania w prostok¹cie, mo¿emy spotkaæ siê z tak¹ sytuacj¹, gdzie na ca³ym obszarze $D$ dla ró¿nych $x_i$ nie znajdziemy dwóch wielkoœci $h_{y,i}$, które bêd¹ sobie równe. Poni¿szy obraz wyjaœnia opisywan¹ logikê podzia³u obszaru ca³kowania:
 \begin{figure}[H]
 		\begin{center}
 		\includegraphics[scale=0.45]{R6.eps}
@@ -277,9 +277,9 @@ Przedzia³ ca³kowania $[a,b]$ podzielmy na $N=2n$ $(n=1,2,\ldots)$ podprzedzia³ów
 $$a=x_0 < x_1 < x_2 < \ldots  < x_{2n-1} < x_{2n}=b\,.$$ 
 Dowolny wêze³ $x_i$ jest postaci $x_i=a+ih_x$ $(i=0, 1, \ldots, 2n=N)$, zaœ $h_x$ okreœlamy jako \mbox{$h_x=\frac{b-a}{2n}$}.
 
-Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y ( g³ównie ) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, zale¿ne od funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $M=2m$  równych podprzedzia³ów $[y_{i,2j}, y_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,n;\,j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych poni¿sz¹ zale¿noœæ:
+Kolejno dla ka¿dego $x_i \in [a,b]$ wyró¿nijmy przedzia³y ( g³ównie ) ró¿nej d³ugoœci $[c(x_i),d(x_i)]$, zale¿ne od funkcji $c(x)$ i $d(x)$ oraz argumentu $x=x_i$. Wszystkie one podzielone zostan¹ na $M=2m$  równych podprzedzia³ów $[y_{i,2j}, y_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,2n;\,j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych poni¿sz¹ zale¿noœæ:
 $$c(x_i)=y_{i,0}\leq y_{i,1} \leq y_{i,2}\leq \ldots  \leq y_{i,2m}=d(x_i).$$
-Oznaczenie $y_{i,j}$ rozumieæ bêdziemy jako $y_{i,j}=c(x_i)+jh_{y,i}$ $(j=0, 1, \ldots ,2m;\, i=0, 1, \ldots ,2n)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{2m}$. Zatem tak jak i w przypadku \textit{wzoru trapezów }(\ref{UogolnionyWzorTrapezow_Trapez2DVar}) wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego argumentu $x_i$ jest ona wyliczana. 
+Oznaczenie $y_{i,j}$ rozumieæ bêdziemy jako $y_{i,j}=c(x_i)+jh_{y,i}$ $(i=0, 1, \ldots ,2n;\, j=0, 1, \ldots ,2m)$, natomiast $h_{y,i}=\frac{d(x_i)-c(x_i)}{2m}$. Zatem tak jak i w przypadku \textit{wzoru trapezów }(\ref{UogolnionyWzorTrapezow_Trapez2DVar}) wielkoœæ kroku $h_{y,i}$ jest  zale¿na od tego dla jakiego argumentu $x_i$ jest ona wyliczana. 
 
 Znaczenie opisanych wy¿ej symboli oraz logikê podzia³u obszaru ca³kowania na potrzeby wykorzystania \textit{wzoru Simpsona} prezentuje poni¿sza grafika:
 \begin{figure}[H]
@@ -752,7 +752,7 @@ $$a=y_0 < y_1 < y_2 < \ldots  < y_{2n-1} < y_{2n}=b\,.$$
 Dowolny wêze³ $y_i$ mo¿na przedstawiæ jako $y_i=a+ih_y$ $(i=0, 1, \ldots, 2n=N)$, natomiast samo $h_y$ definiujemy przez \mbox{$h_y=\frac{b-a}{2n}$}.\\ 
 
 
-Nastêpnie dla ka¿dego $y_i \in [a,b]$ wyznaczmy przedzia³y  $[c(y_i),d(y_i)]$, uzale¿nione od postaci funkcji $c(y)$ i $d(y)$, jak te¿ i argumentu $y=y_i$. Ka¿dy z takich przedzia³ów podzielimy na $M=2m$  podprzedzia³ów równej d³ugoœci $[x_{i,2j}, x_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,n;\, j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych zale¿noœæ:
+Nastêpnie dla ka¿dego $y_i \in [a,b]$ wyznaczmy przedzia³y  $[c(y_i),d(y_i)]$, uzale¿nione od postaci funkcji $c(y)$ i $d(y)$, jak te¿ i argumentu $y=y_i$. Ka¿dy z takich przedzia³ów podzielimy na $M=2m$  podprzedzia³ów równej d³ugoœci $[x_{i,2j}, x_{i,2j+1}]$ \mbox{$(i=0, 1, \ldots ,2n;\, j=0, \frac{1}{2}, \ldots ,\frac{2m-1}{2} )$} spe³niaj¹cych zale¿noœæ:
 $$c(y_i)=x_{i,0}\leq x_{i,1} \leq x_{i,2}\leq \ldots  \leq x_{i,2m}=d(y_i).$$
 
 Przez symbol $x_{i,j}$ rozumiemy $x_{i,j}=c(y_i)+jh_{x,i}$ $(i=0, 1, \ldots ,2n;\,j=0, 1, \ldots ,2m )$, natomiast $h_{x,i}=\frac{d(y_i)-c(y_i)}{2m}$. Jak mo¿na zauwa¿yæ, wielkoœæ kroku $h_{x,i}$ jest  zale¿na od powi¹zanego z nim $y_i$.  
