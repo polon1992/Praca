@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  11 JUN 2018 18:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2017.2.15)  13 JUN 2018 08:38
 entering extended mode
 **glowny.tex
 ("F:\SEMESTR 4\PracaMagisterska\Praca\glowny.tex"
@@ -1455,7 +1455,13 @@ nego i-tego y[]
  []
 
 [80] [81] [82]) ("F:\SEMESTR 4\PracaMagisterska\Praca\podsumowanie.tex"
-[83]) [84
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\T1/ptm/m/n/12 Celem pracy byªo wy-pro-wa-dze-nie wy-bra-nych \T1/ptm/m/it/12
+ dwu-wy-mia-ro-wych kwa-dra-tur
+ []
+
+) [84
 
 ]
 Underfull \hbox (badness 5954) in paragraph at lines 103--105
@@ -1544,4 +1550,4 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  43i,13n,77p,1501b,7029s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on glowny.dvi (87 pages, 509236 bytes).
+Output written on glowny.dvi (87 pages, 510948 bytes).
