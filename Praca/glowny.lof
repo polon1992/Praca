@@ -1,17 +1,15 @@
 \select@language {polish}
 \select@language {polish}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Funkcja interpolacyjna $W(x)$ oraz interpolowana $f(x)$ \relax }}{11}{figure.caption.3}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Graficzne przedstawienie idei zastosowania \textit {wzoru trapez\'ow} do ca\IeC {\l }kowania\relax }}{22}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Graficzne przedstawienie idei zastosowania \textit {wzoru parabol} do ca\IeC {\l }kowania\relax }}{27}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Przedstawienie obszaru dwusp\'ojnego z krzyw\k a $C$ przed modyfikacj\k a.\relax }}{24}{figure.caption.3}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Obszar po zmodyfikowaniu krzywej $C$.\relax }}{24}{figure.caption.4}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Przedstawienie krzywej $C$ i okr\k eg\'ow o \'srodkach w punktach izolowanych funkcji.\relax }}{27}{figure.caption.5}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Przedstawienie zmodyfikowanej krzywej $C$ z wyrzuconymi z jej wn\k etrza punktami $z_0=i$ oraz $z_0=-i$.\relax }}{27}{figure.caption.6}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Obszar ograniczony przez \IeC {\l }aman\k a b\k ed\k ac\k a bokami tr\'ojk\k ata o wierzcho\IeC {\l }kach $A=(2,1)$, $B=(-2,3)$ i $C=(-2,-3)$\relax }}{29}{figure.caption.7}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Zmodyfikowana krzywa ograniczaj\k aca obszar z kt\'orego wyrzucili\'smy punkt osobliwy $z=i$\relax }}{29}{figure.caption.8}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Krzywa $C$ zawieraj\k aca punkty osobliwe $z_1, z_2, z_3$ w obszarze kt\'ory ogranicza\relax }}{31}{figure.caption.9}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Krzywa $C$ po wprowadzonych modyfikacjach usuwaj\k acych z jej wn\k etrza punkty $z_1, z_2, z_3$\relax }}{32}{figure.caption.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textit {Metoda trapez\'ow} dla ca\IeC {\l }ek podw\'ojnych w obszarach prostok\k atnych - podzia\IeC {\l } obszaru ca\IeC {\l }kowania na podobszary \relax }}{38}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textit {Metoda Simpsona} dla ca\IeC {\l }ek podw\'ojnych po obszarze normalnym wzgl\k edem dw\'och zmiennych - podzia\IeC {\l } obszaru ca\IeC {\l }kowania na podobszary\relax }}{47}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Domkni\k ecie krzywej $[-R,R]$ wraz z punktami osobliwymi\relax }}{35}{figure.caption.11}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Przedstawienie $C_1$ i jej domkni\k ecia $C_R$ z punktami osobliwymi \relax }}{36}{figure.caption.12}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Zmodyfikowana krzywa $C$ zawieraj\k aca o\'s liczb $\mathbb {R}$\relax }}{38}{figure.caption.13}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \unhbox \voidb@x \hbox {Podzia\IeC {\l } obszaru ca\IeC {\l }kowania dla \textit {metody trapez\'ow} - obszar normalny wzgl\k edem $Ox$} \relax }}{57}{figure.caption.14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \unhbox \voidb@x \hbox {Podzia\IeC {\l } obszaru ca\IeC {\l }kowania dla \textit {wzoru Simpsona} - obszar normalny wzgl\k edem $Ox$} \relax }}{65}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \unhbox \voidb@x \hbox {Podzia\IeC {\l } obszaru ca\IeC {\l }kowania dla \textit {metody trapez\'ow} - obszar normalny wzgl\k edem $Oy$} \relax }}{73}{figure.caption.20}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \unhbox \voidb@x \hbox {Podzia\IeC {\l } obszaru ca\IeC {\l }kowania dla \textit {wzoru Simpsona} - obszar normalny wzgl\k edem $Oy$} \relax }}{79}{figure.caption.23}
